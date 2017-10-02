@@ -6,4 +6,6 @@ Hot reloading works, but hot module replacement does not.
 
 The app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
 
+![Screenshot of expo-and-typescript](https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png)
+
 [The steps required to set up a React Native app to using TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki)

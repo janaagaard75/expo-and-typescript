@@ -13,7 +13,10 @@
       "icon": "./assets/icons/loading-icon.png"
     },
     "packagerOpts": {
-      "assetExts": ["ttf", "mp4"],
+      "assetExts": [
+        "ttf",
+        "mp4"
+      ],
       "sourceExts": [
         "ts",
         "tsx"

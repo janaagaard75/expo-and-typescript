@@ -1,7 +1,7 @@
 {
   "name": "expo-and-typescript",
   "version": "0.0.0",
-  "description": "Hello Expo!",
+  "description": "React Native using Expo and TypeScript",
   "author": {
     "email": "jan@aagaard.net",
     "name": "Jan Aagaard"

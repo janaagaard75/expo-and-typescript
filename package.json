@@ -11,6 +11,12 @@
   "dependencies": {
     "expo": "21.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
+    "tslib": "1.7.1"
+  },
+  "devDependencies": {
+    "@types/react": "16.0.7",
+    "@types/react-native": "0.48.9",
+    "typescript": "2.5.3"
   }
 }

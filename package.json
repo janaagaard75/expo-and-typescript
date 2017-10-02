@@ -6,7 +6,7 @@
     "email": "jan@aagaard.net",
     "name": "Jan Aagaard"
   },
-  "private": true,
+  "private": false,
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
     "expo": "21.0.2",

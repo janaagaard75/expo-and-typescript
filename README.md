@@ -4,4 +4,4 @@ Demo [React Native](https://facebook.github.io/react-native/) app using [Expo](h
 
 Hot reloading works, but hot module replacement does not.
 
-The [steps needed to code React Native in TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki/Setting-up-TypeScript).
+Here is a description of the [steps needed to code React Native in TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki/Setting-up-TypeScript).

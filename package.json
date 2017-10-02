@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/react": "16.0.7",
     "@types/react-native": "0.48.9",
+    "react-native-typescript-transformer": "1.1.4",
     "typescript": "2.5.3"
   }
 }

@@ -7,7 +7,7 @@ The type definitions for Expo are maintained at [expo-sdk-with-type-definitions]
 This app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
 
 <p align="center">
-![Screenshot of expo-and-typescript](https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png)
+  <img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png" alt="Screenshot of expo-and-typescript">
 </p>
 
 ## Similar Projects

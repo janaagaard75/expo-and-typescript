@@ -7,3 +7,8 @@ The type definitions for Expo are maintained at [expo-sdk-with-type-definitions]
 This app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
 
 ![Screenshot of expo-and-typescript](https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png)
+
+## Similar Projects
+
+* [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
+* [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)

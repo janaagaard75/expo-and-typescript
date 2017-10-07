@@ -1,6 +1,6 @@
 # React Native using Expo and Typescript
 
-[React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org). Hot reloading works, but hot module replacement does not. [The steps required to set up a React Native app to using TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki).
+[React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org). Hot reloading works, but hot module replacement does not.
 
 The type definitions for Expo still require a lot of work.
 

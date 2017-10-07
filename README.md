@@ -1,13 +1,16 @@
 # React Native using Expo and Typescript
 
-[React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org).
+[React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org). Hot reloading works, but hot module replacement does not. [The steps required to set up a React Native app to using TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki).
 
-Hot reloading works, but hot module replacement does not.
+The type definitions for Expo are maintained at [expo-sdk-with-type-definitions](https://github.com/janaagaard75/expo-sdk-with-type-definitions). They still require a lot of work.
 
-The app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
+This app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
 
-Type definitions for Expo maintained at [expo-sdk-with-type-definitions](https://github.com/janaagaard75/expo-sdk-with-type-definitions).
+<p align="center">
+  <img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png" alt="Screenshot of expo-and-typescript">
+</p>
 
-[The steps required to set up a React Native app to using TypeScript](https://github.com/janaagaard75/expo-and-typescript/wiki)
+## Similar Projects
 
-![Screenshot of expo-and-typescript](https://github.com/janaagaard75/expo-and-typescript/raw/master/screenshot.png)
+* [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
+* [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)

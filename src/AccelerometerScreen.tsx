@@ -25,75 +25,97 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
     }
   }
 
-  private _subscription: EventSubscription | undefined
+  private subscription: EventSubscription | undefined
 
   public componentDidMount() {
-    this._toggle()
+    this.toggleSubscription()
   }
 
   public componentWillUnmount() {
-    this._unsubscribe()
-  }
-
-  private _toggle = () => {
-    if (this._subscription) {
-      this._unsubscribe()
-    }
-    else {
-      this._subscribe()
-    }
-  }
-
-  private _slow = () => {
-    Accelerometer.setUpdateInterval(1000)
-  }
-
-  private _fast = () => {
-    Accelerometer.setUpdateInterval(16)
-  }
-
-  private _subscribe = () => {
-    this._subscription = Accelerometer.addListener(accelerometerData => {
-      this.setState({ accelerometerData })
-    })
-  }
-
-  private _unsubscribe = () => {
-    if (this._subscription !== undefined) {
-      this._subscription.remove()
-    }
-    this._subscription = undefined
+    this.unsubscribe()
   }
 
   public render() {
-    const { x, y, z } = this.state.accelerometerData
+    const x = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.x)
+    const y = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.y)
+    const z = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.z)
 
     return (
-      <View style={styles.sensor}>
+      <View
+        style={{
+          marginTop: 15,
+          paddingHorizontal: 10,
+        }}
+      >
         <Text>Accelerometer:</Text>
-        <Text>x: {roundToTwoDecimals(x)} y: {roundToTwoDecimals(y)} z: {roundToTwoDecimals(z)}</Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={this._toggle} style={styles.button}>
-            <Text>Toggle</Text>
+        <Text>x: {x} y: {y} z: {z}</Text>
+        <View
+          style={{
+            alignItems: 'stretch',
+            flexDirection: 'row',
+            marginTop: 15,
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => this.toggleSubscription()}
+            style={styles.button}
+          >
+            <Text>Pause</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={this._slow} style={[styles.button, styles.middleButton]}>
+          <TouchableOpacity
+            onPress={() => this.slow()}
+            style={[styles.button, styles.middleButton]}
+          >
             <Text>Slow</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={this._fast} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => this.fast()}
+            style={styles.button}
+          >
             <Text>Fast</Text>
           </TouchableOpacity>
         </View>
       </View>
     )
   }
-}
 
-function roundToTwoDecimals(value: number | undefined) {
-  if (value === undefined) {
-    return 0
+  private static roundToTwoDecimals(value: number | undefined): number {
+    if (value === undefined) {
+      return 0
+    }
+
+    return Math.floor(value * 100) / 100
   }
 
-  return Math.floor(value * 100) / 100
+  private fast() {
+    Accelerometer.setUpdateInterval(16)
+  }
+
+  private slow() {
+    Accelerometer.setUpdateInterval(1000)
+  }
+
+  private subscribe() {
+    this.subscription = Accelerometer.addListener(accelerometerData => {
+      this.setState({ accelerometerData })
+    })
+  }
+
+  private toggleSubscription() {
+    if (this.subscription) {
+      this.unsubscribe()
+    }
+    else {
+      this.subscribe()
+    }
+  }
+
+  private unsubscribe() {
+    if (this.subscription !== undefined) {
+      this.subscription.remove()
+    }
+    this.subscription = undefined
+  }
 }
 
 const styles = StyleSheet.create({
@@ -104,21 +126,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 10,
   },
-  buttonContainer: {
-    alignItems: 'stretch',
-    flexDirection: 'row',
-    marginTop: 15,
-  },
-  container: {
-    flex: 1,
-  },
   middleButton: {
     borderColor: '#ccc',
     borderLeftWidth: 1,
     borderRightWidth: 1,
-  },
-  sensor: {
-    marginTop: 15,
-    paddingHorizontal: 10,
   },
 })

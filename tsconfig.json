@@ -8,7 +8,8 @@
     "lib": [
       "dom",
       "es2015",
-      "es2016"
+      "es2016",
+      "es2017"
     ],
     "module": "es2015",
     "moduleResolution": "node",
@@ -18,7 +19,7 @@
     "outDir": "build/dist",
     "sourceMap": true,
     "strict": true,
-    "target": "es2015"
+    "target": "es2017"
   },
   "exclude": [
     "acceptance-tests",

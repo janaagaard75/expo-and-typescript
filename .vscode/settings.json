@@ -4,5 +4,6 @@
   "eslint.enable": false,
   "javascript.validate.enable": false,
   "tslint.enable": true,
+  "tslint.ignoreDefinitionFiles": false,
   "typescript.tsdk": "node_modules/typescript/lib"
 }

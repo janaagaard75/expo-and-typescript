@@ -16,7 +16,7 @@ These type definitions are based on [pierre-H's type definition file](https://gi
 
 Here's a lit of the APIs provided by Expo, with a checkmark for the few, that have been tested.
 
-* [ ] Accelerometer
+* [x] Accelerometer
 * [ ] AdMob
 * [ ] Amplitude
 * [ ] AppLoading

@@ -8,5 +8,5 @@ export default StackNavigator({
   // tslint:disable:object-literal-sort-keys
   Main: { screen: MainScreen },
   LinearGradient: { screen: LinearGradientScreen },
-  Svg: { screen: SvgScreen }
+  Svg: { screen: SvgScreen },
 })

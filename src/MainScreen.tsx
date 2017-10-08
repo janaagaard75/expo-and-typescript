@@ -6,7 +6,7 @@ import { View } from 'react-native'
 
 export class MainScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
-    title: 'Expo and TypeScript'
+    title: 'Expo and TypeScript',
   }
 
   public render() {
@@ -14,7 +14,7 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
       <View
         style={{
           backgroundColor: '#fff',
-          flex: 1
+          flex: 1,
         }}
       >
         <Button

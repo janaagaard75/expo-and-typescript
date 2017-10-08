@@ -22,9 +22,6 @@
     "target": "es2017"
   },
   "exclude": [
-    "acceptance-tests",
-    "build",
-    "jest",
     "node_modules"
   ],
   "types": [

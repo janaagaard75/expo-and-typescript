@@ -18,6 +18,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
         }}
       >
         <Button
+          onPress={() => this.props.navigation.navigate('Accelerometer')}
+          title="Accelerometer"
+        />
+        <Button
           onPress={() => this.props.navigation.navigate('LinearGradient')}
           title="LinearGradient"
         />

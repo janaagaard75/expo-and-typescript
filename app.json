@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Expo and TypeScript",
-    "description": "An empty new project",
+    "description": "Showcase of Expo app coded in TypeScript. Testbed for type definitions for the Expo APIs.",
     "slug": "expo-and-typescript",
     "privacy": "public",
     "sdkVersion": "21.0.0",

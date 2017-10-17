@@ -2,7 +2,7 @@
 
 [React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org). Hot reloading works, but hot module replacement does not.
 
-The type definitions for Expo still require a lot of work.
+The type definitions for the Expo SDK still require a lot of work.
 
 This app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
 
@@ -148,17 +148,17 @@ export default App
 
 ### Type Definitions
 
-Add type definitions for React and React Native.
+1. Add type definitions for React and React Native.
 
 ```shell
 yarn add --dev --exact @types/react @types/react-native
 ```
 
-Besides what React Native already has, Expo comes with a lot of additional APIs for your app. Unfortunately there aren't any type definitions for these APIs, and that makes it difficult to use them correctly in TypeScript. I have started on creating these type definitions, but bare in mind that they still lack a lot of testing.
+Besides what React Native already has, the Expo SDK comes with a lot of additional APIs for your app. Unfortunately there aren't any type definitions for these APIs, and that makes it difficult to use them correctly in TypeScript. I have started on creating these type definitions, but bare in mind that they still lack a lot of testing.
 
-Create a file `expo.d.ts` in the `src` folder and copy the content of this [`expo.d.ts`](https://raw.githubusercontent.com/janaagaard75/expo-sdk-with-type-definitions/master/expo.d.ts) to it.
+2. Create a file `expo.d.ts` in the `src` folder and copy the content of this [`expo.d.ts`](https://raw.githubusercontent.com/janaagaard75/expo-sdk-with-type-definitions/master/expo.d.ts) to it.
 
-I'm working on both improving these type definitions, and I'm trying to make it easier to add and update them, but they are still in a very early stage.
+I'm working on both improving these type definitions, and I'm trying to make it easier to add and update them, but they are currently in a very early stage.
 
 ## Similar Projects
 

@@ -345,7 +345,7 @@ declare module 'expo' {
    */
   interface BlurViewProps {
     intensity: number
-    style: ViewStyle
+    style?: ViewStyle
     tint: 'light' | 'default' | 'dark'
   }
   export class BlurView extends React.Component<BlurViewProps, {}> { }

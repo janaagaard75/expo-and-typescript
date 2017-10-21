@@ -4,7 +4,7 @@
     "description": "Showcase of Expo app coded in TypeScript. Testbed for type definitions for the Expo APIs.",
     "slug": "expo-and-typescript",
     "privacy": "public",
-    "sdkVersion": "21.0.0",
+    "sdkVersion": "22.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",

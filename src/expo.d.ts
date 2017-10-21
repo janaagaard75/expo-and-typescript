@@ -339,6 +339,16 @@ declare module 'expo' {
     export function getContactsAsync(options: Options): Promise<Response>
   }
 
+  /**
+   * Expo BlurView
+   */
+  interface BlurViewProps {
+    intensity: number
+    style: ViewStyle
+    tint: 'light' | 'default' | 'dark'
+  }
+  export class BlurView extends React.Component<BlurViewProps, {}> { }
+
   export namespace Components {
     /**
      * AppLoading
@@ -356,16 +366,6 @@ declare module 'expo' {
     }
 
     export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
-
-    /**
-     * Expo BlurView
-     */
-    export interface BlurViewProps {
-      tint: 'light' | 'default' | 'dark'
-      intensity: number
-      style: ViewStyle
-    }
-    export class BlurView extends React.Component<BlurViewProps, void> { }
 
     /**
      * Expo GLView

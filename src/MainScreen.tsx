@@ -26,8 +26,12 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="LinearGradient"
         />
         <Button
-          onPress={() => this.props.navigation.navigate('BlurView')}
-          title="BlurView"
+          onPress={() => this.props.navigation.navigate('BlurView1')}
+          title="BlurView 1"
+        />
+        <Button
+          onPress={() => this.props.navigation.navigate('BlurView2')}
+          title="BlurView 2"
         />
         <Button
           onPress={() => this.props.navigation.navigate('Svg')}

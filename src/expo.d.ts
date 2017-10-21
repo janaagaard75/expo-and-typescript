@@ -4,6 +4,7 @@
 declare module 'expo' {
   import { ColorPropType } from 'react-native'
   import { Component } from 'react'
+  // tslint:disable-next-line:no-implicit-dependencies - fbemitter is included by Expo.
   import { EventSubscription } from 'fbemitter'
   import { GestureResponderEvent } from 'react-native'
   import { PanResponderGestureState } from 'react-native'

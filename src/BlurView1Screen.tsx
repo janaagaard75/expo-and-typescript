@@ -6,16 +6,23 @@ import { View } from 'react-native'
 
 const expoImageUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
 
-export class BlurViewScreen extends React.Component {
+export class BlurView1Screen extends React.Component {
   public render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View
+        style={{
+          alignItems: 'center',
+          flex: 1,
+          justifyContent: 'center',
+        }}
+      >
+        {/* This image is blurred because BlurView is positioned on top of it. */}
         <Image
+          source={{ uri: expoImageUrl }}
           style={{
             height: 192,
             width: 192,
           }}
-          source={{ uri: expoImageUrl }}
         />
         <BlurView
           intensity={50}
@@ -23,13 +30,20 @@ export class BlurViewScreen extends React.Component {
           tint="light"
         >
           <Image
+            source={{ uri: expoImageUrl }}
             style={{
               height: 96,
               width: 96,
             }}
-            source={{ uri: expoImageUrl }}
           />
         </BlurView>
+        <Image
+          source={{ uri: expoImageUrl }}
+          style={{
+            height: 48,
+            width: 48,
+          }}
+        />
       </View>
     )
   }

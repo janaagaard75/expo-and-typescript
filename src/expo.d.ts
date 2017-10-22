@@ -350,110 +350,108 @@ declare module 'expo' {
   }
   export class BlurView extends React.Component<BlurViewProps, {}> { }
 
-  export namespace Components {
-    /**
-     * AppLoading
-     */
-    export class AppLoading extends React.Component<void, void> { }
+  /**
+   * AppLoading
+   */
+  export class AppLoading extends React.Component<void, void> { }
 
-    /**
-     * Expo BarCodeScanner
-     */
-    export interface BarCodeScannerProps {
-      type?: 'front' | 'back'
-      torchMode?: 'on' | 'off'
-      barCodeTypes: Array<string>     // TODO: add supported formats
-      style: ViewStyle
+  /**
+   * Expo BarCodeScanner
+   */
+  export interface BarCodeScannerProps {
+    type?: 'front' | 'back'
+    torchMode?: 'on' | 'off'
+    barCodeTypes: Array<string>     // TODO: add supported formats
+    style: ViewStyle
+  }
+
+  export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
+
+  /**
+   * Expo GLView
+   * TODO: better defs because there is no complete documentation.
+   * I did it from the code.
+   */
+  export interface GLViewProps extends ViewProperties {
+    onContextCreate(): void
+    msaaSamples: number
+  }
+  export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
+
+  /**
+   * Expo KeepAwake
+   */
+  export class KeepAwake extends React.Component<void, void> {
+    public static activate(): void
+    public static deactivate(): void
+  }
+
+  /**
+   * Expo MapView
+   */
+  // TODO: MapView
+
+  /**
+   * Expo Video
+   */
+  export interface VideoLoad {
+    duration: number
+    currentTime: number
+    canPlayReverse: boolean
+    canPlayFastForward: boolean
+    canPlaySlowForward: boolean
+    canPlaySlowReverse: boolean
+    canStepBackward: boolean
+    canStepForward: boolean
+    naturalSize: {
+      width: number;
+      heigth: number;
+      orientation: 'landscape' | 'portrait'
     }
+  }
+  export type VideoError = {
+    code: any,
+    domain: any,
+  } | {
+    what: any,
+    extra: any,
+  }
 
-    export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
+  export interface VideoProgress {
+    currentTime: number
+    playableDuration: number
+  }
 
-    /**
-     * Expo GLView
-     * TODO: better defs because there is no complete documentation.
-     * I did it from the code.
-     */
-    export interface GLViewProps extends ViewProperties {
-      onContextCreate(): void
-      msaaSamples: number
-    }
-    export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
+  export interface VideoSeek {
+    currentTime: number
+    seekTime: number
+  }
 
-    /**
-     * Expo KeepAwake
-     */
-    export class KeepAwake extends React.Component<void, void> {
-      public static activate(): void
-      public static deactivate(): void
-    }
+  export interface VideoProps {
+    source: any    // TODO: better def: string|*require(file)*
+    fullscreen?: boolean
+    resizeMode?: string    // TODO: resize mode instead of general string
+    repeat?: boolean
+    paused?: boolean
+    volume?: number
+    muted?: boolean
+    rate?: number
+    onLoadStart?: (param: { uri: string }) => any
+    onLoad?: (load: VideoLoad) => any
+    onError?: (error: { error: VideoError }) => any
+    onProgress?: (progress: VideoProgress) => any
+    onSeek?: (seek: VideoSeek) => any
+    onEnd?: () => any
+  }
 
-    /**
-     * Expo MapView
-     */
-    // TODO: MapView
+  export class Video extends React.Component<VideoProps, void> {
+    public static RESIZE_MODE_CONTAIN: string
+    public static RESIZE_MODE_COVER: string
+    public static RESIZE_MODE_STRETCH: string
 
-    /**
-     * Expo Video
-     */
-    export interface VideoLoad {
-      duration: number
-      currentTime: number
-      canPlayReverse: boolean
-      canPlayFastForward: boolean
-      canPlaySlowForward: boolean
-      canPlaySlowReverse: boolean
-      canStepBackward: boolean
-      canStepForward: boolean
-      naturalSize: {
-        width: number;
-        heigth: number;
-        orientation: 'landscape' | 'portrait'
-      }
-    }
-    export type VideoError = {
-      code: any,
-      domain: any,
-    } | {
-      what: any,
-      extra: any,
-    }
-
-    export interface VideoProgress {
-      currentTime: number
-      playableDuration: number
-    }
-
-    export interface VideoSeek {
-      currentTime: number
-      seekTime: number
-    }
-
-    export interface VideoProps {
-      source: any    // TODO: better def: string|*require(file)*
-      fullscreen?: boolean
-      resizeMode?: string    // TODO: resize mode instead of general string
-      repeat?: boolean
-      paused?: boolean
-      volume?: number
-      muted?: boolean
-      rate?: number
-      onLoadStart?: (param: { uri: string }) => any
-      onLoad?: (load: VideoLoad) => any
-      onError?: (error: { error: VideoError }) => any
-      onProgress?: (progress: VideoProgress) => any
-      onSeek?: (seek: VideoSeek) => any
-      onEnd?: () => any
-    }
-
-    export class Video extends React.Component<VideoProps, void> {
-      public static RESIZE_MODE_CONTAIN: string
-      public static RESIZE_MODE_COVER: string
-      public static RESIZE_MODE_STRETCH: string
-
-      public seek(time: string): void
-      public presentFullscreenPlayer(): void
-      public dismissFullscreenPlayer(): void
-    }
+    public seek(time: string): void
+    public presentFullscreenPlayer(): void
+    public dismissFullscreenPlayer(): void
   }
 
   export namespace DocumentPicker {

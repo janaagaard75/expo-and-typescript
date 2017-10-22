@@ -10,6 +10,8 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
   }
 
   public render() {
+    const navigate = this.props.navigation.navigate
+
     return (
       <View
         style={{
@@ -18,23 +20,27 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
         }}
       >
         <Button
-          onPress={() => this.props.navigation.navigate('Accelerometer')}
+          onPress={() => navigate('Accelerometer')}
           title="Accelerometer"
         />
         <Button
-          onPress={() => this.props.navigation.navigate('LinearGradient')}
+          onPress={() => navigate('LinearGradient')}
           title="LinearGradient"
         />
         <Button
-          onPress={() => this.props.navigation.navigate('BlurView1')}
+          onPress={() => navigate('BlurView1')}
           title="BlurView 1"
         />
         <Button
-          onPress={() => this.props.navigation.navigate('BlurView2')}
+          onPress={() => navigate('BlurView2')}
           title="BlurView 2"
         />
         <Button
-          onPress={() => this.props.navigation.navigate('Svg')}
+          onPress={() => navigate('MapView')}
+          title="MapView"
+        />
+        <Button
+          onPress={() => navigate('Svg')}
           title="Svg"
         />
       </View>

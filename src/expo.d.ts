@@ -1,3 +1,4 @@
+// tslint:disable:ban-types
 // tslint:disable:interface-over-type-literal
 // tslint:disable:max-classes-per-file
 
@@ -378,7 +379,174 @@ declare module 'expo' {
     public static deactivate(): void
   }
 
-  // TODO: MapView
+  //#region MapView
+  // Copied from https://github.com/airbnb/react-native-maps/blob/master/index.d.ts. Don't know if it is possible to avoid copying.
+  interface MapViewProps {
+    provider?: 'google'
+    style: any
+    customMapStyle?: Array<any>
+    customMapStyleString?: string
+    showsUserLocation?: boolean
+    userLocationAnnotationTitle?: string
+    showsMyLocationButton?: boolean
+    followsUserLocation?: boolean
+    showsPointsOfInterest?: boolean
+    showsCompass?: boolean
+    zoomEnabled?: boolean
+    rotateEnabled?: boolean
+    cacheEnabled?: boolean
+    loadingEnabled?: boolean
+    loadingBackgroundColor?: any
+    loadingIndicatorColor?: any
+    scrollEnabled?: boolean
+    pitchEnabled?: boolean
+    toolbarEnabled?: boolean
+    moveOnMarkerPress?: boolean
+    showsScale?: boolean
+    showsBuildings?: boolean
+    showsTraffic?: boolean
+    showsIndoors?: boolean
+    showsIndoorLevelPicker?: boolean
+    mapType?: 'standard' | 'satellite' | 'hybrid' | 'terrain' | 'none'
+    region?: {
+      latitude: number;
+      longitude: number;
+      /** Distance between the minimum and the maximum latitude. */
+      latitudeDelta: number;
+      /** Distance between the minimum and the maximum longitude. */
+      longitudeDelta: number;
+    }
+    initialRegion?: {
+      latitude: number;
+      longitude: number;
+      /** Distance between the minimum and the maximum latitude. */
+      latitudeDelta: number;
+      /** Distance between the minimum and the maximum longitude. */
+      longitudeDelta: number;
+    }
+    liteMode?: boolean
+    maxDelta?: number
+    minDelta?: number
+    legalLabelInsets?: any
+    onChange?: Function
+    onMapReady?: Function
+    onRegionChange?: Function
+    onRegionChangeComplete?: Function
+    onPress?: Function
+    onLayout?: Function
+    onLongPress?: Function
+    onPanDrag?: Function
+    onMarkerPress?: Function
+    onMarkerSelect?: Function
+    onMarkerDeselect?: Function
+    onCalloutPress?: Function
+    onMarkerDragStart?: Function
+    onMarkerDrag?: Function
+    onMarkerDragEnd?: Function
+    minZoomLevel?: number
+    maxZoomLevel?: number
+  }
+
+  class MapView extends React.Component<MapViewProps, any> {
+    public static Animated: any
+    public static AnimatedRegion: any
+  }
+
+  namespace MapView {
+    type LineCapType = 'butt' | 'round' | 'square'
+    type LineJoinType = 'miter' | 'round' | 'bevel'
+
+    interface MarkerProps {
+      identifier?: string
+      reuseIdentifier?: string
+      title?: string
+      description?: string
+      image?: any
+      opacity?: number
+      pinColor?: string
+      coordinate: { latitude: number; longitude: number }
+      centerOffset?: { x: number; y: number }
+      calloutOffset?: { x: number; y: number }
+      anchor?: { x: number; y: number }
+      calloutAnchor?: { x: number; y: number }
+      flat?: boolean
+      draggable?: boolean
+      onPress?: Function
+      onSelect?: Function
+      onDeselect?: Function
+      onCalloutPress?: Function
+      onDragStart?: Function
+      onDrag?: Function
+      onDragEnd?: Function
+      zIndex?: number
+    }
+
+    interface MapPolylineProps {
+      coordinates?: Array<{ latitude: number; longitude: number; }>
+      onPress?: Function
+      tappable?: boolean
+      fillColor?: string
+      strokeWidth?: number
+      strokeColor?: string
+      zIndex?: number
+      lineCap?: LineCapType
+      lineJoin?: LineJoinType
+      miterLimit?: number
+      geodesic?: boolean
+      lineDashPhase?: number
+      lineDashPattern?: Array<number>
+    }
+
+    interface MapPolygonProps {
+      coordinates?: Array<{ latitude: number; longitude: number; }>
+      holes?: Array<Array<{ latitude: number; longitude: number; }>>
+      onPress?: Function
+      tappable?: boolean
+      strokeWidth?: number
+      strokeColor?: string
+      fillColor?: string
+      zIndex?: number
+      lineCap?: LineCapType
+      lineJoin?: LineJoinType
+      miterLimit?: number
+      geodesic?: boolean
+      lineDashPhase?: number
+      lineDashPattern?: Array<number>
+    }
+
+    interface MapCircleProps {
+      center: { latitude: number; longitude: number }
+      radius: number
+      onPress?: Function
+      strokeWidth?: number
+      strokeColor?: string
+      fillColor?: string
+      zIndex?: number
+      lineCap?: LineCapType
+      lineJoin?: LineJoinType
+      miterLimit?: number
+      lineDashPhase?: number
+      lineDashPattern?: Array<number>
+    }
+
+    interface MapUrlTitleProps {
+      urlTemplate: string
+      zIndex?: number
+    }
+
+    interface MapCalloutProps {
+      tooltip?: boolean
+      onPress?: Function
+    }
+
+    export class Marker extends React.Component<MarkerProps, any> { }
+    export class Polyline extends React.Component<MapPolylineProps, any> { }
+    export class Polygon extends React.Component<MapPolygonProps, any> { }
+    export class Circle extends React.Component<MapCircleProps, any> { }
+    export class UrlTile extends React.Component<MapUrlTitleProps, any> { }
+    export class Callout extends React.Component<MapCalloutProps, any> { }
+  }
+  //#endregion
 
   /**
    * Expo Video

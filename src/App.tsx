@@ -5,6 +5,7 @@ import { BlurView1Screen } from './BlurView1Screen'
 import { BlurView2Screen } from './BlurView2Screen'
 import { LinearGradientScreen } from './LinearGradientScreen'
 import { MainScreen } from './MainScreen'
+import { MapViewScreen } from './MapViewScreen'
 import { SvgScreen } from './SvgScreen'
 
 export default StackNavigator({
@@ -15,5 +16,6 @@ export default StackNavigator({
   BlurView1: { screen: BlurView1Screen },
   BlurView2: { screen: BlurView2Screen },
   LinearGradient: { screen: LinearGradientScreen },
+  MapView: { screen: MapViewScreen },
   Svg: { screen: SvgScreen },
 })

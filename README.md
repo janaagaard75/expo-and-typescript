@@ -48,7 +48,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [ ] Location
 * [ ] Lottie
 * [ ] Magnetometer
-* [ ] MapView
+* [x] MapView
 * [ ] Notifications
 * [ ] Payments
 * [ ] Pedometer
@@ -146,17 +146,19 @@ import App from './src/App'
 export default App
 ```
 
-### Type Definitions
+### Add Type Definitions for React
 
-1. Add type definitions for React and React Native.
+Add type definitions for React and React Native.
 
 ```shell
 yarn add --dev --exact @types/react @types/react-native
 ```
 
+### Add Type Definitions for Expo
+
 Besides what React Native already has, the Expo SDK comes with a lot of additional APIs for your app. Unfortunately there aren't any type definitions for these APIs, and that makes it difficult to use them correctly in TypeScript. I have started on creating these type definitions, but bare in mind that they still lack a lot of testing.
 
-2. Create a file `expo.d.ts` in the `src` folder and copy the content of this [`expo.d.ts`](https://raw.githubusercontent.com/janaagaard75/expo-sdk-with-type-definitions/master/expo.d.ts) to it.
+Create a file `expo.d.ts` in the `src` folder and copy the content of this [`expo.d.ts`](https://raw.githubusercontent.com/janaagaard75/expo-sdk-with-type-definitions/master/expo.d.ts) to it.
 
 I'm working on both improving these type definitions, and I'm trying to make it easier to add and update them, but they are currently in a very early stage.
 

@@ -340,24 +340,19 @@ declare module 'expo' {
     export function getContactsAsync(options: Options): Promise<Response>
   }
 
-  /**
-   * Expo BlurView
-   */
+  //#region BlurView
   interface BlurViewProps {
     intensity: number
     style?: ViewStyle
     tint: 'light' | 'default' | 'dark'
   }
-  export class BlurView extends React.Component<BlurViewProps, {}> { }
 
-  /**
-   * AppLoading
-   */
+  export class BlurView extends React.Component<BlurViewProps, {}> { }
+  //#endregion
+
   export class AppLoading extends React.Component<void, void> { }
 
-  /**
-   * Expo BarCodeScanner
-   */
+  //#region BarCodeScanner
   export interface BarCodeScannerProps {
     type?: 'front' | 'back'
     torchMode?: 'on' | 'off'
@@ -366,29 +361,23 @@ declare module 'expo' {
   }
 
   export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
+  //#endregion
 
-  /**
-   * Expo GLView
-   * TODO: better defs because there is no complete documentation.
-   * I did it from the code.
-   */
-  export interface GLViewProps extends ViewProperties {
+  //#region GLView
+  // TODO: better defs because there is no complete documentation. I did it from the code.
+  interface GLViewProps extends ViewProperties {
     onContextCreate(): void
     msaaSamples: number
   }
-  export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
 
-  /**
-   * Expo KeepAwake
-   */
+  export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
+  //#endregion
+
   export class KeepAwake extends React.Component<void, void> {
     public static activate(): void
     public static deactivate(): void
   }
 
-  /**
-   * Expo MapView
-   */
   // TODO: MapView
 
   /**
@@ -742,7 +731,7 @@ declare module 'expo' {
 
   export namespace ScreenOrientation {
     export namespace Orientation {
-      /** All 4 possible orientations */
+      /** All 4 possible orientations. */
       export const ALL: 'ALL'
 
       /** All but reverse portrait, could be all 4 orientations on certain Android devices. */
@@ -826,6 +815,7 @@ declare module 'expo' {
     ): any
   }
 
+  //#region Svg
   export class Svg extends Component<Svg.SvgProps, {}> { }
 
   export namespace Svg {
@@ -1072,6 +1062,7 @@ declare module 'expo' {
     export class TSpan extends Component<TSpanProps, {}> { }
     export class Use extends Component<UseProps, {}> { }
   }
+  //#endregion
 
   export function takeSnapshotAsync(
     view?: (number | React.ReactElement<any>),

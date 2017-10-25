@@ -36,6 +36,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="BlurView 2"
         />
         <Button
+          onPress={() => navigate('Font')}
+          title="Font"
+        />
+        <Button
           onPress={() => navigate('MapView')}
           title="MapView"
         />

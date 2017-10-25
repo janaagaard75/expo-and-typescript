@@ -36,34 +36,28 @@ declare module 'expo' {
     export function setGroup(groupType: string, groupNames: object): void
   }
 
-  interface AssetOptions {
-    name: string,
-    type: string,
-    hash: string,
-    uri: string,
-    width: number,
-    height: number
-  }
+  class Asset {
+    constructor(options: {
+      hash: string,
+      height: number,
+      name: string,
+      type: string,
+      uri: string,
+      width: number,
+    })
 
-  export class Asset {
-    constructor(options: AssetOptions);
-
+    public hash: string
+    public height: number
+    public localUri: string
     public name: string
     public type: string
-    public hash: string
     public uri: string
-    public localUri: string
-    public width?: number
-    public height?: number
+    public width: number
 
-    // TODO: make sure that these values should be readonly
     public readonly downloading: boolean
     public readonly downloaded: boolean
-    public readonly downloadCallbacks: Array<{ resolve: () => any, reject: () => any }>   // TODO: def of resolve & reject
 
-    public downloadAsync(): void
-
-    public static fromModule(moduleId: number): Asset
+    public static loadAsync(moduleId: number): Promise<void>
   }
 
   export namespace Audio {
@@ -710,7 +704,15 @@ declare module 'expo' {
   }
 
   export namespace Font {
-    export function loadAsync(nameOrMap: string | object, uriOrModuleOrAsset: any): void  // TODO: better defs because the doc is not updated I think ...
+    type FontSource = string | number | Asset
+
+    export function isLoaded(name: string): boolean
+    export function isLoading(name: string): boolean
+    export function loadAsync(
+      nameOrMap: string | { [index: string]: FontSource },
+      uriOrModuleOrAsset?: FontSource,
+    ): Promise<void>
+    export function processFontFamily(name?: string | null): string | null | undefined
   }
 
   export namespace Google {

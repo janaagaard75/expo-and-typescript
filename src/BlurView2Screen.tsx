@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Animated } from 'react-native'
 import { BlurView } from 'expo'
+import { Component } from 'react'
 import { Image } from 'react-native'
 import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
@@ -12,7 +13,7 @@ interface State {
   intensity: Animated.Value
 }
 
-export class BlurView2Screen extends React.Component<{}, State> {
+export class BlurView2Screen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
     super(props, context)
 

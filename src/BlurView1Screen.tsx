@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { BlurView } from 'expo'
+import { Component } from 'react'
 import { Image } from 'react-native'
 import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
 
 const expoImageUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
 
-export class BlurView1Screen extends React.Component {
+export class BlurView1Screen extends Component {
   public render() {
     return (
       <View

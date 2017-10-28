@@ -159,6 +159,13 @@ declare module 'expo' {
     }
   }
 
+  export namespace Brightness {
+    export function getBrightnessAsync(): Promise<number>
+    export function getSystemBrightnessAsync(): Promise<number>
+    export function setBrightnessAsync(brightnessValue: number): Promise<void>
+    export function setSystemBrightnessAsync(brightnessValue: number): Promise<void>
+  }
+
   export namespace Constants {
     export const appOwnership: 'expo' | 'standalone' | 'guest'
     export const expoVersion: string

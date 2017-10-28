@@ -22,6 +22,10 @@ export class BlurView2Screen extends Component<{}, State> {
     }
   }
 
+  public static navigationOptions = {
+    title: 'BlurView 2',
+  }
+
   public componentDidMount() {
     this.animate()
   }

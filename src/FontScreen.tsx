@@ -19,6 +19,10 @@ export class FontScreen extends Component<{}, State> {
     this.loadFont()
   }
 
+  public static navigationOptions = {
+    title: 'Font',
+  }
+
   private async loadFont() {
     await Font.loadAsync({
       'PokerKings-regular': require('../assets/fonts/PokerKings-Regular.ttf'),

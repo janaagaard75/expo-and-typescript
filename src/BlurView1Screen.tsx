@@ -8,6 +8,10 @@ import { View } from 'react-native'
 const expoImageUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
 
 export class BlurView1Screen extends Component {
+  public static navigationOptions = {
+    title: 'BlueView 1',
+  }
+
   public render() {
     return (
       <View

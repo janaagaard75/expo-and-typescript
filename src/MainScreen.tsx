@@ -6,7 +6,7 @@ import { View } from 'react-native'
 
 export class MainScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
-    title: 'Expo and TypeScript',
+    title: 'Home',
   }
 
   public render() {

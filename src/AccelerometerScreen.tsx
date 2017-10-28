@@ -25,6 +25,10 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
     }
   }
 
+  public static navigationOptions = {
+    title: 'Accelerometer',
+  }
+
   private subscription: EventSubscription | undefined
 
   public componentDidMount() {

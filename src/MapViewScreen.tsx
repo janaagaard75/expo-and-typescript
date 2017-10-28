@@ -3,6 +3,10 @@ import { Component } from 'react'
 import { MapView } from 'expo'
 
 export class MapViewScreen extends Component {
+  public static navigationOptions = {
+    title: 'MapView',
+  }
+
   public render() {
     return (
       <MapView

@@ -9,6 +9,9 @@
   "private": false,
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "validate-typescript": "tsc --noEmit"
+  },
   "dependencies": {
     "expo": "22.0.0",
     "react": "16.0.0-beta.5",

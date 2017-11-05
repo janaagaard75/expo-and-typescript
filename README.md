@@ -28,7 +28,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [ ] Branch
 * [x] Brightness
 * [ ] Camera
-* [ ] Constants
+* [x] Constants
 * [ ] Contacts
 * [ ] DocumentPicker
 * [ ] ErrorRecovery

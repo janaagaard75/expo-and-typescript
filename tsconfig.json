@@ -16,7 +16,7 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "target": "es2017"
   },

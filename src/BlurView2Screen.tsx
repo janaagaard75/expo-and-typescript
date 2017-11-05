@@ -18,12 +18,12 @@ export class BlurView2Screen extends Component<{}, State> {
     super(props, context)
 
     this.state = {
-      intensity: new Animated.Value(0),
+      intensity: new Animated.Value(0)
     }
   }
 
   public static navigationOptions = {
-    title: 'BlurView 2',
+    title: 'BlurView 2'
   }
 
   public componentDidMount() {
@@ -42,14 +42,14 @@ export class BlurView2Screen extends Component<{}, State> {
         style={{
           alignItems: 'center',
           flex: 1,
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         <Image
           source={{ uri: expoLogoUrl }}
           style={{
             height: 180,
-            width: 180,
+            width: 180
           }}
         />
         <AnimatedBlurView

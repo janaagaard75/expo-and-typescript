@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { Accelerometer } from 'expo'
 import { Component } from 'react'
+// tslint:disable-next-line:no-implicit-dependencies - fbemitter is included by Expo
+import { EventSubscription } from 'fbemitter'
 import { NavigationScreenProps } from 'react-navigation'
 import { StyleSheet } from 'react-native'
 import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
-import { EventSubscription } from 'fbemitter'
 
 interface State {
   accelerometerData: Accelerometer.AccelerometerObject
@@ -20,13 +21,13 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
       accelerometerData: {
         x: 0,
         y: 0,
-        z: 0,
-      },
+        z: 0
+      }
     }
   }
 
   public static navigationOptions = {
-    title: 'Accelerometer',
+    title: 'Accelerometer'
   }
 
   private subscription: EventSubscription | undefined
@@ -48,7 +49,7 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
       <View
         style={{
           marginTop: 15,
-          paddingHorizontal: 10,
+          paddingHorizontal: 10
         }}
       >
         <Text>Accelerometer:</Text>
@@ -57,7 +58,7 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
           style={{
             alignItems: 'stretch',
             flexDirection: 'row',
-            marginTop: 15,
+            marginTop: 15
           }}
         >
           <TouchableOpacity
@@ -128,11 +129,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
     flex: 1,
     justifyContent: 'center',
-    padding: 10,
+    padding: 10
   },
   middleButton: {
     borderColor: '#ccc',
     borderLeftWidth: 1,
-    borderRightWidth: 1,
-  },
+    borderRightWidth: 1
+  }
 })

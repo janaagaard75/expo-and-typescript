@@ -6,7 +6,7 @@ import { View } from 'react-native'
 
 export class LinearGradientScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
-    title: 'LinearGradient',
+    title: 'LinearGradient'
   }
 
   public render() {
@@ -16,7 +16,7 @@ export class LinearGradientScreen extends Component<NavigationScreenProps<void>>
           alignItems: 'center',
           backgroundColor: '#fff',
           flex: 1,
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         <LinearGradient
@@ -24,7 +24,7 @@ export class LinearGradientScreen extends Component<NavigationScreenProps<void>>
           style={{
             height: 100,
             marginTop: 10,
-            width: 100,
+            width: 100
           }}
         />
       </View>

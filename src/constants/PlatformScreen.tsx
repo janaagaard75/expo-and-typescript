@@ -5,7 +5,7 @@ import { Constants } from 'expo'
 
 export class PlatformScreen extends Component {
   public static navigationOptions = {
-    title: 'platform',
+    title: 'platform'
   }
 
   public render() {

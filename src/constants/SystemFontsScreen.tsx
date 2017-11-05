@@ -5,13 +5,13 @@ import { Constants } from 'expo'
 
 export class SystemFontsScreen extends Component {
   public static navigationOptions = {
-    title: 'systemFonts',
+    title: 'systemFonts'
   }
 
   public render() {
     return (
       Constants.systemFonts.map((systemFont, index) =>
-        <Text key={index}>{systemFont}</Text>,
+        <Text key={index}>{systemFont}</Text>
       )
     )
   }

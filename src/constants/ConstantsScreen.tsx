@@ -14,21 +14,14 @@ export class ConstantsScreen extends Component<NavigationScreenProps<void>, Stat
     super(props, context)
 
     this.state = {
-      webViewUserAgent: undefined,
+      webViewUserAgent: undefined
     }
 
     this.updateWebViewUserAgent()
   }
 
   public static navigationOptions = {
-    title: 'Constants',
-  }
-
-  private async updateWebViewUserAgent() {
-    const userAgent = await Constants.getWebViewUserAgentAsync()
-    this.setState({
-      webViewUserAgent: userAgent,
-    })
+    title: 'Constants'
   }
 
   public render() {
@@ -38,7 +31,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps<void>, Stat
       <View
         style={{
           flex: 1,
-          padding: 10,
+          padding: 10
         }}
       >
         <Text>appOvernership: "{Constants.appOwnership}"</Text>
@@ -56,5 +49,12 @@ export class ConstantsScreen extends Component<NavigationScreenProps<void>, Stat
         <Text>webViewUserAgent: "{this.state.webViewUserAgent}"</Text>
       </View>
     )
+  }
+
+  private async updateWebViewUserAgent() {
+    const userAgent = await Constants.getWebViewUserAgentAsync()
+    this.setState({
+      webViewUserAgent: userAgent
+    })
   }
 }

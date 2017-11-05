@@ -6,7 +6,7 @@ import { View } from 'react-native'
 
 export class SvgScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
-    title: 'Svg',
+    title: 'Svg'
   }
 
   public render() {
@@ -16,13 +16,13 @@ export class SvgScreen extends Component<NavigationScreenProps<void>> {
           alignItems: 'center',
           backgroundColor: '#fff',
           flex: 1,
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         <Svg
           height={100}
           style={{
-            marginTop: 10,
+            marginTop: 10
           }}
           viewBox="0 0 60 60"
           width={100}

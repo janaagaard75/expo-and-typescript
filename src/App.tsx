@@ -29,5 +29,5 @@ export default StackNavigator({
   MapView: { screen: MapViewScreen },
   Platform: { screen: PlatformScreen },
   Svg: { screen: SvgScreen },
-  SystemFonts: { screen: SystemFontsScreen },
+  SystemFonts: { screen: SystemFontsScreen }
 })

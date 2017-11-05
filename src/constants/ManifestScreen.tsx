@@ -5,7 +5,7 @@ import { Constants } from 'expo'
 
 export class ManifestScreen extends Component {
   public static navigationOptions = {
-    title: 'manifest',
+    title: 'manifest'
   }
 
   public render() {

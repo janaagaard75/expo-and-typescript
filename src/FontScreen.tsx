@@ -13,23 +13,23 @@ export class FontScreen extends Component<{}, State> {
     super(props, context)
 
     this.state = {
-      fontLoaded: false,
+      fontLoaded: false
     }
 
     this.loadFont()
   }
 
   public static navigationOptions = {
-    title: 'Font',
+    title: 'Font'
   }
 
   private async loadFont() {
     await Font.loadAsync({
-      'PokerKings-regular': require('../assets/fonts/PokerKings-Regular.ttf'),
+      'PokerKings-regular': require('../assets/fonts/PokerKings-Regular.ttf')
     })
 
     this.setState({
-      fontLoaded: true,
+      fontLoaded: true
     })
   }
 

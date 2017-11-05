@@ -124,26 +124,5 @@
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
     "jsx-wrap-multiline": false
-  },
-  "jsRules": {
-    "align": [
-      false
-    ],
-    "eofline": false,
-    "one-line": [
-      true,
-      "check-open-brace"
-    ],
-    "quotemark": [
-      true,
-      "double"
-    ],
-    "semicolon": [
-      true,
-      "never"
-    ],
-    "trailing-comma": [
-      false
-    ]
   }
 }

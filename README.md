@@ -1,16 +1,16 @@
 # React Native using Expo and Typescript
 
-[React Native](https://facebook.github.io/react-native/) app based on [Expo](https://expo.io), written in [TypeScript](http://www.typescriptlang.org). Hot reloading works, but hot module replacement does not.
+The repository is both a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org) and the home for my work  creating a type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html). The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
 
-The type definitions for the Expo SDK still require a lot of work.
+If you're here for the type definition file, here's a direct link to it: [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
 
-This app can be viewed using the Expo client for iOS and Android: <https://expo.io/@janaagaard75/expo-and-typescript>
+The app is found here: <https://expo.io/@janaagaard75/expo-and-typescript>. It is not published to the app stores, so you have to install the Expo client to run it.
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
 ## Type Definitions for Expo
 
-These type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2). The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
+These type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2). The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
 
 Here's a lit of the APIs provided by Expo, with a checkmark for the few, that have been tested.
 
@@ -66,6 +66,8 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [ ] WebBrowse
 
 ## Setting up Expo and React Native with TypeScript
+
+Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Hot reloading and debugging of TypeScript files works, but hot module replacement does not work.
 
 ### TypeScript
 
@@ -164,5 +166,6 @@ I'm working on both improving these type definitions, and I'm trying to make it 
 
 ## Similar Projects
 
+* [expo-ts-example](https://github.com/dalcib/expo-ts-example)
 * [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
 * [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)

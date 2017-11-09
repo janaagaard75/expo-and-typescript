@@ -48,6 +48,7 @@ export class AccelerometerScreen extends Component<NavigationScreenProps<void>, 
     return (
       <View
         style={{
+          backgroundColor: '#fff',
           marginTop: 15,
           paddingHorizontal: 10
         }}

@@ -38,6 +38,7 @@ export class BrightnessScreen extends Component<NavigationScreenProps<void>, Sta
       <View
         style={{
           alignItems: 'center',
+          backgroundColor: '#fff',
           flex: 1,
           justifyContent: 'center'
         }}

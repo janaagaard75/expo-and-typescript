@@ -41,8 +41,21 @@ export class FontScreen extends Component<{}, State> {
     }
 
     return (
-      <View style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-        <Text style={{ fontFamily: 'PokerKings-regular', fontSize: 48, textAlign: 'center' }}>
+      <View
+        style={{
+          alignItems: 'center',
+          backgroundColor: '#fff',
+          flex: 1,
+          justifyContent: 'center'
+        }}
+      >
+        <Text
+          style={{
+            fontFamily: 'PokerKings-regular',
+            fontSize: 48,
+            textAlign: 'center'
+          }}
+        >
           PokerKings regular
         </Text>
       </View>

@@ -276,10 +276,10 @@ declare module 'expo' {
     tint: 'light' | 'default' | 'dark'
   }
 
-  export class BlurView extends React.Component<BlurViewProps, {}> { }
+  export class BlurView extends React.Component<BlurViewProps> { }
   //#endregion
 
-  export class AppLoading extends React.Component<void, void> { }
+  export class AppLoading extends React.Component { }
 
   //#region BarCodeScanner
   export interface BarCodeScannerProps {
@@ -289,7 +289,7 @@ declare module 'expo' {
     style: ViewStyle
   }
 
-  export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
+  export class BarCodeScanner extends React.Component<BarCodeScannerProps> { }
   //#endregion
 
   //#region GLView
@@ -302,7 +302,7 @@ declare module 'expo' {
   export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
   //#endregion
 
-  export class KeepAwake extends React.Component<void, void> {
+  export class KeepAwake extends React.Component {
     public static activate(): void
     public static deactivate(): void
   }
@@ -529,7 +529,7 @@ declare module 'expo' {
     onEnd?: () => any
   }
 
-  export class Video extends React.Component<VideoProps, void> {
+  export class Video extends React.Component<VideoProps> {
     public static RESIZE_MODE_CONTAIN: string
     public static RESIZE_MODE_COVER: string
     public static RESIZE_MODE_STRETCH: string
@@ -614,7 +614,7 @@ declare module 'expo' {
       onError: () => any
     }
 
-    export class BannerView extends React.Component<BannerViewProps, void> { }
+    export class BannerView extends React.Component<BannerViewProps> { }
 
     /**
      * Ad Settings
@@ -726,7 +726,7 @@ declare module 'expo' {
   }
 
   /** Linear gradient. See https://github.com/react-native-community/react-native-linear-gradient. */
-  export class LinearGradient extends Component<LinearGradientProps, {}> { }
+  export class LinearGradient extends Component<LinearGradientProps> { }
 
   export namespace Location {
     export interface LocationOptions {
@@ -920,7 +920,7 @@ declare module 'expo' {
   }
 
   //#region Svg
-  export class Svg extends Component<Svg.SvgProps, {}> { }
+  export class Svg extends Component<Svg.SvgProps> { }
 
   export namespace Svg {
     interface CircleProps extends SharedPathProps {
@@ -1143,28 +1143,28 @@ declare module 'expo' {
       width?: number | string
     }
 
-    export class Circle extends Component<CircleProps, {}> { }
-    export class ClipPath extends Component<ClipPathProps, {}> { }
-    export class Defs extends Component<{}, {}> { }
-    export class Ellipse extends Component<EllipseProps, {}> { }
-    export class G extends Component<SharedPathProps, {}> { }
-    export class Image extends Component<ImageProps, {}> { }
-    export class Line extends Component<LineProps, {}> { }
+    export class Circle extends Component<CircleProps> { }
+    export class ClipPath extends Component<ClipPathProps> { }
+    export class Defs extends Component<{}> { }
+    export class Ellipse extends Component<EllipseProps> { }
+    export class G extends Component<SharedPathProps> { }
+    export class Image extends Component<ImageProps> { }
+    export class Line extends Component<LineProps> { }
     // tslint:disable-next-line:no-shadowed-variable
-    export class LinearGradient extends Component<LinearGradientProps, {}> { }
-    export class Path extends Component<PathProps, {}> { }
-    export class Pattern extends Component<PatternProps, {}> { }
-    export class Polygon extends Component<PolygonProps, {}> { }
-    export class Polyline extends Component<PolylineProps, {}> { }
-    export class RadialGradient extends Component<RadialGradientProps, {}> { }
-    export class Rect extends Component<RectProps, {}> { }
-    export class Shape extends Component<{}, {}> { }
-    export class Stop extends Component<StopProps, {}> { }
-    export class Symbol extends Component<SymbolProps, {}> { }
-    export class Text extends Component<TextProps, {}> { }
-    export class TextPath extends Component<TextPathProps, {}> { }
-    export class TSpan extends Component<TSpanProps, {}> { }
-    export class Use extends Component<UseProps, {}> { }
+    export class LinearGradient extends Component<LinearGradientProps> { }
+    export class Path extends Component<PathProps> { }
+    export class Pattern extends Component<PatternProps> { }
+    export class Polygon extends Component<PolygonProps> { }
+    export class Polyline extends Component<PolylineProps> { }
+    export class RadialGradient extends Component<RadialGradientProps> { }
+    export class Rect extends Component<RectProps> { }
+    export class Shape extends Component<{}> { }
+    export class Stop extends Component<StopProps> { }
+    export class Symbol extends Component<SymbolProps> { }
+    export class Text extends Component<TextProps> { }
+    export class TextPath extends Component<TextPathProps> { }
+    export class TSpan extends Component<TSpanProps> { }
+    export class Use extends Component<UseProps> { }
   }
   //#endregion
 
@@ -1197,14 +1197,14 @@ declare module '@expo/vector-icons' {
     color?: string
   }
 
-  export class Entypo extends React.Component<IconProps, void> { }
-  export class EvilIcons extends React.Component<IconProps, void> { }
-  export class FontAwesome extends React.Component<IconProps, void> { }
-  export class Foundation extends React.Component<IconProps, void> { }
-  export class Ionicons extends React.Component<IconProps, void> { }
-  export class MaterialIcons extends React.Component<IconProps, void> { }
-  export class MaterialComunityIcons extends React.Component<IconProps, void> { }
-  export class Octicons extends React.Component<IconProps, void> { }
-  export class Zocial extends React.Component<IconProps, void> { }
-  export class SimpleLineIcons extends React.Component<IconProps, void> { }
+  export class Entypo extends React.Component<IconProps> { }
+  export class EvilIcons extends React.Component<IconProps> { }
+  export class FontAwesome extends React.Component<IconProps> { }
+  export class Foundation extends React.Component<IconProps> { }
+  export class Ionicons extends React.Component<IconProps> { }
+  export class MaterialIcons extends React.Component<IconProps> { }
+  export class MaterialComunityIcons extends React.Component<IconProps> { }
+  export class Octicons extends React.Component<IconProps> { }
+  export class Zocial extends React.Component<IconProps> { }
+  export class SimpleLineIcons extends React.Component<IconProps> { }
 }

@@ -62,6 +62,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [x] Svg
 * [ ] takeSnapshotAsync
 * [ ] Util
+* [*] Vector Icons
 * [ ] Video
 * [ ] WebBrowse
 

@@ -55,6 +55,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           onPress={() => navigate('Svg')}
           title="Svg"
         />
+        <Button
+          onPress={() => navigate('VectorIcons')}
+          title="Vector Icons"
+        />
       </View>
     )
   }

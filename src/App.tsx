@@ -13,6 +13,7 @@ import { MapViewScreen } from './MapViewScreen'
 import { PlatformScreen } from './constants/PlatformScreen'
 import { SvgScreen } from './SvgScreen'
 import { SystemFontsScreen } from './constants/SystemFontsScreen'
+import { VectorIconsScreen } from './VectorIconsScreen'
 
 export default StackNavigator({
   // tslint:disable:object-literal-sort-keys
@@ -29,5 +30,6 @@ export default StackNavigator({
   MapView: { screen: MapViewScreen },
   Platform: { screen: PlatformScreen },
   Svg: { screen: SvgScreen },
-  SystemFonts: { screen: SystemFontsScreen }
+  SystemFonts: { screen: SystemFontsScreen },
+  VectorIcons: { screen: VectorIconsScreen }
 })

@@ -36,32 +36,45 @@ declare module 'expo' {
     export function setGroup(groupType: string, groupNames: object): void
   }
 
-  class Asset {
-    constructor(options: {
-      hash: string,
-      height: number,
-      name: string,
-      type: string,
-      uri: string,
-      width: number
-    })
+  /** This module provides an interface to Expo’s asset system. An asset is any file that lives alongside the source code of your app that the app needs at runtime. Examples include images, fonts and sounds. Expo’s asset system integrates with React Native’s, so that you can refer to files with require('path/to/file'). This is how you refer to static image files in React Native for use in an Image component, for example. */
+  export class Asset {
+    // The asset class has properties that these, but I believe that these are the only ones meant to be public.
 
+    /** The MD5 hash of the asset’s data. */
     public hash: string
+
+    /** If the asset is an image, the height of the image data divided by the scale factor. The scale factor is the number after `@` in the filename, or `1` if not present. */
     public height: number
+
+    /** If the asset has been downloaded (by calling `downloadAsync()`), the `file://` URI pointing to the local file on the device that contains the asset data. */
     public localUri: string
+
+    /** The name of the asset file without the extension. Also without the part from @ onward in the filename (used to specify scale factor for images). */
     public name: string
+
+    /** The extension of the asset filename. */
     public type: string
+
+    /** A URI that points to the asset’s data on the remote server. When running the published version of your app, this refers to the the location on Expo’s asset server where Expo has stored your asset. When running the app from XDE during development, this URI points to XDE’s server running on your computer and the asset is served directly from your computer. */
     public uri: string
+
+    /** If the asset is an image, the width of the image data divided by the scale factor. The scale factor is the number after `@` in the filename, or `1` if not present. */
     public width: number
 
-    public readonly downloading: boolean
-    public readonly downloaded: boolean
+    /** Downloads the asset data to a local file in the device’s cache directory. Once the returned promise is fulfilled without error, the localUri field of this asset points to a local file containing the asset data. The asset is only downloaded if an up-to-date local file for the asset isn’t already present due to an earlier download. */
+    public downloadAsync(): Promise<void>
 
-    public static loadAsync(moduleId: number): Promise<void>
+    /** Returns the `Expo.Asset` instance representing an asset given its module. */
+    public static fromModule(moduleId: number): Asset
+
+    /**
+     * A helper that wraps `Expo.Asset.fromModule(module).downloadAsync` for convenience.
+     * @param moduleIds An array of `require('path/to/file')`. Can also be just one module without an Array.
+     */
+    public static loadAsync(moduleIds: number | Array<number>): Promise<void>
   }
 
   export namespace Audio {
-
     export enum InterruptionModeIOS {
       INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS = 0,
       INTERRUPTION_MODE_IOS_DO_NOT_MIX = 1,

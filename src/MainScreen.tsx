@@ -24,6 +24,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Accelerometer"
         />
         <Button
+          onPress={() => navigate('Asset')}
+          title="Asset"
+        />
+        <Button
           onPress={() => navigate('Constants')}
           title="Constants"
         />

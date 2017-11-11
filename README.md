@@ -19,7 +19,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [ ] Amplitude
 * [ ] AppLoading
 * [ ] Art
-* [ ] Asset
+* [x] Asset
 * [ ] Audio
 * [ ] AuthSession
 * [ ] AV

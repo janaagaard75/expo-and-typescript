@@ -201,7 +201,11 @@ declare module 'expo' {
       }
     }
 
-    /** 'expo': Running inside the Expo client. 'standalone': Standalone app. 'guest': Opened through a link from a standalone app. */
+    /**
+     * - `'expo'`: Running inside the Expo client.
+     * - `'standalone'`: Standalone app.
+     * - `'guest'`: Opened through a link from a standalone app.
+     */
     export const appOwnership: 'expo' | 'standalone' | 'guest'
 
     export const deviceId: string

@@ -13,16 +13,28 @@ declare module 'expo' {
   import { ViewStyle } from 'react-native'
   import { ImageURISource } from 'react-native'
 
+  /** Access the device accelerometer sensor(s) to respond to changes in acceleration in 3d space. */
   export namespace Accelerometer {
-    // TODO: good export type of x, y and z
     export interface AccelerometerObject {
-      x: any
-      y: any
-      z: any
+      x: number
+      y: number
+      z: number
     }
 
+    /**
+     * Subscribe for updates to the accelerometer.
+     * @param listener A callback that is invoked when an accelerometer update is available. When invoked, the listener is provided a single argumument that is an object containing keys x, y, z.
+     * @returns An EventSubscription object that you can call remove() on when you would like to unsubscribe the listener.
+     */
     export function addListener(listener: (obj: AccelerometerObject) => any): EventSubscription
+
+    /** Remove all listeners. */
     export function removeAllListeners(): void
+
+    /**
+     * Subscribe for updates to the accelerometer.
+     * @param intervalMs Desired interval in milliseconds between accelerometer updates.
+     */
     export function setUpdateInterval(intervalMs: number): void
   }
 

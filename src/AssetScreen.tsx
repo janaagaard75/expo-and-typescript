@@ -3,13 +3,21 @@ import { Component } from 'react'
 import { Asset } from 'expo'
 import { View } from 'react-native'
 import { Image } from 'react-native'
+import { Text } from 'react-native'
 
-export class AssetScreen extends Component {
+interface State {
+  assetsLoaded: boolean
+}
+
+export class AssetScreen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
     super(props, context)
 
-    // This is only required when the app has been published. I haven't tested this code yet. Probably need something listening for this method to finish, that would then trigger a refresh of this component.
-    Asset.loadAsync(require('./wtfs-per-minute.png'))
+    this.state = {
+      assetsLoaded: false
+    }
+
+    this.loadAssets()
   }
 
   public static navigationOptions = {
@@ -17,6 +25,12 @@ export class AssetScreen extends Component {
   }
 
   public render() {
+    if (!this.state.assetsLoaded) {
+      return (
+        <Text>Loading assets...</Text>
+      )
+    }
+
     return (
       <View
         style={{
@@ -38,5 +52,13 @@ export class AssetScreen extends Component {
         />
       </View>
     )
+  }
+
+  private async loadAssets() {
+    // This is only required when the app has been published. I haven't tested this code yet, so not really sure if this statement is correct.
+    await Asset.loadAsync(require('./wtfs-per-minute.png'))
+    this.setState({
+      assetsLoaded: true
+    })
   }
 }

@@ -27,7 +27,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [x] BlurView
 * [ ] Branch
 * [x] Brightness
-* [ ] Camera
+* [x] Camera
 * [x] Constants
 * [ ] Contacts
 * [ ] DocumentPicker

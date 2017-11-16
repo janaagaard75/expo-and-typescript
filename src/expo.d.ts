@@ -191,6 +191,112 @@ declare module 'expo' {
     export function setSystemBrightnessAsync(brightnessValue: number): Promise<void>
   }
 
+  // #region Camera
+  interface CameraProps extends ViewProperties {
+    /** State of camera auto focus. Use one of `Camera.Constants.AutoFocus`. When `on`, auto focus will be enabled, when `off`, it wont’t and focus will lock as it was in the moment of change, but it can be adjusted on some devices via the `focusDepth` property. Default: `on`. */
+    autoFocus?: Camera.AutoFocus
+
+    /** Default: Object.values(CameraManager.BarCodeType). */
+    barCodeTypes?: Array<any>
+
+    /** Camera flash mode. Use one of `Camera.Constants.FlashMode`. When `on`, the flash on your device will turn on when taking a picture, when `off`, it wont’t. Setting to `auto` will fire flash if required, `torch` turns on flash during the preview. Default: `off`. */
+    flashMode?: Camera.FlashMode
+
+    /** Distance to plane of sharpest focus. A value between `0` and `1`: `0` - infinity focus, `1` - focus as close as possible. Default: `0`. */
+    focusDepth?: number
+
+    onBarCodeRead?: Function
+
+    /** Callback invoked when camera preview has been set. */
+    onCameraReady?: Function
+
+    onMountError?: Function
+
+    /** **Android only**. A string representing aspect ratio of the preview, eg. `'4:3'`, `'16:9'`, `'1:1'`. To check if a ratio is supported by the device use `getSupportedRatiosAsync`. Default: `'4:3'`. */
+    ratio?: string,
+
+    /** Camera facing. Use one of `Camera.Constants.Type`. When `front`, use the front-facing camera. When `back`, use the back-facing camera. Default: `back`. */
+    type: Camera.Type,
+
+    /** Camera white balance. Use one of `Camera.Constants.WhiteBalance`: `auto`, `sunny`, `cloudy`, `shadow`, `fluorescent`, `incandescent`. If a device does not support any of these values previous one is used. */
+    whiteBalance?: Camera.WhiteBalance
+
+    /** A value between `0` and `1` being a percentage of device’s max zoom. `0` - not zoomed, `1` - maximum zoom. Default: `0`. */
+    zoom?: number
+  }
+
+  /**
+   * A React component that renders a preview for the device’s either front or back camera. Camera’s parameters like zoom, auto focus, white balance and flash mode are adjustable. With use of Camera one can also take photos and record videos that are saved to the app’s cache. Only one Camera preview is supported by Expo right now.
+   *
+   * Requires `Permissions.CAMERA`. Video recording requires `Permissions.AUDIO_RECORDING`.
+   */
+  class Camera extends Component<CameraProps> {
+    public takePictureAsync(options: Camera.TakePictureOptions): Promise<Camera.Photo>
+  }
+
+  namespace Camera {
+    // From https://github.com/expo/expo/blob/32c29eea06ff5a2f811f3fe72239d1da2b23cba2/ios/versioned-react-native/ABI21_0_0/Exponent/Modules/Api/Components/ABI21_0_0EXCameraManager.m
+    type AutoFocus = 'on' | 'off'
+
+    type FlashMode = 'off' | 'on' | 'auto' | 'photo'
+
+    type Type = 'front' | 'back'
+
+    type VideoQuality = '2160p' | '1080p' | '720p' | '480p' | '4:3'
+
+    type WhiteBalance = 'auto' | 'sunny' | 'cloudy' | 'shadow' | 'incandescent' | 'fluorescent'
+
+    // Is it possible to avoid having to redeclare the strings?
+    type CameraConstants = {
+      AutoFocus: {
+        on: 'on',
+        off: 'off'
+      }
+      FlashMode: {
+        off: 'off',
+        on: 'on',
+        auto: 'auto',
+        photo: 'photo'
+      }
+      Type: {
+        back: 'back',
+        front: 'front'
+      }
+      VideoQuality: {
+        '2160p': '2160p',
+        '1080p': '1080p',
+        '720p': '720p',
+        '480p': '480p',
+        '4:3': '4:3'
+      }
+      WhiteBalance: {
+        auto: 'auto',
+        sunny: 'sunny',
+        cloudy: 'cloudy',
+        shadow: 'shadow',
+        incandescent: 'incandescent',
+        fluorescent: 'fluorescent'
+      }
+    }
+
+    // tslint:disable-next-line:no-shadowed-variable
+    const Constants: CameraConstants
+
+    interface Photo {
+      base64: boolean
+      exif: boolean
+      height: number
+      uri: string
+      width: number
+    }
+
+    interface TakePictureOptions {
+      base64: boolean
+      exif: boolean
+      quality: number
+    }
+  }
+  // #endregion
 
   /** System information that remains constant throughout the lifetime of your app. */
   export namespace Constants {
@@ -841,7 +947,9 @@ declare module 'expo' {
   }
 
   export namespace Permissions {
-    export type PermissionType = 'remoteNotifications'
+    // TODO: Is it necessary to define these?
+    export type PermissionType
+      = 'remoteNotifications'
       | 'location'
       | 'camera'
       | 'contacts'
@@ -865,12 +973,12 @@ declare module 'expo' {
     export function getAsync(type: PermissionType): Promise<PermissionResponse>
     export function askAsync(type: PermissionType): Promise<PermissionResponse>
 
-    export const CAMERA: string
-    export const AUDIO_RECORDING: string
-    export const LOCATION: string
-    export const REMOTE_NOTIFICATIONS: string
-    export const NOTIFICATIONS: string
-    export const CONTACTS: string
+    export const AUDIO_RECORDING: PermissionType
+    export const CAMERA: PermissionType
+    export const CONTACTS: PermissionType
+    export const LOCATION: PermissionType
+    export const NOTIFICATIONS: PermissionType
+    export const REMOTE_NOTIFICATIONS: PermissionType
   }
 
   /** Register Root Component. Useful when using function like react-redux connect for example. */

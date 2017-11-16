@@ -5,6 +5,7 @@ import { AssetScreen } from './AssetScreen'
 import { BlurView1Screen } from './BlurView1Screen'
 import { BlurView2Screen } from './BlurView2Screen'
 import { BrightnessScreen } from './BrightnessScreen'
+import { CameraScreen } from './CameraScreen'
 import { ConstantsScreen } from './constants/ConstantsScreen'
 import { FontScreen } from './FontScreen'
 import { LinearGradientScreen } from './LinearGradientScreen'
@@ -25,6 +26,7 @@ export default StackNavigator({
   BlurView1: { screen: BlurView1Screen },
   BlurView2: { screen: BlurView2Screen },
   Brightness: { screen: BrightnessScreen },
+  Camera: { screen: CameraScreen },
   Constants: { screen: ConstantsScreen },
   Font: { screen: FontScreen },
   LinearGradient: { screen: LinearGradientScreen },

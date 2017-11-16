@@ -191,28 +191,39 @@ declare module 'expo' {
     export function setSystemBrightnessAsync(brightnessValue: number): Promise<void>
   }
 
+
+  /** System information that remains constant throughout the lifetime of your app. */
   export namespace Constants {
     type Platform = {
       ios: {
+        /** The human-readable model name of this device, e.g. `"iPhone 7 Plus"`. */
         model: string,
+
+        /** The Apple internal model identifier for this device, e.g. `"iPhone1,1"`. */
         platform: string,
+
+        /** The version of iOS running on this device, e.g. `"10.3"`. */
         systemVersion: string,
+
+        /** The user interface idiom of this device, i.e. whether the app is running on an iPhone or an iPad. Current supported values are `"handset"` and `"tablet"`. Apple TV and CarPlay will show up as `"unsupported"`. */
         userInterfaceIdiom: string
       }
     }
 
     /**
-     * - `'expo'`: Running inside the Expo client.
-     * - `'standalone'`: Standalone app.
-     * - `'guest'`: Opened through a link from a standalone app.
+     * - `"expo"`: Running inside the Expo client.
+     * - `"standalone"`: Standalone app.
+     * - `"guest"`: Opened through a link from a standalone app.
      */
     export const appOwnership: 'expo' | 'standalone' | 'guest'
 
+    /** An identifier that is unique to this particular device and installation of the Expo client. */
     export const deviceId: string
 
+    /** A human-readable name for the device type. */
     export const deviceName: string
 
-    /** The year the device would be considered "high end". Might be Android only. */
+    /** The year the device would be considered high end. Might be Android only. */
     export const deviceYearClass: number
 
     /** The version string of the Expo client currently running. */
@@ -224,6 +235,7 @@ declare module 'expo' {
     /** true if the app is running on a device, false if running in a simulator or emulator. */
     export const isDevice: boolean
 
+    /** When an app is opened due to a deep link, the prefix of the URI without the deep link part. This value depends on `Expo.Constants.appOwnership`—: it may be different if your app is running standalone vs. in the Expo client. */
     export const linkingUri: string
 
     /** See https://docs.expo.io/versions/latest/guides/how-expo-works.html#expo-manifest. */
@@ -231,10 +243,13 @@ declare module 'expo' {
 
     export const platform: Platform
 
+    /** A string that is unique to the current session of your app. It is different across apps and across multiple launches of the same app. */
     export const sessionId: string
 
+    /** The default status bar height for the device. Does not factor in changes when location tracking is in use or a phone call is active. */
     export const statusBarHeight: number
 
+    /** A list of the system font names available on the current device. */
     export const systemFonts: Array<string>
   }
 

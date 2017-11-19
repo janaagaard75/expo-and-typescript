@@ -1,6 +1,7 @@
 // tslint:disable:ban-types
 // tslint:disable:interface-over-type-literal
 // tslint:disable:max-classes-per-file
+// tslint:disable:member-access
 
 declare module 'expo' {
   import { ColorPropType } from 'react-native'
@@ -86,19 +87,202 @@ declare module 'expo' {
     public static loadAsync(moduleIds: number | Array<number>): Promise<void>
   }
 
-  export namespace Audio {
-    export enum InterruptionModeIOS {
+  namespace AV {
+    type PlaybackSource = number | { uri: string } | Asset
+
+    type PlaybackStatus =
+      {
+        isLoaded: false,
+        androidImplementation?: string,
+
+        /** Populated exactly once when an error forces the object to unload. */
+        error?: string
+      } |
+      {
+        isLoaded: true,
+        androidImplementation?: string,
+
+        uri: string,
+
+        progressUpdateIntervalMillis: number,
+        durationMillis?: number,
+        positionMillis: number,
+        playableDurationMillis?: number,
+
+        shouldPlay: boolean,
+        isPlaying: boolean,
+        isBuffering: boolean,
+
+        rate: number,
+        shouldCorrectPitch: boolean,
+        volume: number,
+        isMuted: boolean,
+        isLooping: boolean,
+
+        /** True exactly once when the track plays to finish. */
+        didJustFinish: boolean
+      }
+
+    type PlaybackStatusToSet = {
+      androidImplementation?: string,
+      progressUpdateIntervalMillis?: number,
+      positionMillis?: number,
+      shouldPlay?: boolean,
+      rate?: number,
+      shouldCorrectPitch?: boolean,
+      volume?: number,
+      isMuted?: boolean,
+      isLooping?: boolean
+    }
+  }
+
+  /**
+   * Provides basic sample playback and recording.
+   *
+   * Note that Expo does not yet support backgrounding, so audio is not available to play in the background of your experience. Audio also automatically stops if headphones / bluetooth audio devices are disconnected.
+   */
+  namespace Audio {
+    type PlaybackSource = AV.PlaybackSource
+    type PlaybackStatus = AV.PlaybackStatus
+    type PlaybackStatusToSet = AV.PlaybackStatusToSet
+
+    type RecordingOptions = {
+      android: {
+        extension: string,
+        outputFormat: number,
+        audioEncoder: number,
+        sampleRate?: number,
+        numberOfChannels?: number,
+        bitRate?: number,
+        maxFileSize?: number
+      },
+      ios: {
+        extension: string,
+        outputFormat?: string | number,
+        audioQuality: number,
+        sampleRate: number,
+        numberOfChannels: number,
+        bitRate: number,
+        bitRateStrategy?: number,
+        bitDepthHint?: number,
+        linearPCMBitDepth?: number,
+        linearPCMIsBigEndian?: boolean,
+        linearPCMIsFloat?: boolean
+      }
+    }
+
+    enum RecordingOptionsAndroidOutputFormat {
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_DEFAULT = 0,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_THREE_GPP = 1,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_MPEG_4 = 2,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_AMR_NB = 3,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_AMR_WB = 4,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_AAC_ADIF = 5,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_AAC_ADTS = 6,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_RTP_AVP = 7,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_MPEG2TS = 8,
+      RECORDING_OPTION_ANDROID_OUTPUT_FORMAT_WEBM = 9
+    }
+
+    enum RecordingOptionAndroidAudioEncoder {
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_DEFAULT = 0,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_AMR_NB = 1,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_AMR_WB = 2,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_AAC = 3,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_HE_AAC = 4,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_AAC_ELD = 5,
+      RECORDING_OPTION_ANDROID_AUDIO_ENCODER_VORBIS = 6
+    }
+
+    enum RecordingOptionIosOutputFormat {
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_LINEARPCM = 'lpcm',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_AC3 = 'ac-3',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_60958AC3 = 'cac3',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_APPLEIMA4 = 'ima4',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC = 'aac ',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4CELP = 'celp',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4HVXC = 'hvxc',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4TWINVQ = 'twvq',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MACE3 = 'MAC3',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MACE6 = 'MAC6',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_ULAW = 'ulaw',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_ALAW = 'alaw',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_QDESIGN = 'QDMC',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_QDESIGN2 = 'QDM2',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_QUALCOMM = 'Qclp',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEGLAYER1 = '.mp1',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEGLAYER2 = '.mp2',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEGLAYER3 = '.mp3',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_APPLELOSSLESS = 'alac',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_HE = 'aach',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_LD = 'aacl',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_ELD = 'aace',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_ELD_SBR = 'aacf',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_ELD_V2 = 'aacg',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_HE_V2 = 'aacp',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MPEG4AAC_SPATIAL = 'aacs',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_AMR = 'samr',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_AMR_WB = 'sawb',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_AUDIBLE = 'AUDB',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_ILBC = 'ilbc',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_DVIINTELIMA = 0x6d730011,
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_MICROSOFTGSM = 0x6d730031,
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_AES3 = 'aes3',
+      RECORDING_OPTION_IOS_OUTPUT_FORMAT_ENHANCEDAC3 = 'ec-3'
+    }
+
+    enum RecordingOptionIosAudioQuality {
+      RECORDING_OPTION_IOS_AUDIO_QUALITY_MIN = 0,
+      RECORDING_OPTION_IOS_AUDIO_QUALITY_LOW = 0x20,
+      RECORDING_OPTION_IOS_AUDIO_QUALITY_MEDIUM = 0x40,
+      RECORDING_OPTION_IOS_AUDIO_QUALITY_HIGH = 0x60,
+      RECORDING_OPTION_IOS_AUDIO_QUALITY_MAX = 0x7f
+    }
+
+    enum RecodingOptionIosBitRateStratety {
+      RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_CONSTANT = 0,
+      RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_LONG_TERM_AVERAGE = 1,
+      RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_VARIABLE_CONSTRAINED = 2,
+      RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_VARIABLE = 3
+    }
+
+    enum InterruptionModeIos {
       INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS = 0,
       INTERRUPTION_MODE_IOS_DO_NOT_MIX = 1,
       INTERRUPTION_MODE_IOS_DUCK_OTHERS = 2
     }
 
-    export enum InterruptionModeAndroid {
+    enum InterruptionModeAndroid {
       INTERRUPTION_MODE_ANDROID_DO_NOT_MIX = 1,
       INTERRUPTION_MODE_ANDROID_DUCK_OTHERS = 2
     }
 
-    export type SoundStatus =
+    const RECORDING_OPTIONS_PRESET_HIGH_QUALITY: RecordingOptions
+    const RECORDING_OPTIONS_PRESET_LOW_QUALITY: RecordingOptions
+
+    type RecordingStatus =
+      {
+        canRecord: false,
+        isDoneRecording: false
+      } | {
+        canRecord: true,
+        isRecording: boolean,
+        durationMillis: number
+      } | {
+        canRecord: false,
+        isDoneRecording: true,
+        durationMillis: number
+      }
+
+    type AudioMode = {
+      allowsRecordingIOS: boolean,
+      interruptionModeIOS: InterruptionModeIos,
+      playsInSilentLockedModeIOS: boolean,
+      interruptionModeAndroid: InterruptionModeAndroid,
+      shouldDuckAndroid: boolean
+    }
+
+    type SoundStatus =
       {
         isLoaded: false
       } | {
@@ -114,73 +298,115 @@ declare module 'expo' {
         didJustFinish: boolean
       }
 
-    export type RecordingStatus =
-      {
-        canRecord: false,
-        isDoneRecording: false
-      } | {
-        canRecord: true,
-        isRecording: boolean,
-        durationMillis: number
-      } | {
-        canRecord: false,
-        isDoneRecording: true,
-        durationMillis: number
-      }
+    function setIsEnabledAsync(value: boolean): Promise<void>
+    function setAudioModeAsync(mode: AudioMode): Promise<void>
 
-    export type AudioMode = {
-      allowsRecordingIOS: boolean,
-      interruptionModeIOS: InterruptionModeIOS,
-      playsInSilentLockedModeIOS: boolean,
-      interruptionModeAndroid: InterruptionModeAndroid,
-      shouldDuckAndroid: boolean
+    /** This class represents a sound corresponding to an Asset or URL. */
+    class Sound {
+      /**
+       * Creates and loads a sound from source, with optional `initialStatus`, `onPlaybackStatusUpdate`, and `downloadFirst`.
+       *
+       * @returns A `Promise` that is rejected if creation failed, or fulfilled with the following dictionary if creation succeeded:
+       * - `sound`: The newly created and loaded Sound object.
+       * - `status`: The PlaybackStatus of the Sound object. See the AV documentation for further information.
+       */
+      static create(
+        /**
+         * The source of the sound. The following forms are supported:
+         *
+         * - A dictionary of the form `{ uri: 'http://path/to/file' }` with a network URL pointing to an audio file on the web.
+         * - `require('path/to/file')` for an audio file asset in the source code directory.
+         * - An `Expo.Asset` object for an audio file asset.
+         */
+        source: PlaybackSource,
+
+        /** The initial intended PlaybackStatusToSet of the sound, whose values will override the default initial playback status. This value defaults to `{}` if no parameter is passed. */
+        initialStatus?: PlaybackStatusToSet,
+
+        /** A function taking a single parameter PlaybackStatus. This value defaults to `null` if no parameter is passed. */
+        onPlaybackStatusUpdate?: ((status?: PlaybackStatus) => void) | null,
+
+        /** If set to true, the system will attempt to download the resource to the device before loading. This value defaults to `true`. Note that at the moment, this will only work for `source`s of the form `require('path/to/file')` or `Asset` objects. */
+        downloadFirst?: boolean
+      ): Promise<{ sound: Sound, status: PlaybackStatus }>
+
+      getStatusAsync(): Promise<SoundStatus>
+      setOnPlaybackStatusUpdate(onPlaybackStatusUpdate?: (status: PlaybackStatus) => void): void
+
+      loadAsync(
+        source: PlaybackSource,
+        /** Default: `{}`. */
+        initialStatus?: PlaybackStatusToSet,
+        /** Default: `true`. */
+        downloadFirst?: boolean
+      ): Promise<PlaybackStatus>
+
+      unloadAsync(): Promise<PlaybackStatus>
+
+      setStatusAsync(status: PlaybackStatusToSet): Promise<PlaybackStatus>
+
+      playAsync(): Promise<PlaybackStatus>
+      playFromPositionAsync(positionMillis: number): Promise<PlaybackStatus>
+      pauseAsync(): Promise<PlaybackStatus>
+      stopAsync(): Promise<PlaybackStatus>
+      setPositionAsync(positionMillis: number): Promise<PlaybackStatus>
+      setRateAsync(rate: number, shouldCorrectPitch: boolean): Promise<PlaybackStatus>
+      setVolumeAsync(volume: number): Promise<PlaybackStatus>
+      setIsMutedAsync(isMuted: boolean): Promise<PlaybackStatus>
+      setIsLoopingAsync(isLooping: boolean): Promise<PlaybackStatus>
+      setProgressUpdateIntervalAsync(progressUpdateIntervalMillis: number): Promise<PlaybackStatus>
     }
 
-    export function setAudioModeAsync(mode: AudioMode): Promise<void>  // TODO: better return
+    class Recording {
+      /** Gets the `status` of the `Recording`. */
+      getStatusAsync(): Promise<RecordingStatus>
 
-    /**
-     * Expo Sound
-     */
-    export interface SoundOptions {
-      source: number | string | Asset
-    }
+      /** Sets a function to be called regularly with the `status` of the `Recording`. */
+      setOnRecordingStatusUpdate(onRecordingStatusUpdate?: (status: RecordingStatus) => void): void
 
-    export class Sound {
-      constructor(options: SoundOptions)
+      /** Sets the interval with which onRecordingStatusUpdate is called while the recording can record. This value defaults to 500 milliseconds. */
+      setProgressUpdateInterval(progressUpdateIntervalMillis: number): void
 
-      public getStatusAsync(): Promise<SoundStatus>
-      public setCallback(callback: (status: SoundStatus) => any): void
-      public setCallbackPollingMillis(millis: number): void
+      /** Loads the recorder into memory and prepares it for recording. This must be called before calling `startAsync()`. This method can only be called if the `Recording` instance has never yet been prepared. */
+      prepareToRecordAsync(
+        /** Options for the recording, including sample rate, bitrate, channels, format, encoder, and extension. If no options are passed to `prepareToRecordAsync()`, the recorder will be created with options `Expo.Audio.RECORDING_OPTIONS_PRESET_LOW_QUALITY`. */
+        options?: RecordingOptions
+      ): Promise<RecordingStatus>
 
-      public unloadAsync(): Promise<SoundStatus>
-      public playAsync(): Promise<SoundStatus>
-      public pauseAsync(): Promise<SoundStatus>
-      public stopAsync(): Promise<SoundStatus>
-      public setPositionAsync(millis: number): Promise<SoundStatus>
-      public setRateAsync(
-        value: number,
-        shouldCorrectPitch: boolean
-      ): Promise<SoundStatus>
-      public setVolumeAsync(value: number): Promise<SoundStatus>
-      public setIsMutedAsync(value: boolean): Promise<SoundStatus>
-      public setIsLoopingAsync(value: boolean): Promise<SoundStatus>
-    }
+      /** Begins recording. This method can only be called if the `Recording` has been prepared. */
+      startAsync(): Promise<RecordingStatus>
 
-    export class Recording {
-      constructor();
+      /**
+       * Pauses recording. This method can only be called if the Recording has been prepared.
+       *
+       * NOTE: This is only available on Android API version 24 and later.
+       */
+      pauseAsync(): Promise<RecordingStatus>
 
-      public getStatusAsync(): Promise<RecordingStatus>
-      public setCallback(callback: (status: RecordingStatus) => any): void
-      public setCallbackPollingMillis(millis: number): void
+      /** Stops the recording and deallocates the recorder from memory. This reverts the Recording instance to an unprepared state, and another Recording instance must be created in order to record again. This method can only be called if the `Recording` has been prepared. */
+      stopAndUnloadAsync(): Promise<RecordingStatus>
 
-      public prepareToRecordAsync(): Promise<RecordingStatus>
-      public isPreparedToRecord(): boolean  // Note @pierre-H : I found this function on the v16.0.0 doc, not in the code so have to check it.
-      public startAsync(): Promise<RecordingStatus>
-      public pauseAsync(): Promise<RecordingStatus>
-      public stopAndUnloadAsync(): Promise<RecordingStatus>
+      /**
+       * Gets the local URI of the Recording. Note that this will only succeed once the Recording is prepared to record.
+       *
+       * @returns A string with the local URI of the `Recording`, or `null` if the `Recording` is not prepared to record.
+       */
+      getURI(): string | null | undefined
 
-      public getURI(): string | undefined
-      public getNewSound(): Sound | null
+      /**
+       * Creates and loads a new `Sound` object to play back the `Recording`. Note that this will only succeed once the `Recording` is done recording (once `stopAndUnloadAsync()` has been called).
+       *
+       * @returns A Promise that is rejected if creation failed, or fulfilled with the following dictionary if creation succeeded:
+       * - `sound`: the newly created and loaded Sound object.
+       * - `status`: the PlaybackStatus of the Sound object.
+       */
+      createNewLoadedSound(
+        /** The initial intended `PlaybackStatusToSet` of the sound, whose values will override the default initial playback status. This value defaults to `{}` if no parameter is passed. */
+        initialStatus?: PlaybackStatusToSet,
+
+        /** A function taking a single parameter `PlaybackStatus`. This value defaults to `null` if no parameter is passed. */
+        onPlaybackStatusUpdate?: ((status: PlaybackStatus) => void) | null
+      ): Promise<{ sound: Sound, status: PlaybackStatus }>
     }
   }
 
@@ -246,7 +472,7 @@ declare module 'expo' {
 
     type WhiteBalance = 'auto' | 'sunny' | 'cloudy' | 'shadow' | 'incandescent' | 'fluorescent'
 
-    // Is it possible to avoid having to redeclare the strings?
+    // TODO: Use enums to merge the types above with the values below.
     type CameraConstants = {
       AutoFocus: {
         on: 'on',
@@ -644,13 +870,14 @@ declare module 'expo' {
       orientation: 'landscape' | 'portrait'
     }
   }
-  export type VideoError = {
-    code: any,
-    domain: any
-  } | {
-    what: any,
-    extra: any
-  }
+  export type VideoError =
+    {
+      code: any,
+      domain: any
+    } | {
+      what: any,
+      extra: any
+    }
 
   export interface VideoProgress {
     currentTime: number
@@ -693,14 +920,15 @@ declare module 'expo' {
     export interface Options {
       type: string
     }
-    export type Response = {
-      type: 'success',
-      uri: string,
-      name: string,
-      size: number
-    } | {
-      type: 'cancel'
-    }
+    export type Response =
+      {
+        type: 'success',
+        uri: string,
+        name: string,
+        size: number
+      } | {
+        type: 'cancel'
+      }
 
     export function getDocumentAsync(options: Options): Response
   }
@@ -714,13 +942,16 @@ declare module 'expo' {
       permissions?: Array<string>
       behavior?: 'web' | 'native' | 'browser' | 'system'
     }
-    export type Response = {
-      type: 'success',
-      token: string,
-      expires: number
-    } | {
-      type: 'cancel'
-    }
+
+    export type Response =
+      {
+        type: 'success',
+        token: string,
+        expires: number
+      } | {
+        type: 'cancel'
+      }
+
     export function logInWithReadPermissionsAsync(appId: string, options: Options): void
   }
 
@@ -809,23 +1040,24 @@ declare module 'expo' {
       scopes?: Array<string>
     }
 
-    export type LogInResult = {
-      type: 'cancel'
-    } | {
-      type: 'success',
-      accessToken: string,
-      idToken?: string,
-      refreshToken?: string,
-      serverAuthCode?: string,
-      user: {
-        id: string,
-        name: string,
-        givenName: string,
-        familyName: string,
-        photoUrl?: string,
-        email?: string
+    export type LogInResult =
+      {
+        type: 'cancel'
+      } | {
+        type: 'success',
+        accessToken: string,
+        idToken?: string,
+        refreshToken?: string,
+        serverAuthCode?: string,
+        user: {
+          id: string,
+          name: string,
+          givenName: string,
+          familyName: string,
+          photoUrl?: string,
+          email?: string
+        }
       }
-    }
 
     export function logInAsync(config: LogInConfig): Promise<LogInResult>
   }

@@ -15,8 +15,8 @@ declare module 'expo' {
   import { ImageURISource } from 'react-native'
 
   /** Access the device accelerometer sensor(s) to respond to changes in acceleration in 3d space. */
-  export namespace Accelerometer {
-    export interface AccelerometerObject {
+  namespace Accelerometer {
+    interface AccelerometerObject {
       x: number
       y: number
       z: number
@@ -27,64 +27,64 @@ declare module 'expo' {
      * @param listener A callback that is invoked when an accelerometer update is available. When invoked, the listener is provided a single argumument that is an object containing keys x, y, z.
      * @returns An EventSubscription object that you can call remove() on when you would like to unsubscribe the listener.
      */
-    export function addListener(listener: (obj: AccelerometerObject) => any): EventSubscription
+    function addListener(listener: (obj: AccelerometerObject) => any): EventSubscription
 
     /** Remove all listeners. */
-    export function removeAllListeners(): void
+    function removeAllListeners(): void
 
     /**
      * Subscribe for updates to the accelerometer.
      * @param intervalMs Desired interval in milliseconds between accelerometer updates.
      */
-    export function setUpdateInterval(intervalMs: number): void
+    function setUpdateInterval(intervalMs: number): void
   }
 
-  export namespace Amplitude {
-    export function initialize(apiKey: string): void
-    export function setUserId(userId: string): void
-    export function setUserProperties(userProperties: object): void    // TODO: add userProperties definition from amplitude doc
-    export function clearUserProperties(): void
-    export function logEvent(eventName: string): void
-    export function logEventWithProperties(eventName: string, properties: object): void
-    export function setGroup(groupType: string, groupNames: object): void
+  namespace Amplitude {
+    function initialize(apiKey: string): void
+    function setUserId(userId: string): void
+    function setUserProperties(userProperties: object): void    // TODO: add userProperties definition from amplitude doc
+    function clearUserProperties(): void
+    function logEvent(eventName: string): void
+    function logEventWithProperties(eventName: string, properties: object): void
+    function setGroup(groupType: string, groupNames: object): void
   }
 
   /** This module provides an interface to Expo’s asset system. An asset is any file that lives alongside the source code of your app that the app needs at runtime. Examples include images, fonts and sounds. Expo’s asset system integrates with React Native’s, so that you can refer to files with require('path/to/file'). This is how you refer to static image files in React Native for use in an Image component, for example. */
-  export class Asset {
+  class Asset {
     // The asset class has properties that these, but I believe that these are the only ones meant to be public.
 
     /** The MD5 hash of the asset’s data. */
-    public hash: string
+    hash: string
 
     /** If the asset is an image, the height of the image data divided by the scale factor. The scale factor is the number after `@` in the filename, or `1` if not present. */
-    public height: number
+    height: number
 
     /** If the asset has been downloaded (by calling `downloadAsync()`), the `file://` URI pointing to the local file on the device that contains the asset data. */
-    public localUri: string
+    localUri: string
 
     /** The name of the asset file without the extension. Also without the part from @ onward in the filename (used to specify scale factor for images). */
-    public name: string
+    name: string
 
     /** The extension of the asset filename. */
-    public type: string
+    type: string
 
     /** A URI that points to the asset’s data on the remote server. When running the published version of your app, this refers to the the location on Expo’s asset server where Expo has stored your asset. When running the app from XDE during development, this URI points to XDE’s server running on your computer and the asset is served directly from your computer. */
-    public uri: string
+    uri: string
 
     /** If the asset is an image, the width of the image data divided by the scale factor. The scale factor is the number after `@` in the filename, or `1` if not present. */
-    public width: number
+    width: number
 
     /** Downloads the asset data to a local file in the device’s cache directory. Once the returned promise is fulfilled without error, the localUri field of this asset points to a local file containing the asset data. The asset is only downloaded if an up-to-date local file for the asset isn’t already present due to an earlier download. */
-    public downloadAsync(): Promise<void>
+    downloadAsync(): Promise<void>
 
     /** Returns the `Expo.Asset` instance representing an asset given its module. */
-    public static fromModule(moduleId: number): Asset
+    static fromModule(moduleId: number): Asset
 
     /**
      * A helper that wraps `Expo.Asset.fromModule(module).downloadAsync` for convenience.
      * @param moduleIds An array of `require('path/to/file')`. Can also be just one module without an Array.
      */
-    public static loadAsync(moduleIds: number | Array<number>): Promise<void>
+    static loadAsync(moduleIds: number | Array<number>): Promise<void>
   }
 
   namespace AV {
@@ -410,11 +410,11 @@ declare module 'expo' {
     }
   }
 
-  export namespace Brightness {
-    export function getBrightnessAsync(): Promise<number>
-    export function getSystemBrightnessAsync(): Promise<number>
-    export function setBrightnessAsync(brightnessValue: number): Promise<void>
-    export function setSystemBrightnessAsync(brightnessValue: number): Promise<void>
+  namespace Brightness {
+    function getBrightnessAsync(): Promise<number>
+    function getSystemBrightnessAsync(): Promise<number>
+    function setBrightnessAsync(brightnessValue: number): Promise<void>
+    function setSystemBrightnessAsync(brightnessValue: number): Promise<void>
   }
 
   // #region Camera
@@ -457,7 +457,7 @@ declare module 'expo' {
    * Requires `Permissions.CAMERA`. Video recording requires `Permissions.AUDIO_RECORDING`.
    */
   class Camera extends Component<CameraProps> {
-    public takePictureAsync(options: Camera.TakePictureOptions): Promise<Camera.Photo>
+    takePictureAsync(options: Camera.TakePictureOptions): Promise<Camera.Photo>
   }
 
   namespace Camera {
@@ -525,7 +525,7 @@ declare module 'expo' {
   // #endregion
 
   /** System information that remains constant throughout the lifetime of your app. */
-  export namespace Constants {
+  namespace Constants {
     type Platform = {
       ios: {
         /** The human-readable model name of this device, e.g. `"iPhone 7 Plus"`. */
@@ -547,54 +547,54 @@ declare module 'expo' {
      * - `"standalone"`: Standalone app.
      * - `"guest"`: Opened through a link from a standalone app.
      */
-    export const appOwnership: 'expo' | 'standalone' | 'guest'
+    const appOwnership: 'expo' | 'standalone' | 'guest'
 
     /** An identifier that is unique to this particular device and installation of the Expo client. */
-    export const deviceId: string
+    const deviceId: string
 
     /** A human-readable name for the device type. */
-    export const deviceName: string
+    const deviceName: string
 
     /** The year the device would be considered high end. Might be Android only. */
-    export const deviceYearClass: number
+    const deviceYearClass: number
 
     /** The version string of the Expo client currently running. */
-    export const expoVersion: string
+    const expoVersion: string
 
     /** Gets the user agent string which would be included in requests sent by a web view running on this device. */
-    export function getWebViewUserAgentAsync(): Promise<string>
+    function getWebViewUserAgentAsync(): Promise<string>
 
     /** true if the app is running on a device, false if running in a simulator or emulator. */
-    export const isDevice: boolean
+    const isDevice: boolean
 
     /** When an app is opened due to a deep link, the prefix of the URI without the deep link part. This value depends on `Expo.Constants.appOwnership`—: it may be different if your app is running standalone vs. in the Expo client. */
-    export const linkingUri: string
+    const linkingUri: string
 
     /** See https://docs.expo.io/versions/latest/guides/how-expo-works.html#expo-manifest. */
-    export const manifest: any
+    const manifest: any
 
-    export const platform: Platform
+    const platform: Platform
 
     /** A string that is unique to the current session of your app. It is different across apps and across multiple launches of the same app. */
-    export const sessionId: string
+    const sessionId: string
 
     /** The default status bar height for the device. Does not factor in changes when location tracking is in use or a phone call is active. */
-    export const statusBarHeight: number
+    const statusBarHeight: number
 
     /** A list of the system font names available on the current device. */
-    export const systemFonts: Array<string>
+    const systemFonts: Array<string>
   }
 
-  export namespace Contacts {
-    export type FieldType = 'phoneNumbers' | 'emails' | 'addresses'
+  namespace Contacts {
+    type FieldType = 'phoneNumbers' | 'emails' | 'addresses'
 
-    export interface Options {
+    interface Options {
       pageSize?: number
       pageOffset?: number
       fields?: Array<FieldType>
     }
 
-    export interface Contact {
+    interface Contact {
       id: number
       name: string
       firstName?: string
@@ -624,25 +624,25 @@ declare module 'expo' {
       jobTitle?: string
     }
 
-    export interface Response {
+    interface Response {
       data: Array<Contact>,
       total: number,
       hasNextPage: boolean,
       hasPreviousPage: boolean,
     }
 
-    export const PHONE_NUMBERS = 'phoneNumbers'
-    export const EMAILS = 'emails'
-    export const ADDRESSES = 'addresses'
+    const PHONE_NUMBERS = 'phoneNumbers'
+    const EMAILS = 'emails'
+    const ADDRESSES = 'addresses'
 
-    export type Field = 'phoneNumbers' | 'emails' | 'addresses'
+    type Field = 'phoneNumbers' | 'emails' | 'addresses'
 
-    export interface Options {
+    interface Options {
       pageSize?: number
       pageOffset?: number
       fields?: Array<Field>
     }
-    export function getContactsAsync(options: Options): Promise<Response>
+    function getContactsAsync(options: Options): Promise<Response>
   }
 
   //#region BlurView
@@ -652,20 +652,20 @@ declare module 'expo' {
     tint: 'light' | 'default' | 'dark'
   }
 
-  export class BlurView extends React.Component<BlurViewProps> { }
+  class BlurView extends React.Component<BlurViewProps> { }
   //#endregion
 
-  export class AppLoading extends React.Component { }
+  class AppLoading extends React.Component { }
 
   //#region BarCodeScanner
-  export interface BarCodeScannerProps {
+  interface BarCodeScannerProps {
     type?: 'front' | 'back'
     torchMode?: 'on' | 'off'
     barCodeTypes: Array<string>     // TODO: add supported formats
     style: ViewStyle
   }
 
-  export class BarCodeScanner extends React.Component<BarCodeScannerProps> { }
+  class BarCodeScanner extends React.Component<BarCodeScannerProps> { }
   //#endregion
 
   //#region GLView
@@ -675,12 +675,12 @@ declare module 'expo' {
     msaaSamples: number
   }
 
-  export class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
+  class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
   //#endregion
 
-  export class KeepAwake extends React.Component {
-    public static activate(): void
-    public static deactivate(): void
+  class KeepAwake extends React.Component {
+    static activate(): void
+    static deactivate(): void
   }
 
   //#region MapView
@@ -752,8 +752,8 @@ declare module 'expo' {
   }
 
   class MapView extends React.Component<MapViewProps, any> {
-    public static Animated: any
-    public static AnimatedRegion: any
+    static Animated: any
+    static AnimatedRegion: any
   }
 
   namespace MapView {
@@ -843,19 +843,19 @@ declare module 'expo' {
       onPress?: Function
     }
 
-    export class Marker extends React.Component<MarkerProps, any> { }
-    export class Polyline extends React.Component<MapPolylineProps, any> { }
-    export class Polygon extends React.Component<MapPolygonProps, any> { }
-    export class Circle extends React.Component<MapCircleProps, any> { }
-    export class UrlTile extends React.Component<MapUrlTitleProps, any> { }
-    export class Callout extends React.Component<MapCalloutProps, any> { }
+    class Marker extends React.Component<MarkerProps, any> { }
+    class Polyline extends React.Component<MapPolylineProps, any> { }
+    class Polygon extends React.Component<MapPolygonProps, any> { }
+    class Circle extends React.Component<MapCircleProps, any> { }
+    class UrlTile extends React.Component<MapUrlTitleProps, any> { }
+    class Callout extends React.Component<MapCalloutProps, any> { }
   }
   //#endregion
 
   /**
    * Expo Video
    */
-  export interface VideoLoad {
+  interface VideoLoad {
     duration: number
     currentTime: number
     canPlayReverse: boolean
@@ -870,7 +870,7 @@ declare module 'expo' {
       orientation: 'landscape' | 'portrait'
     }
   }
-  export type VideoError =
+  type VideoError =
     {
       code: any,
       domain: any
@@ -879,17 +879,17 @@ declare module 'expo' {
       extra: any
     }
 
-  export interface VideoProgress {
+  interface VideoProgress {
     currentTime: number
     playableDuration: number
   }
 
-  export interface VideoSeek {
+  interface VideoSeek {
     currentTime: number
     seekTime: number
   }
 
-  export interface VideoProps {
+  interface VideoProps {
     source: any    // TODO: better def: string|*require(file)*
     fullscreen?: boolean
     resizeMode?: string    // TODO: resize mode instead of general string
@@ -906,21 +906,21 @@ declare module 'expo' {
     onEnd?: () => any
   }
 
-  export class Video extends React.Component<VideoProps> {
-    public static RESIZE_MODE_CONTAIN: string
-    public static RESIZE_MODE_COVER: string
-    public static RESIZE_MODE_STRETCH: string
+  class Video extends React.Component<VideoProps> {
+    static RESIZE_MODE_CONTAIN: string
+    static RESIZE_MODE_COVER: string
+    static RESIZE_MODE_STRETCH: string
 
-    public seek(time: string): void
-    public presentFullscreenPlayer(): void
-    public dismissFullscreenPlayer(): void
+    seek(time: string): void
+    presentFullscreenPlayer(): void
+    dismissFullscreenPlayer(): void
   }
 
-  export namespace DocumentPicker {
-    export interface Options {
+  namespace DocumentPicker {
+    interface Options {
       type: string
     }
-    export type Response =
+    type Response =
       {
         type: 'success',
         uri: string,
@@ -930,20 +930,20 @@ declare module 'expo' {
         type: 'cancel'
       }
 
-    export function getDocumentAsync(options: Options): Response
+    function getDocumentAsync(options: Options): Response
   }
 
-  export namespace ErrorRecovery {
-    export function setRecoveryProps(props: object): void
+  namespace ErrorRecovery {
+    function setRecoveryProps(props: object): void
   }
 
-  export namespace Facebook {
-    export interface Options {
+  namespace Facebook {
+    interface Options {
       permissions?: Array<string>
       behavior?: 'web' | 'native' | 'browser' | 'system'
     }
 
-    export type Response =
+    type Response =
       {
         type: 'success',
         token: string,
@@ -952,28 +952,28 @@ declare module 'expo' {
         type: 'cancel'
       }
 
-    export function logInWithReadPermissionsAsync(appId: string, options: Options): void
+    function logInWithReadPermissionsAsync(appId: string, options: Options): void
   }
 
-  export namespace FacebookAds {
+  namespace FacebookAds {
     /**
      * Interstitial Ads
      */
-    export namespace InterstitialAdManager {
-      export function showAd(placementId: string): Promise<boolean>
+    namespace InterstitialAdManager {
+      function showAd(placementId: string): Promise<boolean>
     }
 
     /**
      * Native Ads
      */
-    export type MediaCachePolicy = 'none' | 'icon' | 'image' | 'all'
-    export class NativeAdsManager {
+    type MediaCachePolicy = 'none' | 'icon' | 'image' | 'all'
+    class NativeAdsManager {
       constructor(placementId: string, numberOfAdsToRequest?: number);
-      public disableAutoRefresh(): void
-      public setMediaCachePolicy(iOS: MediaCachePolicy): any
+      disableAutoRefresh(): void
+      setMediaCachePolicy(iOS: MediaCachePolicy): any
     }
 
-    export function withNativeAd(component: React.Component<{
+    function withNativeAd(component: React.Component<{
       icon?: string;
       coverImage?: string;
       title?: string;
@@ -986,52 +986,52 @@ declare module 'expo' {
     /**
      * Banner View
      */
-    export type AdType = 'large' | 'rectangle' | 'standard'
+    type AdType = 'large' | 'rectangle' | 'standard'
 
-    export interface BannerViewProps {
+    interface BannerViewProps {
       type: AdType
       placementId: string
       onPress: () => any
       onError: () => any
     }
 
-    export class BannerView extends React.Component<BannerViewProps> { }
+    class BannerView extends React.Component<BannerViewProps> { }
 
     /**
      * Ad Settings
      */
-    export namespace AdSettings {
-      export const currentDeviceHash: string
-      export function addTestDevice(device: string): void
-      export function clearTestDevices(): void
-      export type SDKLogLevel = 'none'
+    namespace AdSettings {
+      const currentDeviceHash: string
+      function addTestDevice(device: string): void
+      function clearTestDevices(): void
+      type SDKLogLevel = 'none'
         | 'debug'
         | 'verbose'
         | 'warning'
         | 'error'
         | 'notification'
 
-      export function setLogLevel(logLevel: SDKLogLevel): void
-      export function setIsChildDirected(isDirected: boolean): void
-      export function setMediationService(mediationService: string): void
-      export function setUrlPrefix(urlPrefix: string): void
+      function setLogLevel(logLevel: SDKLogLevel): void
+      function setIsChildDirected(isDirected: boolean): void
+      function setMediationService(mediationService: string): void
+      function setUrlPrefix(urlPrefix: string): void
     }
   }
 
-  export namespace Font {
+  namespace Font {
     type FontSource = string | number | Asset
 
-    export function isLoaded(name: string): boolean
-    export function isLoading(name: string): boolean
-    export function loadAsync(
+    function isLoaded(name: string): boolean
+    function isLoading(name: string): boolean
+    function loadAsync(
       nameOrMap: string | { [index: string]: FontSource },
       uriOrModuleOrAsset?: FontSource
     ): Promise<void>
-    export function processFontFamily(name?: string | null): string | null | undefined
+    function processFontFamily(name?: string | null): string | null | undefined
   }
 
-  export namespace Google {
-    export interface LogInConfig {
+  namespace Google {
+    interface LogInConfig {
       androidClientId?: string
       androidStandaloneAppClientId?: string
       iosClientId?: string
@@ -1040,7 +1040,7 @@ declare module 'expo' {
       scopes?: Array<string>
     }
 
-    export type LogInResult =
+    type LogInResult =
       {
         type: 'cancel'
       } | {
@@ -1059,45 +1059,45 @@ declare module 'expo' {
         }
       }
 
-    export function logInAsync(config: LogInConfig): Promise<LogInResult>
+    function logInAsync(config: LogInConfig): Promise<LogInResult>
   }
 
-  export namespace Gyroscope {
-    // TODO: good export type of x, y and z
-    export interface GyroscopeObject {
+  namespace Gyroscope {
+    // TODO: good type of x, y and z
+    interface GyroscopeObject {
       x: any
       y: any
       z: any
     }
 
-    export function addListener(listener: (obj: GyroscopeObject) => any): EventSubscription
-    export function removeAllListeners(): void
-    export function setUpdateInterval(intervalMs: number): void
+    function addListener(listener: (obj: GyroscopeObject) => any): EventSubscription
+    function removeAllListeners(): void
+    function setUpdateInterval(intervalMs: number): void
   }
 
-  export namespace ImagePicker {
-    export interface ImageInfo {
+  namespace ImagePicker {
+    interface ImageInfo {
       uri: string
       width: number
       height: number
     }
 
-    export type ImageResult = { cancelled: true } | ({ cancelled: false } & ImageInfo)
+    type ImageResult = { cancelled: true } | ({ cancelled: false } & ImageInfo)
 
-    export interface ImageLibraryOptions {
+    interface ImageLibraryOptions {
       allowsEditing?: boolean
       aspect?: [number, number]
       quality?: number
     }
 
-    export function launchImageLibraryAsync(options?: ImageLibraryOptions): Promise<ImageResult>
+    function launchImageLibraryAsync(options?: ImageLibraryOptions): Promise<ImageResult>
 
-    export interface CameraOptions {
+    interface CameraOptions {
       allowsEditing?: boolean
       aspect?: [number, number]
       quality?: number
     }
-    export function launchCameraAsync(options?: CameraOptions): Promise<ImageResult>
+    function launchCameraAsync(options?: CameraOptions): Promise<ImageResult>
   }
 
   interface LinearGradientProps extends ViewProperties {
@@ -1108,16 +1108,16 @@ declare module 'expo' {
   }
 
   /** Linear gradient. See https://github.com/react-native-community/react-native-linear-gradient. */
-  export class LinearGradient extends Component<LinearGradientProps> { }
+  class LinearGradient extends Component<LinearGradientProps> { }
 
-  export namespace Location {
-    export interface LocationOptions {
+  namespace Location {
+    interface LocationOptions {
       enableHighAccuracy?: boolean
       timeInterval?: number
       distanceInterval?: number
     }
 
-    export interface LocationData {
+    interface LocationData {
       coords: {
         latitude: number,
         longitude: number,
@@ -1129,21 +1129,21 @@ declare module 'expo' {
       timestamp: number
     }
 
-    export type LocationCallback = (data: LocationData) => any
+    type LocationCallback = (data: LocationData) => any
 
-    export function getCurrentPositionAsync(options: LocationOptions): Promise<LocationData>    // TODO: check if it's correct
-    export function watchPositionAsync(options: LocationOptions, callback: (data: LocationData) => any): EventSubscription
+    function getCurrentPositionAsync(options: LocationOptions): Promise<LocationData>    // TODO: check if it's correct
+    function watchPositionAsync(options: LocationOptions, callback: (data: LocationData) => any): EventSubscription
   }
 
-  export namespace Notifications {
-    export interface Notification {
+  namespace Notifications {
+    interface Notification {
       origin: 'selected' | 'received'
       data: any
       remote: boolean
       isMultiple: boolean
     }
 
-    export interface LocalNotification {
+    interface LocalNotification {
       title: string
       body?: string
       data?: any
@@ -1161,107 +1161,107 @@ declare module 'expo' {
       }
     }
 
-    export type LocalNotificationId = string | number
+    type LocalNotificationId = string | number
 
-    export function addListener(listener: (notification: Notification) => any): EventSubscription
-    export function getExponentPushTokenAsync(): Promise<string>
-    export function presentLocalNotificationAsync(localNotification: LocalNotification): Promise<LocalNotificationId>
-    export function scheduleLocalNotificationAsync(
+    function addListener(listener: (notification: Notification) => any): EventSubscription
+    function getExponentPushTokenAsync(): Promise<string>
+    function presentLocalNotificationAsync(localNotification: LocalNotification): Promise<LocalNotificationId>
+    function scheduleLocalNotificationAsync(
       localNotification: LocalNotification,
       schedulingOptions: { time: Date | number, repeat?: 'minute' | 'hour' | 'day' | 'week' | 'month' | 'year' }
     ): Promise<LocalNotificationId>
-    export function dismissNotificationAsync(localNotificationId: LocalNotificationId): Promise<void>
-    export function dismissAllNotificationsAsync(): Promise<void>
-    export function cancelScheduledNotificationAsync(localNotificationId: LocalNotificationId): Promise<void>
-    export function cancelAllScheduledNotificationsAsync(): Promise<void>
-    export function getBadgeNumberAsync(): Promise<number>
-    export function setBadgeNumberAsync(badgeNumber: number): Promise<void>
+    function dismissNotificationAsync(localNotificationId: LocalNotificationId): Promise<void>
+    function dismissAllNotificationsAsync(): Promise<void>
+    function cancelScheduledNotificationAsync(localNotificationId: LocalNotificationId): Promise<void>
+    function cancelAllScheduledNotificationsAsync(): Promise<void>
+    function getBadgeNumberAsync(): Promise<number>
+    function setBadgeNumberAsync(badgeNumber: number): Promise<void>
   }
 
-  export namespace Permissions {
+  namespace Permissions {
     // TODO: Is it necessary to define these?
-    export type PermissionType
+    type PermissionType
       = 'remoteNotifications'
       | 'location'
       | 'camera'
       | 'contacts'
       | 'audioRecording'
 
-    export type PermissionStatus = 'undetermined' | 'granted' | 'denied'
-    export type PermissionExpires = 'never'
-    export interface PermissionDetailsLocationIOS {
+    type PermissionStatus = 'undetermined' | 'granted' | 'denied'
+    type PermissionExpires = 'never'
+    interface PermissionDetailsLocationIOS {
       scope: 'whenInUse' | 'always'
     }
-    export interface PermissionDetailsLocationAndroid {
+    interface PermissionDetailsLocationAndroid {
       scope: 'fine' | 'coarse' | 'none'
     }
-    export interface PermissionResponse {
+    interface PermissionResponse {
       status: PermissionStatus
       expires: PermissionExpires
       ios?: PermissionDetailsLocationIOS
       android?: PermissionDetailsLocationAndroid
     }
 
-    export function getAsync(type: PermissionType): Promise<PermissionResponse>
-    export function askAsync(type: PermissionType): Promise<PermissionResponse>
+    function getAsync(type: PermissionType): Promise<PermissionResponse>
+    function askAsync(type: PermissionType): Promise<PermissionResponse>
 
-    export const AUDIO_RECORDING: PermissionType
-    export const CAMERA: PermissionType
-    export const CONTACTS: PermissionType
-    export const LOCATION: PermissionType
-    export const NOTIFICATIONS: PermissionType
-    export const REMOTE_NOTIFICATIONS: PermissionType
+    const AUDIO_RECORDING: PermissionType
+    const CAMERA: PermissionType
+    const CONTACTS: PermissionType
+    const LOCATION: PermissionType
+    const NOTIFICATIONS: PermissionType
+    const REMOTE_NOTIFICATIONS: PermissionType
   }
 
   /** Register Root Component. Useful when using function like react-redux connect for example. */
   // TODO: verify if it's a good idea or not to use generics.
-  export function registerRootComponent<P, S>(component: React.Component<P, S>): React.Component<P, S>
+  function registerRootComponent<P, S>(component: React.Component<P, S>): React.Component<P, S>
 
-  export namespace ScreenOrientation {
-    export namespace Orientation {
+  namespace ScreenOrientation {
+    namespace Orientation {
       /** All 4 possible orientations. */
-      export const ALL: 'ALL'
+      const ALL: 'ALL'
 
       /** All but reverse portrait, could be all 4 orientations on certain Android devices. */
-      export const ALL_BUT_UPSIDE_DOWN: 'ALL_BUT_UPSIDE_DOWN'
+      const ALL_BUT_UPSIDE_DOWN: 'ALL_BUT_UPSIDE_DOWN'
 
       /** Portrait orientation, could also be reverse portrait on certain Android devices. */
-      export const PORTRAIT: 'PORTRAIT'
+      const PORTRAIT: 'PORTRAIT'
 
       /** Upside portrait only. */
-      export const PORTRAIT_UP: 'PORTRAIT_UP'
+      const PORTRAIT_UP: 'PORTRAIT_UP'
 
       /** Upside down portrait only. */
-      export const PORTRAIT_DOWN: 'PORTRAIT_DOWN'
+      const PORTRAIT_DOWN: 'PORTRAIT_DOWN'
 
       /** Any landscape orientation. */
-      export const LANDSCAPE: 'LANDSCAPE'
+      const LANDSCAPE: 'LANDSCAPE'
 
       /** Left landscape only. */
-      export const LANDSCAPE_LEFT: 'LANDSCAPE_LEFT'
+      const LANDSCAPE_LEFT: 'LANDSCAPE_LEFT'
 
       /** Right landscape only. */
-      export const LANDSCAPE_RIGHT: 'LANDSCAPE_RIGHT'
+      const LANDSCAPE_RIGHT: 'LANDSCAPE_RIGHT'
     }
 
-    export function allow(orientation: 'ALL' | 'ALL_BUT_UPSIDE_DOWN' | 'PORTRAIT' | 'PORTRAIT_UP' | 'PORTRAIT_DOWN' | 'LANDSCAPE' | 'LANDSCAPE_LEFT' | 'LANDSCAPE_RIGHT'): void
+    function allow(orientation: 'ALL' | 'ALL_BUT_UPSIDE_DOWN' | 'PORTRAIT' | 'PORTRAIT_UP' | 'PORTRAIT_DOWN' | 'LANDSCAPE' | 'LANDSCAPE_LEFT' | 'LANDSCAPE_RIGHT'): void
   }
 
   // TODO: check that all these functions return void or not.
-  export namespace Segment {
-    export function initializeIOS(writeKey: string): void
-    export function initializeAndroid(writeKey: string): void
-    export function identify(userId: string): void
-    export function identifyWithTraits(userId: string, traits: any): void
-    export function track(event: string): void
-    export function trackWithProperties(event: string, properties: any): void
-    export function flush(): void
+  namespace Segment {
+    function initializeIOS(writeKey: string): void
+    function initializeAndroid(writeKey: string): void
+    function identify(userId: string): void
+    function identifyWithTraits(userId: string, traits: any): void
+    function track(event: string): void
+    function trackWithProperties(event: string, properties: any): void
+    function flush(): void
   }
 
-  export namespace SQLite {
+  namespace SQLite {
     type Error = any
 
-    export interface Database {
+    interface Database {
       transaction(
         callback: (transaction: Transaction) => any,
         error?: (error: Error) => any,     // TODO def of error
@@ -1269,7 +1269,7 @@ declare module 'expo' {
       ): void
     }
 
-    export interface Transaction {
+    interface Transaction {
       executeSql(
         sqlStatement: string,
         arguments?: Array<string | number>,
@@ -1278,7 +1278,7 @@ declare module 'expo' {
       ): any
     }
 
-    export interface ResultSet {
+    interface ResultSet {
       insertId: number
       rowAffected: number
       rows: {
@@ -1288,7 +1288,7 @@ declare module 'expo' {
       }
     }
 
-    export function openDatabase(
+    function openDatabase(
       name: string | {
         name: string,
         version?: string,
@@ -1304,9 +1304,9 @@ declare module 'expo' {
   }
 
   //#region Svg
-  export class Svg extends Component<Svg.SvgProps> { }
+  class Svg extends Component<Svg.SvgProps> { }
 
-  export namespace Svg {
+  namespace Svg {
     interface CircleProps extends SharedPathProps {
       cx: number | string
       cy: number | string
@@ -1527,32 +1527,32 @@ declare module 'expo' {
       width?: number | string
     }
 
-    export class Circle extends Component<CircleProps> { }
-    export class ClipPath extends Component<ClipPathProps> { }
-    export class Defs extends Component<{}> { }
-    export class Ellipse extends Component<EllipseProps> { }
-    export class G extends Component<SharedPathProps> { }
-    export class Image extends Component<ImageProps> { }
-    export class Line extends Component<LineProps> { }
+    class Circle extends Component<CircleProps> { }
+    class ClipPath extends Component<ClipPathProps> { }
+    class Defs extends Component<{}> { }
+    class Ellipse extends Component<EllipseProps> { }
+    class G extends Component<SharedPathProps> { }
+    class Image extends Component<ImageProps> { }
+    class Line extends Component<LineProps> { }
     // tslint:disable-next-line:no-shadowed-variable
-    export class LinearGradient extends Component<LinearGradientProps> { }
-    export class Path extends Component<PathProps> { }
-    export class Pattern extends Component<PatternProps> { }
-    export class Polygon extends Component<PolygonProps> { }
-    export class Polyline extends Component<PolylineProps> { }
-    export class RadialGradient extends Component<RadialGradientProps> { }
-    export class Rect extends Component<RectProps> { }
-    export class Shape extends Component<{}> { }
-    export class Stop extends Component<StopProps> { }
-    export class Symbol extends Component<SymbolProps> { }
-    export class Text extends Component<TextProps> { }
-    export class TextPath extends Component<TextPathProps> { }
-    export class TSpan extends Component<TSpanProps> { }
-    export class Use extends Component<UseProps> { }
+    class LinearGradient extends Component<LinearGradientProps> { }
+    class Path extends Component<PathProps> { }
+    class Pattern extends Component<PatternProps> { }
+    class Polygon extends Component<PolygonProps> { }
+    class Polyline extends Component<PolylineProps> { }
+    class RadialGradient extends Component<RadialGradientProps> { }
+    class Rect extends Component<RectProps> { }
+    class Shape extends Component<{}> { }
+    class Stop extends Component<StopProps> { }
+    class Symbol extends Component<SymbolProps> { }
+    class Text extends Component<TextProps> { }
+    class TextPath extends Component<TextPathProps> { }
+    class TSpan extends Component<TSpanProps> { }
+    class Use extends Component<UseProps> { }
   }
   //#endregion
 
-  export function takeSnapshotAsync(
+  function takeSnapshotAsync(
     view?: (number | React.ReactElement<any>),
     options?: {
       width?: number,
@@ -1563,14 +1563,14 @@ declare module 'expo' {
     }
   ): Promise<string>
 
-  export namespace Util {
-    export function getCurrentLocaleAsync(): Promise<string>
-    export function reload(): void
+  namespace Util {
+    function getCurrentLocaleAsync(): Promise<string>
+    function reload(): void
   }
 
-  export namespace WebBrowser {
-    export function openBrowserAsync(url: string): Promise<{ type: 'cancelled' | 'dismissed' }>
-    export function dismissBrowser(): Promise<{ type: 'dismissed' }>
+  namespace WebBrowser {
+    function openBrowserAsync(url: string): Promise<{ type: 'cancelled' | 'dismissed' }>
+    function dismissBrowser(): Promise<{ type: 'dismissed' }>
   }
 }
 
@@ -1629,15 +1629,15 @@ declare module '@expo/vector-icons' {
     name: 'acrobat' | 'amazon' | 'android' | 'angellist' | 'aol' | 'appnet' | 'appstore' | 'bitbucket' | 'bitcoin' | 'blogger' | 'buffer' | 'cal' | 'call' | 'cart' | 'chrome' | 'cloudapp' | 'creativecommons' | 'delicious' | 'digg' | 'disqus' | 'dribbble' | 'dropbox' | 'drupal' | 'dwolla' | 'email' | 'eventasaurus' | 'eventbrite' | 'eventful' | 'evernote' | 'facebook' | 'fivehundredpx' | 'flattr' | 'flickr' | 'forrst' | 'foursquare' | 'github' | 'gmail' | 'google' | 'googleplay' | 'googleplus' | 'gowalla' | 'grooveshark' | 'guest' | 'html5' | 'ie' | 'instagram' | 'instapaper' | 'intensedebate' | 'itunes' | 'klout' | 'lanyrd' | 'lastfm' | 'lego' | 'linkedin' | 'lkdto' | 'logmein' | 'macstore' | 'meetup' | 'myspace' | 'ninetyninedesigns' | 'openid' | 'opentable' | 'paypal' | 'persona' | 'pinboard' | 'pinterest' | 'plancast' | 'plurk' | 'pocket' | 'podcast' | 'posterous' | 'print' | 'quora' | 'reddit' | 'rss' | 'scribd' | 'skype' | 'smashing' | 'songkick' | 'soundcloud' | 'spotify' | 'stackoverflow' | 'statusnet' | 'steam' | 'stripe' | 'stumbleupon' | 'tumblr' | 'twitter' | 'viadeo' | 'vimeo' | 'vk' | 'weibo' | 'wikipedia' | 'windows' | 'wordpress' | 'xing' | 'yahoo' | 'ycombinator' | 'yelp' | 'youtube'
   }
 
-  export class Entypo extends Component<EntypoProps> { }
-  export class EvilIcons extends Component<EvilIconsProps> { }
-  export class Feather extends Component<FeatherProps> { }
-  export class FontAwesome extends Component<FontAwesomeProps> { }
-  export class Foundation extends Component<FoundationProps> { }
-  export class Ionicons extends Component<IoniconsProps> { }
-  export class MaterialComunityIcons extends Component<MaterialCommunityIconsProps> { }
-  export class MaterialIcons extends Component<MaterialIconsProps> { }
-  export class Octicons extends Component<OcticonsProps> { }
-  export class SimpleLineIcons extends Component<SimpleLineIconsProps> { }
-  export class Zocial extends Component<ZocialProps> { }
+  class Entypo extends Component<EntypoProps> { }
+  class EvilIcons extends Component<EvilIconsProps> { }
+  class Feather extends Component<FeatherProps> { }
+  class FontAwesome extends Component<FontAwesomeProps> { }
+  class Foundation extends Component<FoundationProps> { }
+  class Ionicons extends Component<IoniconsProps> { }
+  class MaterialComunityIcons extends Component<MaterialCommunityIconsProps> { }
+  class MaterialIcons extends Component<MaterialIconsProps> { }
+  class Octicons extends Component<OcticonsProps> { }
+  class SimpleLineIcons extends Component<SimpleLineIconsProps> { }
+  class Zocial extends Component<ZocialProps> { }
 }

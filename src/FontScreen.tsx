@@ -12,6 +12,7 @@ export class FontScreen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
     super(props, context)
 
+    // TODO: Use public static defaultProps instead.
     this.state = {
       fontLoaded: false
     }

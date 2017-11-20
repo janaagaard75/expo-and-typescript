@@ -28,6 +28,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Asset"
         />
         <Button
+          onPress={() => navigate('Audio')}
+          title="Audio"
+        />
+        <Button
           onPress={() => navigate('Camera')}
           title="Camera"
         />

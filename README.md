@@ -22,7 +22,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the ones, that h
 * [ ] AppLoading
 * [ ] Art
 * [x] Asset
-* [x] Audio (still no demo of it, though)
+* [x] Audio
 * [ ] AuthSession
 * [ ] AV
 * [ ] BarCodeScanner

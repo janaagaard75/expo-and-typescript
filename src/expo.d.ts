@@ -247,13 +247,21 @@ declare module 'expo' {
     }
 
     enum InterruptionModeIos {
+      /** This is the default option. If this option is set, your experience’s audio is mixed with audio playing in background apps. */
       INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS = 0,
+
+      /** If this option is set, your experience’s audio interrupts audio from other apps. */
       INTERRUPTION_MODE_IOS_DO_NOT_MIX = 1,
+
+      /** If this option is set, your experience’s audio lowers the volume ("ducks") of audio from other apps while your audio plays. */
       INTERRUPTION_MODE_IOS_DUCK_OTHERS = 2
     }
 
     enum InterruptionModeAndroid {
+      /** If this option is set, your experience’s audio interrupts audio from other apps. */
       INTERRUPTION_MODE_ANDROID_DO_NOT_MIX = 1,
+
+      /** This is the default option. If this option is set, your experience’s audio lowers the volume ("ducks") of audio from other apps while your audio plays. */
       INTERRUPTION_MODE_ANDROID_DUCK_OTHERS = 2
     }
 
@@ -274,11 +282,32 @@ declare module 'expo' {
         durationMillis: number
       }
 
+    /**
+     * Note that these are the only legal `AudioMode` combinations of (`playsInSilentModeIOS`, `allowsRecordingIOS`, `interruptionModeIOS`), and any other will result in promise rejection:
+     *
+     * - `false`, `false`, `INTERRUPTION_MODE_IOS_DO_NOT_MIX`
+     * - `false`, `false`, `INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS`
+     * - `true`, `true`, `INTERRUPTION_MODE_IOS_DO_NOT_MIX`
+     * - `true`, `true`, `INTERRUPTION_MODE_IOS_DUCK_OTHERS`
+     * - `true`, `true`, `INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS`
+     * - `true`, `false`, `INTERRUPTION_MODE_IOS_DO_NOT_MIX`
+     * - `true`, `false`, `INTERRUPTION_MODE_IOS_DUCK_OTHERS`
+     * - `true`, `false`, `INTERRUPTION_MODE_IOS_MIX_WITH_OTHERS`
+     */
     type AudioMode = {
+      /** Boolean selecting if recording is enabled on iOS. This value defaults to `false`. NOTE: when this flag is set to true, playback may be routed to the phone receiver instead of to the speaker. */
       allowsRecordingIOS: boolean,
+
+      /** Enum selecting how your experience’s audio should interact with the audio from other apps on iOS. */
       interruptionModeIOS: InterruptionModeIos,
+
+      /** Boolean selecting if your experience’s audio should play in silent mode on iOS. This value defaults to `false`. */
       playsInSilentLockedModeIOS: boolean,
+
+      /** an enum selecting how your experience’s audio should interact with the audio from other apps on Android: */
       interruptionModeAndroid: InterruptionModeAndroid,
+
+      /** Boolean selecting if your experience’s audio should automatically be lowered in volume ("duck") if audio from another app interrupts your experience. This value defaults to true. If false, audio from other apps will pause your audio. */
       shouldDuckAndroid: boolean
     }
 

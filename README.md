@@ -1,18 +1,20 @@
 # React Native using Expo and Typescript
 
-The repository is both a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org) and the home for my work  creating a type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html). The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
+The repository is both a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It also contains work-in-progress type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
 
 If you're here for the type definition file, here's a direct link to it: [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
 
-The app is found here: <https://expo.io/@janaagaard75/expo-and-typescript>. It is not published to the app stores, so you have to install the Expo client to run it.
+The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example) and the type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2).
+
+The app is found here: <https://expo.io/@janaagaard75/expo-and-typescript>. It is not published to the app stores, but you can run it on a device, if install the free Expo client.
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
 ## Type Definitions for Expo
 
-These type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2). The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
+The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
 
-Here's a lit of the APIs provided by Expo, with a checkmark for the few, that have been tested.
+Here's a lit of the APIs provided by Expo, with a checkmark for the ones, that have been tested.
 
 * [x] Accelerometer
 * [ ] AdMob
@@ -20,7 +22,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the few, that ha
 * [ ] AppLoading
 * [ ] Art
 * [x] Asset
-* [ ] Audio
+* [x] Audio (still no demo of it, though)
 * [ ] AuthSession
 * [ ] AV
 * [ ] BarCodeScanner

@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
 
 interface State {
-  cameraType: Camera.Type,
+  cameraType: Camera.Constants.Type,
   hasPermissionToCamera: boolean | undefined
 }
 

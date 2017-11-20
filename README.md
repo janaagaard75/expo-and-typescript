@@ -1,6 +1,6 @@
 # React Native using Expo and Typescript
 
-The repository is both a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It also contains work-in-progress type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
+The repository is a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It also contains a work-in-progress type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
 
 If you're here for the type definition file, here's a direct link to it: [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
 

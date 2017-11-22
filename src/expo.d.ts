@@ -1084,16 +1084,21 @@ declare module 'expo' {
     function logInAsync(config: LogInConfig): Promise<LogInResult>
   }
 
+  /** Access the device gyroscope sensor to respond to changes in rotation in 3d space. */
   namespace Gyroscope {
-    // TODO: good type of x, y and z
     interface GyroscopeObject {
-      x: any
-      y: any
-      z: any
+      x: number
+      y: number
+      z: number
     }
 
+    /** A callback that is invoked when an gyroscope update is available. */
     function addListener(listener: (obj: GyroscopeObject) => any): EventSubscription
+
+    /** Remove all listeners. */
     function removeAllListeners(): void
+
+    /** Subscribe for updates to the gyroscope. */
     function setUpdateInterval(intervalMs: number): void
   }
 

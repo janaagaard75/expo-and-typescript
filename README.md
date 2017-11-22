@@ -42,7 +42,7 @@ Here's a lit of the APIs provided by Expo, with a checkmark for the ones, that h
 * [ ] GestureHandler
 * [ ] GLView
 * [ ] Google
-* [ ] Gyroscope
+* [x] Gyroscope
 * [ ] ImagePicker
 * [ ] IntentLauncherAndroid
 * [ ] KeepAwake

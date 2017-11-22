@@ -60,6 +60,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Font"
         />
         <Button
+          onPress={() => navigate('Gyroscope')}
+          title="Gyroscope"
+        />
+        <Button
           onPress={() => navigate('MapView')}
           title="MapView"
         />

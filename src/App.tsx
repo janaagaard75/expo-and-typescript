@@ -9,6 +9,7 @@ import { BrightnessScreen } from './BrightnessScreen'
 import { CameraScreen } from './CameraScreen'
 import { ConstantsScreen } from './constants/ConstantsScreen'
 import { FontScreen } from './FontScreen'
+import { GyroscopeScreen } from './GyroscopeScreen'
 import { LinearGradientScreen } from './LinearGradientScreen'
 import { MainScreen } from './MainScreen'
 import { ManifestScreen } from './constants/ManifestScreen'
@@ -31,6 +32,7 @@ export default StackNavigator({
   Camera: { screen: CameraScreen },
   Constants: { screen: ConstantsScreen },
   Font: { screen: FontScreen },
+  Gyroscope: { screen: GyroscopeScreen },
   LinearGradient: { screen: LinearGradientScreen },
   Manifest: { screen: ManifestScreen },
   MapView: { screen: MapViewScreen },

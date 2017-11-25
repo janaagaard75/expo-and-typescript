@@ -1206,38 +1206,41 @@ declare module 'expo' {
   }
 
   namespace Permissions {
-    // TODO: Is it necessary to define these?
     type PermissionType
-      = 'remoteNotifications'
-      | 'location'
+      = 'audioRecording'
       | 'camera'
+      | 'cameraRoll'
       | 'contacts'
-      | 'audioRecording'
+      | 'location'
+      | 'remoteNotifications'
+      | 'systemBrightness'
 
     type PermissionStatus = 'undetermined' | 'granted' | 'denied'
     type PermissionExpires = 'never'
-    interface PermissionDetailsLocationIOS {
+    interface PermissionDetailsLocationIos {
       scope: 'whenInUse' | 'always'
     }
     interface PermissionDetailsLocationAndroid {
       scope: 'fine' | 'coarse' | 'none'
     }
     interface PermissionResponse {
-      status: PermissionStatus
-      expires: PermissionExpires
-      ios?: PermissionDetailsLocationIOS
       android?: PermissionDetailsLocationAndroid
+      expires: PermissionExpires
+      ios?: PermissionDetailsLocationIos
+      status: PermissionStatus
     }
 
     function getAsync(type: PermissionType): Promise<PermissionResponse>
     function askAsync(type: PermissionType): Promise<PermissionResponse>
 
     const AUDIO_RECORDING: PermissionType
+    const CAMERA_ROLL: PermissionType
     const CAMERA: PermissionType
     const CONTACTS: PermissionType
     const LOCATION: PermissionType
     const NOTIFICATIONS: PermissionType
     const REMOTE_NOTIFICATIONS: PermissionType
+    const SYSTEM_BRIGHTNESS: PermissionType
   }
 
   /** Register Root Component. Useful when using function like react-redux connect for example. */

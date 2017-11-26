@@ -44,27 +44,9 @@ export class UtilScreen extends Component<{}, State> {
   }
 
   private async updateState() {
-    Promise.all([
-      this.updateCountry(),
-      this.updateLocale(),
-      this.updateTimeZone()
-    ])
-  }
-
-  private async updateCountry() {
     this.setState({
-      country: await Util.getCurrentDeviceCountryAsync()
-    })
-  }
-
-  private async updateLocale() {
-    this.setState({
-      locale: await Util.getCurrentLocaleAsync()
-    })
-  }
-
-  private async updateTimeZone() {
-    this.setState({
+      country: await Util.getCurrentDeviceCountryAsync(),
+      locale: await Util.getCurrentLocaleAsync(),
       timeZone: await Util.getCurrentTimeZoneAsync()
     })
   }

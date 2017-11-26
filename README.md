@@ -63,7 +63,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [ ] SQLite
 * [x] Svg
 * [ ] takeSnapshotAsync
-* [ ] Util
+* [x] Util
 * [x] Vector Icons
 * [ ] Video
 * [ ] WebBrowse

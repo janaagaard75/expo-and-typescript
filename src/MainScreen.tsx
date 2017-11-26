@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Button } from 'react-native'
 import { Component } from 'react'
 import { NavigationScreenProps } from 'react-navigation'
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 export class MainScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
@@ -13,7 +13,7 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
     const navigate = this.props.navigation.navigate
 
     return (
-      <View
+      <ScrollView
         style={{
           backgroundColor: '#fff',
           flex: 1
@@ -72,10 +72,14 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Svg"
         />
         <Button
+          onPress={() => navigate('Util')}
+          title="Util"
+        />
+        <Button
           onPress={() => navigate('VectorIcons')}
           title="Vector Icons"
         />
-      </View>
+      </ScrollView>
     )
   }
 }

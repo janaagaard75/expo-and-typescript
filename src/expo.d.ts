@@ -1593,9 +1593,22 @@ declare module 'expo' {
     }
   ): Promise<string>
 
+  /** Helpful utility functions that don’t fit anywhere else, including some localization and internationalization methods. */
   namespace Util {
+    /** Returns the current device country code. */
+    function getCurrentDeviceCountryAsync(): Promise<string>
+
+    /** Returns the current device locale as a string. */
     function getCurrentLocaleAsync(): Promise<string>
+
+    /** Returns the current device time zone name. */
+    function getCurrentTimeZoneAsync(): Promise<string>
+
+    /** Reloads the current experience. This will fetch and load the newest available JavaScript supported by the device’s Expo environment. This is useful for triggering an update of your experience if you have published a new version. */
     function reload(): void
+
+    /** _Android only_. Invokes a callback when a new version of your app is successfully downloaded in the background. */
+    function addNewVersionListenerExperimental(listener: Function): EventSubscription
   }
 
   namespace WebBrowser {

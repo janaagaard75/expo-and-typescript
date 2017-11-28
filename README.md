@@ -34,7 +34,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [ ] Contacts
 * [ ] DocumentPicker
 * [ ] ErrorRecovery
-* [ ] Facebook
+* [x] Facebook
 * [ ] FacebookAds
 * [ ] FileSystem
 * [ ] Fingerprint

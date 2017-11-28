@@ -8,6 +8,7 @@ import { BlurView2Screen } from './BlurView2Screen'
 import { BrightnessScreen } from './BrightnessScreen'
 import { CameraScreen } from './CameraScreen'
 import { ConstantsScreen } from './constants/ConstantsScreen'
+import { FacebookScreen } from './FacebookScreen'
 import { FontScreen } from './FontScreen'
 import { GyroscopeScreen } from './GyroscopeScreen'
 import { LinearGradientScreen } from './LinearGradientScreen'
@@ -32,6 +33,7 @@ export default StackNavigator({
   Brightness: { screen: BrightnessScreen },
   Camera: { screen: CameraScreen },
   Constants: { screen: ConstantsScreen },
+  Facebook: { screen: FacebookScreen },
   Font: { screen: FontScreen },
   Gyroscope: { screen: GyroscopeScreen },
   LinearGradient: { screen: LinearGradientScreen },

@@ -56,6 +56,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Brightness"
         />
         <Button
+          onPress={() => navigate('Facebook')}
+          title="Facebook"
+        />
+        <Button
           onPress={() => navigate('Font')}
           title="Font"
         />

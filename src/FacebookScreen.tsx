@@ -1,10 +1,13 @@
 import * as React from 'react'
+import { Alert } from 'react-native'
 import { Component } from 'react'
-import { NavigationScreenProps } from 'react-navigation'
+import { Facebook } from 'expo'
 // tslint:disable-next-line:no-implicit-dependencies
 import { FontAwesome } from '@expo/vector-icons'
-import { Facebook } from 'expo'
-import { Alert, Text, TouchableOpacity, View } from 'react-native'
+import { NavigationScreenProps } from 'react-navigation'
+import { Text } from 'react-native'
+import { TouchableOpacity } from 'react-native'
+import { View } from 'react-native'
 
 export class FacebookScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
@@ -15,8 +18,9 @@ export class FacebookScreen extends Component<NavigationScreenProps<void>> {
     const loginResponse = await Facebook.logInWithReadPermissionsAsync('1487822177919606', {
       permissions: ['public_profile']
     })
+
     if (loginResponse.type === 'success') {
-      // Get the user's name using Facebook's Graph API
+      // Get the user's name using Facebook's Graph API.
       const response = await fetch(
         `https://graph.facebook.com/me?access_token=${loginResponse.token}`)
       Alert.alert(

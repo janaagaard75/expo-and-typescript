@@ -13,7 +13,7 @@
     "validate-typescript": "tsc --noEmit"
   },
   "dependencies": {
-    "expo": "23.0.2",
+    "expo": "23.0.4",
     "react": "16.0.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
     "react-navigation": "1.0.0-beta.21",
@@ -23,11 +23,11 @@
     "@types/fbemitter": "2.0.32",
     "@types/react": "16.0.25",
     "@types/react-native": "0.50.7",
-    "@types/react-navigation": "1.0.23",
+    "@types/react-navigation": "1.0.25",
     "react-native-typescript-transformer": "1.1.4",
     "tslint": "5.8.0",
     "tslint-eslint-rules": "4.1.1",
     "tslint-react": "3.2.0",
-    "typescript": "2.6.1"
+    "typescript": "2.6.2"
   }
 }

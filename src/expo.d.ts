@@ -1680,7 +1680,7 @@ declare module '@expo/vector-icons' {
   class FontAwesome extends Component<FontAwesomeProps> { }
   class Foundation extends Component<FoundationProps> { }
   class Ionicons extends Component<IoniconsProps> { }
-  class MaterialComunityIcons extends Component<MaterialCommunityIconsProps> { }
+  class MaterialCommunityIcons extends Component<MaterialCommunityIconsProps> { }
   class MaterialIcons extends Component<MaterialIconsProps> { }
   class Octicons extends Component<OcticonsProps> { }
   class SimpleLineIcons extends Component<SimpleLineIconsProps> { }

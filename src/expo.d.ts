@@ -1245,9 +1245,8 @@ declare module 'expo' {
     const SYSTEM_BRIGHTNESS: PermissionType
   }
 
-  /** Register Root Component. Useful when using function like react-redux connect for example. */
-  // TODO: verify if it's a good idea or not to use generics.
-  function registerRootComponent<P, S>(component: React.Component<P, S>): React.Component<P, S>
+  /** Sets the main component for Expo to use for your app. */
+  function registerRootComponent(component: React.ComponentType<any>): void
 
   namespace ScreenOrientation {
     namespace Orientation {

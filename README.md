@@ -55,7 +55,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [ ] Payments
 * [ ] Pedometer
 * [x] Permissions
-* [ ] registerRootComponent
+* [x] registerRootComponent
 * [x] ScreenOrientation
 * [ ] SecureStore
 * [ ] Segment

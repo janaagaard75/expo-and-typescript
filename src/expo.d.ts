@@ -49,6 +49,8 @@ declare module 'expo' {
     function setGroup(groupType: string, groupNames: object): void
   }
 
+  class AppLoading extends React.Component { }
+
   /** This module provides an interface to Expo’s asset system. An asset is any file that lives alongside the source code of your app that the app needs at runtime. Examples include images, fonts and sounds. Expo’s asset system integrates with React Native’s, so that you can refer to files with require('path/to/file'). This is how you refer to static image files in React Native for use in an Image component, for example. */
   class Asset {
     // The asset class has properties that these, but I believe that these are the only ones meant to be public.
@@ -676,8 +678,6 @@ declare module 'expo' {
 
   class BlurView extends React.Component<BlurViewProps> { }
   //#endregion
-
-  class AppLoading extends React.Component { }
 
   //#region BarCodeScanner
   interface BarCodeScannerProps {

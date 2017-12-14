@@ -7,7 +7,7 @@
     "sdkVersion": "23.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
+    "primaryColor": "#fff",
     "icon": "./assets/icons/app-icon.png",
     "loading": {
       "icon": "./assets/icons/loading-icon.png"

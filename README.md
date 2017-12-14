@@ -37,7 +37,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [x] Facebook
 * [ ] FacebookAds
 * [ ] FileSystem
-* [ ] Fingerprint
+* [x] Fingerprint
 * [x] Font
 * [ ] GestureHandler
 * [ ] GLView

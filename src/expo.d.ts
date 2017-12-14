@@ -690,6 +690,46 @@ declare module 'expo' {
   class BarCodeScanner extends React.Component<BarCodeScannerProps> { }
   //#endregion
 
+  /** Use TouchID/FaceID (iOS) or the Fingerprint API (Android) to authenticate the user with a fingerprint scan. */
+  namespace Fingerprint {
+    // interface FingerprintAuthenticationSuccess {
+    //   success: true
+    // }
+
+    // interface FingerprintAuthenticationFailure {
+    //   success: false,
+    //     /** Error code in the case where authentication fails. */
+    //   error: string
+    // }
+
+    // type FingerprintAuthenticationResult = FingerprintAuthenticationSuccess | FingerprintAuthenticationFailure
+
+    type FingerprintAuthenticationResult =
+      {
+        success: true
+      } | {
+        success: false,
+        /** Error code in the case where authentication fails. */
+        error: string
+      }
+
+    /**
+     * Attempts to authenticate via Fingerprint. Android: When using the fingerprint module on Android, you need to provide a UI component to prompt the user to scan their fingerprint, as the OS has no default alert for it.
+     *
+     * @param promptMessage A message that is shown alongside the TouchID/FaceID prompt. (iOS only)
+     */
+    function authenticateAsync(promptMessage?: string): Promise<FingerprintAuthenticationResult>
+
+    /** Cancels the fingerprint authentication flow. (Android only) */
+    function cancelAuthenticate(): void
+
+    /** Determine whether the Fingerprint scanner is available on the device. */
+    function hasHardwareAsync(): Promise<boolean>
+
+    /** Determine whether the device has saved fingerprints to use for authentication. */
+    function isEnrolledAsync(): Promise<boolean>
+  }
+
   //#region GLView
   // TODO: better defs because there is no complete documentation. I did it from the code.
   interface GLViewProps extends ViewProperties {

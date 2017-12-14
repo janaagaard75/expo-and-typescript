@@ -60,6 +60,10 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           title="Facebook"
         />
         <Button
+          onPress={() => navigate('Fingerprint')}
+          title="Fingerprint"
+        />
+        <Button
           onPress={() => navigate('Font')}
           title="Font"
         />

@@ -9,6 +9,7 @@ import { BrightnessScreen } from './BrightnessScreen'
 import { CameraScreen } from './CameraScreen'
 import { ConstantsScreen } from './constants/ConstantsScreen'
 import { FacebookScreen } from './FacebookScreen'
+import { FingerprintScreen } from './FingerprintScreen'
 import { FontScreen } from './FontScreen'
 import { GyroscopeScreen } from './GyroscopeScreen'
 import { LinearGradientScreen } from './LinearGradientScreen'
@@ -34,6 +35,7 @@ export default StackNavigator({
   Camera: { screen: CameraScreen },
   Constants: { screen: ConstantsScreen },
   Facebook: { screen: FacebookScreen },
+  Fingerprint: { screen: FingerprintScreen },
   Font: { screen: FontScreen },
   Gyroscope: { screen: GyroscopeScreen },
   LinearGradient: { screen: LinearGradientScreen },

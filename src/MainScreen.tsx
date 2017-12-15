@@ -4,13 +4,48 @@ import { Component } from 'react'
 import { NavigationScreenProps } from 'react-navigation'
 import { ScrollView } from 'react-native'
 
+class DestinationAndTitle {
+  constructor(
+    public destination: string,
+    title?: string
+  ) {
+    if (title === undefined) {
+      this.title = destination
+    }
+    else {
+      this.title = title
+    }
+  }
+
+  public title: string
+}
+
+// tslint:disable-next-line:max-classes-per-file
 export class MainScreen extends Component<NavigationScreenProps<void>> {
   public static navigationOptions = {
     title: 'Home'
   }
 
   public render() {
-    const navigate = this.props.navigation.navigate
+    const destinationAndTitlePairs: Array<DestinationAndTitle> = [
+      new DestinationAndTitle('Accelerometer'),
+      new DestinationAndTitle('Asset'),
+      new DestinationAndTitle('Audio'),
+      new DestinationAndTitle('Camera'),
+      new DestinationAndTitle('Constants'),
+      new DestinationAndTitle('LinearGradient'),
+      new DestinationAndTitle('BlurView1', 'BlurView 1'),
+      new DestinationAndTitle('BlurView2', 'BlurView 2'),
+      new DestinationAndTitle('Brightness'),
+      new DestinationAndTitle('Facebook'),
+      new DestinationAndTitle('Fingerprint'),
+      new DestinationAndTitle('Font'),
+      new DestinationAndTitle('Gyroscope'),
+      new DestinationAndTitle('MapView'),
+      new DestinationAndTitle('Svg'),
+      new DestinationAndTitle('Util'),
+      new DestinationAndTitle('VectorIcons', 'Vector Icons')
+    ]
 
     return (
       <ScrollView
@@ -19,74 +54,13 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           flex: 1
         }}
       >
-        <Button
-          onPress={() => navigate('Accelerometer')}
-          title="Accelerometer"
-        />
-        <Button
-          onPress={() => navigate('Asset')}
-          title="Asset"
-        />
-        <Button
-          onPress={() => navigate('Audio')}
-          title="Audio"
-        />
-        <Button
-          onPress={() => navigate('Camera')}
-          title="Camera"
-        />
-        <Button
-          onPress={() => navigate('Constants')}
-          title="Constants"
-        />
-        <Button
-          onPress={() => navigate('LinearGradient')}
-          title="LinearGradient"
-        />
-        <Button
-          onPress={() => navigate('BlurView1')}
-          title="BlurView 1"
-        />
-        <Button
-          onPress={() => navigate('BlurView2')}
-          title="BlurView 2"
-        />
-        <Button
-          onPress={() => navigate('Brightness')}
-          title="Brightness"
-        />
-        <Button
-          onPress={() => navigate('Facebook')}
-          title="Facebook"
-        />
-        <Button
-          onPress={() => navigate('Fingerprint')}
-          title="Fingerprint"
-        />
-        <Button
-          onPress={() => navigate('Font')}
-          title="Font"
-        />
-        <Button
-          onPress={() => navigate('Gyroscope')}
-          title="Gyroscope"
-        />
-        <Button
-          onPress={() => navigate('MapView')}
-          title="MapView"
-        />
-        <Button
-          onPress={() => navigate('Svg')}
-          title="Svg"
-        />
-        <Button
-          onPress={() => navigate('Util')}
-          title="Util"
-        />
-        <Button
-          onPress={() => navigate('VectorIcons')}
-          title="Vector Icons"
-        />
+        {destinationAndTitlePairs.map(destinationAndTitle =>
+          <Button
+            key={destinationAndTitle.destination}
+            onPress={() => this.props.navigation.navigate(destinationAndTitle.destination)}
+            title={destinationAndTitle.title}
+          />
+        )}
       </ScrollView>
     )
   }

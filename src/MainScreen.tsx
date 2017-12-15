@@ -27,26 +27,6 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
   }
 
   public render() {
-    const destinationAndTitlePairs: Array<DestinationAndTitle> = [
-      new DestinationAndTitle('Accelerometer'),
-      new DestinationAndTitle('Asset'),
-      new DestinationAndTitle('Audio'),
-      new DestinationAndTitle('Camera'),
-      new DestinationAndTitle('Constants'),
-      new DestinationAndTitle('LinearGradient'),
-      new DestinationAndTitle('BlurView1', 'BlurView 1'),
-      new DestinationAndTitle('BlurView2', 'BlurView 2'),
-      new DestinationAndTitle('Brightness'),
-      new DestinationAndTitle('Facebook'),
-      new DestinationAndTitle('Fingerprint'),
-      new DestinationAndTitle('Font'),
-      new DestinationAndTitle('Gyroscope'),
-      new DestinationAndTitle('MapView'),
-      new DestinationAndTitle('Svg'),
-      new DestinationAndTitle('Util'),
-      new DestinationAndTitle('VectorIcons', 'Vector Icons')
-    ]
-
     return (
       <ScrollView
         style={{
@@ -54,7 +34,7 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
           flex: 1
         }}
       >
-        {destinationAndTitlePairs.map(destinationAndTitle =>
+        {this.destinationAndTitlePairs.map(destinationAndTitle =>
           <Button
             key={destinationAndTitle.destination}
             onPress={() => this.props.navigation.navigate(destinationAndTitle.destination)}
@@ -64,4 +44,24 @@ export class MainScreen extends Component<NavigationScreenProps<void>> {
       </ScrollView>
     )
   }
+
+  private destinationAndTitlePairs: Array<DestinationAndTitle> = [
+    new DestinationAndTitle('Accelerometer'),
+    new DestinationAndTitle('Asset'),
+    new DestinationAndTitle('Audio'),
+    new DestinationAndTitle('Camera'),
+    new DestinationAndTitle('Constants'),
+    new DestinationAndTitle('LinearGradient'),
+    new DestinationAndTitle('BlurView1', 'BlurView 1'),
+    new DestinationAndTitle('BlurView2', 'BlurView 2'),
+    new DestinationAndTitle('Brightness'),
+    new DestinationAndTitle('Facebook'),
+    new DestinationAndTitle('Fingerprint'),
+    new DestinationAndTitle('Font'),
+    new DestinationAndTitle('Gyroscope'),
+    new DestinationAndTitle('MapView'),
+    new DestinationAndTitle('Svg'),
+    new DestinationAndTitle('Util'),
+    new DestinationAndTitle('VectorIcons', 'Vector Icons')
+  ]
 }

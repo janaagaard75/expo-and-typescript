@@ -1589,9 +1589,6 @@ declare module 'expo' {
   }
 
   //#region Video
-  /**
-   * Expo Video
-   */
   interface VideoLoad {
     duration: number
     currentTime: number
@@ -1607,6 +1604,7 @@ declare module 'expo' {
       orientation: 'landscape' | 'portrait'
     }
   }
+
   type VideoError =
     {
       code: any,
@@ -1627,9 +1625,9 @@ declare module 'expo' {
   }
 
   interface VideoProps {
-    source: any    // TODO: better def: string|*require(file)*
+    source: any // TODO: better def: string | *require(file)*
     fullscreen?: boolean
-    resizeMode?: string    // TODO: resize mode instead of general string
+    resizeMode?: string // TODO: resize mode instead of general string.
     repeat?: boolean
     paused?: boolean
     volume?: number

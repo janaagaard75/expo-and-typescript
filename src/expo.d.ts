@@ -49,7 +49,7 @@ declare module 'expo' {
     function setGroup(groupType: string, groupNames: object): void
   }
 
-  class AppLoading extends React.Component { }
+  class AppLoading extends Component { }
 
   /** This module provides an interface to Expo’s asset system. An asset is any file that lives alongside the source code of your app that the app needs at runtime. Examples include images, fonts and sounds. Expo’s asset system integrates with React Native’s, so that you can refer to files with require('path/to/file'). This is how you refer to static image files in React Native for use in an Image component, for example. */
   class Asset {
@@ -676,7 +676,7 @@ declare module 'expo' {
     tint: 'light' | 'default' | 'dark'
   }
 
-  class BlurView extends React.Component<BlurViewProps> { }
+  class BlurView extends Component<BlurViewProps> { }
   //#endregion
 
   //#region BarCodeScanner
@@ -687,7 +687,7 @@ declare module 'expo' {
     style: ViewStyle
   }
 
-  class BarCodeScanner extends React.Component<BarCodeScannerProps> { }
+  class BarCodeScanner extends Component<BarCodeScannerProps> { }
   //#endregion
 
   /** Use TouchID/FaceID (iOS) or the Fingerprint API (Android) to authenticate the user with a fingerprint scan. */
@@ -737,10 +737,10 @@ declare module 'expo' {
     msaaSamples: number
   }
 
-  class GLView extends React.Component<GLViewProps, { msaaSamples: number }> { }
+  class GLView extends Component<GLViewProps, { msaaSamples: number }> { }
   //#endregion
 
-  class KeepAwake extends React.Component {
+  class KeepAwake extends Component {
     static activate(): void
     static deactivate(): void
   }
@@ -813,7 +813,7 @@ declare module 'expo' {
     maxZoomLevel?: number
   }
 
-  class MapView extends React.Component<MapViewProps, any> {
+  class MapView extends Component<MapViewProps, any> {
     static Animated: any
     static AnimatedRegion: any
   }
@@ -905,12 +905,12 @@ declare module 'expo' {
       onPress?: Function
     }
 
-    class Marker extends React.Component<MarkerProps, any> { }
-    class Polyline extends React.Component<MapPolylineProps, any> { }
-    class Polygon extends React.Component<MapPolygonProps, any> { }
-    class Circle extends React.Component<MapCircleProps, any> { }
-    class UrlTile extends React.Component<MapUrlTitleProps, any> { }
-    class Callout extends React.Component<MapCalloutProps, any> { }
+    class Marker extends Component<MarkerProps, any> { }
+    class Polyline extends Component<MapPolylineProps, any> { }
+    class Polygon extends Component<MapPolygonProps, any> { }
+    class Circle extends Component<MapCircleProps, any> { }
+    class UrlTile extends Component<MapUrlTitleProps, any> { }
+    class Callout extends Component<MapCalloutProps, any> { }
   }
   //#endregion
 
@@ -973,7 +973,7 @@ declare module 'expo' {
       setMediaCachePolicy(iOS: MediaCachePolicy): any
     }
 
-    function withNativeAd(component: React.Component<{
+    function withNativeAd(component: Component<{
       icon?: string;
       coverImage?: string;
       title?: string;
@@ -981,7 +981,7 @@ declare module 'expo' {
       description?: string;
       callToActionText?: string;
       socialContext?: string;
-    }, any>): React.Component<{ adsManager: NativeAdsManager }, { ad: any, canRequestAds: boolean }>
+    }, any>): Component<{ adsManager: NativeAdsManager }, { ad: any, canRequestAds: boolean }>
 
     /**
      * Banner View
@@ -995,7 +995,7 @@ declare module 'expo' {
       onError: () => any
     }
 
-    class BannerView extends React.Component<BannerViewProps> { }
+    class BannerView extends Component<BannerViewProps> { }
 
     /**
      * Ad Settings
@@ -1643,7 +1643,7 @@ declare module 'expo' {
     onEnd?: () => any
   }
 
-  class Video extends React.Component<VideoProps> {
+  class Video extends Component<VideoProps> {
     static RESIZE_MODE_CONTAIN: string
     static RESIZE_MODE_COVER: string
     static RESIZE_MODE_STRETCH: string

@@ -914,70 +914,6 @@ declare module 'expo' {
   }
   //#endregion
 
-  /**
-   * Expo Video
-   */
-  interface VideoLoad {
-    duration: number
-    currentTime: number
-    canPlayReverse: boolean
-    canPlayFastForward: boolean
-    canPlaySlowForward: boolean
-    canPlaySlowReverse: boolean
-    canStepBackward: boolean
-    canStepForward: boolean
-    naturalSize: {
-      width: number;
-      heigth: number;
-      orientation: 'landscape' | 'portrait'
-    }
-  }
-  type VideoError =
-    {
-      code: any,
-      domain: any
-    } | {
-      what: any,
-      extra: any
-    }
-
-  interface VideoProgress {
-    currentTime: number
-    playableDuration: number
-  }
-
-  interface VideoSeek {
-    currentTime: number
-    seekTime: number
-  }
-
-  interface VideoProps {
-    source: any    // TODO: better def: string|*require(file)*
-    fullscreen?: boolean
-    resizeMode?: string    // TODO: resize mode instead of general string
-    repeat?: boolean
-    paused?: boolean
-    volume?: number
-    muted?: boolean
-    rate?: number
-    onLoadStart?: (param: { uri: string }) => any
-    onLoad?: (load: VideoLoad) => any
-    onError?: (error: { error: VideoError }) => any
-    onProgress?: (progress: VideoProgress) => any
-    onSeek?: (seek: VideoSeek) => any
-    onEnd?: () => any
-  }
-
-  class Video extends React.Component<VideoProps> {
-    static RESIZE_MODE_CONTAIN: string
-    static RESIZE_MODE_COVER: string
-    static RESIZE_MODE_STRETCH: string
-
-    seek(time: string): void
-    presentFullscreenPlayer(): void
-    dismissFullscreenPlayer(): void
-  }
-
   namespace DocumentPicker {
     interface Options {
       type: string
@@ -1651,6 +1587,72 @@ declare module 'expo' {
     /** _Android only_. Invokes a callback when a new version of your app is successfully downloaded in the background. */
     function addNewVersionListenerExperimental(listener: Function): EventSubscription
   }
+
+  //#region Video
+  /**
+   * Expo Video
+   */
+  interface VideoLoad {
+    duration: number
+    currentTime: number
+    canPlayReverse: boolean
+    canPlayFastForward: boolean
+    canPlaySlowForward: boolean
+    canPlaySlowReverse: boolean
+    canStepBackward: boolean
+    canStepForward: boolean
+    naturalSize: {
+      width: number;
+      heigth: number;
+      orientation: 'landscape' | 'portrait'
+    }
+  }
+  type VideoError =
+    {
+      code: any,
+      domain: any
+    } | {
+      what: any,
+      extra: any
+    }
+
+  interface VideoProgress {
+    currentTime: number
+    playableDuration: number
+  }
+
+  interface VideoSeek {
+    currentTime: number
+    seekTime: number
+  }
+
+  interface VideoProps {
+    source: any    // TODO: better def: string|*require(file)*
+    fullscreen?: boolean
+    resizeMode?: string    // TODO: resize mode instead of general string
+    repeat?: boolean
+    paused?: boolean
+    volume?: number
+    muted?: boolean
+    rate?: number
+    onLoadStart?: (param: { uri: string }) => any
+    onLoad?: (load: VideoLoad) => any
+    onError?: (error: { error: VideoError }) => any
+    onProgress?: (progress: VideoProgress) => any
+    onSeek?: (seek: VideoSeek) => any
+    onEnd?: () => any
+  }
+
+  class Video extends React.Component<VideoProps> {
+    static RESIZE_MODE_CONTAIN: string
+    static RESIZE_MODE_COVER: string
+    static RESIZE_MODE_STRETCH: string
+
+    seek(time: string): void
+    presentFullscreenPlayer(): void
+    dismissFullscreenPlayer(): void
+  }
+  //#endregion
 
   namespace WebBrowser {
     function openBrowserAsync(url: string): Promise<{ type: 'cancelled' | 'dismissed' }>

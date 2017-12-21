@@ -20,7 +20,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [ ] AdMob
 * [ ] Amplitude
 * [ ] AppLoading
-* [ ] Art
+* [ ] Art (Deprecated in favor of Svg)
 * [x] Asset
 * [x] Audio
 * [ ] AuthSession
@@ -65,7 +65,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 * [ ] takeSnapshotAsync
 * [x] Util
 * [x] Vector Icons
-* [ ] Video
+* [x] Video (Alpha - Type definitions are still not tested with a test screen)
 * [ ] WebBrowse
 
 ## Setting up Expo and React Native with TypeScript

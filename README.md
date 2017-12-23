@@ -1,14 +1,17 @@
 # React Native using Expo and Typescript
 
-The repository is a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It also contains a work-in-progress type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
+This repository is both a
 
-If you're here for the type definition file, here's a direct link to it: [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
+* [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org); and it also
+* contains (a work-in-progress) type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
 
-The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example) and the type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2).
+If you're here for the type definition file, here's a direct link to [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
 
-The app is found here: <https://expo.io/@janaagaard75/expo-and-typescript>. It is not published to the app stores, but you can run it on a device, if install the free Expo client.
+The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on a device, if install the free [Expo client](https://expo.io/tools#client).
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
+
+The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example) and the type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2).
 
 ## Type Definitions for Expo
 

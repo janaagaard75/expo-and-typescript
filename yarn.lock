@@ -13,9 +13,9 @@
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
 
-"@types/react-native@*", "@types/react-native@0.51.4":
-  version "0.51.4"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.51.4.tgz#92756c0600c18335a12d324b53b3231f33fe758f"
+"@types/react-native@*", "@types/react-native@0.51.5":
+  version "0.51.5"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.51.5.tgz#7607f04e579ebaefddf7639348f6a23e1bffdde3"
   dependencies:
     "@types/react" "*"
 
@@ -3724,8 +3724,8 @@ tsutils@^1.4.0:
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-1.9.1.tgz#b9f9ab44e55af9681831d5f28d0aeeaf5c750cb0"
 
 tsutils@^2.12.1, tsutils@^2.8.0:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.13.1.tgz#d6d1cc0f7c04cf9fb3b28a292973cffb9cfbe09a"
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.14.0.tgz#bc5291622aa2448c1baffc544bcc14ecfa528fb7"
   dependencies:
     tslib "^1.8.0"
 

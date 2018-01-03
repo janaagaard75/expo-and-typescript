@@ -2,6 +2,7 @@ import { StackNavigator } from 'react-navigation'
 
 import { AccelerometerScreen } from './AccelerometerScreen'
 import { AssetScreen } from './AssetScreen'
+import { AmplitudeScreen } from './AmplitudeScreen'
 import { AudioScreen } from './AudioScreen'
 import { BlurView1Screen } from './BlurView1Screen'
 import { BlurView2Screen } from './BlurView2Screen'
@@ -27,6 +28,7 @@ export default StackNavigator({
   Main: { screen: MainScreen },
 
   Accelerometer: { screen: AccelerometerScreen },
+  Amplitude: { screen: AmplitudeScreen },
   Asset: { screen: AssetScreen },
   Audio: { screen: AudioScreen },
   BlurView1: { screen: BlurView1Screen },

@@ -21,7 +21,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 
 * [x] Accelerometer
 * [ ] AdMob
-* [ ] Amplitude
+* [x] Amplitude
 * [x] AppLoading (No test screen)
 * [ ] Art (Deprecated in favor of Svg)
 * [x] Asset

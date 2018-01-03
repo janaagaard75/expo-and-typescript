@@ -39,14 +39,43 @@ declare module 'expo' {
     function setUpdateInterval(intervalMs: number): void
   }
 
+  /**
+   * Provides access to Amplitude mobile analytics which basically lets you log various events to the Cloud. This module wraps Amplitude’s iOS and Android SDKs.
+   *
+   * Note: Session tracking may not work correctly when running Experiences in the main Expo app. It will work correctly if you create a standalone app.
+   */
   namespace Amplitude {
+    /** Initializes Amplitude with your Amplitude API key. */
     function initialize(apiKey: string): void
+
+    /** Assign a user ID to the current user. If you don’t have a system for user IDs you don’t need to call this. */
     function setUserId(userId: string): void
-    function setUserProperties(userProperties: object): void    // TODO: add userProperties definition from amplitude doc
+
+    /** Set properties for the current user. */
+    function setUserProperties(userProperties: object): void
+
+    /** Clear properties set by `setUserProperties()`. */
     function clearUserProperties(): void
+
+    /** Log an event to Amplitude. */
     function logEvent(eventName: string): void
-    function logEventWithProperties(eventName: string, properties: object): void
-    function setGroup(groupType: string, groupNames: object): void
+
+    /** Log an event to Amplitude with custom properties. */
+    function logEventWithProperties(
+      eventName: string,
+
+      /** A map of custom properties. */
+      properties: object
+    ): void
+
+    /** Add the current user to a group. */
+    function setGroup(
+      /** The group name, e.g. `'sports'`. */
+      groupType: string,
+
+      /** An array of group names, e.g. `['tennis', 'soccer']`. */
+      groupNames: Array<string>
+    ): void
   }
 
   /** The following props are recommended, but optional for the sake of backwards compatibility (they were introduced in SDK21). If you do not provide any props, you are responsible for coordinating loading assets, handling errors, and updating state to unmount the `AppLoading` component. */

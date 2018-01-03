@@ -17,7 +17,7 @@ The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-
 
 The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
 
-These are the APIs provided by Expo, with a checkmark for the ones, that have been tested in this repo. 21 out of 51 done.
+These are the APIs provided by Expo, with a checkmark for the ones, that have been tested in this repo. 22 out of 51 done.
 
 * [x] Accelerometer
 * [ ] AdMob

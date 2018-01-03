@@ -21,13 +21,13 @@
   },
   "devDependencies": {
     "@types/fbemitter": "2.0.32",
-    "@types/react": "16.0.31",
-    "@types/react-native": "0.51.5",
+    "@types/react": "16.0.33",
+    "@types/react-native": "0.51.9",
     "@types/react-navigation": "1.0.26",
     "react-native-typescript-transformer": "1.1.4",
     "tslint": "5.8.0",
     "tslint-eslint-rules": "4.1.1",
-    "tslint-react": "3.2.0",
+    "tslint-react": "3.3.3",
     "typescript": "2.6.2"
   }
 }

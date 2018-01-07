@@ -41,9 +41,6 @@ export class FingerprintScreen extends Component<{}, State> {
   private async authenticate() {
     const authenticated = await Fingerprint.authenticateAsync('Authentication message')
 
-    // TODO: Figure out how to get access to the error attribute.
-    // authenticated.error
-
     if (authenticated.success) {
       this.setState({
         authenticationError: 'None'

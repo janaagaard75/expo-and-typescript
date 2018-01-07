@@ -1393,15 +1393,71 @@ declare module 'expo' {
     function allow(orientation: 'ALL' | 'ALL_BUT_UPSIDE_DOWN' | 'PORTRAIT' | 'PORTRAIT_UP' | 'PORTRAIT_DOWN' | 'LANDSCAPE' | 'LANDSCAPE_LEFT' | 'LANDSCAPE_RIGHT'): void
   }
 
-  // TODO: check that all these functions return void or not.
+  /**
+   * Provides access to https://segment.com/ mobile analytics. Wraps Segment’s iOS and Android sources.
+   *
+   * Session tracking may not work correctly when running Experiences in the main Expo app. It will work correctly if you create a standalone app.
+   */
   namespace Segment {
-    function initializeIOS(writeKey: string): void
-    function initializeAndroid(writeKey: string): void
-    function identify(userId: string): void
-    function identifyWithTraits(userId: string, traits: any): void
-    function track(event: string): void
-    function trackWithProperties(event: string, properties: any): void
+    /** Manually flush the event queue. You shouldn’t need to call this in most cases. */
     function flush(): void
+
+    /** Associates the current user with a user ID. Call this after calling `initialize()` but before other segment calls. See https://segment.com/docs/spec/identify/. */
+    function identify(
+      /** User ID for the current user. */
+      userId: string
+    ): void
+
+    /** Associates the current user with a user ID and some metadata. Call this after calling Expo.Segment.initialize() but before other segment calls. See https://segment.com/docs/spec/identify/. */
+    function identifyWithTraits(
+      /** User ID for the current user. */
+      userId: string,
+
+      /** A map of custom properties. */
+      traits: object
+    ): void
+
+    /** Segment requires separate write keys for iOS and Android. You will need to log in to Segment to recieve these https://segment.com/docs/guides/setup/how-do-i-find-my-write-key/. */
+    function initialize(options: {
+      /** Write key for Android source. */
+      androidWriteKey?: string,
+
+      /** Write key for iOS source. */
+      iosWriteKey?: string
+    }): void
+
+    /** Clears the current user. See https://segment.com/docs/sources/mobile/ios/#reset. */
+    function reset(): void
+
+    /** Record that a user has seen a screen to Segment. See https://segment.com/docs/spec/screen/. */
+    function screen(
+      /** Name of the screen. */
+      screenName: string
+    ): void
+
+    /** Record that a user has seen a screen to Segment with custom properties. See https://segment.com/docs/spec/screen/. */
+    function screenWithProperties(
+      /**  Name of the screen. */
+      screenName: string,
+
+      /** A map of custom properties. */
+      properties: object
+    ): void
+
+    /** Log an event to Segment. See https://segment.com/docs/spec/track/. */
+    function track(
+      /** The event name. */
+      event: string
+    ): void
+
+    /** Log an event to Segment with custom properties. See https://segment.com/docs/spec/track/. */
+    function trackWithProperties(
+      /** The event name. */
+      event: string,
+
+      /** A map of custom properties. */
+      properties: object
+    ): void
   }
 
   namespace SQLite {

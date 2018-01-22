@@ -78,6 +78,7 @@ declare module 'expo' {
     ): void
   }
 
+  // #region AppLoading
   /** The following props are recommended, but optional for the sake of backwards compatibility (they were introduced in SDK21). If you do not provide any props, you are responsible for coordinating loading assets, handling errors, and updating state to unmount the `AppLoading` component. */
   interface AppLoadingProps {
     /** If `startAsync` throws an error, it is caught and passed into the function provided to `onError`. */
@@ -96,6 +97,7 @@ declare module 'expo' {
    * This is incredibly useful to let you download and cache fonts, logo and icon images and other assets that you want to be sure the user has on their device for an optimal experience before rendering they start using the app.
    */
   class AppLoading extends React.Component<AppLoadingProps> { }
+  // #endregion
 
   /** This module provides an interface to Expo’s asset system. An asset is any file that lives alongside the source code of your app that the app needs at runtime. Examples include images, fonts and sounds. Expo’s asset system integrates with React Native’s, so that you can refer to files with require('path/to/file'). This is how you refer to static image files in React Native for use in an Image component, for example. */
   class Asset {

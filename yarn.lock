@@ -539,7 +539,15 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
 
-"@types/fbemitter@2.0.32":
+"@types/expo@25.0.4":
+  version "25.0.4"
+  resolved "https://registry.yarnpkg.com/@types/expo/-/expo-25.0.4.tgz#4699a6afdabe0aaec231df9b7459930e66d21dd7"
+  dependencies:
+    "@types/fbemitter" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/fbemitter@*", "@types/fbemitter@2.0.32":
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
 

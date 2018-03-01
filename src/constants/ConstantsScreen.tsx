@@ -9,8 +9,8 @@ interface State {
   webViewUserAgent: string | undefined
 }
 
-export class ConstantsScreen extends Component<NavigationScreenProps<void>, State> {
-  constructor(props: NavigationScreenProps<void>, context?: any) {
+export class ConstantsScreen extends Component<NavigationScreenProps, State> {
+  constructor(props: NavigationScreenProps, context?: any) {
     super(props, context)
 
     this.state = {

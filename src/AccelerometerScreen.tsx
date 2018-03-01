@@ -13,8 +13,8 @@ interface State {
   accelerometerData: Accelerometer.AccelerometerObject
 }
 
-export class AccelerometerScreen extends Component<NavigationScreenProps<void>, State> {
-  constructor(props: NavigationScreenProps<void>, context?: any) {
+export class AccelerometerScreen extends Component<NavigationScreenProps, State> {
+  constructor(props: NavigationScreenProps, context?: any) {
     super(props, context)
 
     this.state = {

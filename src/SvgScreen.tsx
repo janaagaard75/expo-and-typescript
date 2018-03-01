@@ -4,7 +4,7 @@ import { NavigationScreenProps } from 'react-navigation'
 import { Svg } from 'expo'
 import { View } from 'react-native'
 
-export class SvgScreen extends Component<NavigationScreenProps<void>> {
+export class SvgScreen extends Component<NavigationScreenProps> {
   public static navigationOptions = {
     title: 'Svg'
   }

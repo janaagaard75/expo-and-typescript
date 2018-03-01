@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo'
 import { NavigationScreenProps } from 'react-navigation'
 import { View } from 'react-native'
 
-export class LinearGradientScreen extends Component<NavigationScreenProps<void>> {
+export class LinearGradientScreen extends Component<NavigationScreenProps> {
   public static navigationOptions = {
     title: 'LinearGradient'
   }

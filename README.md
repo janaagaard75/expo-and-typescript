@@ -73,7 +73,7 @@ These are the APIs provided by Expo, with a checkmark for the ones, that have be
 
 ## Setting up Expo and React Native with TypeScript
 
-Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Hot reloading and debugging of TypeScript files works, but hot module replacement does not work.
+Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, but I am not sure is hot reloading (aka module replacement) works as well as it does with a non-transpiled solution. The Expo client has some caching, so subsequent reloads are faster than the initial load.
 
 ### TypeScript
 

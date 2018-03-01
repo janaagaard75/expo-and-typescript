@@ -6,6 +6,11 @@
     "tslint:latest",
     "tslint-react"
   ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*"
+    ]
+  },
   "rules": {
     "align": [
       false

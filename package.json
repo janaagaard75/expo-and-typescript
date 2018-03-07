@@ -10,6 +10,8 @@
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "ios": "exp ios",
+    "start": "exp start",
     "validate-typescript": "tsc --noEmit"
   },
   "dependencies": {
@@ -24,6 +26,7 @@
     "@types/react": "16.0.40",
     "@types/react-native": "0.52.15",
     "@types/react-navigation": "1.2.1",
+    "exp": "49.2.2",
     "react-native-typescript-transformer": "1.2.3",
     "tslint": "5.9.1",
     "tslint-eslint-rules": "5.1.0",

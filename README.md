@@ -13,6 +13,28 @@ The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@jan
 
 The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example) and the type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2).
 
+## Running the App
+
+You can either run the app using [Expo XDE](https://expo.io/tools#xde) or using the command line. Personally I find that using the XDE is the easiest solution, since it handles a lot of the setup for you, but if you're prefer using the command line here are the commands to do so.
+
+Start the local server. This will give you a QR code that you can scan using the Expo Client app on your mobile divice.
+
+```shell
+yarn start
+```
+
+If you're on a Mac and have Xcode installed, you can run the app using the iOS Simulator. The first time you have to install the Expo Client on the simulator. Use the same command to update the client.
+
+```shell
+yarn exp install:ios
+```
+
+Once the client is installed you can launch the simulator and open the project with this command. The server has to be kept running, so open up a second terminal.
+
+```shell
+yarn ios
+```
+
 ## Type Definitions for Expo
 
 The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.

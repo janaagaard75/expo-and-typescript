@@ -3,9 +3,9 @@
 This repository is both a
 
 * [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org); and it also
-* contains (a work-in-progress) type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
+* contains type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
 
-If you're here for the type definition file, here's a direct link to [expo.d.ts](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/expo.d.ts).
+There is now [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package available in the Definitetly Typed project, and most of the work done in this project has been merged into that package.
 
 The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on a device, if install the free [Expo client](https://expo.io/tools#client).
 

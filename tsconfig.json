@@ -4,6 +4,8 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
+    "baseUrl": "./src",
+    "rootDir": ".",
     "jsx": "react-native",
     "lib": [
       "dom",

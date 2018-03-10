@@ -16,6 +16,7 @@
     "validate-typescript": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
+    "@types/expo": "^25.0.0",
     "expo": "25.0.0",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
@@ -27,6 +28,7 @@
     "@types/react": "16.0.40",
     "@types/react-native": "0.52.15",
     "@types/react-navigation": "1.2.1",
+    "babel-plugin-module-resolver": "^3.1.0",
     "exp": "49.2.2",
     "react-native-typescript-transformer": "1.2.3",
     "tslint": "5.9.1",

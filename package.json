@@ -11,8 +11,9 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "ios": "exp ios",
+    "lint": "tslint src/**/*.ts",
     "start": "exp start",
-    "validate-typescript": "tsc --noEmit"
+    "validate-typescript": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
     "expo": "25.0.0",

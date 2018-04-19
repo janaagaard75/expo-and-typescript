@@ -16,22 +16,22 @@
     "validate-typescript": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
-    "expo": "25.0.0",
-    "react": "16.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
-    "react-navigation": "1.2.1",
+    "expo": "26.0.0",
+    "react": "16.3.0-alpha.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
+    "react-navigation": "1.5.8",
     "tslib": "1.9.0"
   },
   "devDependencies": {
     "@types/fbemitter": "2.0.32",
-    "@types/react": "16.0.40",
-    "@types/react-native": "0.52.15",
-    "@types/react-navigation": "1.2.1",
-    "exp": "49.2.2",
-    "react-native-typescript-transformer": "1.2.3",
+    "@types/react": "16.3.12",
+    "@types/react-native": "0.55.4",
+    "@types/react-navigation": "1.5.7",
+    "exp": "53.0.0",
+    "react-native-typescript-transformer": "1.2.4",
     "tslint": "5.9.1",
     "tslint-eslint-rules": "5.1.0",
     "tslint-react": "3.5.1",
-    "typescript": "2.7.2"
+    "typescript": "2.8.3"
   }
 }

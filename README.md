@@ -1,17 +1,12 @@
 # React Native using Expo and Typescript
 
-This repository is both a
-
-* [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org); and it also
-* contains type definition file for the [APIs provided by Expo](https://docs.expo.io/versions/latest/sdk/index.html).
-
-There is now [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package available in the Definitetly Typed project, and most of the work done in this project has been merged into that package.
+This repository is a [React Native](https://facebook.github.io/react-native/) demo app using [Expo](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package.
 
 The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on a device, if install the free [Expo client](https://expo.io/tools#client).
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
-The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example) and the type definitions are based on [pierre-H's type definition file](https://gist.github.com/pierre-H/eef9a9225fb1c5a0f81180a8b0fbb2c2).
+The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
 
 ## Running the App
 
@@ -35,67 +30,9 @@ Once the client is installed you can launch the simulator and open the project w
 yarn ios
 ```
 
-## Type Definitions for Expo
-
-The ultimate goal is to get the definitions merged into to [expo/expo-sdk](https://github.com/expo/expo-sdk), or if that's is not possible, then as a secondary option to create the `@types/expo` package through the [DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped). I do however believe that the quality of the type defintions have to be better before any of these paths are persued.
-
-These are the APIs provided by Expo, with a checkmark for the ones, that have been tested in this repo. 23 out of 51 done.
-
-* [x] Accelerometer
-* [ ] AdMob
-* [x] Amplitude
-* [x] AppLoading (No test screen)
-* [ ] Art (Deprecated in favor of Svg)
-* [x] Asset
-* [x] Audio
-* [ ] AuthSession
-* [ ] AV
-* [ ] BarCodeScanner
-* [x] BlurView
-* [ ] Branch
-* [x] Brightness
-* [x] Camera
-* [x] Constants
-* [ ] Contacts
-* [ ] DocumentPicker
-* [ ] ErrorRecovery
-* [x] Facebook
-* [ ] FacebookAds
-* [ ] FileSystem
-* [x] Fingerprint
-* [x] Font
-* [ ] GestureHandler
-* [ ] GLView
-* [ ] Google
-* [x] Gyroscope
-* [ ] ImagePicker
-* [ ] IntentLauncherAndroid
-* [ ] KeepAwake
-* [x] LinearGradient
-* [ ] Location
-* [ ] Lottie
-* [ ] Magnetometer
-* [x] MapView
-* [ ] Notifications
-* [ ] Payments
-* [ ] Pedometer
-* [x] Permissions
-* [x] registerRootComponent
-* [x] ScreenOrientation
-* [ ] SecureStore
-* [x] Segment (No test screen)
-* [ ] Speech
-* [ ] SQLite
-* [x] Svg
-* [ ] takeSnapshotAsync
-* [x] Util
-* [x] Vector Icons
-* [x] Video (No test screen)
-* [ ] WebBrowse
-
 ## Setting up Expo and React Native with TypeScript
 
-Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, but I am not sure is hot reloading (aka module replacement) works as well as it does with a non-transpiled solution. The Expo client has some caching, so subsequent reloads are faster than the initial load.
+Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, and hot realoading works. I am unsure as to how well hot module replacement works compared to coding in Expo in JavaScript. There is definitely some caching though, because subsequent reloads are faster than the initial load.
 
 ### TypeScript
 
@@ -176,21 +113,13 @@ import App from './src/App'
 export default App
 ```
 
-### Add Type Definitions for React
+### Add Type Definitions
 
-Add type definitions for React and React Native.
+Add type definitions for React, React Native and Expo.
 
 ```shell
-yarn add --dev --exact @types/react @types/react-native
+yarn add --dev --exact @types/react @types/react-native @types/expo
 ```
-
-### Add Type Definitions for Expo
-
-Besides what React Native already has, the Expo SDK comes with a lot of additional APIs for your app. Unfortunately there aren't any type definitions for these APIs, and that makes it difficult to use them correctly in TypeScript. I have started on creating these type definitions, but bare in mind that they still lack a lot of testing.
-
-Create a file `expo.d.ts` in the `src` folder and copy the content of this [`expo.d.ts`](https://raw.githubusercontent.com/janaagaard75/expo-sdk-with-type-definitions/master/expo.d.ts) to it.
-
-I'm working on both improving these type definitions, and I'm trying to make it easier to add and update them, but they are currently in a very early stage.
 
 ## Similar Projects
 

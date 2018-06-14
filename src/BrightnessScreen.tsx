@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { Component } from 'react'
-import { Button } from 'react-native'
 import { Brightness } from 'expo'
+import { Button } from 'react-native'
+import { Component } from 'react'
+import { FloatFromZeroToOne } from 'expo'
 import { NavigationScreenProps } from 'react-navigation'
 import { Text } from 'react-native'
 import { View } from 'react-native'
@@ -57,6 +58,10 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
             title="Normal 0%"
           />
           <Button
+            onPress={() => this.setNormalBrightness(0.05)}
+            title="Normal 5%"
+          />
+          <Button
             onPress={() => this.setNormalBrightness(0.5)}
             title="Normal 50%"
           />
@@ -69,6 +74,10 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
           <Button
             onPress={() => this.setSystemBrightness(0)}
             title="System 0%"
+          />
+          <Button
+            onPress={() => this.setSystemBrightness(0.05)}
+            title="System 5%"
           />
           <Button
             onPress={() => this.setSystemBrightness(0.5)}
@@ -84,12 +93,14 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
   }
 
   private async setNormalBrightness(value: number) {
-    await Brightness.setBrightnessAsync(value)
+    // TODO: Fix the type definition.
+    await Brightness.setBrightnessAsync(value as FloatFromZeroToOne)
     this.updateBrightness()
   }
 
   private async setSystemBrightness(value: number) {
-    await Brightness.setSystemBrightnessAsync(value)
+    // TODO: Fix the type definition.
+    await Brightness.setSystemBrightnessAsync(value as FloatFromZeroToOne)
     this.updateBrightness()
   }
 

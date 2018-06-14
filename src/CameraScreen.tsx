@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
 
 interface State {
-  cameraType: Camera.Constants.Type,
+  cameraType: string // TODO Camera.Constants.Type,
   hasPermissionToCamera: boolean | undefined
 }
 
@@ -16,7 +16,7 @@ export class CameraScreen extends Component<{}, State> {
     super(props, context)
 
     this.state = {
-      cameraType: Camera.Constants.Type.back,
+      cameraType: 'back', // Camera.Constants.Type.back, TODO
       hasPermissionToCamera: undefined
     }
   }
@@ -77,9 +77,13 @@ export class CameraScreen extends Component<{}, State> {
 
   private toggleCameraType() {
     this.setState({
-      cameraType: this.state.cameraType === Camera.Constants.Type.back
-        ? Camera.Constants.Type.front
-        : Camera.Constants.Type.back
+      // TODO
+      // cameraType: this.state.cameraType === Camera.Constants.Type.back
+      //   ? Camera.Constants.Type.front
+      //   : Camera.Constants.Type.back
+      cameraType: this.state.cameraType === 'back'
+        ? 'front'
+        : 'back'
     })
   }
 }

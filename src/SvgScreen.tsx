@@ -21,10 +21,11 @@ export class SvgScreen extends Component<NavigationScreenProps> {
       >
         <Svg
           height={100}
-          style={{
-            marginTop: 10
-          }}
-          viewBox="0 0 60 60"
+          // TODO
+          // style={{
+          //   marginTop: 10
+          // }}
+          // viewBox="0 0 60 60"
           width={100}
         >
           <Svg.G>

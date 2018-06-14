@@ -23,6 +23,8 @@
     "tslib": "1.9.0"
   },
   "devDependencies": {
+    "@types/expo": "25.0.4",
+    "@types/expo__vector-icons": "6.2.1",
     "@types/fbemitter": "2.0.32",
     "@types/react": "16.3.12",
     "@types/react-native": "0.55.4",

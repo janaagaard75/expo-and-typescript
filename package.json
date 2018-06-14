@@ -20,7 +20,7 @@
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
     "react-navigation": "2.3.1",
-    "tslib": "1.9.0"
+    "tslib": "1.9.2"
   },
   "devDependencies": {
     "@types/expo": "27.0.1",
@@ -30,10 +30,10 @@
     "@types/react-native": "0.55.19",
     "@types/react-navigation": "2.0.5",
     "exp": "55.0.1",
-    "react-native-typescript-transformer": "1.2.4",
-    "tslint": "5.9.1",
-    "tslint-eslint-rules": "5.1.0",
-    "tslint-react": "3.5.1",
-    "typescript": "2.8.3"
+    "react-native-typescript-transformer": "1.2.10",
+    "tslint": "5.10.0",
+    "tslint-eslint-rules": "5.3.1",
+    "tslint-react": "3.6.0",
+    "typescript": "2.9.2"
   }
 }

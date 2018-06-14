@@ -8,6 +8,16 @@ The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@jan
 
 The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
 
+## Currently Lots of Warnings
+
+The current state of the app is a bit shaky in that there are quite a lot of warnings when building and running the app.
+
+1. A buch of warnings about incompatible platform when installing the packages, e.g. *@expo/ngrok-bin-freebsd-ia32@2.2.8: The platform "darwin" is incompatible with this module.* Using npm instead of yarn reveals that these are optional dependencies being skipped, but still weird to have all these warnings.
+
+2. Two issues when running the app in Expo, one about npm not found and then this second one *`npm` command not found. If you have npm installed please run `npm install -g exp && exp path`*. Both messages can be removed by install exp globally running the suggested command, though. Install globally with Yarn does not seem to work.
+
+3. Warning inside the app that `StackNavigator` has been deprecated. The warning includes a fix, but I haven't updated the code yet.
+
 ## Running the App
 
 You can either run the app using [Expo XDE](https://expo.io/tools#xde) or using the command line. Personally I find that using the XDE is the easiest solution, since it handles a lot of the setup for you, but if you're prefer using the command line here are the commands to do so.

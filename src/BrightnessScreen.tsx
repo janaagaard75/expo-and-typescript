@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Brightness } from 'expo'
 import { Button } from 'react-native'
 import { Component } from 'react'
-import { FloatFromZeroToOne } from 'expo'
 import { NavigationScreenProps } from 'react-navigation'
 import { Text } from 'react-native'
 import { View } from 'react-native'
@@ -94,13 +93,13 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
 
   private async setNormalBrightness(value: number) {
     // TODO: Fix the type definition.
-    await Brightness.setBrightnessAsync(value as FloatFromZeroToOne)
+    await Brightness.setBrightnessAsync(value)
     this.updateBrightness()
   }
 
   private async setSystemBrightness(value: number) {
     // TODO: Fix the type definition.
-    await Brightness.setSystemBrightnessAsync(value as FloatFromZeroToOne)
+    await Brightness.setSystemBrightnessAsync(value)
     this.updateBrightness()
   }
 

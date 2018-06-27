@@ -13,7 +13,7 @@
     "ios": "exp ios",
     "lint": "tslint src/**/*.ts",
     "start": "exp start",
-    "validate-typescript": "npm run lint && tsc --noEmit"
+    "validate": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
     "expo": "28.0.0",

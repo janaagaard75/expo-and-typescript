@@ -5,7 +5,7 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "validate-typescript",
+      "script": "validate",
       "problemMatcher": [
         "$tsc"
       ],

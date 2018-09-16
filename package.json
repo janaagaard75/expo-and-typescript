@@ -16,24 +16,24 @@
     "validate": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
-    "expo": "28.0.0",
+    "expo": "30.0.1",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
-    "react-navigation": "2.3.1",
-    "tslib": "1.9.2"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-navigation": "2.14.2",
+    "tslib": "1.9.3"
   },
   "devDependencies": {
-    "@types/expo": "27.0.4",
-    "@types/expo__vector-icons": "6.2.2",
+    "@types/expo": "27.0.9",
+    "@types/expo__vector-icons": "6.2.3",
     "@types/fbemitter": "2.0.32",
-    "@types/react": "16.3.17",
-    "@types/react-native": "0.55.19",
-    "@types/react-navigation": "2.0.5",
-    "exp": "55.0.1",
+    "@types/react": "16.3.18",
+    "@types/react-native": "0.56.19",
+    "@types/react-navigation": "2.0.21",
+    "exp": "57.1.4",
     "react-native-typescript-transformer": "1.2.10",
-    "tslint": "5.10.0",
-    "tslint-eslint-rules": "5.3.1",
+    "tslint": "5.11.0",
+    "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",
-    "typescript": "2.9.2"
+    "typescript": "3.0.3"
   }
 }

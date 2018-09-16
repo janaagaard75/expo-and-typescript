@@ -43,6 +43,7 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
           justifyContent: 'center'
         }}
       >
+        <Text style={{ marginBottom: 10 }}>Controlling the brightness has been broken on iOS for quite a while now. :-/</Text>
         <Text>Normal brightness: {this.state.normalBrightness}</Text>
         <Text>System brightness: {this.state.systemBrightness}</Text>
         <View style={{ marginTop: 10 }}>

@@ -8,13 +8,20 @@ The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@jan
 
 The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
 
-## Currently Lots of Warnings
+## Prerequisites
 
-The current state of the app is a bit shaky in that there are quite a lot of warnings when building and running the app.
+Install `expo-cli` globally if you want to use the run scripts to start the application locally. If you use the Expo XDE you don't need to do this, but it looks like this tool has been deperecated in favor of the [Expo CLI 2.0](https://blog.expo.io/expo-cli-2-0-released-a7a9c250e99c).
 
-1. A buch of warnings about incompatible platform when installing the packages, e.g. *@expo/ngrok-bin-freebsd-ia32@2.2.8: The platform "darwin" is incompatible with this module.* Using npm instead of yarn reveals that these are optional dependencies being skipped, but still weird to have all these warnings.
+```shell
+# Install expo-cli globally using Yarn.
+yarn global add expo-cli
+```
 
-2. Two issues when running the app in Expo, one about npm not found and then this second one *`npm` command not found. If you have npm installed please run `npm install -g exp && exp path`*. Both messages can be removed by install exp globally running the suggested command, though. Install globally with Yarn does not seem to work.
+If you prefer to use npm the command is `npm install --global expo-cli`.
+
+## Warnings When Installing Packages
+
+There are a surprising amout of of warnings when building and running the app, because of peer dependecies not being correct. I think the Expo team has a tough time getting all the added React Native libraries to play well together, but this app seems to run fine.
 
 ## Running the App
 
@@ -26,13 +33,7 @@ Start the local server. This will give you a QR code that you can scan using the
 yarn start
 ```
 
-If you're on a Mac and have Xcode installed, you can run the app using the iOS Simulator. The first time you have to install the Expo Client on the simulator. Use the same command to update the client.
-
-```shell
-yarn exp install:ios
-```
-
-Once the client is installed you can launch the simulator and open the project with this command. The server has to be kept running, so open up a second terminal.
+If you're on a Mac and have Xcode installed, you can run the app using the iOS Simulator with the following command.
 
 ```shell
 yarn ios

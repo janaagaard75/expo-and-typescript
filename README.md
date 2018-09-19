@@ -96,7 +96,7 @@ Add the React Native TypeScript Transformer package.
 yarn add --dev --exact react-native-typescript-transformer
 ```
 
-Configure Expo to use the transformer for `ts` and `tsx` files by adding the following lines to `app.json` under `expo/packagerOpts`. [The final app.json should look somewhat like this](https://raw.githubusercontent.com/janaagaard75/expo-and-typescript/master/app.json).
+Configure Expo to use the transformer for `ts` and `tsx` files by adding the following lines to `app.json` under `expo/packagerOpts`.
 
 ```json
 "sourceExts": [
@@ -106,9 +106,9 @@ Configure Expo to use the transformer for `ts` and `tsx` files by adding the fol
 "transformer": "node_modules/react-native-typescript-transformer/index.js"
 ```
 
-I don't know why it is necessary to append `/index.js` to the URL, but it has been so since version 19 of Expo.
+It has been necessary to append `/index.js` to the URL since version 19 of Expo. Don't know why.
 
-[The final `app.json`](https://github.com/janaagaard75/expo-and-typescript/blob/master/app.json)
+[Complete `app.json` in this project](https://github.com/janaagaard75/expo-and-typescript/blob/master/app.json).
 
 ### App Component in TypeScript
 
@@ -127,7 +127,7 @@ export default App
 Add type definitions for React, React Native and Expo.
 
 ```shell
-yarn add --dev --exact @types/react @types/react-native @types/expo
+yarn add --dev --exact @types/react @types/react-native @types/expo @types/expo__vector-icons
 ```
 
 ## Similar Projects

@@ -63,9 +63,6 @@ Configure TypeScript by putting a `tsconfig.json` file in the root of your proje
     "importHelpers": true,
     "jsx": "react-native",
     "lib": [
-      "dom",
-      "es2015",
-      "es2016",
       "es2017"
     ],
     "module": "es2015",

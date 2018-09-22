@@ -93,13 +93,11 @@ export class BrightnessScreen extends Component<NavigationScreenProps, State> {
   }
 
   private async setNormalBrightness(value: number) {
-    // TODO: Fix the type definition.
     await Brightness.setBrightnessAsync(value)
     this.updateBrightness()
   }
 
   private async setSystemBrightness(value: number) {
-    // TODO: Fix the type definition.
     await Brightness.setSystemBrightnessAsync(value)
     this.updateBrightness()
   }

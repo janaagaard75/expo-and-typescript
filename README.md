@@ -6,8 +6,6 @@ The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@jan
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
-The code is orignally based on [expo-ts-example](https://github.com/dalcib/expo-ts-example).
-
 ## Prerequisites
 
 Install `expo-cli` globally if you want to use the run scripts to start the application locally. If you use the Expo XDE you don't need to do this, but it looks like this tool has been deperecated in favor of the [Expo CLI 2.0](https://blog.expo.io/expo-cli-2-0-released-a7a9c250e99c).
@@ -129,6 +127,6 @@ yarn add --dev --exact @types/react @types/react-native @types/expo @types/expo_
 
 ## Similar Projects
 
-* [expo-ts-example](https://github.com/dalcib/expo-ts-example)
+* [expo-ts-example](https://github.com/dalcib/expo-ts-example), the basis for this project
 * [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
 * [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)

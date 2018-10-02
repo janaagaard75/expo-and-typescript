@@ -46,7 +46,7 @@ Here is how you set up an Expo app to be able to code in TypeScript instead of J
 Add TypeScript and the helpers library, `tslib`, to the project. It's optional to use the --exact switch. I just prefer micro managing the version of the packages that I'm using. You can, of course, also use `npm` instead of `yarn`.
 
 ```shell
-yarn add --dev --exact TypeScript react-native-typescript-transformer
+yarn add --dev --exact typescript react-native-typescript-transformer
 yarn add --exact tslib
 ```
 

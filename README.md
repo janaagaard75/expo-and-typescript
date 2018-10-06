@@ -23,8 +23,6 @@ There are a surprising amout of of warnings when building and running the app, b
 
 ## Running the App
 
-You can either run the app using [Expo XDE](https://expo.io/tools#xde) or using the command line. Personally I find that using the XDE is the easiest solution, since it handles a lot of the setup for you, but if you're prefer using the command line here are the commands to do so.
-
 Start the local server. This will give you a QR code that you can scan using the Expo Client app on your mobile divice.
 
 ```shell
@@ -43,7 +41,7 @@ Here is how you set up an Expo app to be able to code in TypeScript instead of J
 
 ### TypeScript
 
-Add TypeScript and the helpers library, `tslib`, to the project. It's optional to use the --exact switch. I just prefer micro managing the version of the packages that I'm using. You can, of course, also use `npm` instead of `yarn`.
+Add TypeScript and the helpers library, `tslib`, to the project. I prefer micro managing the version of the packages that I'm using, so I add use `--exact`, but this is optional. You can, of course, also use `npm` instead of `yarn`.
 
 ```shell
 yarn add --dev --exact typescript react-native-typescript-transformer

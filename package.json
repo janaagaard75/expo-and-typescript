@@ -24,16 +24,16 @@
     "tslib": "1.9.3"
   },
   "devDependencies": {
-    "@types/expo": "27.0.9",
+    "@types/expo": "27.0.13",
     "@types/expo__vector-icons": "6.2.3",
     "@types/fbemitter": "2.0.32",
     "@types/react": "16.3.18",
-    "@types/react-native": "0.56.19",
-    "@types/react-navigation": "2.0.21",
+    "@types/react-native": "0.57.6",
+    "@types/react-navigation": "2.0.24",
     "react-native-typescript-transformer": "1.2.10",
     "tslint": "5.11.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",
-    "typescript": "3.0.3"
+    "typescript": "3.1.3"
   }
 }

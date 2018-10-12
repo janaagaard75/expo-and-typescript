@@ -1,5 +1,7 @@
 # React Native using Expo and Typescript
 
+<img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/assets/icons/app-icon.png" height="50">
+
 This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package.
 
 The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on a device, if install the free [Expo client](https://expo.io/tools#client).
@@ -105,13 +107,12 @@ It has been necessary to append `/index.js` to the URL since version 19 of Expo.
 
 ### App Component in TypeScript
 
-Create a `src` folder, move `App.js` to that folder, and rename the file to `App.tsx`. Since TypeScript has a syntax that is very similar to JavaScript it is probably not necessary to make any modifications to App.tsx to make it valid TypeScript.
+Create a `src` folder, move `App.js` to that folder, and rename the file to `App.tsx`. Since TypeScript has a syntax that is very similar to JavaScript it is probably not necessary to make any modifications to App.tsx to make it valid TypeScript. It is not required to put the sources files in a `src` folder, but that is the de facto standard.
 
 Create a new `App.js` in the root of the project, and insert the following lines. Expo will still be looking for App.js in the root of the project, and these lines simply loads `src/App.tsx`.
 
 ```javascript
 import App from './src/App'
-
 export default App
 ```
 

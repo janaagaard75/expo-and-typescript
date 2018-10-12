@@ -111,7 +111,6 @@ Create a new `App.js` in the root of the project, and insert the following lines
 
 ```javascript
 import App from './src/App'
-
 export default App
 ```
 

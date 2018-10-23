@@ -39,7 +39,7 @@ yarn ios
 
 ## Setting up Expo and React Native with TypeScript
 
-Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, and hot realoading works. I am unsure as to how well hot module replacement works compared to an app coded in JavaScript, but there is definitely some caching going on, because subsequent reloads are faster than the initial load.
+Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, and hot reloading works. I am unsure as to how well hot module replacement works compared to an app coded in JavaScript, but there is definitely some caching going on, because subsequent reloads are faster than the initial load.
 
 ### Add TypeScript
 

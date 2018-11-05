@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Button } from 'react-native'
 import { Component } from 'react'
-import { Fingerprint } from 'expo'
+import { LocalAuthentication } from 'expo'
 import { Text } from 'react-native'
 import { View } from 'react-native'
 
@@ -39,7 +39,7 @@ export class FingerprintScreen extends Component<{}, State> {
   }
 
   private async authenticate() {
-    const authenticated = await Fingerprint.authenticateAsync('Authentication message')
+    const authenticated = await LocalAuthentication.authenticateAsync('Authentication message')
 
     if (authenticated.success) {
       this.setState({
@@ -59,7 +59,7 @@ export class FingerprintScreen extends Component<{}, State> {
 
   private async updateState() {
     this.setState({
-      hasHardware: await Fingerprint.hasHardwareAsync()
+      hasHardware: await LocalAuthentication.hasHardwareAsync()
     })
   }
 }

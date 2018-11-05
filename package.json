@@ -14,7 +14,7 @@
     "ios": "expo start --ios",
     "lint": "tslint src/**/*.ts",
     "start": "expo start",
-    "validate": "npm run lint && tsc --noEmit"
+    "validate": "npm run lint --scripts-prepend-node-path && tsc --noEmit"
   },
   "dependencies": {
     "expo": "31.0.3",

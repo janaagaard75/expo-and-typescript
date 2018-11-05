@@ -6,9 +6,11 @@ import { ScrollView } from 'react-native'
 
 class DestinationAndTitle {
   constructor(
-    public destination: string,
+    destination: string,
     title?: string
   ) {
+    this.destination = destination
+
     if (title === undefined) {
       this.title = destination
     }
@@ -17,6 +19,7 @@ class DestinationAndTitle {
     }
   }
 
+  public destination: string
   public title: string
 }
 

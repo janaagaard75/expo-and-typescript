@@ -39,6 +39,8 @@ yarn ios
 
 ## Setting up Expo and React Native with TypeScript
 
+**Since version 31 Expo supports TypeScript natively. If you're using that version, 1) don't add the `react-native-typescript-transformer` package, 2) don't specify `sourceExt` and `transformer` in `app.json` and 3) don't mention `babel-preset-expo` and `transform-react-jsx-source` in your `.babelrc`, i.e. delete the file if those were the only two things in it.**
+
 Here is how you set up an Expo app to be able to code in TypeScript instead of JavaScript. Debugging of TypeScript files works, and hot reloading works. I am unsure as to how well hot module replacement works compared to an app coded in JavaScript, but there is definitely some caching going on, because subsequent reloads are faster than the initial load.
 
 ### Add TypeScript

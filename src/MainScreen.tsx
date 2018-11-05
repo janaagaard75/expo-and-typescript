@@ -6,9 +6,11 @@ import { ScrollView } from 'react-native'
 
 class DestinationAndTitle {
   constructor(
-    public destination: string,
+    destination: string,
     title?: string
   ) {
+    this.destination = destination
+
     if (title === undefined) {
       this.title = destination
     }
@@ -17,6 +19,7 @@ class DestinationAndTitle {
     }
   }
 
+  public destination: string
   public title: string
 }
 
@@ -50,19 +53,18 @@ export class MainScreen extends Component<NavigationScreenProps> {
     new DestinationAndTitle('Amplitude'),
     new DestinationAndTitle('Asset'),
     new DestinationAndTitle('Audio'),
-    new DestinationAndTitle('Camera'),
-    new DestinationAndTitle('Constants'),
-    new DestinationAndTitle('LinearGradient'),
     new DestinationAndTitle('BlurView1', 'BlurView 1'),
     new DestinationAndTitle('BlurView2', 'BlurView 2'),
     new DestinationAndTitle('Brightness'),
+    new DestinationAndTitle('Camera'),
+    new DestinationAndTitle('Constants'),
     new DestinationAndTitle('Facebook'),
-    new DestinationAndTitle('Fingerprint'),
     new DestinationAndTitle('Font'),
     new DestinationAndTitle('Gyroscope'),
+    new DestinationAndTitle('LinearGradient'),
+    new DestinationAndTitle('LocalAuthentication', 'Local Authentication'),
     new DestinationAndTitle('MapView'),
     new DestinationAndTitle('Svg'),
-    new DestinationAndTitle('Util'),
     new DestinationAndTitle('VectorIcons', 'Vector Icons')
   ]
 }

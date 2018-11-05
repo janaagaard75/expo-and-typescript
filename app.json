@@ -4,7 +4,7 @@
     "description": "Showcase of an Expo app coded in TypeScript.",
     "slug": "expo-and-typescript",
     "privacy": "public",
-    "sdkVersion": "30.0.0",
+    "sdkVersion": "31.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#fff",
@@ -16,12 +16,7 @@
       "assetExts": [
         "ttf",
         "mp4"
-      ],
-      "sourceExts": [
-        "ts",
-        "tsx"
-      ],
-      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+      ]
     },
     "ios": {
       "supportsTablet": true

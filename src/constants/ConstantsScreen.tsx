@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Component } from 'react'
 import { Constants } from 'expo'
+import { NavigationScreenProps } from 'react-navigation'
 import { Text } from 'react-native'
 import { View } from 'react-native'
-import { NavigationScreenProps } from 'react-navigation'
 
 interface State {
   webViewUserAgent: string | undefined
@@ -52,7 +52,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
   }
 
   private async updateWebViewUserAgent() {
-    const userAgent = 'TODO' // await Constants.getWebViewUserAgentAsync()
+    const userAgent = await Constants.getWebViewUserAgentAsync()
     this.setState({
       webViewUserAgent: userAgent
     })

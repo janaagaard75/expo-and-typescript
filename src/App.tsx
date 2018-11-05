@@ -20,7 +20,6 @@ import { MapViewScreen } from './MapViewScreen'
 import { PlatformScreen } from './constants/PlatformScreen'
 import { SvgScreen } from './SvgScreen'
 import { SystemFontsScreen } from './constants/SystemFontsScreen'
-import { UtilScreen } from './UtilScreen'
 import { VectorIconsScreen } from './VectorIconsScreen'
 
 export default createStackNavigator({
@@ -46,6 +45,5 @@ export default createStackNavigator({
   Platform: { screen: PlatformScreen },
   Svg: { screen: SvgScreen },
   SystemFonts: { screen: SystemFontsScreen },
-  Util: { screen: UtilScreen },
   VectorIcons: { screen: VectorIconsScreen }
 })

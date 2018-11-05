@@ -65,7 +65,6 @@ export class MainScreen extends Component<NavigationScreenProps> {
     new DestinationAndTitle('LocalAuthentication', 'Local Authentication'),
     new DestinationAndTitle('MapView'),
     new DestinationAndTitle('Svg'),
-    new DestinationAndTitle('Util'),
     new DestinationAndTitle('VectorIcons', 'Vector Icons')
   ]
 }

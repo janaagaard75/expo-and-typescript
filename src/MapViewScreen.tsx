@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { Text } from 'react-native'
-// import { MapView } from 'expo'
+
+// The type definitions for MapView have not been created.
+declare const MapView: any
 
 export class MapViewScreen extends Component {
   public static navigationOptions = {
@@ -10,18 +11,15 @@ export class MapViewScreen extends Component {
 
   public render() {
     return (
-      <Text>
-        MapView doesn't yet exit in @types/expo. :-/
-      </Text>
-      // <MapView
-      //   style={{ flex: 1 }}
-      //   initialRegion={{
-      //     latitude: 55.6838499,
-      //     latitudeDelta: 0.1,
-      //     longitude: 12.5630238,
-      //     longitudeDelta: 0.1
-      //   }}
-      // />
+      <MapView
+        style={{ flex: 1 }}
+        initialRegion={{
+          latitude: 55.6838499,
+          latitudeDelta: 0.1,
+          longitude: 12.5630238,
+          longitudeDelta: 0.1
+        }}
+      />
     )
   }
 }

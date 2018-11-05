@@ -24,6 +24,7 @@
     "tslib": "1.9.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
     "@types/expo": "30.0.0",
     "@types/expo__vector-icons": "6.2.3",
     "@types/fbemitter": "2.0.32",

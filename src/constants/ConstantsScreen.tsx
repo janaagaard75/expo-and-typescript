@@ -52,7 +52,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
   }
 
   private async updateWebViewUserAgent() {
-    const userAgent = 'TODO' // await Constants.getWebViewUserAgentAsync()
+    const userAgent = await Constants.getWebViewUserAgentAsync()
     this.setState({
       webViewUserAgent: userAgent
     })

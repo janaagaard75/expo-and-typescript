@@ -11,7 +11,7 @@ interface State {
   hasHardware: boolean | undefined
 }
 
-export class FingerprintScreen extends Component<{}, State> {
+export class LocalAuthenticationScreen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
     super(props, context)
 

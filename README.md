@@ -54,38 +54,7 @@ yarn add --dev --exact typescript react-native-typescript-transformer
 yarn add --exact tslib
 ```
 
-Configure TypeScript by putting a `tsconfig.json` file in the root of your project. You probably don't need all of these settings. **TODO: Boil the configuration down to the required settings.**
-
-```json
-{
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "jsx": "react-native",
-    "lib": [
-      "es2017"
-    ],
-    "module": "es2015",
-    "moduleResolution": "node",
-    "noEmitHelpers": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "outDir": "build/dist",
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2017"
-  },
-  "exclude": [
-    "build",
-    "node_modules"
-  ],
-  "types": [
-    "typePatches"
-  ]
-}
-```
+Configure TypeScript by adding a [`tsconfig.json`](https://github.com/janaagaard75/expo-and-typescript/blob/master/tsconfig.json) file in the root of your project. If you are stating a new project, I would definitetly recommend including `"strict": true` and some of the other compiler checks. If you are converting a JavaScript project to TypeScript, you might want to loosen up the rules to start with, and apply them gradually.
 
 ### Main App Component in TypeScript
 

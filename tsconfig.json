@@ -19,8 +19,5 @@
   },
   "exclude": [
     "node_modules"
-  ],
-  "types": [
-    "typePatches"
   ]
 }

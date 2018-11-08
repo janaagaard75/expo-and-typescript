@@ -17,7 +17,7 @@
     "validate": "npm run lint --scripts-prepend-node-path && tsc --noEmit"
   },
   "dependencies": {
-    "expo": "31.0.3",
+    "expo": "31.0.4",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
     "react-navigation": "2.18.2",
@@ -30,7 +30,7 @@
     "@types/fbemitter": "2.0.32",
     "@types/react": "16.4.18",
     "@types/react-native": "0.57.7",
-    "@types/react-navigation": "2.13.0",
+    "@types/react-navigation": "2.13.1",
     "tslint": "5.11.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",

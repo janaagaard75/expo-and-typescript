@@ -13,7 +13,6 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "skipLibCheck": true, // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24573
     "sourceMap": false, // Something else (Babel?) is creating the necessary source maps.
     "strict": true,
     "target": "es2017"

@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Component } from 'react'
-
-// The type definitions for MapView have not been created.
-declare const MapView: any
+// @ts-ignore // The type definitions for MapView have not been created.
+import { MapView } from 'expo'
 
 export class MapViewScreen extends Component {
   public static navigationOptions = {

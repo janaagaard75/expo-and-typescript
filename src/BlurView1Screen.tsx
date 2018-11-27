@@ -9,7 +9,7 @@ const expoImageUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest
 
 export class BlurView1Screen extends Component {
   public static navigationOptions = {
-    title: 'BlueView 1'
+    title: 'BlurView 1'
   }
 
   public render() {

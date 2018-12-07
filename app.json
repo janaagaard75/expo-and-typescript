@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#fff",
-    "icon": "./assets/icons/app-icon.png",
+    "icon": "./assets/app-icon.png",
     "splash": {
       "backgroundColor": "#fff",
       "image": "./assets/splash-screen.png",

@@ -1,4 +1,4 @@
-# Contibuting to Expo and TypeScript
+# Contributing to Expo and TypeScript
 
 * Pick one of the SDKs that haven't yet been tested from the list in the README.
 * Write the type definitions for the SDK.

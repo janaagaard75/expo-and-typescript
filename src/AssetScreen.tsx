@@ -42,7 +42,7 @@ export class AssetScreen extends Component<{}, State> {
       >
         <Image
           resizeMode="contain"
-          source={require('./wtfs-per-minute.png')}
+          source={require('../assets/wtfs-per-minute.png')}
           style={{
             alignSelf: 'stretch',
             flex: 1,
@@ -55,8 +55,8 @@ export class AssetScreen extends Component<{}, State> {
   }
 
   private async loadAssets() {
-    // This is only required when the app has been published. I haven't tested this code yet, so not really sure if this statement is correct.
-    await Asset.loadAsync(require('./wtfs-per-minute.png'))
+    // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
+    await Asset.loadAsync(require('../assets/wtfs-per-minute.png'))
     this.setState({
       assetsLoaded: true
     })

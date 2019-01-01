@@ -57,7 +57,7 @@ export class AudioScreen extends Component<{}, State> {
   private async playSound() {
     // The type definitions should be updated to reflect the new name, `createAsync`. Pull request for updating the documentation at https://github.com/expo/expo-docs/pull/405.
     await (Audio.Sound as any).createAsync(
-      require('../assets/sounds/bensound-thejazzpiano.mp3'),
+      require('../assets/bensound-thejazzpiano.mp3'),
       { shouldPlay: true }
     )
 

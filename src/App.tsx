@@ -1,4 +1,5 @@
-import { createStackNavigator } from 'react-navigation'
+import { createAppContainer } from "react-navigation"
+import { createStackNavigator } from "react-navigation"
 
 import { AccelerometerScreen } from './AccelerometerScreen'
 import { AssetScreen } from './AssetScreen'
@@ -22,7 +23,7 @@ import { SvgScreen } from './SvgScreen'
 import { SystemFontsScreen } from './constants/SystemFontsScreen'
 import { VectorIconsScreen } from './VectorIconsScreen'
 
-export default createStackNavigator({
+const mainNavigator = createStackNavigator({
   // tslint:disable:object-literal-sort-keys
   Main: { screen: MainScreen },
 
@@ -47,3 +48,5 @@ export default createStackNavigator({
   SystemFonts: { screen: SystemFontsScreen },
   VectorIcons: { screen: VectorIconsScreen }
 })
+
+export default createAppContainer(mainNavigator)

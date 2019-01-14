@@ -12,7 +12,7 @@
   "scripts": {
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "lint": "tslint src/**/*.ts",
+    "lint": "tslint src/**/*.ts src/**/*.tsx",
     "start": "expo start",
     "validate": "npm run lint --scripts-prepend-node-path && tsc --noEmit"
   },

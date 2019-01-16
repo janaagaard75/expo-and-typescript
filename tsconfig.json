@@ -13,6 +13,7 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
+    "skipLibCheck": true,
     "sourceMap": false, // Something else (Babel?) is creating the necessary source maps.
     "strict": true,
     "target": "es2017"

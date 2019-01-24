@@ -11,10 +11,11 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "android": "expo start --android",
+    "check-types": "tsc --noEmit",
     "ios": "expo start --ios",
     "lint": "tslint src/**/*.ts src/**/*.tsx",
     "start": "expo start",
-    "validate": "npm run lint --scripts-prepend-node-path && tsc --noEmit"
+    "validate": "npm run lint --scripts-prepend-node-path && npm run check-types"
   },
   "dependencies": {
     "expo": "32.0.1",

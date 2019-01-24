@@ -15,7 +15,7 @@
     "ios": "expo start --ios",
     "lint": "tslint src/**/*.ts src/**/*.tsx",
     "start": "expo start",
-    "validate": "npm run lint --scripts-prepend-node-path && npm run check-types"
+    "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {
     "expo": "32.0.1",

@@ -2251,7 +2251,7 @@ expo-contacts@~2.0.0:
     expo-errors "~1.0.0"
     uuid-js "^0.7.5"
 
-expo-core@~2.0.0:
+expo-core@2.0.0, expo-core@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/expo-core/-/expo-core-2.0.0.tgz#374e297add4386296b9cdc429ceeaa5797212a24"
   integrity sha512-mGvAzqJyN/RCIX34dCOnPYu4KqTNaoKGbwjssWUKIlquNeQAuT7q09h3D52xK4eo0zeCV8tg8jipYJEzgzFDHQ==

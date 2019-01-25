@@ -12,7 +12,7 @@ export class SystemFontsScreen extends Component {
   public render() {
     return (
       <ScrollView>
-        {Constants.systemFonts.map((systemFont, index) =>
+        {(Constants.systemFonts as Array<string>).map((systemFont, index) =>
           <Text key={index}>{systemFont}</Text>
         )}
       </ScrollView>

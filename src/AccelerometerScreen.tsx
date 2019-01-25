@@ -8,12 +8,7 @@ import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
 
-// ThreeAxisMeasurement isn't exported from the type definitions.
-interface ThreeAxisMeasurement {
-  x: number
-  y: number
-  z: number
-}
+import { ThreeAxisMeasurement } from './ThreeAxisMeasurement'
 
 interface State {
   accelerometerData: ThreeAxisMeasurement

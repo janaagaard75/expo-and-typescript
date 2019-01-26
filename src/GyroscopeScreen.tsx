@@ -1,15 +1,16 @@
 import * as React from 'react'
 import { Component } from 'react'
-// tslint:disable-next-line:no-implicit-dependencies
-import { EventSubscription } from 'fbemitter'
 import { Gyroscope } from 'expo'
-import { ViewStyle } from 'react-native'
+import { Subscription } from 'expo-core'
 import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
+import { ViewStyle } from 'react-native'
+
+import { ThreeAxisMeasurement } from './ThreeAxisMeasurement'
 
 interface State {
-  gyroscopeData: Gyroscope.GyroscopeObject
+  gyroscopeData: ThreeAxisMeasurement
 }
 
 export class GyroscopeScreen extends Component<{}, State> {
@@ -29,7 +30,7 @@ export class GyroscopeScreen extends Component<{}, State> {
     title: 'Gyroscope'
   }
 
-  private subscription: EventSubscription | undefined
+  private subscription: Subscription | undefined
 
   private buttonStyle: ViewStyle = {
     alignItems: 'center',

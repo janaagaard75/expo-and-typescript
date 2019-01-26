@@ -11,29 +11,30 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "android": "expo start --android",
+    "check-types": "tsc --noEmit",
     "ios": "expo start --ios",
     "lint": "tslint src/**/*.ts src/**/*.tsx",
     "start": "expo start",
-    "validate": "npm run lint --scripts-prepend-node-path && tsc --noEmit"
+    "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {
-    "expo": "31.0.6",
+    "expo": "32.0.1",
+    "expo-core": "2.0.0",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
-    "react-navigation": "2.18.2",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "3.0.9",
     "tslib": "1.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
-    "@types/expo": "31.0.5",
     "@types/expo__vector-icons": "6.2.3",
     "@types/fbemitter": "2.0.32",
-    "@types/react": "16.7.18",
-    "@types/react-native": "0.57.24",
-    "@types/react-navigation": "2.13.7",
-    "tslint": "5.12.0",
+    "@types/react": "16.7.20",
+    "@types/react-native": "0.57.32",
+    "@types/react-navigation": "3.0.1",
+    "tslint": "5.12.1",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.4"
   }
 }

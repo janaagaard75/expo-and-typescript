@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
-    "@types/expo": "31.0.8",
     "@types/expo__vector-icons": "6.2.3",
     "@types/fbemitter": "2.0.32",
     "@types/react": "16.7.20",

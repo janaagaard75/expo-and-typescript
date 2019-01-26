@@ -667,16 +667,6 @@
     react-native-safe-area-view "^0.11.0"
     react-native-screens "^1.0.0 || ^1.0.0-alpha"
 
-"@types/expo@31.0.8":
-  version "31.0.8"
-  resolved "https://registry.yarnpkg.com/@types/expo/-/expo-31.0.8.tgz#e5e8b9a88087220e6cfa10a8ec940587eaefcf1d"
-  integrity sha512-FuH7CnyicH2IZxOZHuwkkgUTZDnx4SF0KZ8B6XZ/y1ReEStY98c7ntcdzsO0+gHj4IRjB+ou4j7CvJ2tJKYYjg==
-  dependencies:
-    "@types/fbemitter" "*"
-    "@types/react" "*"
-    "@types/react-native" "*"
-    react-native-maps "*"
-
 "@types/expo__vector-icons@6.2.3":
   version "6.2.3"
   resolved "https://registry.yarnpkg.com/@types/expo__vector-icons/-/expo__vector-icons-6.2.3.tgz#68f2018a40dcfccb9bae79461080cc4d129b451f"
@@ -686,7 +676,7 @@
     "@types/react-native" "*"
     "@types/react-native-vector-icons" "*"
 
-"@types/fbemitter@*", "@types/fbemitter@2.0.32", "@types/fbemitter@^2.0.32":
+"@types/fbemitter@2.0.32", "@types/fbemitter@^2.0.32":
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
   integrity sha1-jtIE2g9U6cjq7DGx7skeJRMtCCw=
@@ -4582,11 +4572,6 @@ react-native-gesture-handler@^1.0.0:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.2"
     prop-types "^15.5.10"
-
-react-native-maps@*:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.23.0.tgz#edbfdcad0e42190627eb1c8067eaba5965c8f81e"
-  integrity sha512-qxOIQGsDtQXQlSJdXMW1wg8pvLaVYdbiIolB7tZTTgTGgIA/hDxXwZbQZ08c4KDD6/VTk8krfd1APaHkqvh6og==
 
 react-native-maps@expo/react-native-maps#v0.22.1-exp.0:
   version "0.22.1"

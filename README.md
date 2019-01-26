@@ -2,9 +2,13 @@
 
 <img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/assets/app-icon.png" height="50">
 
-This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). The repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package.
+This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org).
 
-The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on an Android device, if install the free [Expo client](https://expo.io/tools#client).
+Expo includes [Babel 7](https://babeljs.io) since version 31, and Babel is now used to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn run script `check-types` does this. `tsconfig.json` is only used when checking the types. Babel is configured with `.babelrc`.
+
+This repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. The `expo` npm package now contains its own set of type definitions, so `@types/expo` is now ignore, and has been removed. There is currently a type check issue with the SVGs that I haven't figured out how to solve.
+
+The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on an Android device, if install the free [Expo client](https://expo.io/tools#client). Running on an iOS device without signing in to my Expo account is unfortunately no longer allowed by Apple. This is probably because it makes the Expo app behave too much like an app store.
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 

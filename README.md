@@ -2,7 +2,7 @@
 
 <img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/assets/app-icon.png" height="50">
 
-This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). It used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package.
+This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org). The repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package.
 
 The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on an Android device, if install the free [Expo client](https://expo.io/tools#client).
 
@@ -21,11 +21,11 @@ If you prefer to use npm the command is `npm install --global expo-cli`.
 
 ## Warnings When Installing Packages
 
-There are a surprising amout of of warnings when building and running the app, because of peer dependecies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together, and this app seems to run fine, so I believe it's safe to ignore the warnings.
+There are a surprising amount of of warnings when building and running the app, because of peer dependencies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together, and this app seems to run fine, so I believe it's safe to ignore the warnings.
 
 ## Running the App
 
-Start the local server. This will give you a QR code that you can scan using the Expo Client app on your mobile divice.
+Start the local server. This will give you a QR code that you can scan using the Expo Client app on your mobile device.
 
 ```shell
 yarn start
@@ -54,7 +54,7 @@ yarn add --dev --exact typescript react-native-typescript-transformer
 yarn add --exact tslib
 ```
 
-Configure TypeScript by adding a [`tsconfig.json`](https://github.com/janaagaard75/expo-and-typescript/blob/master/tsconfig.json) file in the root of your project. If you are stating a new project, I would definitetly recommend including `"strict": true` and some of the other compiler checks. If you are converting a JavaScript project to TypeScript, you might want to loosen up the rules to start with, and apply them gradually.
+Configure TypeScript by adding a [`tsconfig.json`](https://github.com/janaagaard75/expo-and-typescript/blob/master/tsconfig.json) file in the root of your project. If you are stating a new project, I would definitely recommend including `"strict": true` and some of the other compiler checks. If you are converting a JavaScript project to TypeScript, you might want to loosen up the rules to start with, and apply them gradually.
 
 ### Main App Component in TypeScript
 

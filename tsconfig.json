@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -13,6 +14,13 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
+    // Using the type definitions in @types/expo becuase they are still better than the ones provided by expo. See SvgScreen.tsx and SystemFontsScreen.tsx.
+    "paths": {
+      "expo": [
+        "../node_modules/@types/expo",
+        "../node_modules/expo"
+      ],
+    },
     "skipLibCheck": true,
     "sourceMap": false, // Something else (Babel?) is creating the necessary source maps.
     "strict": true,

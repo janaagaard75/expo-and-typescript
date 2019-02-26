@@ -53,6 +53,7 @@ export class MainScreen extends Component<NavigationScreenProps> {
     new DestinationAndTitle('Amplitude'),
     new DestinationAndTitle('Asset'),
     new DestinationAndTitle('Audio'),
+    new DestinationAndTitle('BarCodeScanner'),
     new DestinationAndTitle('BlurView1', 'BlurView 1'),
     new DestinationAndTitle('BlurView2', 'BlurView 2'),
     new DestinationAndTitle('Brightness'),

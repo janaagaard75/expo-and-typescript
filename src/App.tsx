@@ -1,10 +1,11 @@
-import { createAppContainer } from "react-navigation"
-import { createStackNavigator } from "react-navigation"
+import { createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 
 import { AccelerometerScreen } from './AccelerometerScreen'
 import { AssetScreen } from './AssetScreen'
 import { AmplitudeScreen } from './AmplitudeScreen'
 import { AudioScreen } from './AudioScreen'
+import { BarCodeScannerScreen } from './BarCodeScannerScreen'
 import { BlurView1Screen } from './BlurView1Screen'
 import { BlurView2Screen } from './BlurView2Screen'
 import { BrightnessScreen } from './BrightnessScreen'
@@ -31,6 +32,7 @@ const mainNavigator = createStackNavigator({
   Amplitude: { screen: AmplitudeScreen },
   Asset: { screen: AssetScreen },
   Audio: { screen: AudioScreen },
+  BarCodeScanner: { screen: BarCodeScannerScreen },
   BlurView1: { screen: BlurView1Screen },
   BlurView2: { screen: BlurView2Screen },
   Brightness: { screen: BrightnessScreen },

@@ -12,7 +12,8 @@ export class SystemFontsScreen extends Component {
   public render() {
     return (
       <ScrollView>
-        {(Constants.systemFonts as Array<string>).map((systemFont, index) =>
+        {/* Cast to a string array (Constants.systemFonts as Array<string>)... if using the native types provided by expo insted of @types/expo. See tsconfig.json. */}
+        {Constants.systemFonts.map((systemFont, index) =>
           <Text key={index}>{systemFont}</Text>
         )}
       </ScrollView>

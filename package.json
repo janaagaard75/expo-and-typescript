@@ -13,7 +13,7 @@
     "android": "expo start --android",
     "check-types": "tsc --noEmit",
     "ios": "expo start --ios",
-    "lint": "tslint src/**/*.ts src/**/*.tsx",
+    "lint": "tslint --project tsconfig.json",
     "start": "expo start",
     "validate": "yarn run lint && yarn run check-types"
   },

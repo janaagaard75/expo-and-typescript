@@ -25,7 +25,7 @@ If you prefer to use npm the command is `npm install --global expo-cli`.
 
 ## Warnings When Installing Packages
 
-There are a surprising amount of of warnings when building and running the app, because of peer dependencies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together, and this app seems to run fine, so I believe it's safe to ignore the warnings.
+There are a surprising amount of of warnings when building the app, because of peer dependencies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together, and this app seems to run fine, so I believe it's safe to ignore the warnings.
 
 ## Running the App
 
@@ -82,6 +82,32 @@ yarn add --dev --exact @types/react @types/react-native @types/expo @types/expo_
 ```
 
 Since Expo is evolving quickly it is not uncommon that the type definitions are outdated or simply missing. [AudioScreen.tsx line 59](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/AudioScreen.tsx#L59) shows how to deal with an incorrect type definition and [MapViewScreen.tsx line 5] show how to deal with missing type definitions.
+
+## Why No Semicolons?
+
+The repository started out as mainly a big collection of TypeScript interfaces. While most developers are pretty strict about terminating lines with or without a semicolon, this is apparently not the case when it comes to writing interfaces. So after reading about the [JavaScript Standard Style](https://standardjs.com/) advocating not using semicolons, I thought this would be a simple way to clean up the mess. And now that I've become used to looking a TypeScript code without semicolons it really like it. It's definitely cleaner, and I have yet to stumble upon a piece of code that would be more readable with the semicolons.
+
+```typescript
+interface Point {
+  number x;
+  number y;
+}
+
+interface Point {
+  number x,
+  number y
+}
+
+interface Point {
+  number x;
+  number y;
+  test: {
+    string a,
+    string b
+  }
+}
+
+```
 
 ## Similar Projects
 

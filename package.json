@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "expo": "32.0.6",
-    "expo-core": "2.0.1",
+    "expo-core": "3.0.1",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "3.3.2",
@@ -27,13 +27,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
-    "@types/expo": "32.0.3",
+    "@types/expo": "32.0.5",
     "@types/expo__vector-icons": "9.0.1",
     "@types/fbemitter": "2.0.32",
-    "@types/react": "16.8.5",
+    "@types/react": "16.8.6",
     "@types/react-native": "0.57.38",
     "@types/react-navigation": "3.0.4",
-    "tslint": "5.13.0",
+    "tslint": "5.13.1",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",
     "typescript": "3.3.3333"

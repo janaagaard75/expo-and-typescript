@@ -14,6 +14,7 @@
     "check-types": "tsc --noEmit",
     "ios": "expo start --ios",
     "lint": "tslint --project tsconfig.json",
+    "prettify": "prettier --write '{./,./src/**/}*.{js,json,ts,tsx}'",
     "start": "expo start",
     "validate": "yarn run lint && yarn run check-types"
   },
@@ -33,7 +34,9 @@
     "@types/react": "16.8.6",
     "@types/react-native": "0.57.38",
     "@types/react-navigation": "3.0.4",
+    "prettier": "1.16.4",
     "tslint": "5.13.1",
+    "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "3.6.0",
     "typescript": "3.3.3333"

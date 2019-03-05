@@ -4,7 +4,8 @@
   ],
   "extends": [
     "tslint:latest",
-    "tslint-react"
+    "tslint-react",
+    "tslint-config-prettier"
   ],
   "linterOptions": {
     "exclude": [
@@ -12,114 +13,22 @@
     ]
   },
   "rules": {
-    "align": [
-      false
-    ],
-    "array-type": [
-      true,
-      "generic"
-    ],
-    "arrow-parens": false,
-    "eofline": false,
-    "interface-name": [
-      true,
-      "never-prefix"
-    ],
-    "max-line-length": [
-      false
-    ],
-    "member-ordering": [
-      false
-    ],
-    "no-bitwise": false,
+    "array-type": [true, "generic"],
+    "interface-name": [true, "never-prefix"],
+    "member-ordering": false,
     "no-duplicate-imports": false,
-    "no-null-keyword": true,
-    "no-switch-case-fall-through": true,
-    "object-literal-shorthand": false,
-    "one-line": [
-      false
-    ],
-    "ordered-imports": [
-      false
-    ],
+    "ordered-imports": false,
     "prefer-conditional-expression": false,
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
-    "semicolon": [
-      true,
-      "never"
-    ],
-    "trailing-comma": [
-      true,
-      {
-        "multiline": "never",
-        "singleline": "never"
-      }
-    ],
-    "variable-name": [
-      true,
-      "ban-keywords"
-    ],
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-module",
-      "check-separator",
-      "check-type"
-    ],
     // ESLint rules for TSLint (tslint-eslint-rules).
-    "array-bracket-spacing":
-    [
-      true,
-      "never"
-    ],
-    "block-spacing":
-    [
-      true,
-      "always"
-    ],
-    "brace-style": [
-      true,
-      "stroustrup",
-      {
-        "allowSingleLine": true
-      }
-    ],
-    "no-consecutive-blank-lines": [
-      true
-    ],
     "no-constant-condition": true,
     "no-control-regex": true,
     "no-duplicate-case": true,
     "no-empty-character-class": true,
     "no-ex-assign": true,
     "no-extra-boolean-cast": true,
-    "no-extra-semi": true,
     "no-inner-declarations": true,
     "no-invalid-regexp": true,
     "no-irregular-whitespace": true,
-    "no-multi-spaces": true,
-    "no-regex-spaces": true,
-    "object-curly-spacing":
-    [
-      true,
-      "always"
-    ],
-    "object-literal-key-quotes": [
-      false
-    ],
-    "ter-indent": [
-      true,
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
     "ter-prefer-arrow-callback": [
       true
     ],

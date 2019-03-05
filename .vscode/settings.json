@@ -1,15 +1,14 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "eslint.enable": false,
   "javascript.validate.enable": false,
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
     "**/yarn.lock"
   ],
-  "tslint.enable": true,
   "tslint.exclude": "/node_modules/**/*",
   "tslint.ignoreDefinitionFiles": false,
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

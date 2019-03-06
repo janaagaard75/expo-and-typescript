@@ -1,16 +1,8 @@
 {
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ],
-  "extends": [
-    "tslint:latest",
-    "tslint-react",
-    "tslint-config-prettier"
-  ],
+  "rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"],
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "node_modules/**/*"
-    ]
+    "exclude": ["node_modules/**/*"]
   },
   "rules": {
     "array-type": [true, "generic"],
@@ -29,9 +21,7 @@
     "no-inner-declarations": true,
     "no-invalid-regexp": true,
     "no-irregular-whitespace": true,
-    "ter-prefer-arrow-callback": [
-      true
-    ],
+    "ter-prefer-arrow-callback": [true],
     "use-isnan": true,
     "valid-typeof": true,
     // tslint-react rules.

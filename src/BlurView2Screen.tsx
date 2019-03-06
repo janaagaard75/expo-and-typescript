@@ -6,7 +6,8 @@ import { Image } from 'react-native'
 import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
 
-const expoLogoUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
+const expoLogoUrl =
+  'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView)
 
 interface State {
@@ -31,8 +32,14 @@ export class BlurView2Screen extends Component<{}, State> {
   }
 
   private animate = () => {
-    Animated.timing(this.state.intensity, { duration: 2500, toValue: 100 }).start(() => {
-      Animated.timing(this.state.intensity, { duration: 2500, toValue: 0 }).start(this.animate)
+    Animated.timing(this.state.intensity, {
+      duration: 2500,
+      toValue: 100
+    }).start(() => {
+      Animated.timing(this.state.intensity, {
+        duration: 2500,
+        toValue: 0
+      }).start(this.animate)
     })
   }
 

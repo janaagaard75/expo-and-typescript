@@ -15,18 +15,19 @@ export class FacebookScreen extends Component<NavigationScreenProps> {
   }
 
   public async logIn() {
-    const loginResponse = await Facebook.logInWithReadPermissionsAsync('1487822177919606', {
-      permissions: ['public_profile']
-    })
+    const loginResponse = await Facebook.logInWithReadPermissionsAsync(
+      '1487822177919606',
+      {
+        permissions: ['public_profile']
+      }
+    )
 
     if (loginResponse.type === 'success') {
       // Get the user's name using Facebook's Graph API.
       const response = await fetch(
-        `https://graph.facebook.com/me?access_token=${loginResponse.token}`)
-      Alert.alert(
-        'Logged in!',
-        `Hi ${(await response.json()).name}!`
+        `https://graph.facebook.com/me?access_token=${loginResponse.token}`
       )
+      Alert.alert('Logged in!', `Hi ${(await response.json()).name}!`)
     }
   }
 
@@ -52,7 +53,11 @@ export class FacebookScreen extends Component<NavigationScreenProps> {
               width: 250
             }}
           >
-            <FontAwesome name="facebook-official" size={28} style={{ color: '#fff' }} />
+            <FontAwesome
+              name="facebook-official"
+              size={28}
+              style={{ color: '#fff' }}
+            />
             <Text
               style={{
                 color: '#fff',

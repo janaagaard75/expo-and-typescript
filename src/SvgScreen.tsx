@@ -19,10 +19,7 @@ export class SvgScreen extends Component<NavigationScreenProps> {
           justifyContent: 'center'
         }}
       >
-        <Svg
-          height={100}
-          width={100}
-        >
+        <Svg height={100} width={100}>
           {/* check-types will fail unless the @types/expo is used. See tsconfig.json. */}
           <Svg.G>
             <Svg.Path

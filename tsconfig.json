@@ -13,16 +13,11 @@
     "noUnusedLocals": true,
     // Using the type definitions in @types/expo becuase they are still better than the ones provided by expo. See SvgScreen.tsx and SystemFontsScreen.tsx.
     "paths": {
-      "expo": [
-        "../node_modules/@types/expo",
-        "../node_modules/expo"
-      ],
+      "expo": ["../node_modules/@types/expo", "../node_modules/expo"]
     },
     "skipLibCheck": true,
     "strict": true,
     "target": "es2017"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

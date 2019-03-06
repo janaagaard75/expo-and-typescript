@@ -82,13 +82,22 @@ export class GyroscopeScreen extends Component<{}, State> {
         </Text>
 
         <View style={this.buttonContainerStyle}>
-          <TouchableOpacity onPress={() => this.toggleSubscription()} style={this.buttonStyle}>
+          <TouchableOpacity
+            onPress={() => this.toggleSubscription()}
+            style={this.buttonStyle}
+          >
             <Text>Pause</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.useLongUpdateInterval()} style={[this.buttonStyle, this.middleButtonStyle]}>
+          <TouchableOpacity
+            onPress={() => this.useLongUpdateInterval()}
+            style={[this.buttonStyle, this.middleButtonStyle]}
+          >
             <Text>Slow</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.useShortUpdateInterval()} style={this.buttonStyle}>
+          <TouchableOpacity
+            onPress={() => this.useShortUpdateInterval()}
+            style={this.buttonStyle}
+          >
             <Text>Fast</Text>
           </TouchableOpacity>
         </View>
@@ -99,8 +108,7 @@ export class GyroscopeScreen extends Component<{}, State> {
   private toggleSubscription() {
     if (this.subscription === undefined) {
       this.subscribe()
-    }
-    else {
+    } else {
       this.unsubscribe()
     }
   }
@@ -115,7 +123,7 @@ export class GyroscopeScreen extends Component<{}, State> {
   }
 
   private subscribe() {
-    this.subscription = Gyroscope.addListener((result) => {
+    this.subscription = Gyroscope.addListener(result => {
       this.setState({ gyroscopeData: result })
     })
   }

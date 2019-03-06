@@ -35,9 +35,7 @@ export class FontScreen extends Component<{}, State> {
 
   public render() {
     if (!this.state.fontLoaded) {
-      return (
-        <Text>Loading font...</Text>
-      )
+      return <Text>Loading font...</Text>
     }
 
     return (

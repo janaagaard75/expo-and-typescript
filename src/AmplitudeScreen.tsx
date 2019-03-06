@@ -11,7 +11,7 @@ export class AmplitudeScreen extends Component {
     Amplitude.initialize('31ef1b42450bb6c4372b30524c69b9a9')
     Amplitude.setUserId('1')
     Amplitude.setUserProperties({
-      'age': 42
+      age: 42
     })
   }
 
@@ -21,7 +21,7 @@ export class AmplitudeScreen extends Component {
 
   public render() {
     Amplitude.logEventWithProperties('OPEN_SCREEN', {
-      'screenName': 'AmplitudeScreen'
+      screenName: 'AmplitudeScreen'
     })
 
     return (

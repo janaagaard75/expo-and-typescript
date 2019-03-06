@@ -5,7 +5,8 @@ import { Image } from 'react-native'
 import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
 
-const expoImageUrl = 'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
+const expoImageUrl =
+  'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
 
 export class BlurView1Screen extends Component {
   public static navigationOptions = {
@@ -30,11 +31,7 @@ export class BlurView1Screen extends Component {
             width: 192
           }}
         />
-        <BlurView
-          intensity={50}
-          style={StyleSheet.absoluteFill}
-          tint="light"
-        >
+        <BlurView intensity={50} style={StyleSheet.absoluteFill} tint="light">
           <Image
             source={{ uri: expoImageUrl }}
             style={{

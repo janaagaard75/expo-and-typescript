@@ -40,10 +40,7 @@ export class CameraScreen extends Component<{}, State> {
 
     return (
       <View style={{ flex: 1 }}>
-        <Camera
-          style={{ flex: 1 }}
-          type={this.state.cameraType}
-        >
+        <Camera style={{ flex: 1 }} type={this.state.cameraType}>
           <View
             style={{
               backgroundColor: 'transparent',
@@ -66,7 +63,8 @@ export class CameraScreen extends Component<{}, State> {
                   marginBottom: 10
                 }}
               >
-                {' '}Flip{' '}
+                {' '}
+                Flip{' '}
               </Text>
             </TouchableOpacity>
           </View>
@@ -81,9 +79,7 @@ export class CameraScreen extends Component<{}, State> {
       // cameraType: this.state.cameraType === Camera.Constants.Type.back
       //   ? Camera.Constants.Type.front
       //   : Camera.Constants.Type.back
-      cameraType: this.state.cameraType === 'back'
-        ? 'front'
-        : 'back'
+      cameraType: this.state.cameraType === 'back' ? 'front' : 'back'
     })
   }
 }

@@ -14,7 +14,10 @@ interface State {
   accelerometerData: ThreeAxisMeasurement
 }
 
-export class AccelerometerScreen extends Component<NavigationScreenProps, State> {
+export class AccelerometerScreen extends Component<
+  NavigationScreenProps,
+  State
+> {
   constructor(props: NavigationScreenProps, context?: any) {
     super(props, context)
 
@@ -42,9 +45,15 @@ export class AccelerometerScreen extends Component<NavigationScreenProps, State>
   }
 
   public render() {
-    const x = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.x)
-    const y = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.y)
-    const z = AccelerometerScreen.roundToTwoDecimals(this.state.accelerometerData.z)
+    const x = AccelerometerScreen.roundToTwoDecimals(
+      this.state.accelerometerData.x
+    )
+    const y = AccelerometerScreen.roundToTwoDecimals(
+      this.state.accelerometerData.y
+    )
+    const z = AccelerometerScreen.roundToTwoDecimals(
+      this.state.accelerometerData.z
+    )
 
     return (
       <View
@@ -55,7 +64,9 @@ export class AccelerometerScreen extends Component<NavigationScreenProps, State>
         }}
       >
         <Text>Accelerometer:</Text>
-        <Text>x: {x} y: {y} z: {z}</Text>
+        <Text>
+          x: {x} y: {y} z: {z}
+        </Text>
         <View
           style={{
             alignItems: 'stretch',
@@ -75,10 +86,7 @@ export class AccelerometerScreen extends Component<NavigationScreenProps, State>
           >
             <Text>Slow</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.fast()}
-            style={styles.button}
-          >
+          <TouchableOpacity onPress={() => this.fast()} style={styles.button}>
             <Text>Fast</Text>
           </TouchableOpacity>
         </View>
@@ -111,8 +119,7 @@ export class AccelerometerScreen extends Component<NavigationScreenProps, State>
   private toggleSubscription() {
     if (this.subscription) {
       this.unsubscribe()
-    }
-    else {
+    } else {
       this.subscribe()
     }
   }

@@ -33,13 +33,13 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
   public async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA)
     this.setState({
-      cameraPermission: status === 'granted' ? PermissionState.Granted : PermissionState.Denied
+      cameraPermission:
+        status === 'granted' ? PermissionState.Granted : PermissionState.Denied
     })
   }
 
   public render() {
-    switch (this.state.cameraPermission)
-    {
+    switch (this.state.cameraPermission) {
       case PermissionState.Unknown:
         return <Text>Requesting for camera permission.</Text>
 
@@ -67,8 +67,8 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
         )
 
       default:
-        const _exhaustiveCheck: never = this.state.cameraPermission
-        return _exhaustiveCheck
+        const _: never = this.state.cameraPermission
+        return _
     }
   }
 

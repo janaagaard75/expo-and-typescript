@@ -41,11 +41,11 @@ If you're on a Mac and have Xcode installed, you can run the app using the iOS S
 yarn ios
 ```
 
-## Setting Expo and TypeScript A With Expo Version >= 31
+## Setting Expo and TypeScript With Expo Version >= 31
 
 Since version 31 Expo supports TypeScript natively. If you're using that version, 1) don't add the react-native-typescript-transformer package, 2) don't specify sourceExt and transformer in app.json and 3) don't mention babel-preset-expo and transform-react-jsx-source in your .babelrc, i.e. delete the file if those were the only two things in it.
 
-## Setting Expo and TypeScript A With Expo Version <= 30
+## Setting Expo and TypeScript With Expo Version <= 30
 
 This guide show how to transform and Expo app written in JavaScript in to TypeScript. While Expo supports TypeScript since version 31,  it is still a work in progress, and namely the type definition files are not yet included.
 

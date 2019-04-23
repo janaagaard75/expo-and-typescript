@@ -95,22 +95,25 @@ Since Expo is evolving quickly it is not uncommon that the type definitions are 
 The repository started out as mainly a big collection of TypeScript interfaces. While most developers are pretty strict about terminating lines with or without a semicolon, this is apparently not the case when it comes to writing interfaces. So after reading about the [JavaScript Standard Style](https://standardjs.com/) advocating not using semicolons, I thought this would be a simple way to clean up the mess. And now that I've become used to looking a TypeScript code without semicolons it really like it. It's definitely cleaner, and I have yet to stumble upon a piece of code that would be more readable with the semicolons.
 
 ```typescript
+// Some use semicolons in interfaces.
 interface Point {
-  number x;
-  number y;
+  x: number;
+  y: number;
 }
 
+// Some use commas.
 interface Point {
-  number x,
-  number y
+  x: number,
+  y: number
 }
 
+// And sometimes it's a mix.
 interface Point {
-  number x;
-  number y;
-  test: {
-    string a,
-    string b
+  x: number;
+  y: number;
+  color: {
+    border: string,
+    fill: string
   }
 }
 

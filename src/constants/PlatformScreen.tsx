@@ -9,8 +9,6 @@ export class PlatformScreen extends Component {
   }
 
   public render() {
-    return (
-      <Text>{JSON.stringify(Constants.platform, undefined, 2)}</Text>
-    )
+    return <Text>{JSON.stringify(Constants.platform, undefined, 2)}</Text>
   }
 }

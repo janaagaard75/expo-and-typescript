@@ -5,16 +5,12 @@ import { NavigationScreenProps } from 'react-navigation'
 import { ScrollView } from 'react-native'
 
 class DestinationAndTitle {
-  constructor(
-    destination: string,
-    title?: string
-  ) {
+  constructor(destination: string, title?: string) {
     this.destination = destination
 
     if (title === undefined) {
       this.title = destination
-    }
-    else {
+    } else {
       this.title = title
     }
   }
@@ -37,13 +33,15 @@ export class MainScreen extends Component<NavigationScreenProps> {
           flex: 1
         }}
       >
-        {this.destinationAndTitlePairs.map(destinationAndTitle =>
+        {this.destinationAndTitlePairs.map(destinationAndTitle => (
           <Button
             key={destinationAndTitle.destination}
-            onPress={() => this.props.navigation.navigate(destinationAndTitle.destination)}
+            onPress={() =>
+              this.props.navigation.navigate(destinationAndTitle.destination)
+            }
             title={destinationAndTitle.title}
           />
-        )}
+        ))}
       </ScrollView>
     )
   }

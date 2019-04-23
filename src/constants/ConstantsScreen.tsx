@@ -41,11 +41,17 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
         <Text>expoVersion: "{Constants.expoVersion}"</Text>
         <Text>isDevice: {Constants.isDevice}</Text>
         <Text>linkingUri: "{Constants.linkingUri}"</Text>
-        <Text onPress={() => navigate('Manifest')}>manifest: (Click to see)</Text>
-        <Text onPress={() => navigate('Platform')}>platform: (Click to see)</Text>
+        <Text onPress={() => navigate('Manifest')}>
+          manifest: (Click to see)
+        </Text>
+        <Text onPress={() => navigate('Platform')}>
+          platform: (Click to see)
+        </Text>
         <Text>sessionId: "{Constants.sessionId}"</Text>
         <Text>statusBarHeight: {Constants.statusBarHeight}</Text>
-        <Text onPress={() => navigate('SystemFonts')}>systemFonts: (Click to see)</Text>
+        <Text onPress={() => navigate('SystemFonts')}>
+          systemFonts: (Click to see)
+        </Text>
         <Text>webViewUserAgent: "{this.state.webViewUserAgent}"</Text>
       </View>
     )

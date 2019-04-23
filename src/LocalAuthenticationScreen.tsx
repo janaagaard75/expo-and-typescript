@@ -27,26 +27,27 @@ export class LocalAuthenticationScreen extends Component<{}, State> {
   public render() {
     return (
       <View>
-        <Text>This device has a fingerprint or a face scanner: {this.state.hasHardware ? 'Yes' : 'No'}</Text>
+        <Text>
+          This device has a fingerprint or a face scanner:{' '}
+          {this.state.hasHardware ? 'Yes' : 'No'}
+        </Text>
         <Text>Authenticated: {this.state.authenticated ? 'Yes' : 'No'}</Text>
         <Text>Authentication error: {this.state.authenticationError}</Text>
-        <Button
-          onPress={() => this.authenticate()}
-          title="Scan"
-        />
+        <Button onPress={() => this.authenticate()} title="Scan" />
       </View>
     )
   }
 
   private async authenticate() {
-    const authenticated = await LocalAuthentication.authenticateAsync('Authentication message')
+    const authenticated = await LocalAuthentication.authenticateAsync(
+      'Authentication message'
+    )
 
     if (authenticated.success) {
       this.setState({
         authenticationError: 'None'
       })
-    }
-    else {
+    } else {
       this.setState({
         authenticationError: authenticated.error
       })

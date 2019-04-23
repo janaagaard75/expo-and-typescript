@@ -26,9 +26,7 @@ export class AssetScreen extends Component<{}, State> {
 
   public render() {
     if (!this.state.assetsLoaded) {
-      return (
-        <Text>Loading assets...</Text>
-      )
+      return <Text>Loading assets...</Text>
     }
 
     return (

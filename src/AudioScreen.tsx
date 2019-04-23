@@ -26,9 +26,7 @@ export class AudioScreen extends Component<{}, State> {
 
   public render() {
     if (!this.state.soundLoaded) {
-      return (
-        <Text>Loading sound...</Text>
-      )
+      return <Text>Loading sound...</Text>
     }
 
     return (
@@ -40,11 +38,14 @@ export class AudioScreen extends Component<{}, State> {
         }}
       >
         <Text>
-          Music from
-          {' '}
+          Music from{' '}
           <Text
             style={{ color: 'blue' }}
-            onPress={() => Linking.openURL('https://www.bensound.com/royalty-free-music/track/the-jazz-piano')}
+            onPress={() =>
+              Linking.openURL(
+                'https://www.bensound.com/royalty-free-music/track/the-jazz-piano'
+              )
+            }
           >
             www.bensound.com
           </Text>

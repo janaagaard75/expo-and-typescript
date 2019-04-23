@@ -4,11 +4,9 @@
 
 This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org).
 
-Expo includes [Babel 7](https://babeljs.io) since version 31, and Babel is now used to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn run script `check-types` does this. `tsconfig.json` is only used when checking the types. Babel is configured with `.babelrc`.
+Expo includes [Babel 7](https://babeljs.io) since version 31, and Babel is now used to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn run script `check-types` does this. `tsconfig.json` is only used when checking the types. Babel is configured with `babel.config.js`.
 
 This repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. The `expo` npm package now contains its own set of type definitions, so `@types/expo` is now ignore, and has been removed. There is currently a type check issue with the SVGs that I haven't figured out how to solve.
-
-The app is published on Expo: [Expo and TypeScript on Expo](https://expo.io/@janaagaard75/expo-and-typescript). It is not published to the app stores, but you can run it on an Android device, if install the free [Expo client](https://expo.io/tools#client). Running on an iOS device without signing in to my Expo account is unfortunately no longer allowed by Apple. This is probably because it makes the Expo app behave too much like an app store.
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
@@ -43,11 +41,20 @@ yarn ios
 
 ## Setting Expo and TypeScript With Expo Version >= 31
 
-Since version 31 Expo supports TypeScript natively. If you're using that version, 1) don't add the react-native-typescript-transformer package, 2) don't specify sourceExt and transformer in app.json and 3) don't mention babel-preset-expo and transform-react-jsx-source in your .babelrc, i.e. delete the file if those were the only two things in it.
+Since version 31 Expo supports TypeScript natively. If you're using you actually only need to add TypeScript and the type definitions when doing type checking.
+
+Some of versions of `expo` contain type definitions---look for the `typings` property in `node_modules/expo/package.json`. If this property exists then TypeScript will use there instead of `@types/expo`. Add the following lines below to your `tsconfig.json` if you want to use `@types/expo` instead of the official type definitions. I would recommend trying to the use the built-in type definition and only install `@types/expo` if they aren't good enough for your project.
+
+```javascript
+// Using the type definitions in @types/expo becuase they are still better than the ones provided by expo. See SvgScreen.tsx and SystemFontsScreen.tsx.
+"paths": {
+  "expo": ["../node_modules/@types/expo", "../node_modules/expo"]
+}
+```
 
 ## Setting Expo and TypeScript With Expo Version <= 30
 
-This guide show how to transform and Expo app written in JavaScript in to TypeScript. While Expo supports TypeScript since version 31,  it is still a work in progress, and namely the type definition files are not yet included.
+This guide show how to transform and Expo app written in JavaScript in to TypeScript. While Expo supports TypeScript since version 31, it is still a work in progress, and namely the type definition files are not yet included.
 
 Setting breakpoints in TypeScript files works, and hot reloading works, so it's a pretty solid development experience as long as you're lucky enough to not hit a missing type definition.
 
@@ -111,6 +118,6 @@ interface Point {
 
 ## Similar Projects
 
-* [expo-ts-example](https://github.com/dalcib/expo-ts-example), the basis for this project
-* [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
-* [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)
+- [expo-ts-example](https://github.com/dalcib/expo-ts-example), the basis for this project
+- [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
+- [react-native-typescript-starter](https://github.com/cbrevik/react-native-typescript-starter)

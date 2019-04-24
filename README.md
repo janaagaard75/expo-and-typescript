@@ -4,8 +4,6 @@
 
 This repository is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org).
 
-Expo includes [Babel 7](https://babeljs.io) since version 31, and Babel is now used to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn run script `check-types` does this. `tsconfig.json` is only used when checking the types. Babel is configured with `babel.config.js`.
-
 This repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. The `expo` npm package now contains its own set of type definitions, so `@types/expo` is now ignore, and has been removed. There is currently a type check issue with the SVGs that I haven't figured out how to solve.
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
@@ -41,12 +39,11 @@ yarn ios
 
 ## Setting Expo and TypeScript With Expo Version >= 31
 
-Since version 31 Expo supports TypeScript natively. If you're using you actually only need to add TypeScript and the type definitions when doing type checking.
+Since version 31 Expo includes [Babel 7](https://babeljs.io), and Babel is used out of the box to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn command script `check-types` in this repo does this. `tsconfig.json` is only used when checking the types. Babel is configured with `babel.config.js`.
 
-Some of versions of `expo` contain type definitions---look for the `typings` property in `node_modules/expo/package.json`. If this property exists then TypeScript will use there instead of `@types/expo`. Add the following lines below to your `tsconfig.json` if you want to use `@types/expo` instead of the official type definitions. I would recommend trying to the use the built-in type definition and only install `@types/expo` if they aren't good enough for your project.
+The Expo team is currently working on native type definitions, but this works is not yet done. Look for the `types` property in `node_modules/expo/package.json`. If this property exists then TypeScript will use there instead of `@types/expo`. You can add the lines below to your `tsconfig.json` if you want to use `@types/expo` instead of the official type definitions. I would recommend trying to the use the built-in type definition once they are released, and only install `@types/expo` if they aren't good enough for your project.
 
 ```javascript
-// Using the type definitions in @types/expo becuase they are still better than the ones provided by expo. See SvgScreen.tsx and SystemFontsScreen.tsx.
 "paths": {
   "expo": ["../node_modules/@types/expo", "../node_modules/expo"]
 }
@@ -97,26 +94,25 @@ The repository started out as mainly a big collection of TypeScript interfaces. 
 ```typescript
 // Some use semicolons in interfaces.
 interface Point {
-  x: number;
-  y: number;
+  x: number
+  y: number
 }
 
 // Some use commas.
 interface Point {
-  x: number,
+  x: number
   y: number
 }
 
 // And sometimes it's a mix.
 interface Point {
-  x: number;
-  y: number;
+  x: number
+  y: number
   color: {
-    border: string,
+    border: string
     fill: string
   }
 }
-
 ```
 
 ## Similar Projects

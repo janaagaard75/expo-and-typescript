@@ -33,6 +33,7 @@
     "@types/react-native": "0.57.55",
     "@types/react-navigation": "3.0.7",
     "babel-preset-expo": "5.1.1",
+    "expo-cli": "2.18.5",
     "prettier": "1.17.0",
     "tslint": "5.16.0",
     "tslint-config-prettier": "1.18.0",

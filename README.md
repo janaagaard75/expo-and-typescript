@@ -10,14 +10,7 @@ This repo used to also contain a type definition file for Expo, but that work ha
 
 ## Prerequisites
 
-Install `expo-cli` globally.
-
-```shell
-# Install expo-cli globally using Yarn.
-yarn global add expo-cli
-```
-
-If you prefer to use npm the command is `npm install --global expo-cli`.
+You don't need to install any global packages for this repo. `expo-cli` is included as a dev dependency.
 
 ## Warnings When Installing Packages
 

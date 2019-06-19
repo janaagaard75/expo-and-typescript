@@ -30,6 +30,7 @@
     "expo-constants": "5.0.1",
     "expo-core": "3.0.1",
     "expo-font": "5.0.1",
+    "expo-linear-gradient": "5.0.1",
     "expo-local-authentication": "5.0.1",
     "expo-permissions": "5.0.1",
     "expo-sensors": "5.0.1",

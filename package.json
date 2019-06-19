@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "expo": "33.0.6",
+    "expo-analytics-amplitude": "5.0.1",
     "expo-asset": "5.0.1",
     "expo-av": "5.0.2",
     "expo-blur": "5.0.1",

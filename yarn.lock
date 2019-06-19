@@ -4247,7 +4247,7 @@ expo-ads-facebook@~5.0.1:
     fbemitter "^2.1.1"
     nullthrows "^1.1.0"
 
-expo-analytics-amplitude@~5.0.1:
+expo-analytics-amplitude@5.0.1, expo-analytics-amplitude@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/expo-analytics-amplitude/-/expo-analytics-amplitude-5.0.1.tgz#2f0d046f1949342c45cf0b6351f5b021357d4f92"
   integrity sha512-zzH82IbA/MTfpEbSQuDq4fHR1O3srNTwdOsBYSizn/mvt7+5DPHn4pHJuf9QRtm8FhmpuQQ7d26I6/2/5JCKKA==

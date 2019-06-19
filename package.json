@@ -22,6 +22,7 @@
     "expo": "33.0.6",
     "expo-asset": "5.0.1",
     "expo-av": "5.0.2",
+    "expo-constants": "5.0.1",
     "expo-core": "3.0.1",
     "expo-local-authentication": "5.0.1",
     "react": "16.8.3",

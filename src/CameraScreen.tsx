@@ -1,7 +1,7 @@
+import * as Permissions from 'expo-permissions'
 import * as React from 'react'
 import { Camera } from 'expo-camera'
 import { Component } from 'react'
-import { Permissions } from 'expo'
 import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'

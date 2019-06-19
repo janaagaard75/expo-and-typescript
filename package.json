@@ -37,6 +37,7 @@
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-maps": "0.24.2",
+    "react-native-svg": "9.5.1",
     "react-navigation": "3.11.0",
     "tslib": "1.10.0"
   },

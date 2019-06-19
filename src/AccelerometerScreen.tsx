@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Accelerometer } from 'expo'
+import { Accelerometer } from 'expo-sensors'
 import { Component } from 'react'
 import { NavigationScreenProps } from 'react-navigation'
 import { StyleSheet } from 'react-native'

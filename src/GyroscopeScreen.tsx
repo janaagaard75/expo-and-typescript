@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { Gyroscope } from 'expo'
+import { Gyroscope } from 'expo-sensors'
 import { Subscription } from 'expo-core'
 import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'

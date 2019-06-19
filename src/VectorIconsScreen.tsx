@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Component } from 'react'
-// tslint:disable-next-line:no-implicit-dependencies
 import { Ionicons } from '@expo/vector-icons'
 import { View } from 'react-native'
 

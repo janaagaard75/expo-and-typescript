@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { LinearGradient } from 'expo'
+import { LinearGradient } from 'expo-linear-gradient'
 import { NavigationScreenProps } from 'react-navigation'
 import { View } from 'react-native'
 

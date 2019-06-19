@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { MapView } from 'expo'
+import MapView from 'react-native-maps'
 
 export class MapViewScreen extends Component {
   public static navigationOptions = {

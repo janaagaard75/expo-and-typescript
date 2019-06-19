@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Alert } from 'react-native'
 import { Component } from 'react'
 import { Facebook } from 'expo'
-// tslint:disable-next-line:no-implicit-dependencies
 import { FontAwesome } from '@expo/vector-icons'
 import { NavigationScreenProps } from 'react-navigation'
 import { Text } from 'react-native'

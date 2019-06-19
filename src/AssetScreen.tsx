@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { Asset } from 'expo'
+import { Asset } from 'expo-asset'
 import { View } from 'react-native'
 import { Image } from 'react-native'
 import { Text } from 'react-native'

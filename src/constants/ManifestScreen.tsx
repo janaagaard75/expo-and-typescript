@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Text } from 'react-native'
 import { Component } from 'react'
-import { Constants } from 'expo'
 import { ScrollView } from 'react-native'
+import { Text } from 'react-native'
+import Constants from 'expo-constants'
 
 export class ManifestScreen extends Component {
   public static navigationOptions = {

@@ -4307,7 +4307,7 @@ expo-blur@5.0.1, expo-blur@~5.0.1:
   dependencies:
     prop-types "^15.6.0"
 
-expo-brightness@~5.0.1:
+expo-brightness@5.0.1, expo-brightness@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/expo-brightness/-/expo-brightness-5.0.1.tgz#90e0445a34c7ef92c4511211c888bbc50eae0441"
   integrity sha512-jUbbucNYoBiWiQhHJG78SB4e7DVTRpcm19DKxvvtcwyDMDUch6YFtk1+pImOjkPDlD6xVFm4xPpSWdW3Y2Md3Q==

@@ -19,26 +19,26 @@
     "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {
-    "expo": "32.0.6",
+    "expo": "33.0.6",
     "expo-core": "3.0.1",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-navigation": "3.11.0",
-    "tslib": "1.9.3"
+    "tslib": "1.10.0"
   },
   "devDependencies": {
     "@types/expo": "32.0.13",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/react": "16.8.19",
-    "@types/react-native": "0.57.60",
+    "@types/react": "16.8.20",
+    "@types/react-native": "0.57.63",
     "@types/react-navigation": "3.0.7",
-    "babel-preset-expo": "5.1.1",
-    "expo-cli": "2.18.5",
-    "prettier": "1.17.1",
-    "tslint": "5.16.0",
+    "babel-preset-expo": "5.2.0",
+    "expo-cli": "2.20.2",
+    "prettier": "1.18.2",
+    "tslint": "5.17.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "4.0.0",
-    "typescript": "3.5.1"
+    "typescript": "3.5.2"
   }
 }

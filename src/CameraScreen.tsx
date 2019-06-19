@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Camera } from 'expo'
+import { Camera } from 'expo-camera'
 import { Component } from 'react'
 import { Permissions } from 'expo'
 import { Text } from 'react-native'

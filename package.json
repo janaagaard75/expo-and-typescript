@@ -26,6 +26,7 @@
     "expo-barcode-scanner": "5.0.1",
     "expo-blur": "5.0.1",
     "expo-brightness": "5.0.1",
+    "expo-camera": "5.0.1",
     "expo-constants": "5.0.1",
     "expo-core": "3.0.1",
     "expo-local-authentication": "5.0.1",

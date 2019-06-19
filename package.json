@@ -47,6 +47,7 @@
     "@types/react": "16.8.20",
     "@types/react-native": "0.57.63",
     "@types/react-navigation": "3.0.7",
+    "@unimodules/core": "2.0.1",
     "babel-preset-expo": "5.2.0",
     "expo-cli": "2.20.2",
     "prettier": "1.18.2",

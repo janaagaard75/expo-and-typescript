@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Component } from 'react'
 import { Gyroscope } from 'expo-sensors'
-import { Subscription } from 'expo-core'
+import { Subscription } from '@unimodules/core'
 import { Text } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { View } from 'react-native'

@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { Linking } from 'react-native'
 import { Text } from 'react-native'
 import { View } from 'react-native'
-import { Audio } from 'expo'
+import { Audio } from 'expo-av'
 
 interface State {
   soundLoaded: boolean

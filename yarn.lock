@@ -4426,7 +4426,7 @@ expo-file-system@~5.0.1:
   dependencies:
     uuid-js "^0.7.5"
 
-expo-font@~5.0.1:
+expo-font@5.0.1, expo-font@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-5.0.1.tgz#b3174134efd0ce3382db3a6c282147cba8bee203"
   integrity sha512-fa/z31lLi1ut6IGTf9/Kvw9KAlwSGQaBkuunuqjrW2ephqiXlHTeOOsaqKMirtmiqgsKOJysdlYUH1Aw03Y2bg==

@@ -1,6 +1,6 @@
+import * as Font from 'expo-font'
 import * as React from 'react'
 import { Component } from 'react'
-import { Font } from 'expo'
 import { Text } from 'react-native'
 import { View } from 'react-native'
 

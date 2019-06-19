@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Animated } from 'react-native'
-import { BlurView } from 'expo'
+import { BlurView } from 'expo-blur'
 import { Component } from 'react'
 import { Image } from 'react-native'
 import { StyleSheet } from 'react-native'

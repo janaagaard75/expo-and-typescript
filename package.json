@@ -23,6 +23,7 @@
     "expo-analytics-amplitude": "5.0.1",
     "expo-asset": "5.0.1",
     "expo-av": "5.0.2",
+    "expo-barcode-scanner": "5.0.1",
     "expo-blur": "5.0.1",
     "expo-constants": "5.0.1",
     "expo-core": "3.0.1",

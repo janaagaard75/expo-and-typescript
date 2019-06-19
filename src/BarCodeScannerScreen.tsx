@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BarCodeScanner } from 'expo'
+import { BarCodeScanner } from 'expo-barcode-scanner'
 import { Permissions } from 'expo'
 import { StyleSheet } from 'react-native'
 import { Text } from 'react-native'

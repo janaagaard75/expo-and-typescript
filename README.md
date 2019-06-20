@@ -30,11 +30,11 @@ If you're on a Mac and have Xcode installed, you can run the app using the iOS S
 yarn ios
 ```
 
-## Setting Expo and TypeScript With Expo Version >= 33
+## Setting Expo and TypeScript With Expo Version &ge; 33
 
 Since version 33 Expo includes great types, so there is no longer a need for `@types/expo`. I am really glad that TypeScript support has become official, but also admittedly a bit sad, that all the work in `@types/expo` will no longer be used.
 
-## Setting Expo and TypeScript With Expo Version >= 31
+## Setting Expo and TypeScript With Expo Version &ge; 31
 
 Since version 31 Expo includes [Babel 7](https://babeljs.io), and Babel is used out of the box to transform the TypeScript into JavaScript. Note that Babel doesn't ["perform type-checking on TypeScript code; it [only transforms] your code, and it will compile regardless of whether type errors are present."](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), so if you want to type check your code, you have to run the TypeScript compiler separately. The npm/Yarn command script `check-types` in this repo does this. `tsconfig.json` is only used when checking the types. Babel is configured with `babel.config.js`.
 
@@ -46,7 +46,7 @@ The Expo team is currently working on native type definitions, but this works is
 }
 ```
 
-## Setting Expo and TypeScript With Expo Version <= 30
+## Setting Expo and TypeScript With Expo Version &le; 30
 
 This guide show how to transform and Expo app written in JavaScript in to TypeScript. While Expo supports TypeScript since version 31, it is still a work in progress, and namely the type definition files are not yet included.
 

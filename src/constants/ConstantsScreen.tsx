@@ -6,7 +6,7 @@ import { View } from 'react-native'
 import Constants from 'expo-constants'
 
 interface State {
-  webViewUserAgent: string | undefined
+  webViewUserAgent: string | null
 }
 
 export class ConstantsScreen extends Component<NavigationScreenProps, State> {
@@ -14,7 +14,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
     super(props, context)
 
     this.state = {
-      webViewUserAgent: undefined
+      webViewUserAgent: null
     }
 
     this.updateWebViewUserAgent()
@@ -58,13 +58,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
   }
 
   private async updateWebViewUserAgent() {
-    let userAgent:
-      | string
-      | null
-      | undefined = await Constants.getWebViewUserAgentAsync()
-    if (userAgent === null) {
-      userAgent = undefined
-    }
+    const userAgent = await Constants.getWebViewUserAgentAsync()
     this.setState({
       webViewUserAgent: userAgent
     })

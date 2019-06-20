@@ -14,7 +14,7 @@ You don't need to install any global packages for this repo. `expo-cli` is inclu
 
 ## Warnings When Installing Packages
 
-There are a surprising amount of of warnings when building the app, because of peer dependencies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together, and this app seems to run fine, so I believe it's safe to ignore the warnings.
+There are a surprising amount of of warnings when installing Node packages, because of peer dependencies not being correct. My guess is that the Expo team has a tough time getting all the added React Native libraries to play well together. This app seems to run fine, so I believe it's safe to ignore the warnings.
 
 ## Running the App
 

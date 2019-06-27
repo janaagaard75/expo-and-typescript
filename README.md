@@ -91,17 +91,27 @@ The repository started out as mainly a big collection of TypeScript interfaces. 
 ```typescript
 // Some use semicolons in interfaces.
 interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 // Some use commas.
 interface Point {
-  x: number
+  x: number,
   y: number
 }
 
 // And sometimes it's a mix.
+interface Point {
+  x: number;
+  y: number;
+  color: {
+    border: string,
+    fill: string
+  }
+}
+
+// It was simpler to remove the punctuation. This choice naturally affected the rest of the code too.
 interface Point {
   x: number
   y: number

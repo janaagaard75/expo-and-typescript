@@ -19,7 +19,7 @@
     "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {
-    "expo": "33.0.6",
+    "expo": "33.0.7",
     "expo-analytics-amplitude": "5.0.1",
     "expo-asset": "5.0.1",
     "expo-av": "5.0.2",
@@ -43,14 +43,14 @@
   },
   "devDependencies": {
     "@types/expo__vector-icons": "9.0.1",
-    "@types/react": "16.8.20",
-    "@types/react-native": "0.57.63",
+    "@types/react": "16.8.23",
+    "@types/react-native": "0.60.0",
     "@types/react-navigation": "3.0.7",
     "@unimodules/core": "2.0.1",
     "babel-preset-expo": "5.2.0",
-    "expo-cli": "2.20.2",
+    "expo-cli": "2.21.2",
     "prettier": "1.18.2",
-    "tslint": "5.17.0",
+    "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "4.0.0",

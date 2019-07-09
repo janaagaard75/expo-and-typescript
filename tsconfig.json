@@ -5,16 +5,18 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
+    "isolatedModules": true,
     "jsx": "react-native",
     "module": "es2015",
     "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
     "noEmit": true,
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2017"
+    "target": "esnext"
   },
   "exclude": ["node_modules"]
 }

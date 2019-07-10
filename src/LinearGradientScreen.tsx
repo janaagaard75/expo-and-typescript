@@ -1,26 +1,26 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { LinearGradient } from 'expo-linear-gradient'
-import { NavigationScreenProps } from 'react-navigation'
-import { View } from 'react-native'
+import * as React from "react";
+import { Component } from "react";
+import { LinearGradient } from "expo-linear-gradient";
+import { NavigationScreenProps } from "react-navigation";
+import { View } from "react-native";
 
 export class LinearGradientScreen extends Component<NavigationScreenProps> {
   public static navigationOptions = {
-    title: 'LinearGradient'
-  }
+    title: "LinearGradient"
+  };
 
   public render() {
     return (
       <View
         style={{
-          alignItems: 'center',
-          backgroundColor: '#fff',
+          alignItems: "center",
+          backgroundColor: "#fff",
           flex: 1,
-          justifyContent: 'center'
+          justifyContent: "center"
         }}
       >
         <LinearGradient
-          colors={['#f0f', '#ff0']}
+          colors={["#f0f", "#ff0"]}
           style={{
             height: 100,
             marginTop: 10,
@@ -28,6 +28,6 @@ export class LinearGradientScreen extends Component<NavigationScreenProps> {
           }}
         />
       </View>
-    )
+    );
   }
 }

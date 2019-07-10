@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { Ionicons } from '@expo/vector-icons'
-import { View } from 'react-native'
+import * as React from "react";
+import { Component } from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { View } from "react-native";
 
 export class VectorIconsScreen extends Component {
   public static navigationOptions = {
-    title: 'Vector Icons'
-  }
+    title: "Vector Icons"
+  };
 
   public render() {
     return (
       <View
         style={{
-          alignItems: 'center',
-          backgroundColor: '#fff',
+          alignItems: "center",
+          backgroundColor: "#fff",
           flex: 1,
-          justifyContent: 'center'
+          justifyContent: "center"
         }}
       >
         <Ionicons
@@ -23,12 +23,12 @@ export class VectorIconsScreen extends Component {
           name="md-checkmark-circle"
           size={100}
           style={{
-            textDecorationColor: 'black',
-            textDecorationLine: 'underline',
-            textDecorationStyle: 'double'
+            textDecorationColor: "black",
+            textDecorationLine: "underline",
+            textDecorationStyle: "double"
           }}
         />
       </View>
-    )
+    );
   }
 }

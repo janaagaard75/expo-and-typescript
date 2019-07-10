@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Accelerometer } from 'expo-sensors'
-import { Component } from 'react'
-import { NavigationScreenProps } from 'react-navigation'
-import { StyleSheet } from 'react-native'
-import { Subscription } from '@unimodules/core'
-import { Text } from 'react-native'
-import { TouchableOpacity } from 'react-native'
-import { View } from 'react-native'
+import * as React from "react";
+import { Accelerometer } from "expo-sensors";
+import { Component } from "react";
+import { NavigationScreenProps } from "react-navigation";
+import { StyleSheet } from "react-native";
+import { Subscription } from "@unimodules/core";
+import { Text } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { View } from "react-native";
 
-import { ThreeAxisMeasurement } from './ThreeAxisMeasurement'
+import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
-  accelerometerData: ThreeAxisMeasurement
+  accelerometerData: ThreeAxisMeasurement;
 }
 
 export class AccelerometerScreen extends Component<
@@ -19,7 +19,7 @@ export class AccelerometerScreen extends Component<
   State
 > {
   constructor(props: NavigationScreenProps, context?: any) {
-    super(props, context)
+    super(props, context);
 
     this.state = {
       accelerometerData: {
@@ -27,38 +27,38 @@ export class AccelerometerScreen extends Component<
         y: 0,
         z: 0
       }
-    }
+    };
   }
 
   public static navigationOptions = {
-    title: 'Accelerometer'
-  }
+    title: "Accelerometer"
+  };
 
-  private subscription: Subscription | undefined
+  private subscription: Subscription | undefined;
 
   public componentDidMount() {
-    this.toggleSubscription()
+    this.toggleSubscription();
   }
 
   public componentWillUnmount() {
-    this.unsubscribe()
+    this.unsubscribe();
   }
 
   public render() {
     const x = AccelerometerScreen.roundToTwoDecimals(
       this.state.accelerometerData.x
-    )
+    );
     const y = AccelerometerScreen.roundToTwoDecimals(
       this.state.accelerometerData.y
-    )
+    );
     const z = AccelerometerScreen.roundToTwoDecimals(
       this.state.accelerometerData.z
-    )
+    );
 
     return (
       <View
         style={{
-          backgroundColor: '#fff',
+          backgroundColor: "#fff",
           marginTop: 15,
           paddingHorizontal: 10
         }}
@@ -69,8 +69,8 @@ export class AccelerometerScreen extends Component<
         </Text>
         <View
           style={{
-            alignItems: 'stretch',
-            flexDirection: 'row',
+            alignItems: "stretch",
+            flexDirection: "row",
             marginTop: 15
           }}
         >
@@ -91,58 +91,58 @@ export class AccelerometerScreen extends Component<
           </TouchableOpacity>
         </View>
       </View>
-    )
+    );
   }
 
   private static roundToTwoDecimals(value: number | undefined): number {
     if (value === undefined) {
-      return 0
+      return 0;
     }
 
-    return Math.floor(value * 100) / 100
+    return Math.floor(value * 100) / 100;
   }
 
   private fast() {
-    Accelerometer.setUpdateInterval(16)
+    Accelerometer.setUpdateInterval(16);
   }
 
   private slow() {
-    Accelerometer.setUpdateInterval(1000)
+    Accelerometer.setUpdateInterval(1000);
   }
 
   private subscribe() {
     this.subscription = Accelerometer.addListener(accelerometerData => {
-      this.setState({ accelerometerData })
-    })
+      this.setState({ accelerometerData });
+    });
   }
 
   private toggleSubscription() {
     if (this.subscription) {
-      this.unsubscribe()
+      this.unsubscribe();
     } else {
-      this.subscribe()
+      this.subscribe();
     }
   }
 
   private unsubscribe() {
     if (this.subscription !== undefined) {
-      this.subscription.remove()
+      this.subscription.remove();
     }
-    this.subscription = undefined
+    this.subscription = undefined;
   }
 }
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
-    backgroundColor: '#eee',
+    alignItems: "center",
+    backgroundColor: "#eee",
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     padding: 10
   },
   middleButton: {
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderLeftWidth: 1,
     borderRightWidth: 1
   }
-})
+});

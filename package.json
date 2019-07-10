@@ -10,12 +10,12 @@
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "android": "expo start --android",
+    "android": "yarn run start --android",
     "check-types": "tsc",
-    "ios": "expo start --ios",
+    "ios": "yarn run start --ios",
     "lint": "tslint --project tsconfig.json",
     "prettify": "prettier --write \"{./,./src/**/}*.{js,json,ts,tsx}\"",
-    "start": "expo start",
+    "start": "yarn install && expo start",
     "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {

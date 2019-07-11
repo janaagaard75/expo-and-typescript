@@ -1,26 +1,26 @@
-import * as React from 'react'
-import { BlurView } from 'expo-blur'
-import { Component } from 'react'
-import { Image } from 'react-native'
-import { StyleSheet } from 'react-native'
-import { View } from 'react-native'
+import * as React from "react";
+import { BlurView } from "expo-blur";
+import { Component } from "react";
+import { Image } from "react-native";
+import { StyleSheet } from "react-native";
+import { View } from "react-native";
 
 const expoImageUrl =
-  'https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png'
+  "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";
 
 export class BlurView1Screen extends Component {
   public static navigationOptions = {
-    title: 'BlurView 1'
-  }
+    title: "BlurView 1"
+  };
 
   public render() {
     return (
       <View
         style={{
-          alignItems: 'center',
-          backgroundColor: '#fff',
+          alignItems: "center",
+          backgroundColor: "#fff",
           flex: 1,
-          justifyContent: 'center'
+          justifyContent: "center"
         }}
       >
         {/* This image is blurred because BlurView is positioned on top of it. */}
@@ -48,6 +48,6 @@ export class BlurView1Screen extends Component {
           }}
         />
       </View>
-    )
+    );
   }
 }

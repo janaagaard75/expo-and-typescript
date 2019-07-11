@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { Gyroscope } from 'expo-sensors'
-import { Subscription } from '@unimodules/core'
-import { Text } from 'react-native'
-import { TouchableOpacity } from 'react-native'
-import { View } from 'react-native'
-import { ViewStyle } from 'react-native'
+import * as React from "react";
+import { Component } from "react";
+import { Gyroscope } from "expo-sensors";
+import { Subscription } from "@unimodules/core";
+import { Text } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { View } from "react-native";
+import { ViewStyle } from "react-native";
 
-import { ThreeAxisMeasurement } from './ThreeAxisMeasurement'
+import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
-  gyroscopeData: ThreeAxisMeasurement
+  gyroscopeData: ThreeAxisMeasurement;
 }
 
 export class GyroscopeScreen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
-    super(props, context)
+    super(props, context);
 
     this.state = {
       gyroscopeData: {
@@ -23,52 +23,52 @@ export class GyroscopeScreen extends Component<{}, State> {
         y: 0,
         z: 0
       }
-    }
+    };
   }
 
   public static navigationOptions = {
-    title: 'Gyroscope'
-  }
+    title: "Gyroscope"
+  };
 
-  private subscription: Subscription | undefined
+  private subscription: Subscription | undefined;
 
   private buttonStyle: ViewStyle = {
-    alignItems: 'center',
-    backgroundColor: '#eee',
+    alignItems: "center",
+    backgroundColor: "#eee",
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     padding: 10
-  }
+  };
 
   private buttonContainerStyle: ViewStyle = {
-    alignItems: 'stretch',
-    flexDirection: 'row',
+    alignItems: "stretch",
+    flexDirection: "row",
     marginTop: 15
-  }
+  };
 
   private middleButtonStyle: ViewStyle = {
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderLeftWidth: 1,
     borderRightWidth: 1
-  }
+  };
 
   private sensorStyle: ViewStyle = {
     marginTop: 15,
     paddingHorizontal: 10
-  }
+  };
 
   public componentDidMount() {
-    this.toggleSubscription()
+    this.toggleSubscription();
   }
 
   public componentWillUnmount() {
-    this.unsubscribe()
+    this.unsubscribe();
   }
 
   public render() {
-    const x = GyroscopeScreen.round(this.state.gyroscopeData.x)
-    const y = GyroscopeScreen.round(this.state.gyroscopeData.y)
-    const z = GyroscopeScreen.round(this.state.gyroscopeData.z)
+    const x = GyroscopeScreen.round(this.state.gyroscopeData.x);
+    const y = GyroscopeScreen.round(this.state.gyroscopeData.y);
+    const z = GyroscopeScreen.round(this.state.gyroscopeData.z);
 
     return (
       <View style={this.sensorStyle}>
@@ -102,45 +102,45 @@ export class GyroscopeScreen extends Component<{}, State> {
           </TouchableOpacity>
         </View>
       </View>
-    )
+    );
   }
 
   private toggleSubscription() {
     if (this.subscription === undefined) {
-      this.subscribe()
+      this.subscribe();
     } else {
-      this.unsubscribe()
+      this.unsubscribe();
     }
   }
 
   private useLongUpdateInterval() {
-    Gyroscope.setUpdateInterval(1000)
+    Gyroscope.setUpdateInterval(1000);
   }
 
   private useShortUpdateInterval() {
-    const framesPerSecond = 60
-    Gyroscope.setUpdateInterval(1000 / framesPerSecond)
+    const framesPerSecond = 60;
+    Gyroscope.setUpdateInterval(1000 / framesPerSecond);
   }
 
   private subscribe() {
     this.subscription = Gyroscope.addListener(result => {
-      this.setState({ gyroscopeData: result })
-    })
+      this.setState({ gyroscopeData: result });
+    });
   }
 
   private unsubscribe() {
     if (this.subscription) {
-      this.subscription.remove()
+      this.subscription.remove();
     }
 
-    this.subscription = undefined
+    this.subscription = undefined;
   }
 
   private static round(n: number | undefined) {
     if (!n) {
-      return 0
+      return 0;
     }
 
-    return Math.floor(n * 100) / 100
+    return Math.floor(n * 100) / 100;
   }
 }

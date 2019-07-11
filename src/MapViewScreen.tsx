@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Component } from 'react'
-import MapView from 'react-native-maps'
+import * as React from "react";
+import { Component } from "react";
+import MapView from "react-native-maps";
 
 export class MapViewScreen extends Component {
   public static navigationOptions = {
-    title: 'MapView'
-  }
+    title: "MapView"
+  };
 
   public render() {
     return (
@@ -18,6 +18,6 @@ export class MapViewScreen extends Component {
           longitudeDelta: 0.1
         }}
       />
-    )
+    );
   }
 }

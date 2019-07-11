@@ -1,49 +1,49 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { Linking } from 'react-native'
-import { Text } from 'react-native'
-import { View } from 'react-native'
-import { Audio } from 'expo-av'
+import * as React from "react";
+import { Component } from "react";
+import { Linking } from "react-native";
+import { Text } from "react-native";
+import { View } from "react-native";
+import { Audio } from "expo-av";
 
 interface State {
-  soundLoaded: boolean
+  soundLoaded: boolean;
 }
 
 export class AudioScreen extends Component<{}, State> {
   constructor(props: {}, context?: any) {
-    super(props, context)
+    super(props, context);
 
     this.state = {
       soundLoaded: false
-    }
+    };
 
-    this.playSound()
+    this.playSound();
   }
 
   public static navigationOptions = {
-    title: 'Audio'
-  }
+    title: "Audio"
+  };
 
   public render() {
     if (!this.state.soundLoaded) {
-      return <Text>Loading sound...</Text>
+      return <Text>Loading sound...</Text>;
     }
 
     return (
       <View
         style={{
-          alignItems: 'center',
+          alignItems: "center",
           flex: 1,
-          justifyContent: 'center'
+          justifyContent: "center"
         }}
       >
         <Text>
-          Music from{' '}
+          Music from{" "}
           <Text
-            style={{ color: 'blue' }}
+            style={{ color: "blue" }}
             onPress={() =>
               Linking.openURL(
-                'https://www.bensound.com/royalty-free-music/track/the-jazz-piano'
+                "https://www.bensound.com/royalty-free-music/track/the-jazz-piano"
               )
             }
           >
@@ -52,18 +52,18 @@ export class AudioScreen extends Component<{}, State> {
           .
         </Text>
       </View>
-    )
+    );
   }
 
   private async playSound() {
     // The type definitions should be updated to reflect the new name, `createAsync`. Pull request for updating the documentation at https://github.com/expo/expo-docs/pull/405.
     await (Audio.Sound as any).createAsync(
-      require('../assets/bensound-thejazzpiano.mp3'),
+      require("../assets/bensound-thejazzpiano.mp3"),
       { shouldPlay: true }
-    )
+    );
 
     this.setState({
       soundLoaded: true
-    })
+    });
   }
 }

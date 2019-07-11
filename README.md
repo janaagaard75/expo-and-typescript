@@ -70,8 +70,8 @@ Create a `src` folder, move `App.js` to that folder, and rename the file to `App
 Create a new `App.js` in the root of the project, and insert the following lines. Expo will still be looking for App.js in the root of the project, and these lines simply loads `src/App.tsx`.
 
 ```javascript
-import App from './src/App'
-export default App
+import App from "./src/App";
+export default App;
 ```
 
 ### Add Type Definitions
@@ -83,44 +83,6 @@ yarn add --dev --exact @types/react @types/react-native @types/expo @types/expo_
 ```
 
 Since Expo is evolving quickly it is not uncommon that the type definitions are outdated or simply missing. [AudioScreen.tsx line 59](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/AudioScreen.tsx#L59) shows how to deal with an incorrect type definition and [MapViewScreen.tsx line 5] show how to deal with missing type definitions.
-
-## Why No Semicolons?
-
-The repository started out as mainly a big collection of TypeScript interfaces. While most developers are pretty strict about terminating lines with or without a semicolon, this is apparently not the case when it comes to writing interfaces. So after reading about the [JavaScript Standard Style](https://standardjs.com/) advocating not using semicolons, I thought this would be a simple way to clean up the mess. And now that I've become used to looking a TypeScript code without semicolons it really like it. It's definitely cleaner, and I have yet to stumble upon a piece of code that would be more readable with the semicolons.
-
-```typescript
-// Some use semicolons in interfaces.
-interface Point {
-  x: number;
-  y: number;
-}
-
-// Some use commas.
-interface Point {
-  x: number,
-  y: number
-}
-
-// And sometimes it's a mix.
-interface Point {
-  x: number;
-  y: number;
-  color: {
-    border: string,
-    fill: string
-  }
-}
-
-// It was simpler to remove the punctuation. This choice naturally affected the rest of the code too.
-interface Point {
-  x: number
-  y: number
-  color: {
-    border: string
-    fill: string
-  }
-}
-```
 
 ## Similar Projects
 

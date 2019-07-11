@@ -6,7 +6,7 @@
     "email": "jan@aagaard.net",
     "name": "Jan Aagaard"
   },
-  "private": false,
+  "private": true,
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {

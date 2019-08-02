@@ -39,9 +39,9 @@ export class LocalAuthenticationScreen extends Component<{}, State> {
   }
 
   private async authenticate() {
-    const authenticated = await LocalAuthentication.authenticateAsync(
-      "Authentication message"
-    );
+    const authenticated = await LocalAuthentication.authenticateAsync({
+      promptMessage: "Authentication message"
+    });
 
     if (authenticated.success) {
       this.setState({

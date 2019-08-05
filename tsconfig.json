@@ -7,7 +7,7 @@
     "importHelpers": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "module": "es2015",
+    "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noEmit": true,
@@ -17,6 +17,5 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  },
-  "exclude": ["node_modules"]
+  }
 }

@@ -19,7 +19,7 @@
     "validate": "yarn run lint && yarn run check-types"
   },
   "dependencies": {
-    "expo": "34.0.3",
+    "expo": "34.0.4",
     "expo-analytics-amplitude": "6.0.0",
     "expo-asset": "6.0.0",
     "expo-av": "6.0.0",
@@ -47,14 +47,13 @@
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/googlemaps": "3.37.0",
     "@types/markerclustererplus": "2.1.33",
-    "@types/react": "16.8.24",
-    "@types/react-native": "0.60.3",
-    "@types/react-navigation": "3.0.7",
+    "@types/react": "16.8.25",
+    "@types/react-native": "0.60.6",
+    "@types/react-navigation": "3.0.8",
     "@unimodules/core": "3.0.2",
     "babel-preset-expo": "5.2.0",
-    "expo-cli": "3.0.8",
+    "expo-cli": "3.0.9",
     "prettier": "1.18.2",
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",

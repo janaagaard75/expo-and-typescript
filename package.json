@@ -16,7 +16,7 @@
     "lint": "tslint --project tsconfig.json",
     "prettify": "prettier --write \"{./,./src/**/}*.{js,json,ts,tsx}\"",
     "start": "yarn install && expo start",
-    "validate": "yarn run lint && yarn run check-types"
+    "validate": "yarn install && yarn run lint && yarn run check-types"
   },
   "dependencies": {
     "expo": "34.0.4",

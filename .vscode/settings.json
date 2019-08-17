@@ -2,13 +2,17 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "javascript.validate.enable": false,
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
     "**/yarn.lock"
   ],
-  "tslint.exclude": "/node_modules/**/*",
-  "tslint.ignoreDefinitionFiles": false,
   "typescript.tsdk": "node_modules/typescript/lib"
 }

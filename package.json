@@ -13,13 +13,13 @@
     "android": "yarn run start --android",
     "check-types": "tsc",
     "ios": "yarn run start --ios",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "eslint --format codeframe \"**/src/*.ts\" \"**/src/*.tsx\"",
     "prettify": "prettier --write \"{./,./src/**/}*.{js,json,ts,tsx}\"",
     "start": "yarn install && expo start",
-    "validate": "yarn run lint && yarn run check-types"
+    "validate": "yarn install && yarn run lint && yarn run check-types"
   },
   "dependencies": {
-    "expo": "34.0.3",
+    "expo": "34.0.4",
     "expo-analytics-amplitude": "6.0.0",
     "expo-asset": "6.0.0",
     "expo-av": "6.0.0",
@@ -47,19 +47,20 @@
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/googlemaps": "3.37.0",
     "@types/markerclustererplus": "2.1.33",
-    "@types/react": "16.8.24",
-    "@types/react-native": "0.60.3",
-    "@types/react-navigation": "3.0.7",
+    "@types/react": "16.8.25",
+    "@types/react-native": "0.60.6",
+    "@types/react-navigation": "3.0.8",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
     "@unimodules/core": "3.0.2",
     "babel-preset-expo": "5.2.0",
-    "expo-cli": "3.0.8",
+    "eslint": "6.1.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "expo-cli": "3.0.9",
     "prettier": "1.18.2",
-    "tslint": "5.18.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-eslint-rules": "5.4.0",
-    "tslint-react": "4.0.0",
     "typescript": "3.5.3"
   }
 }

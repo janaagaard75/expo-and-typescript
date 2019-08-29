@@ -30,6 +30,10 @@ If you're on a Mac and have Xcode installed, you can run the app using the iOS S
 yarn ios
 ```
 
+## Node Packages
+
+Using the same versions as bundled with Expo: <https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319#627f>.
+
 ## Setting Expo and TypeScript With Expo Version &ge; 33
 
 Since version 33 Expo includes great types, so there is no longer a need for `@types/expo`. I am really glad that TypeScript support has become official, but also admittedly a bit sad, that all the work in `@types/expo` will no longer be used.

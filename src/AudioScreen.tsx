@@ -10,8 +10,8 @@ interface State {
 }
 
 export class AudioScreen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       soundLoaded: false

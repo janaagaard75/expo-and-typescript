@@ -5,8 +5,8 @@ import { Text } from "react-native";
 import { View } from "react-native";
 
 export class AmplitudeScreen extends Component {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     Amplitude.initialize("31ef1b42450bb6c4372b30524c69b9a9");
     Amplitude.setUserId("1");

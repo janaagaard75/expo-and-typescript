@@ -1,5 +1,19 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  "cSpell.words": [
+    "Aagaard",
+    "SVGs",
+    "Xcode",
+    "barcode",
+    "bensound",
+    "codeframe",
+    "readonly",
+    "thejazzpiano",
+    "tslib",
+    "unimodules",
+    "unmount",
+    "wtfs"
+  ],
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.validate": [

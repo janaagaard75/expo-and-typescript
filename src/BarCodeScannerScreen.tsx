@@ -17,8 +17,8 @@ interface State {
 }
 
 export class BarCodeScannerScreen extends React.Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       cameraPermission: PermissionState.Unknown,
@@ -72,9 +72,9 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
     }
   }
 
-  private handleBarCodeScanned = ({ type, data }: any) => {
+  private handleBarCodeScanned = (event: { type: string; data: string }) => {
     this.setState({
-      scannedText: `A bar code of type ${type} with content '${data}' has been scanned.`
+      scannedText: `A bar code of type ${event.type} with content '${event.data}' has been scanned.`
     });
   };
 }

@@ -18,8 +18,8 @@ export class AccelerometerScreen extends Component<
   NavigationScreenProps,
   State
 > {
-  constructor(props: NavigationScreenProps, context?: any) {
-    super(props, context);
+  constructor(props: NavigationScreenProps) {
+    super(props);
 
     this.state = {
       accelerometerData: {
@@ -76,23 +76,41 @@ export class AccelerometerScreen extends Component<
         >
           <TouchableOpacity
             onPress={() => this.toggleSubscription()}
-            style={styles.button}
+            style={this.styles.button}
           >
             <Text>Pause</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => this.slow()}
-            style={[styles.button, styles.middleButton]}
+            style={[this.styles.button, this.styles.middleButton]}
           >
             <Text>Slow</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.fast()} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => this.fast()}
+            style={this.styles.button}
+          >
             <Text>Fast</Text>
           </TouchableOpacity>
         </View>
       </View>
     );
   }
+
+  private styles = StyleSheet.create({
+    button: {
+      alignItems: "center",
+      backgroundColor: "#eee",
+      flex: 1,
+      justifyContent: "center",
+      padding: 10
+    },
+    middleButton: {
+      borderColor: "#ccc",
+      borderLeftWidth: 1,
+      borderRightWidth: 1
+    }
+  });
 
   private static roundToTwoDecimals(value: number | undefined): number {
     if (value === undefined) {
@@ -131,18 +149,3 @@ export class AccelerometerScreen extends Component<
     this.subscription = undefined;
   }
 }
-
-const styles = StyleSheet.create({
-  button: {
-    alignItems: "center",
-    backgroundColor: "#eee",
-    flex: 1,
-    justifyContent: "center",
-    padding: 10
-  },
-  middleButton: {
-    borderColor: "#ccc",
-    borderLeftWidth: 1,
-    borderRightWidth: 1
-  }
-});

@@ -12,8 +12,8 @@ interface State {
 }
 
 export class CameraScreen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       cameraType: "back", // Camera.Constants.Type.back, TODO

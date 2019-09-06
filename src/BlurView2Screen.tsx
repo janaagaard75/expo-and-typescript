@@ -15,8 +15,8 @@ interface State {
 }
 
 export class BlurView2Screen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       intensity: new Animated.Value(0)

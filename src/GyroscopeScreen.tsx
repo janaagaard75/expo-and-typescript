@@ -14,8 +14,8 @@ interface State {
 }
 
 export class GyroscopeScreen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       gyroscopeData: {

@@ -10,8 +10,8 @@ interface State {
 }
 
 export class AssetScreen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       assetsLoaded: false

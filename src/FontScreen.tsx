@@ -9,8 +9,8 @@ interface State {
 }
 
 export class FontScreen extends Component<{}, State> {
-  constructor(props: {}, context?: any) {
-    super(props, context);
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       fontLoaded: false

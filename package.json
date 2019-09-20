@@ -47,7 +47,6 @@
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.8.25",
     "@types/react-native": "0.60.11",
     "@types/react-navigation": "3.0.8",

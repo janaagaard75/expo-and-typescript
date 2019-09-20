@@ -25,10 +25,5 @@
     "typescriptreact"
   ],
   "javascript.validate.enable": false,
-  "spellright.ignoreFiles": [
-    "**/.gitignore",
-    "**/.spellignore",
-    "**/yarn.lock"
-  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

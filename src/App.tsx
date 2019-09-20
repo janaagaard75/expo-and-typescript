@@ -1,5 +1,5 @@
 import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
 import { AccelerometerScreen } from "./AccelerometerScreen";
 import { AssetScreen } from "./AssetScreen";

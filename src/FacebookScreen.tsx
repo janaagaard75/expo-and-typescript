@@ -1,12 +1,9 @@
-import * as React from "react";
-import { Alert } from "react-native";
-import { Component } from "react";
-import { Facebook } from "expo";
 import { FontAwesome } from "@expo/vector-icons";
+import { Facebook } from "expo";
+import * as React from "react";
+import { Component } from "react";
+import { Alert, Text, TouchableOpacity, View } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
-import { Text } from "react-native";
-import { TouchableOpacity } from "react-native";
-import { View } from "react-native";
 
 export class FacebookScreen extends Component<NavigationScreenProps> {
   public static navigationOptions = {

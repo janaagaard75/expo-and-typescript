@@ -1,9 +1,7 @@
 import * as LocalAuthentication from "expo-local-authentication";
 import * as React from "react";
-import { Button } from "react-native";
 import { Component } from "react";
-import { Text } from "react-native";
-import { View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 interface State {
   authenticated: boolean;

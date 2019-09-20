@@ -1,8 +1,7 @@
+import Constants from "expo-constants";
 import * as React from "react";
 import { Component } from "react";
-import { ScrollView } from "react-native";
-import { Text } from "react-native";
-import Constants from "expo-constants";
+import { ScrollView, Text } from "react-native";
 
 export class SystemFontsScreen extends Component {
   public static navigationOptions = {

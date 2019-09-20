@@ -1,8 +1,7 @@
 import * as Font from "expo-font";
 import * as React from "react";
 import { Component } from "react";
-import { Text } from "react-native";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 interface State {
   fontLoaded: boolean;

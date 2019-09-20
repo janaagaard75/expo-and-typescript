@@ -1,6 +1,6 @@
+import { Ionicons } from "@expo/vector-icons";
 import * as React from "react";
 import { Component } from "react";
-import { Ionicons } from "@expo/vector-icons";
 import { View } from "react-native";
 
 export class VectorIconsScreen extends Component {

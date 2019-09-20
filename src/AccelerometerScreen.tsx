@@ -1,13 +1,9 @@
-import * as React from "react";
-import { Accelerometer } from "expo-sensors";
-import { Component } from "react";
-import { NavigationScreenProps } from "react-navigation";
-import { StyleSheet } from "react-native";
 import { Subscription } from "@unimodules/core";
-import { Text } from "react-native";
-import { TouchableOpacity } from "react-native";
-import { View } from "react-native";
-
+import { Accelerometer } from "expo-sensors";
+import * as React from "react";
+import { Component } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { NavigationScreenProps } from "react-navigation";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {

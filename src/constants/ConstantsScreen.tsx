@@ -1,9 +1,8 @@
+import Constants from "expo-constants";
 import * as React from "react";
 import { Component } from "react";
+import { Text, View } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
-import { Text } from "react-native";
-import { View } from "react-native";
-import Constants from "expo-constants";
 
 interface State {
   webViewUserAgent: string | null;

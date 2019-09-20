@@ -1,9 +1,7 @@
+import { Asset } from "expo-asset";
 import * as React from "react";
 import { Component } from "react";
-import { Asset } from "expo-asset";
-import { View } from "react-native";
-import { Image } from "react-native";
-import { Text } from "react-native";
+import { Image, Text, View } from "react-native";
 
 interface State {
   assetsLoaded: boolean;

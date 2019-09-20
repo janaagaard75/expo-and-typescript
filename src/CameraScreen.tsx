@@ -1,10 +1,8 @@
+import { Camera } from "expo-camera";
 import * as Permissions from "expo-permissions";
 import * as React from "react";
-import { Camera } from "expo-camera";
 import { Component } from "react";
-import { Text } from "react-native";
-import { TouchableOpacity } from "react-native";
-import { View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 interface State {
   cameraType: string; // TODO Camera.Constants.Type,

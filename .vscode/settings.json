@@ -16,6 +16,9 @@
     "unmount",
     "wtfs"
   ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.validate": [

@@ -1,9 +1,8 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-
 import { AccelerometerScreen } from "./AccelerometerScreen";
-import { AssetScreen } from "./AssetScreen";
 import { AmplitudeScreen } from "./AmplitudeScreen";
+import { AssetScreen } from "./AssetScreen";
 import { AudioScreen } from "./AudioScreen";
 import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
 import { BlurView1Screen } from "./BlurView1Screen";
@@ -11,17 +10,17 @@ import { BlurView2Screen } from "./BlurView2Screen";
 import { BrightnessScreen } from "./BrightnessScreen";
 import { CameraScreen } from "./CameraScreen";
 import { ConstantsScreen } from "./constants/ConstantsScreen";
+import { ManifestScreen } from "./constants/ManifestScreen";
+import { PlatformScreen } from "./constants/PlatformScreen";
+import { SystemFontsScreen } from "./constants/SystemFontsScreen";
 import { FacebookScreen } from "./FacebookScreen";
 import { FontScreen } from "./FontScreen";
 import { GyroscopeScreen } from "./GyroscopeScreen";
 import { LinearGradientScreen } from "./LinearGradientScreen";
 import { LocalAuthenticationScreen } from "./LocalAuthenticationScreen";
 import { MainScreen } from "./MainScreen";
-import { ManifestScreen } from "./constants/ManifestScreen";
 import { MapViewScreen } from "./MapViewScreen";
-import { PlatformScreen } from "./constants/PlatformScreen";
 import { SvgScreen } from "./SvgScreen";
-import { SystemFontsScreen } from "./constants/SystemFontsScreen";
 import { VectorIconsScreen } from "./VectorIconsScreen";
 
 const mainNavigator = createStackNavigator({

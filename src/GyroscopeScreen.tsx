@@ -1,12 +1,8 @@
+import { Subscription } from "@unimodules/core";
+import { Gyroscope } from "expo-sensors";
 import * as React from "react";
 import { Component } from "react";
-import { Gyroscope } from "expo-sensors";
-import { Subscription } from "@unimodules/core";
-import { Text } from "react-native";
-import { TouchableOpacity } from "react-native";
-import { View } from "react-native";
-import { ViewStyle } from "react-native";
-
+import { Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {

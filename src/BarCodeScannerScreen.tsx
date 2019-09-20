@@ -1,9 +1,7 @@
-import * as React from "react";
 import { BarCodeScanner } from "expo-barcode-scanner";
-import { Permissions } from "expo";
-import { StyleSheet } from "react-native";
-import { Text } from "react-native";
-import { View } from "react-native";
+import * as Permissions from "expo-permissions";
+import * as React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 enum PermissionState {
   Unknown,

@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Button } from "react-native";
 import { Component } from "react";
+import { Button, ScrollView } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
-import { ScrollView } from "react-native";
 
 class DestinationAndTitle {
   constructor(destination: string, title?: string) {

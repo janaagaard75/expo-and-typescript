@@ -1,10 +1,7 @@
-import * as React from "react";
-import { Animated } from "react-native";
 import { BlurView } from "expo-blur";
+import * as React from "react";
 import { Component } from "react";
-import { Image } from "react-native";
-import { StyleSheet } from "react-native";
-import { View } from "react-native";
+import { Animated, Image, StyleSheet, View } from "react-native";
 
 const expoLogoUrl =
   "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";

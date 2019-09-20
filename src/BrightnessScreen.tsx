@@ -1,10 +1,8 @@
 import * as Brightness from "expo-brightness";
 import * as React from "react";
-import { Button } from "react-native";
 import { Component } from "react";
+import { Button, Text, View } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
-import { Text } from "react-native";
-import { View } from "react-native";
 
 interface State {
   normalBrightness: number | undefined;

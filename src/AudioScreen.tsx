@@ -1,9 +1,7 @@
+import { Audio } from "expo-av";
 import * as React from "react";
 import { Component } from "react";
-import { Linking } from "react-native";
-import { Text } from "react-native";
-import { View } from "react-native";
-import { Audio } from "expo-av";
+import { Linking, Text, View } from "react-native";
 
 interface State {
   soundLoaded: boolean;

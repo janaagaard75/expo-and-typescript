@@ -1,9 +1,7 @@
-import * as React from "react";
 import { BlurView } from "expo-blur";
+import * as React from "react";
 import { Component } from "react";
-import { Image } from "react-native";
-import { StyleSheet } from "react-native";
-import { View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 const expoImageUrl =
   "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";

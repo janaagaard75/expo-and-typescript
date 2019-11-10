@@ -15,8 +15,8 @@
     "android": "npm start --android",
     "check-types": "tsc",
     "ios": "npm start --ios",
-    "lint": "eslint --fix --format codeframe \"**/*.ts\" \"**/*.tsx\"",
-    "prettify": "prettier --write \"{./,./src/**/}*.{js,json,ts,tsx}\"",
+    "lint": "eslint --fix --format codeframe src/**/*.{ts,tsx}",
+    "prettify": "prettier --write src/**/*.{js,json,ts,tsx}",
     "start": "nve 10.17.0 expo start",
     "validate": "npm run lint && npm run check-types"
   },

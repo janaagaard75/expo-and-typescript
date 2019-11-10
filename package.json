@@ -51,22 +51,22 @@
     "tslib": "1.10.0"
   },
   "devDependencies": {
-    "@babel/core": "7.6.0",
+    "@babel/core": "7.7.2",
     "@types/expo__vector-icons": "9.0.1",
     "@types/react": "16.8.25",
     "@types/react-native": "0.60.15",
     "@types/react-navigation": "3.0.8",
-    "@typescript-eslint/eslint-plugin": "2.3.0",
-    "@typescript-eslint/parser": "2.3.0",
+    "@typescript-eslint/eslint-plugin": "2.6.1",
+    "@typescript-eslint/parser": "2.6.1",
     "@unimodules/core": "4.0.0",
     "babel-preset-expo": "7.0.0",
-    "eslint": "6.4.0",
-    "eslint-config-prettier": "6.3.0",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
     "eslint-plugin-prettier": "3.1.1",
-    "eslint-plugin-react": "7.14.3",
-    "expo-cli": "3.0.10",
+    "eslint-plugin-react": "7.16.0",
+    "expo-cli": "^3.4.1",
     "nve": "^7.2.0",
-    "prettier": "1.18.2",
-    "typescript": "3.6.3"
+    "prettier": "1.19.1",
+    "typescript": "3.7.2"
   }
 }

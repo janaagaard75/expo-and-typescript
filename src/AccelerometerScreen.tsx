@@ -1,147 +1,101 @@
 import { Subscription } from "@unimodules/core";
 import { Accelerometer } from "expo-sensors";
-import * as React from "react";
-import { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
-interface State {
-  accelerometerData: ThreeAxisMeasurement;
+const initialState: ThreeAxisMeasurement = {
+  x: 0,
+  y: 0,
+  z: 0
+};
+
+function roundToTwoDecimals(value = 0) {
+  // return Math.floor(value * 100) / 100;
+  return +value.toFixed(2);
 }
 
-export class AccelerometerScreen extends Component<
-  NavigationScreenProps,
-  State
-> {
-  constructor(props: NavigationScreenProps) {
-    super(props);
-
-    this.state = {
-      accelerometerData: {
-        x: 0,
-        y: 0,
-        z: 0
-      }
-    };
+const styles = StyleSheet.create({
+  mainContainer: {
+    backgroundColor: "#fff",
+    marginTop: 15,
+    paddingHorizontal: 10
+  },
+  subContainer: {
+    alignItems: "stretch",
+    flexDirection: "row",
+    marginTop: 15
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#eee",
+    flex: 1,
+    justifyContent: "center",
+    padding: 10
+  },
+  middleButton: {
+    borderColor: "#ccc",
+    borderLeftWidth: 1,
+    borderRightWidth: 1
   }
+});
 
-  public static navigationOptions = {
-    title: "Accelerometer"
-  };
+export default function AccelerometerScreen() {
+  const [accelerometerData, setAccelerometerData] = useState(initialState);
+  const [subscription, setSubscription] = useState<Subscription>();
 
-  private subscription: Subscription | undefined;
-
-  public componentDidMount() {
-    this.toggleSubscription();
-  }
-
-  public componentWillUnmount() {
-    this.unsubscribe();
-  }
-
-  public render() {
-    const x = AccelerometerScreen.roundToTwoDecimals(
-      this.state.accelerometerData.x
+  function subscribe() {
+    const subscription = Accelerometer.addListener(accelerometerData =>
+      setAccelerometerData(accelerometerData)
     );
-    const y = AccelerometerScreen.roundToTwoDecimals(
-      this.state.accelerometerData.y
-    );
-    const z = AccelerometerScreen.roundToTwoDecimals(
-      this.state.accelerometerData.z
-    );
-
-    return (
-      <View
-        style={{
-          backgroundColor: "#fff",
-          marginTop: 15,
-          paddingHorizontal: 10
-        }}
-      >
-        <Text>Accelerometer:</Text>
-        <Text>
-          x: {x} y: {y} z: {z}
-        </Text>
-        <View
-          style={{
-            alignItems: "stretch",
-            flexDirection: "row",
-            marginTop: 15
-          }}
-        >
-          <TouchableOpacity
-            onPress={() => this.toggleSubscription()}
-            style={this.styles.button}
-          >
-            <Text>Pause</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.slow()}
-            style={[this.styles.button, this.styles.middleButton]}
-          >
-            <Text>Slow</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.fast()}
-            style={this.styles.button}
-          >
-            <Text>Fast</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
+    setSubscription(subscription);
   }
 
-  private styles = StyleSheet.create({
-    button: {
-      alignItems: "center",
-      backgroundColor: "#eee",
-      flex: 1,
-      justifyContent: "center",
-      padding: 10
-    },
-    middleButton: {
-      borderColor: "#ccc",
-      borderLeftWidth: 1,
-      borderRightWidth: 1
-    }
-  });
-
-  private static roundToTwoDecimals(value: number | undefined): number {
-    if (value === undefined) {
-      return 0;
-    }
-
-    return Math.floor(value * 100) / 100;
+  function unsubscribe() {
+    subscription ? subscription.remove() : setSubscription(undefined);
   }
 
-  private fast() {
+  function toggleSubscription() {
+    subscription ? unsubscribe() : subscribe();
+  }
+
+  useEffect(() => {
+    toggleSubscription();
+    return unsubscribe;
+  }, []);
+
+  function fast() {
     Accelerometer.setUpdateInterval(16);
   }
 
-  private slow() {
+  function slow() {
     Accelerometer.setUpdateInterval(1000);
   }
 
-  private subscribe() {
-    this.subscription = Accelerometer.addListener(accelerometerData => {
-      this.setState({ accelerometerData });
-    });
-  }
+  const x = roundToTwoDecimals(accelerometerData.x);
+  const y = roundToTwoDecimals(accelerometerData.y);
+  const z = roundToTwoDecimals(accelerometerData.z);
 
-  private toggleSubscription() {
-    if (this.subscription) {
-      this.unsubscribe();
-    } else {
-      this.subscribe();
-    }
-  }
-
-  private unsubscribe() {
-    if (this.subscription !== undefined) {
-      this.subscription.remove();
-    }
-    this.subscription = undefined;
-  }
+  return (
+    <View style={styles.mainContainer}>
+      <Text>Accelerometer:</Text>
+      <Text>
+        x: {x} y: {y} z: {z}
+      </Text>
+      <View style={styles.subContainer}>
+        <TouchableOpacity onPress={toggleSubscription} style={styles.button}>
+          <Text>Pause</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={slow}
+          style={[styles.button, styles.middleButton]}
+        >
+          <Text>Slow</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={fast} style={styles.button}>
+          <Text>Fast</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 }

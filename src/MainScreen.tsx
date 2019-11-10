@@ -1,68 +1,48 @@
 import * as React from "react";
-import { Component } from "react";
 import { Button, ScrollView } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationScreenProp } from "react-navigation";
 
-class DestinationAndTitle {
-  constructor(destination: string, title?: string) {
-    this.destination = destination;
-
-    if (title === undefined) {
-      this.title = destination;
-    } else {
-      this.title = title;
-    }
-  }
-
-  public destination: string;
-  public title: string;
+interface DestinationAndTitle {
+  destination: string;
+  title?: string;
 }
 
-// tslint:disable-next-line:max-classes-per-file
-export class MainScreen extends Component<NavigationScreenProps> {
-  public static navigationOptions = {
-    title: "Home"
-  };
+const destinationMappings: Array<DestinationAndTitle> = [
+  { destination: "Accelerometer" },
+  { destination: "Amplitude" },
+  { destination: "Asset" },
+  { destination: "Audio" },
+  { destination: "BarCodeScanner" },
+  { destination: "BlurView1", title: "BlurView 1" },
+  { destination: "BlurView2", title: "BlurView 2" },
+  { destination: "Brightness" },
+  { destination: "Camera" },
+  { destination: "Constants" },
+  { destination: "Facebook" },
+  { destination: "Font" },
+  { destination: "Gyroscope" },
+  { destination: "LinearGradient" },
+  { destination: "LocalAuthentication", title: "Local Authentication" },
+  { destination: "MapView" },
+  { destination: "Svg" },
+  { destination: "VectorIcons", title: "Vector Icons" }
+];
 
-  public render() {
-    return (
-      <ScrollView
-        style={{
-          backgroundColor: "#fff",
-          flex: 1
-        }}
-      >
-        {this.destinationAndTitlePairs.map(destinationAndTitle => (
-          <Button
-            key={destinationAndTitle.destination}
-            onPress={() =>
-              this.props.navigation.navigate(destinationAndTitle.destination)
-            }
-            title={destinationAndTitle.title}
-          />
-        ))}
-      </ScrollView>
-    );
-  }
-
-  private destinationAndTitlePairs: Array<DestinationAndTitle> = [
-    new DestinationAndTitle("Accelerometer"),
-    new DestinationAndTitle("Amplitude"),
-    new DestinationAndTitle("Asset"),
-    new DestinationAndTitle("Audio"),
-    new DestinationAndTitle("BarCodeScanner"),
-    new DestinationAndTitle("BlurView1", "BlurView 1"),
-    new DestinationAndTitle("BlurView2", "BlurView 2"),
-    new DestinationAndTitle("Brightness"),
-    new DestinationAndTitle("Camera"),
-    new DestinationAndTitle("Constants"),
-    new DestinationAndTitle("Facebook"),
-    new DestinationAndTitle("Font"),
-    new DestinationAndTitle("Gyroscope"),
-    new DestinationAndTitle("LinearGradient"),
-    new DestinationAndTitle("LocalAuthentication", "Local Authentication"),
-    new DestinationAndTitle("MapView"),
-    new DestinationAndTitle("Svg"),
-    new DestinationAndTitle("VectorIcons", "Vector Icons")
-  ];
+export default function MainScreen({ navigate }: NavigationScreenProp<{}>) {
+  return (
+    <ScrollView
+      style={{
+        backgroundColor: "#fff",
+        flex: 1
+      }}
+    >
+      {destinationMappings.map(destinationAndTitle => (
+        <Button
+          key={destinationAndTitle.destination}
+          onPress={() => navigate(destinationAndTitle.destination)}
+          title={destinationAndTitle.title || destinationAndTitle.destination}
+        />
+      ))}
+    </ScrollView>
+  );
 }

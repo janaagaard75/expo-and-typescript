@@ -1,30 +1,29 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import { AccelerometerScreen } from "./AccelerometerScreen";
+import AccelerometerScreen from "./AccelerometerScreen";
 import { AmplitudeScreen } from "./AmplitudeScreen";
-import { AssetScreen } from "./AssetScreen";
-import { AudioScreen } from "./AudioScreen";
+import AssetScreen from "./AssetScreen";
+import AudioScreen from "./AudioScreen";
 import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
 import { BlurView1Screen } from "./BlurView1Screen";
 import { BlurView2Screen } from "./BlurView2Screen";
-import { BrightnessScreen } from "./BrightnessScreen";
-import { CameraScreen } from "./CameraScreen";
-import { ConstantsScreen } from "./constants/ConstantsScreen";
+import BrightnessScreen from "./BrightnessScreen";
+import CameraScreen from "./CameraScreen";
+import ConstantsScreen from "./constants/ConstantsScreen";
 import { ManifestScreen } from "./constants/ManifestScreen";
 import { PlatformScreen } from "./constants/PlatformScreen";
 import { SystemFontsScreen } from "./constants/SystemFontsScreen";
-import { FacebookScreen } from "./FacebookScreen";
+import FacebookScreen from "./FacebookScreen";
 import { FontScreen } from "./FontScreen";
 import { GyroscopeScreen } from "./GyroscopeScreen";
-import { LinearGradientScreen } from "./LinearGradientScreen";
+import LinearGradientScreen from "./LinearGradientScreen";
 import { LocalAuthenticationScreen } from "./LocalAuthenticationScreen";
-import { MainScreen } from "./MainScreen";
+import MainScreen from "./MainScreen";
 import { MapViewScreen } from "./MapViewScreen";
-import { SvgScreen } from "./SvgScreen";
+import SvgScreen from "./SvgScreen";
 import { VectorIconsScreen } from "./VectorIconsScreen";
 
 const mainNavigator = createStackNavigator({
-  // tslint:disable:object-literal-sort-keys
   Main: { screen: MainScreen },
 
   Accelerometer: { screen: AccelerometerScreen },

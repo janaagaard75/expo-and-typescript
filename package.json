@@ -1,11 +1,13 @@
 {
   "name": "expo-and-typescript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Showcase of an Expo app coded in TypeScript.",
   "author": {
     "email": "jan@aagaard.net",
     "name": "Jan Aagaard"
   },
+  "maintainers": [],
+  "repository": "https://github.com/janaagaard75/expo-and-typescript",
   "private": true,
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",

@@ -19,7 +19,7 @@ export class CameraScreen extends Component<{}, State> {
     };
   }
 
-  public async componentWillMount() {
+  public async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
 
     this.setState({

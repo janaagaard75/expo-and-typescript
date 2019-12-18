@@ -54,7 +54,6 @@
     "@types/expo__vector-icons": "9.0.1",
     "@types/react": "16.9.16",
     "@types/react-native": "0.60.25",
-    "@types/react-navigation": "3.4.0",
     "@typescript-eslint/eslint-plugin": "2.12.0",
     "@typescript-eslint/parser": "2.12.0",
     "@unimodules/core": "~5.0.0",

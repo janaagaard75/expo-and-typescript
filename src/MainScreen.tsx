@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { Button, ScrollView } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationStackScreenProps } from "react-navigation-stack";
 
 class DestinationAndTitle {
   constructor(destination: string, title?: string) {
@@ -19,7 +19,7 @@ class DestinationAndTitle {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class MainScreen extends Component<NavigationScreenProps> {
+export class MainScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
     title: "Home"
   };

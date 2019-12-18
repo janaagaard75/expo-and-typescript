@@ -2,15 +2,18 @@ import * as Brightness from "expo-brightness";
 import * as React from "react";
 import { Component } from "react";
 import { Button, Text, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationStackScreenProps } from "react-navigation-stack";
 
 interface State {
   normalBrightness: number | undefined;
   systemBrightness: number | undefined;
 }
 
-export class BrightnessScreen extends Component<NavigationScreenProps, State> {
-  constructor(props: NavigationScreenProps) {
+export class BrightnessScreen extends Component<
+  NavigationStackScreenProps,
+  State
+> {
+  constructor(props: NavigationStackScreenProps) {
     super(props);
 
     this.state = {

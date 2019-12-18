@@ -18,6 +18,10 @@
     "start": "yarn install && expo start",
     "validate": "yarn install && yarn run lint && yarn run check-types"
   },
+  "engines": {
+    "node": ">=10",
+    "yarn": ">=1.1"
+  },
   "dependencies": {
     "expo": "35.0.0",
     "expo-analytics-amplitude": "7.0.0",

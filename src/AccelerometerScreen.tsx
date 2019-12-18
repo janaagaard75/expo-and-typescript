@@ -3,7 +3,7 @@ import { Accelerometer } from "expo-sensors";
 import * as React from "react";
 import { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationStackScreenProps } from "react-navigation-stack";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
@@ -11,10 +11,10 @@ interface State {
 }
 
 export class AccelerometerScreen extends Component<
-  NavigationScreenProps,
+  NavigationStackScreenProps,
   State
 > {
-  constructor(props: NavigationScreenProps) {
+  constructor(props: NavigationStackScreenProps) {
     super(props);
 
     this.state = {

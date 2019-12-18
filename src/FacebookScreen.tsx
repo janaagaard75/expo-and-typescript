@@ -3,9 +3,9 @@ import { Facebook } from "expo";
 import * as React from "react";
 import { Component } from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationStackScreenProps } from "react-navigation-stack";
 
-export class FacebookScreen extends Component<NavigationScreenProps> {
+export class FacebookScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
     title: "Facebook"
   };

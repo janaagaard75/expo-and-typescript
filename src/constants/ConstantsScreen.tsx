@@ -2,14 +2,17 @@ import Constants from "expo-constants";
 import * as React from "react";
 import { Component } from "react";
 import { Text, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
+import { NavigationStackScreenProps } from "react-navigation-stack";
 
 interface State {
   webViewUserAgent: string | null;
 }
 
-export class ConstantsScreen extends Component<NavigationScreenProps, State> {
-  constructor(props: NavigationScreenProps) {
+export class ConstantsScreen extends Component<
+  NavigationStackScreenProps,
+  State
+> {
+  constructor(props: NavigationStackScreenProps) {
     super(props);
 
     this.state = {

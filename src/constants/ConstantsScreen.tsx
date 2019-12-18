@@ -33,7 +33,7 @@ export class ConstantsScreen extends Component<NavigationScreenProps, State> {
           padding: 10
         }}
       >
-        <Text>appOvernership: "{Constants.appOwnership}"</Text>
+        <Text>appOwnership: "{Constants.appOwnership}"</Text>
         <Text>deviceId: "{Constants.deviceId}"</Text>
         <Text>deviceName: "{Constants.deviceName}"</Text>
         <Text>deviceYearClass: {Constants.deviceYearClass}</Text>

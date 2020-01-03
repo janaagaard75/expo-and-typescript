@@ -58,11 +58,11 @@ Setting breakpoints in TypeScript files works, and hot reloading works, so it's 
 
 ### Add TypeScript
 
-Add TypeScript and the helper library, `tslib`, to the project. I prefer micro managing the version of the packages that I'm using so I add `--exact`, but this is optional. You can, of course, also use `npm` instead of `yarn`.
+Add TypeScript and the helper library, `tslib`, to the project. You can, of course, also use `npm` instead of `yarn`.
 
 ```shell
-yarn add --dev --exact typescript react-native-typescript-transformer
-yarn add --exact tslib
+yarn add --dev typescript react-native-typescript-transformer
+yarn add tslib
 ```
 
 Configure TypeScript by adding a [`tsconfig.json`](https://github.com/janaagaard75/expo-and-typescript/blob/master/tsconfig.json) file in the root of your project. If you are stating a new project, I would definitely recommend including `"strict": true` and some of the other compiler checks. If you are converting a JavaScript project to TypeScript, you might want to loosen up the rules to start with, and apply them gradually.
@@ -83,7 +83,7 @@ export default App;
 Finally add the type definitions for React, React Native, Expo and the Expo icons.
 
 ```shell
-yarn add --dev --exact @types/react @types/react-native @types/expo @types/expo__vector-icons
+yarn add --dev @types/react @types/react-native @types/expo @types/expo__vector-icons
 ```
 
 Since Expo is evolving quickly it is not uncommon that the type definitions are outdated or simply missing. [AudioScreen.tsx line 59](https://github.com/janaagaard75/expo-and-typescript/blob/master/src/AudioScreen.tsx#L59) shows how to deal with an incorrect type definition and [MapViewScreen.tsx line 5] show how to deal with missing type definitions.

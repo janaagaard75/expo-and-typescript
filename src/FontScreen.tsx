@@ -1,6 +1,5 @@
 import * as Font from "expo-font";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Text, View } from "react-native";
 
 interface State {

@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { View } from "react-native";
 import Svg, { G, Path } from "react-native-svg";
 import { NavigationStackScreenProps } from "react-navigation-stack";

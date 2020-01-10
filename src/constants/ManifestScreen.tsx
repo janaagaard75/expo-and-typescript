@@ -1,6 +1,5 @@
 import Constants from "expo-constants";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { ScrollView, Text } from "react-native";
 
 export class ManifestScreen extends Component {

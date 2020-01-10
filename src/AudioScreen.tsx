@@ -1,6 +1,5 @@
 import { Audio } from "expo-av";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Linking, Text, View } from "react-native";
 
 interface State {

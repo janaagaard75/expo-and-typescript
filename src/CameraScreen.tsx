@@ -1,7 +1,6 @@
 import { Camera } from "expo-camera";
 import * as Permissions from "expo-permissions";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
 interface State {

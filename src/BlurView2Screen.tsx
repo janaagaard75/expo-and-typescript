@@ -1,6 +1,5 @@
 import { BlurView } from "expo-blur";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Animated, Image, StyleSheet, View } from "react-native";
 
 const expoLogoUrl =

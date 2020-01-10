@@ -1,6 +1,5 @@
 import * as Brightness from "expo-brightness";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Button, Text, View } from "react-native";
 import { NavigationStackScreenProps } from "react-navigation-stack";
 

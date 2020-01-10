@@ -1,7 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { Facebook } from "expo";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
 import { NavigationStackScreenProps } from "react-navigation-stack";
 

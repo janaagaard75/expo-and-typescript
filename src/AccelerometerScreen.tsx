@@ -1,7 +1,6 @@
 import { Subscription } from "@unimodules/core";
 import { Accelerometer } from "expo-sensors";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { NavigationStackScreenProps } from "react-navigation-stack";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";

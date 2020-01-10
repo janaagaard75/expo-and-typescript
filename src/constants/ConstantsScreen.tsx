@@ -1,6 +1,5 @@
 import Constants from "expo-constants";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { NavigationStackScreenProps } from "react-navigation-stack";
 

@@ -1,6 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import { View } from "react-native";
 import { NavigationStackScreenProps } from "react-navigation-stack";
 

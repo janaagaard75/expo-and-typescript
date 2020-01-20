@@ -10,7 +10,12 @@ This repo used to also contain a type definition file for Expo, but that work ha
 
 ## Prerequisites
 
-You don't need to install any global packages for this repo. `expo-cli` is included as a dev dependency.
+- [Node.js](https://nodejs.org/).
+- [Yarn](https://yarnpkg.com/).
+- Optional: [XCode](https://developer.apple.com/xcode/), since it includes the iOS Simulator. XCode only runs on Macs.
+- Optional: [android studio](https://developer.android.com/studio), since it includes the Android Virtual Device Manager.
+
+You don't need to install any global npm packages for this repo. `expo-cli` is included as a dev dependency.
 
 ## Warnings When Installing Packages
 

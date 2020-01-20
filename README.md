@@ -4,7 +4,7 @@
 
 This is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org).
 
-This repo used to also contain a type definition file for Expo, but that work has been merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. The `expo` npm package now contains its own set of type definitions, so `@types/expo` is now ignore, and has been removed. There is currently a type check issue with the SVGs that I haven't figured out how to solve.
+This repo used to also contain a type definition file for Expo. That work was merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. `@types/expo` is now deprecated in favor of definition types includes with the `expo` package. TypeScript FTW!
 
 ![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
 
@@ -34,6 +34,12 @@ If you're on a Mac and have Xcode installed, you can run the app using the iOS S
 ```shell
 yarn ios
 ```
+
+## Troubleshooting
+
+If you have issues running the app it may help clearing the React Native packager cache. Use the command `yarn expo start --clear` to do this.
+
+More tips found in [this thread on the Expo Forum](https://forums.expo.io/t/how-to-clear-the-react-native-packager/1352).
 
 ## Similar Projects
 

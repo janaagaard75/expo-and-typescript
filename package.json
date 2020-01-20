@@ -50,21 +50,21 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.3",
     "@types/expo__vector-icons": "^9.0.1",
     "@types/react": "~16.9.17",
-    "@types/react-native": "^0.60.30",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@types/react-native": "^0.61.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.15.0",
     "@unimodules/core": "~5.0.0",
     "babel-preset-expo": "^8.0.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.17.0",
-    "expo-cli": "^3.11.5",
+    "eslint-plugin-react": "^7.18.0",
+    "expo-cli": "^3.11.7",
     "prettier": "^1.19.1",
     "sharp-cli": "^1.13.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   }
 }

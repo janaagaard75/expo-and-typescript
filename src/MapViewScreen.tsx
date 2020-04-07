@@ -3,7 +3,7 @@ import MapView from "react-native-maps";
 
 export class MapViewScreen extends Component {
   public static navigationOptions = {
-    title: "MapView"
+    title: "MapView",
   };
 
   public render() {
@@ -14,7 +14,7 @@ export class MapViewScreen extends Component {
           latitude: 55.6838499,
           latitudeDelta: 0.1,
           longitude: 12.5630238,
-          longitudeDelta: 0.1
+          longitudeDelta: 0.1,
         }}
       />
     );

@@ -4,7 +4,7 @@ import { Text } from "react-native";
 
 export class PlatformScreen extends Component {
   public static navigationOptions = {
-    title: "platform"
+    title: "platform",
   };
 
   public render() {

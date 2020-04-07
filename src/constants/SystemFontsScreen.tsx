@@ -4,7 +4,7 @@ import { ScrollView, Text } from "react-native";
 
 export class SystemFontsScreen extends Component {
   public static navigationOptions = {
-    title: "systemFonts"
+    title: "systemFonts",
   };
 
   public render() {

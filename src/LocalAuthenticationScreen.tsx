@@ -15,7 +15,7 @@ export class LocalAuthenticationScreen extends Component<{}, State> {
     this.state = {
       authenticated: false,
       authenticationError: "n/a",
-      hasHardware: undefined
+      hasHardware: undefined,
     };
 
     this.updateState();
@@ -37,27 +37,27 @@ export class LocalAuthenticationScreen extends Component<{}, State> {
 
   private async authenticate() {
     const authenticated = await LocalAuthentication.authenticateAsync({
-      promptMessage: "Authentication message"
+      promptMessage: "Authentication message",
     });
 
     if (authenticated.success) {
       this.setState({
-        authenticationError: "None"
+        authenticationError: "None",
       });
     } else {
       this.setState({
-        authenticationError: authenticated.error
+        authenticationError: authenticated.error,
       });
     }
 
     this.setState({
-      authenticated: authenticated.success
+      authenticated: authenticated.success,
     });
   }
 
   private async updateState() {
     this.setState({
-      hasHardware: await LocalAuthentication.hasHardwareAsync()
+      hasHardware: await LocalAuthentication.hasHardwareAsync(),
     });
   }
 }

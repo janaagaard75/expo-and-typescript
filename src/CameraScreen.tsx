@@ -14,7 +14,7 @@ export class CameraScreen extends Component<{}, State> {
 
     this.state = {
       cameraType: "back",
-      hasPermissionToCamera: undefined
+      hasPermissionToCamera: undefined,
     };
   }
 
@@ -22,7 +22,7 @@ export class CameraScreen extends Component<{}, State> {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
 
     this.setState({
-      hasPermissionToCamera: status === "granted"
+      hasPermissionToCamera: status === "granted",
     });
   }
 
@@ -42,7 +42,7 @@ export class CameraScreen extends Component<{}, State> {
             style={{
               backgroundColor: "transparent",
               flex: 1,
-              flexDirection: "row"
+              flexDirection: "row",
             }}
           >
             <TouchableOpacity
@@ -50,14 +50,14 @@ export class CameraScreen extends Component<{}, State> {
               style={{
                 alignItems: "center",
                 alignSelf: "flex-end",
-                flex: 0.1
+                flex: 0.1,
               }}
             >
               <Text
                 style={{
                   color: "white",
                   fontSize: 18,
-                  marginBottom: 10
+                  marginBottom: 10,
                 }}
               >
                 {" "}
@@ -72,7 +72,7 @@ export class CameraScreen extends Component<{}, State> {
 
   private toggleCameraType() {
     this.setState({
-      cameraType: this.state.cameraType === "back" ? "front" : "back"
+      cameraType: this.state.cameraType === "back" ? "front" : "back",
     });
   }
 }

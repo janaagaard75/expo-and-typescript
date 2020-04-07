@@ -17,14 +17,14 @@ export class BrightnessScreen extends Component<
 
     this.state = {
       normalBrightness: undefined,
-      systemBrightness: undefined
+      systemBrightness: undefined,
     };
 
     this.updateBrightness();
   }
 
   public static navigationOptions = {
-    title: "Brightness"
+    title: "Brightness",
   };
 
   public render() {
@@ -38,7 +38,7 @@ export class BrightnessScreen extends Component<
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Text style={{ marginBottom: 10 }}>
@@ -83,7 +83,7 @@ export class BrightnessScreen extends Component<
   private async updateBrightness() {
     this.setState({
       normalBrightness: await Brightness.getBrightnessAsync(),
-      systemBrightness: await Brightness.getSystemBrightnessAsync()
+      systemBrightness: await Brightness.getSystemBrightnessAsync(),
     });
   }
 }

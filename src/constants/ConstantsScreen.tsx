@@ -15,14 +15,14 @@ export class ConstantsScreen extends Component<
     super(props);
 
     this.state = {
-      webViewUserAgent: null
+      webViewUserAgent: null,
     };
 
     this.updateWebViewUserAgent();
   }
 
   public static navigationOptions = {
-    title: "Constants"
+    title: "Constants",
   };
 
   public render() {
@@ -32,7 +32,7 @@ export class ConstantsScreen extends Component<
       <View
         style={{
           flex: 1,
-          padding: 10
+          padding: 10,
         }}
       >
         <Text>appOwnership: "{Constants.appOwnership}"</Text>
@@ -61,7 +61,7 @@ export class ConstantsScreen extends Component<
   private async updateWebViewUserAgent() {
     const userAgent = await Constants.getWebViewUserAgentAsync();
     this.setState({
-      webViewUserAgent: userAgent
+      webViewUserAgent: userAgent,
     });
   }
 }

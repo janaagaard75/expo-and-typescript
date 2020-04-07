@@ -7,7 +7,7 @@ const expoImageUrl =
 
 export class BlurView1Screen extends Component {
   public static navigationOptions = {
-    title: "BlurView 1"
+    title: "BlurView 1",
   };
 
   public render() {
@@ -17,7 +17,7 @@ export class BlurView1Screen extends Component {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         {/* This image is blurred because BlurView is positioned on top of it. */}
@@ -25,7 +25,7 @@ export class BlurView1Screen extends Component {
           source={{ uri: expoImageUrl }}
           style={{
             height: 192,
-            width: 192
+            width: 192,
           }}
         />
         <BlurView intensity={50} style={StyleSheet.absoluteFill} tint="light">
@@ -33,7 +33,7 @@ export class BlurView1Screen extends Component {
             source={{ uri: expoImageUrl }}
             style={{
               height: 96,
-              width: 96
+              width: 96,
             }}
           />
         </BlurView>
@@ -41,7 +41,7 @@ export class BlurView1Screen extends Component {
           source={{ uri: expoImageUrl }}
           style={{
             height: 48,
-            width: 48
+            width: 48,
           }}
         />
       </View>

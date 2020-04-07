@@ -6,14 +6,14 @@ import { NavigationStackScreenProps } from "react-navigation-stack";
 
 export class FacebookScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
-    title: "Facebook"
+    title: "Facebook",
   };
 
   public async logIn() {
     const loginResponse = await Facebook.logInWithReadPermissionsAsync(
       "1487822177919606",
       {
-        permissions: ["public_profile"]
+        permissions: ["public_profile"],
       }
     );
 
@@ -33,7 +33,7 @@ export class FacebookScreen extends Component<NavigationStackScreenProps> {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <TouchableOpacity onPress={this.logIn}>
@@ -45,7 +45,7 @@ export class FacebookScreen extends Component<NavigationStackScreenProps> {
               flexDirection: "row",
               height: 40,
               paddingLeft: 6,
-              width: 250
+              width: 250,
             }}
           >
             <FontAwesome
@@ -59,7 +59,7 @@ export class FacebookScreen extends Component<NavigationStackScreenProps> {
                 flexGrow: 1,
                 fontSize: 20,
                 fontWeight: "500",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Log in With Facebook

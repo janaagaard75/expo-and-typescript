@@ -20,7 +20,7 @@ class DestinationAndTitle {
 // tslint:disable-next-line:max-classes-per-file
 export class MainScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
-    title: "Home"
+    title: "Home",
   };
 
   public render() {
@@ -28,10 +28,10 @@ export class MainScreen extends Component<NavigationStackScreenProps> {
       <ScrollView
         style={{
           backgroundColor: "#fff",
-          flex: 1
+          flex: 1,
         }}
       >
-        {this.destinationAndTitlePairs.map(destinationAndTitle => (
+        {this.destinationAndTitlePairs.map((destinationAndTitle) => (
           <Button
             key={destinationAndTitle.destination}
             onPress={() =>
@@ -62,6 +62,6 @@ export class MainScreen extends Component<NavigationStackScreenProps> {
     new DestinationAndTitle("LocalAuthentication", "Local Authentication"),
     new DestinationAndTitle("MapView"),
     new DestinationAndTitle("Svg"),
-    new DestinationAndTitle("VectorIcons", "Vector Icons")
+    new DestinationAndTitle("VectorIcons", "Vector Icons"),
   ];
 }

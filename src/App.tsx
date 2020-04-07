@@ -47,7 +47,7 @@ const mainNavigator = createStackNavigator({
   Platform: { screen: PlatformScreen },
   Svg: { screen: SvgScreen },
   SystemFonts: { screen: SystemFontsScreen },
-  VectorIcons: { screen: VectorIconsScreen }
+  VectorIcons: { screen: VectorIconsScreen },
 });
 
 export default createAppContainer(mainNavigator);

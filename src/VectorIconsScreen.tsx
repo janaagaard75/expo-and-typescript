@@ -4,7 +4,7 @@ import { View } from "react-native";
 
 export class VectorIconsScreen extends Component {
   public static navigationOptions = {
-    title: "Vector Icons"
+    title: "Vector Icons",
   };
 
   public render() {
@@ -14,7 +14,7 @@ export class VectorIconsScreen extends Component {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Ionicons
@@ -24,7 +24,7 @@ export class VectorIconsScreen extends Component {
           style={{
             textDecorationColor: "black",
             textDecorationLine: "underline",
-            textDecorationStyle: "double"
+            textDecorationStyle: "double",
           }}
         />
       </View>

@@ -6,7 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 enum PermissionState {
   Unknown,
   Denied,
-  Granted
+  Granted,
 }
 
 interface State {
@@ -20,19 +20,19 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
 
     this.state = {
       cameraPermission: PermissionState.Unknown,
-      scannedText: "Scan a bar code or a QR code."
+      scannedText: "Scan a bar code or a QR code.",
     };
   }
 
   public static navigationOptions = {
-    title: "BarCodeScanner"
+    title: "BarCodeScanner",
   };
 
   public async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     this.setState({
       cameraPermission:
-        status === "granted" ? PermissionState.Granted : PermissionState.Denied
+        status === "granted" ? PermissionState.Granted : PermissionState.Denied,
     });
   }
 
@@ -49,7 +49,7 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
           <View style={{ flex: 1 }}>
             <Text
               style={{
-                margin: 10
+                margin: 10,
               }}
             >
               this.state.scannerStatus
@@ -72,7 +72,7 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
 
   private handleBarCodeScanned = (event: { type: string; data: string }) => {
     this.setState({
-      scannedText: `A bar code of type ${event.type} with content '${event.data}' has been scanned.`
+      scannedText: `A bar code of type ${event.type} with content '${event.data}' has been scanned.`,
     });
   };
 }

@@ -5,7 +5,7 @@ import { NavigationStackScreenProps } from "react-navigation-stack";
 
 export class SvgScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
-    title: "Svg"
+    title: "Svg",
   };
 
   public render() {
@@ -15,7 +15,7 @@ export class SvgScreen extends Component<NavigationStackScreenProps> {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Svg height={100} width={100}>

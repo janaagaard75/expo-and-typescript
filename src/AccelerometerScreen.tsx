@@ -20,13 +20,13 @@ export class AccelerometerScreen extends Component<
       accelerometerData: {
         x: 0,
         y: 0,
-        z: 0
-      }
+        z: 0,
+      },
     };
   }
 
   public static navigationOptions = {
-    title: "Accelerometer"
+    title: "Accelerometer",
   };
 
   private subscription: Subscription | undefined;
@@ -55,7 +55,7 @@ export class AccelerometerScreen extends Component<
         style={{
           backgroundColor: "#fff",
           marginTop: 15,
-          paddingHorizontal: 10
+          paddingHorizontal: 10,
         }}
       >
         <Text>Accelerometer:</Text>
@@ -66,7 +66,7 @@ export class AccelerometerScreen extends Component<
           style={{
             alignItems: "stretch",
             flexDirection: "row",
-            marginTop: 15
+            marginTop: 15,
           }}
         >
           <TouchableOpacity
@@ -98,13 +98,13 @@ export class AccelerometerScreen extends Component<
       backgroundColor: "#eee",
       flex: 1,
       justifyContent: "center",
-      padding: 10
+      padding: 10,
     },
     middleButton: {
       borderColor: "#ccc",
       borderLeftWidth: 1,
-      borderRightWidth: 1
-    }
+      borderRightWidth: 1,
+    },
   });
 
   private static roundToTwoDecimals(value: number | undefined): number {
@@ -124,7 +124,7 @@ export class AccelerometerScreen extends Component<
   }
 
   private subscribe() {
-    this.subscription = Accelerometer.addListener(accelerometerData => {
+    this.subscription = Accelerometer.addListener((accelerometerData) => {
       this.setState({ accelerometerData });
     });
   }

@@ -16,13 +16,13 @@ export class GyroscopeScreen extends Component<{}, State> {
       gyroscopeData: {
         x: 0,
         y: 0,
-        z: 0
-      }
+        z: 0,
+      },
     };
   }
 
   public static navigationOptions = {
-    title: "Gyroscope"
+    title: "Gyroscope",
   };
 
   private subscription: Subscription | undefined;
@@ -32,24 +32,24 @@ export class GyroscopeScreen extends Component<{}, State> {
     backgroundColor: "#eee",
     flex: 1,
     justifyContent: "center",
-    padding: 10
+    padding: 10,
   };
 
   private buttonContainerStyle: ViewStyle = {
     alignItems: "stretch",
     flexDirection: "row",
-    marginTop: 15
+    marginTop: 15,
   };
 
   private middleButtonStyle: ViewStyle = {
     borderColor: "#ccc",
     borderLeftWidth: 1,
-    borderRightWidth: 1
+    borderRightWidth: 1,
   };
 
   private sensorStyle: ViewStyle = {
     marginTop: 15,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   };
 
   public componentDidMount() {
@@ -70,7 +70,7 @@ export class GyroscopeScreen extends Component<{}, State> {
         <Text>Gyroscope:</Text>
         <Text
           style={{
-            fontSize: 20
+            fontSize: 20,
           }}
         >
           x: {x} y: {y} z: {z}
@@ -118,7 +118,7 @@ export class GyroscopeScreen extends Component<{}, State> {
   }
 
   private subscribe() {
-    this.subscription = Gyroscope.addListener(result => {
+    this.subscription = Gyroscope.addListener((result) => {
       this.setState({ gyroscopeData: result });
     });
   }

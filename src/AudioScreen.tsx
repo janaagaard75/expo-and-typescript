@@ -11,14 +11,14 @@ export class AudioScreen extends Component<{}, State> {
     super(props);
 
     this.state = {
-      soundLoaded: false
+      soundLoaded: false,
     };
 
     this.playSound();
   }
 
   public static navigationOptions = {
-    title: "Audio"
+    title: "Audio",
   };
 
   public render() {
@@ -31,7 +31,7 @@ export class AudioScreen extends Component<{}, State> {
         style={{
           alignItems: "center",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Text>
@@ -59,7 +59,7 @@ export class AudioScreen extends Component<{}, State> {
     );
 
     this.setState({
-      soundLoaded: true
+      soundLoaded: true,
     });
   }
 }

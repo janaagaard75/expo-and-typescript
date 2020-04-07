@@ -11,23 +11,23 @@ export class FontScreen extends Component<{}, State> {
     super(props);
 
     this.state = {
-      fontLoaded: false
+      fontLoaded: false,
     };
 
     this.loadFont();
   }
 
   public static navigationOptions = {
-    title: "Font"
+    title: "Font",
   };
 
   private async loadFont() {
     await Font.loadAsync({
-      "PokerKings-regular": require("../assets/PokerKings-Regular.ttf")
+      "PokerKings-regular": require("../assets/PokerKings-Regular.ttf"),
     });
 
     this.setState({
-      fontLoaded: true
+      fontLoaded: true,
     });
   }
 
@@ -42,14 +42,14 @@ export class FontScreen extends Component<{}, State> {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Text
           style={{
             fontFamily: "PokerKings-regular",
             fontSize: 48,
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           PokerKings regular

@@ -11,14 +11,14 @@ export class AssetScreen extends Component<{}, State> {
     super(props);
 
     this.state = {
-      assetsLoaded: false
+      assetsLoaded: false,
     };
 
     this.loadAssets();
   }
 
   public static navigationOptions = {
-    title: "Asset"
+    title: "Asset",
   };
 
   public render() {
@@ -32,7 +32,7 @@ export class AssetScreen extends Component<{}, State> {
           alignItems: "center",
           backgroundColor: "#fff",
           flex: 1,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <Image
@@ -42,7 +42,7 @@ export class AssetScreen extends Component<{}, State> {
             alignSelf: "stretch",
             flex: 1,
             height: undefined,
-            width: undefined
+            width: undefined,
           }}
         />
       </View>
@@ -53,7 +53,7 @@ export class AssetScreen extends Component<{}, State> {
     // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
     await Asset.loadAsync(require("../assets/wtfs-per-minute.png"));
     this.setState({
-      assetsLoaded: true
+      assetsLoaded: true,
     });
   }
 }

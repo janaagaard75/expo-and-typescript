@@ -7,7 +7,7 @@ const expoImageUrl =
 
 export class BlurViewScreen extends Component {
   public static navigationOptions = {
-    title: "BlurView 1",
+    title: "BlurView",
   };
 
   public render() {

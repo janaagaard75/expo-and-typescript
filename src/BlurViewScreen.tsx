@@ -5,7 +5,7 @@ import { Image, StyleSheet, View } from "react-native";
 const expoImageUrl =
   "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";
 
-export class BlurView1Screen extends Component {
+export class BlurViewScreen extends Component {
   public static navigationOptions = {
     title: "BlurView 1",
   };

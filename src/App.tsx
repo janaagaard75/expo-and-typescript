@@ -6,7 +6,7 @@ import { AssetScreen } from "./AssetScreen";
 import { AudioScreen } from "./AudioScreen";
 import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
 import { BlurView2Screen } from "./BlurView2Screen";
-import { BlurView1Screen } from "./BlurViewScreen";
+import { BlurViewScreen } from "./BlurViewScreen";
 import { BrightnessScreen } from "./BrightnessScreen";
 import { CameraScreen } from "./CameraScreen";
 import { ConstantsScreen } from "./constants/ConstantsScreen";
@@ -32,7 +32,7 @@ const mainNavigator = createStackNavigator({
   Asset: { screen: AssetScreen },
   Audio: { screen: AudioScreen },
   BarCodeScanner: { screen: BarCodeScannerScreen },
-  BlurView1: { screen: BlurView1Screen },
+  BlurView: { screen: BlurViewScreen },
   BlurView2: { screen: BlurView2Screen },
   Brightness: { screen: BrightnessScreen },
   Camera: { screen: CameraScreen },

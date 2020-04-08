@@ -11,7 +11,7 @@ interface State {
   intensity: Animated.Value;
 }
 
-export class BlurView2Screen extends Component<{}, State> {
+export class AnimatedBlurViewScreen extends Component<{}, State> {
   constructor(props: {}) {
     super(props);
 

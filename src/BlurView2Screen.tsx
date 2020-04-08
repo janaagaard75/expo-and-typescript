@@ -1,10 +1,11 @@
 import { BlurView } from "expo-blur";
 import React, { Component } from "react";
-import { Animated, Image, View } from "react-native";
+import { Animated, Image, StyleSheet, View } from "react-native";
 
 const expoLogoUrl =
   "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";
-// const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const AnimatedBlurView = Animated.createAnimatedComponent(BlurView) as any;
 
 interface State {
   intensity: Animated.Value;
@@ -59,12 +60,11 @@ export class BlurView2Screen extends Component<{}, State> {
             width: 180,
           }}
         />
-        {/* Removed for now because there is an issue with the `intensity` property not being accepted by TypeScript.  */}
-        {/* <AnimatedBlurView
+        <AnimatedBlurView
           intensity={this.state.intensity}
           style={StyleSheet.absoluteFill}
           tint="default"
-        /> */}
+        />
       </View>
     );
   }

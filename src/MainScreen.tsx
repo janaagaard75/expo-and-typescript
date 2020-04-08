@@ -46,11 +46,11 @@ export class MainScreen extends Component<NavigationStackScreenProps> {
   private destinationAndTitlePairs: Array<DestinationAndTitle> = [
     new DestinationAndTitle("Accelerometer"),
     new DestinationAndTitle("Amplitude"),
+    new DestinationAndTitle("Animated BlurView", "Animated BlurView"),
     new DestinationAndTitle("Asset"),
     new DestinationAndTitle("Audio"),
     new DestinationAndTitle("BarCodeScanner"),
-    new DestinationAndTitle("BlurView1", "BlurView 1"),
-    new DestinationAndTitle("BlurView2", "BlurView 2"),
+    new DestinationAndTitle("BlurView", "BlurView"),
     new DestinationAndTitle("Brightness"),
     new DestinationAndTitle("Camera"),
     new DestinationAndTitle("Constants"),

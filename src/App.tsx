@@ -24,7 +24,6 @@ import { SvgScreen } from "./SvgScreen";
 import { VectorIconsScreen } from "./VectorIconsScreen";
 
 const mainNavigator = createStackNavigator({
-  // tslint:disable:object-literal-sort-keys
   Main: { screen: MainScreen },
 
   Accelerometer: { screen: AccelerometerScreen },

@@ -26,8 +26,8 @@ module.exports = {
         readonly: "generic",
       },
     ],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+    "@typescript-eslint/explicit-function-return-type": "off", // Mandatory return types clutters the code too much.
+    "@typescript-eslint/no-var-requires": "off", // Used when importing assets.
+    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }], // Allow unescaped single and double quotes.
   },
 };

@@ -23,6 +23,9 @@
     "yarn": ">=1.1"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "0.1.6",
+    "@react-navigation/native": "5.1.5",
+    "@react-navigation/stack": "5.2.10",
     "expo": "^37.0.6",
     "expo-analytics-amplitude": "~8.1.0",
     "expo-asset": "~8.1.4",
@@ -43,10 +46,9 @@
     "react-native-gesture-handler": "~1.6.1",
     "react-native-maps": "0.26.1",
     "react-native-reanimated": "~1.7.1",
+    "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
     "react-native-svg": "11.0.1",
-    "react-navigation": "4.0.10",
-    "react-navigation-stack": "1.10.3",
     "tslib": "^1.11.1"
   },
   "devDependencies": {

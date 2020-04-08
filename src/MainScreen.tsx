@@ -17,7 +17,6 @@ class DestinationAndTitle {
   public title: string;
 }
 
-// tslint:disable-next-line:max-classes-per-file
 export class MainScreen extends Component<NavigationStackScreenProps> {
   public static navigationOptions = {
     title: "Home",

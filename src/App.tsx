@@ -2,11 +2,11 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { AccelerometerScreen } from "./AccelerometerScreen";
 import { AmplitudeScreen } from "./AmplitudeScreen";
+import { AnimatedBlurViewScreen } from "./AnimatedBlurViewScreen";
 import { AssetScreen } from "./AssetScreen";
 import { AudioScreen } from "./AudioScreen";
 import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
-import { BlurView1Screen } from "./BlurView1Screen";
-import { BlurView2Screen } from "./BlurView2Screen";
+import { BlurViewScreen } from "./BlurViewScreen";
 import { BrightnessScreen } from "./BrightnessScreen";
 import { CameraScreen } from "./CameraScreen";
 import { ConstantsScreen } from "./constants/ConstantsScreen";
@@ -24,16 +24,15 @@ import { SvgScreen } from "./SvgScreen";
 import { VectorIconsScreen } from "./VectorIconsScreen";
 
 const mainNavigator = createStackNavigator({
-  // tslint:disable:object-literal-sort-keys
   Main: { screen: MainScreen },
 
   Accelerometer: { screen: AccelerometerScreen },
   Amplitude: { screen: AmplitudeScreen },
+  AnimatedBlurView: { screen: AnimatedBlurViewScreen },
   Asset: { screen: AssetScreen },
   Audio: { screen: AudioScreen },
   BarCodeScanner: { screen: BarCodeScannerScreen },
-  BlurView1: { screen: BlurView1Screen },
-  BlurView2: { screen: BlurView2Screen },
+  BlurView: { screen: BlurViewScreen },
   Brightness: { screen: BrightnessScreen },
   Camera: { screen: CameraScreen },
   Constants: { screen: ConstantsScreen },

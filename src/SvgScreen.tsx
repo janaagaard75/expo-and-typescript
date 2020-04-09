@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 import Svg, { G, Path } from "react-native-svg";
-import { NavigationStackScreenProps } from "react-navigation-stack";
 
-export class SvgScreen extends Component<NavigationStackScreenProps> {
-  public static navigationOptions = {
-    title: "Svg",
-  };
-
+export class SvgScreen extends Component {
   public render() {
     return (
       <View

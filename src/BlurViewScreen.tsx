@@ -6,10 +6,6 @@ const expoImageUrl =
   "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png";
 
 export class BlurViewScreen extends Component {
-  public static navigationOptions = {
-    title: "BlurView",
-  };
-
   public render() {
     return (
       <View

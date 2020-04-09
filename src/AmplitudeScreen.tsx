@@ -13,10 +13,6 @@ export class AmplitudeScreen extends Component {
     });
   }
 
-  public static navigationOptions = {
-    title: "Amplitude",
-  };
-
   public render() {
     Amplitude.logEventWithProperties("OPEN_SCREEN", {
       screenName: "AmplitudeScreen",

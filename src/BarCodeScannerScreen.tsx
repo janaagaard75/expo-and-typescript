@@ -24,10 +24,6 @@ export class BarCodeScannerScreen extends React.Component<{}, State> {
     };
   }
 
-  public static navigationOptions = {
-    title: "BarCodeScanner",
-  };
-
   public async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     this.setState({

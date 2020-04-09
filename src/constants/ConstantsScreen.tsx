@@ -1,17 +1,24 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import Constants from "expo-constants";
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import { NavigationStackScreenProps } from "react-navigation-stack";
+
+type ConstantsStackParamList = {
+  Manifest: undefined;
+  Platform: undefined;
+  SystemFonts: undefined;
+};
+
+interface Props {
+  navigation: StackNavigationProp<ConstantsStackParamList>;
+}
 
 interface State {
   webViewUserAgent: string | null;
 }
 
-export class ConstantsScreen extends Component<
-  NavigationStackScreenProps,
-  State
-> {
-  constructor(props: NavigationStackScreenProps) {
+export class ConstantsScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -20,10 +27,6 @@ export class ConstantsScreen extends Component<
 
     this.updateWebViewUserAgent();
   }
-
-  public static navigationOptions = {
-    title: "Constants",
-  };
 
   public render() {
     const navigate = this.props.navigation.navigate;

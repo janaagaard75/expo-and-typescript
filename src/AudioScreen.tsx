@@ -17,10 +17,6 @@ export class AudioScreen extends Component<{}, State> {
     this.playSound();
   }
 
-  public static navigationOptions = {
-    title: "Audio",
-  };
-
   public render() {
     if (!this.state.soundLoaded) {
       return <Text>Loading sound...</Text>;

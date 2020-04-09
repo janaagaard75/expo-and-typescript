@@ -1,10 +1,9 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
 import { AccelerometerScreen } from "./AccelerometerScreen";
 import { AmplitudeScreen } from "./AmplitudeScreen";
 import { AssetScreen } from "./AssetScreen";
-import { AudioScreen } from "./AudioScreen";
-import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
 import { BlurViewScreen } from "./BlurViewScreen";
 import { BrightnessScreen } from "./BrightnessScreen";
 import { CameraScreen } from "./CameraScreen";
@@ -22,29 +21,108 @@ import { MapViewScreen } from "./MapViewScreen";
 import { SvgScreen } from "./SvgScreen";
 import { VectorIconsScreen } from "./VectorIconsScreen";
 
-const mainNavigator = createStackNavigator({
-  Main: { screen: MainScreen },
+const Stack = createStackNavigator();
 
-  Accelerometer: { screen: AccelerometerScreen },
-  Amplitude: { screen: AmplitudeScreen },
-  Asset: { screen: AssetScreen },
-  Audio: { screen: AudioScreen },
-  BarCodeScanner: { screen: BarCodeScannerScreen },
-  BlurView: { screen: BlurViewScreen },
-  Brightness: { screen: BrightnessScreen },
-  Camera: { screen: CameraScreen },
-  Constants: { screen: ConstantsScreen },
-  Facebook: { screen: FacebookScreen },
-  Font: { screen: FontScreen },
-  Gyroscope: { screen: GyroscopeScreen },
-  LinearGradient: { screen: LinearGradientScreen },
-  LocalAuthentication: { screen: LocalAuthenticationScreen },
-  Manifest: { screen: ManifestScreen },
-  MapView: { screen: MapViewScreen },
-  Platform: { screen: PlatformScreen },
-  Svg: { screen: SvgScreen },
-  SystemFonts: { screen: SystemFontsScreen },
-  VectorIcons: { screen: VectorIconsScreen },
-});
-
-export default createAppContainer(mainNavigator);
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Main">
+        <Stack.Screen
+          name="Main"
+          component={MainScreen}
+          options={{ title: "Home" }}
+        />
+        <Stack.Screen
+          name="Accelerometer"
+          component={AccelerometerScreen}
+          options={{ title: "Accelerometer" }}
+        />
+        <Stack.Screen
+          name="Amplitude"
+          component={AmplitudeScreen}
+          options={{ title: "Amplitude" }}
+        />
+        <Stack.Screen
+          name="Asset"
+          component={AssetScreen}
+          options={{ title: "Aar Code Scanner" }}
+        />
+        <Stack.Screen
+          name="BlurView"
+          component={BlurViewScreen}
+          options={{ title: "Blur View" }}
+        />
+        <Stack.Screen
+          name="Brightness"
+          component={BrightnessScreen}
+          options={{ title: "Brightness" }}
+        />
+        <Stack.Screen
+          name="Camera"
+          component={CameraScreen}
+          options={{ title: "Camera" }}
+        />
+        <Stack.Screen
+          name="Constants"
+          component={ConstantsScreen}
+          options={{ title: "Constants" }}
+        />
+        <Stack.Screen
+          name="Facebook"
+          component={FacebookScreen}
+          options={{ title: "Facebook" }}
+        />
+        <Stack.Screen
+          name="Font"
+          component={FontScreen}
+          options={{ title: "Font" }}
+        />
+        <Stack.Screen
+          name="Gyroscope"
+          component={GyroscopeScreen}
+          options={{ title: "Gyroscope" }}
+        />
+        <Stack.Screen
+          name="LinearGradient"
+          component={LinearGradientScreen}
+          options={{ title: "Linear Gradient" }}
+        />
+        <Stack.Screen
+          name="LocalAuthentication"
+          component={LocalAuthenticationScreen}
+          options={{ title: "Local Authentication" }}
+        />
+        <Stack.Screen
+          name="Manifest"
+          component={ManifestScreen}
+          options={{ title: "Manifest" }}
+        />
+        <Stack.Screen
+          name="MapView"
+          component={MapViewScreen}
+          options={{ title: "Map View" }}
+        />
+        <Stack.Screen
+          name="Platform"
+          component={PlatformScreen}
+          options={{ title: "Platform" }}
+        />
+        <Stack.Screen
+          name="Svg"
+          component={SvgScreen}
+          options={{ title: "Svg" }}
+        />
+        <Stack.Screen
+          name="SystemFonts"
+          component={SystemFontsScreen}
+          options={{ title: "System Fonts" }}
+        />
+        <Stack.Screen
+          name="VectorIcons"
+          component={VectorIconsScreen}
+          options={{ title: "Vector Icons" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

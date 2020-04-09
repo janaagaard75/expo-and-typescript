@@ -1,15 +1,8 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React, { Component } from "react";
 import { View } from "react-native";
-import { NavigationStackScreenProps } from "react-navigation-stack";
 
-export class LinearGradientScreen extends Component<
-  NavigationStackScreenProps
-> {
-  public static navigationOptions = {
-    title: "LinearGradient",
-  };
-
+export class LinearGradientScreen extends Component {
   public render() {
     return (
       <View

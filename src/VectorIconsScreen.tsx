@@ -3,10 +3,6 @@ import React, { Component } from "react";
 import { View } from "react-native";
 
 export class VectorIconsScreen extends Component {
-  public static navigationOptions = {
-    title: "Vector Icons",
-  };
-
   public render() {
     return (
       <View

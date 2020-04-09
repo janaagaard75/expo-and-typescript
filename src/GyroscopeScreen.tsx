@@ -21,10 +21,6 @@ export class GyroscopeScreen extends Component<{}, State> {
     };
   }
 
-  public static navigationOptions = {
-    title: "Gyroscope",
-  };
-
   private subscription: Subscription | undefined;
 
   private buttonStyle: ViewStyle = {

@@ -54,7 +54,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@types/expo__vector-icons": "^9.0.1",
-    "@types/react": "^16.9.32",
+    "@types/react": "^16.9.33",
     "@types/react-native": "^0.62.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
@@ -64,7 +64,7 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
-    "expo-cli": "^3.17.18",
+    "expo-cli": "^3.17.21",
     "prettier": "^2.0.4",
     "sharp-cli": "^1.13.1",
     "typescript": "^3.8.3"

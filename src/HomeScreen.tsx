@@ -2,7 +2,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import React, { Component } from "react";
 import { Button, ScrollView } from "react-native";
 
-type RootStackParamList = {
+type HomeStackParametersList = {
   Accelerometer: undefined;
   Amplitude: undefined;
   Asset: undefined;
@@ -23,7 +23,7 @@ type RootStackParamList = {
 };
 
 interface Props {
-  navigation: StackNavigationProp<RootStackParamList>;
+  navigation: StackNavigationProp<HomeStackParametersList>;
 }
 
 export class HomeScreen extends Component<Props> {

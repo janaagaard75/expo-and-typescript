@@ -3,14 +3,14 @@ import Constants from "expo-constants";
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
-type ConstantsStackParamList = {
+type ConstantsStackParametersList = {
   Manifest: undefined;
   Platform: undefined;
   SystemFonts: undefined;
 };
 
 interface Props {
-  navigation: StackNavigationProp<ConstantsStackParamList>;
+  navigation: StackNavigationProp<ConstantsStackParametersList>;
 }
 
 interface State {

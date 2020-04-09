@@ -14,7 +14,7 @@ import { SystemFontsScreen } from "./constants/SystemFontsScreen";
 import { FacebookScreen } from "./FacebookScreen";
 import { FontScreen } from "./FontScreen";
 import { GyroscopeScreen } from "./GyroscopeScreen";
-import { MainScreen } from "./HomeScreen";
+import { HomeScreen } from "./HomeScreen";
 import { LinearGradientScreen } from "./LinearGradientScreen";
 import { LocalAuthenticationScreen } from "./LocalAuthenticationScreen";
 import { MapViewScreen } from "./MapViewScreen";
@@ -26,10 +26,10 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Main">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
-          name="Main"
-          component={MainScreen}
+          name="Home"
+          component={HomeScreen}
           options={{ title: "Home" }}
         />
         <Stack.Screen

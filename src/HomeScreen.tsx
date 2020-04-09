@@ -26,7 +26,7 @@ interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
 }
 
-export class MainScreen extends Component<Props> {
+export class HomeScreen extends Component<Props> {
   public render() {
     return (
       <ScrollView

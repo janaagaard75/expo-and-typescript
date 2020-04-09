@@ -35,6 +35,7 @@
     "expo-brightness": "~8.1.0",
     "expo-camera": "~8.2.0",
     "expo-constants": "~9.0.0",
+    "expo-facebook": "~8.1.0",
     "expo-font": "~8.1.1",
     "expo-linear-gradient": "~8.1.0",
     "expo-local-authentication": "~9.0.0",

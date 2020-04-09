@@ -28,6 +28,8 @@ interface Props {
 
 export class HomeScreen extends Component<Props> {
   public render() {
+    const navigate = this.props.navigation.navigate;
+
     return (
       <ScrollView
         style={{
@@ -36,71 +38,35 @@ export class HomeScreen extends Component<Props> {
         }}
       >
         <Button
-          onPress={() => this.props.navigation.navigate("Accelerometer")}
+          onPress={() => navigate("Accelerometer")}
           title={"Accelerometer"}
         />
+        <Button onPress={() => navigate("Amplitude")} title={"Amplitude"} />
+        <Button onPress={() => navigate("Asset")} title={"Asset"} />
+        <Button onPress={() => navigate("Audio")} title={"Audio"} />
         <Button
-          onPress={() => this.props.navigation.navigate("Amplitude")}
-          title={"Amplitude"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Asset")}
-          title={"Asset"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Audio")}
-          title={"Audio"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("BarCodeScanner")}
+          onPress={() => navigate("BarCodeScanner")}
           title={"Bar Code Scanner"}
         />
+        <Button onPress={() => navigate("BlurView")} title={"Blur View"} />
+        <Button onPress={() => navigate("Brightness")} title={"Brightness"} />
+        <Button onPress={() => navigate("Camera")} title={"Camera"} />
+        <Button onPress={() => navigate("Constants")} title={"Constants"} />
+        <Button onPress={() => navigate("Facebook")} title={"Facebook"} />
+        <Button onPress={() => navigate("Font")} title={"Font"} />
+        <Button onPress={() => navigate("Gyroscope")} title={"Gyroscope"} />
         <Button
-          onPress={() => this.props.navigation.navigate("BlurView")}
-          title={"Blur View"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Brightness")}
-          title={"Brightness"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Camera")}
-          title={"Camera"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Constants")}
-          title={"Constants"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Facebook")}
-          title={"Facebook"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Font")}
-          title={"Font"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Gyroscope")}
-          title={"Gyroscope"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("LinearGradient")}
+          onPress={() => navigate("LinearGradient")}
           title={"Linear Gradient"}
         />
         <Button
-          onPress={() => this.props.navigation.navigate("LocalAuthentication")}
+          onPress={() => navigate("LocalAuthentication")}
           title={"Local Authentication"}
         />
+        <Button onPress={() => navigate("MapView")} title={"Map View"} />
+        <Button onPress={() => navigate("Svg")} title={"Svg"} />
         <Button
-          onPress={() => this.props.navigation.navigate("MapView")}
-          title={"Map View"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("Svg")}
-          title={"Svg"}
-        />
-        <Button
-          onPress={() => this.props.navigation.navigate("VectorIcons")}
+          onPress={() => navigate("VectorIcons")}
           title={"Vector Icons"}
         />
       </ScrollView>

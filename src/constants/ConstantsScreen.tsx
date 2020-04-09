@@ -38,10 +38,7 @@ export class ConstantsScreen extends Component<Props, State> {
           padding: 10,
         }}
       >
-        <Button
-          onPress={() => this.props.navigation.navigate("Manifest")}
-          title="Manifest"
-        />
+        <Button onPress={() => navigate("Manifest")} title="Manifest" />
         <Button onPress={() => navigate("Platform")} title="Platform" />
         <Button onPress={() => navigate("SystemFonts")} title="System Fonts" />
         <Text>appOwnership: "{Constants.appOwnership}"</Text>

@@ -2,18 +2,14 @@ import { Subscription } from "@unimodules/core";
 import { Accelerometer } from "expo-sensors";
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { NavigationStackScreenProps } from "react-navigation-stack";
 import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
   accelerometerData: ThreeAxisMeasurement;
 }
 
-export class AccelerometerScreen extends Component<
-  NavigationStackScreenProps,
-  State
-> {
-  constructor(props: NavigationStackScreenProps) {
+export class AccelerometerScreen extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -24,10 +20,6 @@ export class AccelerometerScreen extends Component<
       },
     };
   }
-
-  public static navigationOptions = {
-    title: "Accelerometer",
-  };
 
   private subscription: Subscription | undefined;
 

@@ -1,21 +1,15 @@
 import { FontAwesome } from "@expo/vector-icons";
-import { Facebook } from "expo";
+import * as Facebook from "expo-facebook";
 import React, { Component } from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
-import { NavigationStackScreenProps } from "react-navigation-stack";
 
-export class FacebookScreen extends Component<NavigationStackScreenProps> {
-  public static navigationOptions = {
-    title: "Facebook",
-  };
-
+export class FacebookScreen extends Component {
   public async logIn() {
-    const loginResponse = await Facebook.logInWithReadPermissionsAsync(
-      "1487822177919606",
-      {
-        permissions: ["public_profile"],
-      }
-    );
+    const appId = "1487822177919606";
+    await Facebook.initializeAsync(appId);
+    const loginResponse = await Facebook.logInWithReadPermissionsAsync({
+      permissions: ["public_profile"],
+    });
 
     if (loginResponse.type === "success") {
       // Get the user's name using Facebook's Graph API.

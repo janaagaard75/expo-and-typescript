@@ -17,10 +17,6 @@ export class AssetScreen extends Component<{}, State> {
     this.loadAssets();
   }
 
-  public static navigationOptions = {
-    title: "Asset",
-  };
-
   public render() {
     if (!this.state.assetsLoaded) {
       return <Text>Loading assets...</Text>;

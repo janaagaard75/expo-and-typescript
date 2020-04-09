@@ -23,6 +23,9 @@
     "yarn": ">=1.1"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "0.1.6",
+    "@react-navigation/native": "5.1.5",
+    "@react-navigation/stack": "5.2.10",
     "expo": "^37.0.6",
     "expo-analytics-amplitude": "~8.1.0",
     "expo-asset": "~8.1.4",
@@ -32,6 +35,7 @@
     "expo-brightness": "~8.1.0",
     "expo-camera": "~8.2.0",
     "expo-constants": "~9.0.0",
+    "expo-facebook": "~8.1.0",
     "expo-font": "~8.1.1",
     "expo-linear-gradient": "~8.1.0",
     "expo-local-authentication": "~9.0.0",
@@ -43,16 +47,15 @@
     "react-native-gesture-handler": "~1.6.1",
     "react-native-maps": "0.26.1",
     "react-native-reanimated": "~1.7.1",
+    "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
     "react-native-svg": "11.0.1",
-    "react-navigation": "4.0.10",
-    "react-navigation-stack": "1.10.3",
     "tslib": "^1.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@types/expo__vector-icons": "^9.0.1",
-    "@types/react": "^16.9.32",
+    "@types/react": "^16.9.33",
     "@types/react-native": "^0.62.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
@@ -62,7 +65,7 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
-    "expo-cli": "^3.17.18",
+    "expo-cli": "^3.17.21",
     "prettier": "^2.0.4",
     "sharp-cli": "^1.13.1",
     "typescript": "^3.8.3"

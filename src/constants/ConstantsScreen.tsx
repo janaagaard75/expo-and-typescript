@@ -1,17 +1,24 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import Constants from "expo-constants";
 import React, { Component } from "react";
-import { Text, View } from "react-native";
-import { NavigationStackScreenProps } from "react-navigation-stack";
+import { Button, Text, View } from "react-native";
+
+type ConstantsStackParametersList = {
+  Manifest: undefined;
+  Platform: undefined;
+  SystemFonts: undefined;
+};
+
+interface Props {
+  navigation: StackNavigationProp<ConstantsStackParametersList>;
+}
 
 interface State {
   webViewUserAgent: string | null;
 }
 
-export class ConstantsScreen extends Component<
-  NavigationStackScreenProps,
-  State
-> {
-  constructor(props: NavigationStackScreenProps) {
+export class ConstantsScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -20,10 +27,6 @@ export class ConstantsScreen extends Component<
 
     this.updateWebViewUserAgent();
   }
-
-  public static navigationOptions = {
-    title: "Constants",
-  };
 
   public render() {
     const navigate = this.props.navigation.navigate;
@@ -35,6 +38,12 @@ export class ConstantsScreen extends Component<
           padding: 10,
         }}
       >
+        <Button
+          onPress={() => this.props.navigation.navigate("Manifest")}
+          title="Manifest"
+        />
+        <Button onPress={() => navigate("Platform")} title="Platform" />
+        <Button onPress={() => navigate("SystemFonts")} title="System Fonts" />
         <Text>appOwnership: "{Constants.appOwnership}"</Text>
         <Text>deviceId: "{Constants.deviceId}"</Text>
         <Text>deviceName: "{Constants.deviceName}"</Text>
@@ -42,17 +51,8 @@ export class ConstantsScreen extends Component<
         <Text>expoVersion: "{Constants.expoVersion}"</Text>
         <Text>isDevice: {Constants.isDevice}</Text>
         <Text>linkingUri: "{Constants.linkingUri}"</Text>
-        <Text onPress={() => navigate("Manifest")}>
-          manifest: (Click to see)
-        </Text>
-        <Text onPress={() => navigate("Platform")}>
-          platform: (Click to see)
-        </Text>
         <Text>sessionId: "{Constants.sessionId}"</Text>
         <Text>statusBarHeight: {Constants.statusBarHeight}</Text>
-        <Text onPress={() => navigate("SystemFonts")}>
-          systemFonts: (Click to see)
-        </Text>
         <Text>webViewUserAgent: "{this.state.webViewUserAgent}"</Text>
       </View>
     );

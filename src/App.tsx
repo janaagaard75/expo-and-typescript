@@ -23,7 +23,7 @@ import { VectorIconsScreen } from "./VectorIconsScreen";
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -125,4 +125,4 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};

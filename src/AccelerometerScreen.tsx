@@ -44,27 +44,34 @@ export class AccelerometerScreen extends Component<{}, State> {
     return (
       <View
         style={{
-          backgroundColor: "#fff",
-          marginTop: 15,
           paddingHorizontal: 10,
         }}
       >
-        <Text>Accelerometer:</Text>
-        <Text>
-          x: {x} y: {y} z: {z}
-        </Text>
+        <View
+          style={{
+            alignItems: "stretch",
+            alignSelf: "center",
+            flexDirection: "row",
+            marginBottom: 15,
+            marginTop: 15,
+            width: 200,
+          }}
+        >
+          <Text style={{ flex: 1 }}>x: {x}</Text>
+          <Text style={{ flex: 1 }}>y: {y}</Text>
+          <Text style={{ flex: 1 }}>z: {z}</Text>
+        </View>
         <View
           style={{
             alignItems: "stretch",
             flexDirection: "row",
-            marginTop: 15,
           }}
         >
           <TouchableOpacity
             onPress={() => this.toggleSubscription()}
             style={this.styles.button}
           >
-            <Text>Pause</Text>
+            <Text>Play/Pause</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => this.slow()}
@@ -86,7 +93,6 @@ export class AccelerometerScreen extends Component<{}, State> {
   private styles = StyleSheet.create({
     button: {
       alignItems: "center",
-      backgroundColor: "#eee",
       flex: 1,
       justifyContent: "center",
       padding: 10,

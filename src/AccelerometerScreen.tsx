@@ -23,7 +23,7 @@ export class AccelerometerScreen extends Component<{}, State> {
   private subscription: Subscription | undefined;
 
   public componentDidMount() {
-    this.toggleSubscription();
+    this.subscribe();
   }
 
   public componentWillUnmount() {

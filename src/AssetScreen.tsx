@@ -1,55 +1,42 @@
 import { Asset } from "expo-asset";
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Image, Text, View } from "react-native";
 
-interface State {
-  assetsLoaded: boolean;
-}
+export const AssetScreen = () => {
+  const [assetsLoaded, setAssetsLoaded] = useState(false);
 
-export class AssetScreen extends Component<{}, State> {
-  constructor(props: {}) {
-    super(props);
-
-    this.state = {
-      assetsLoaded: false,
+  useEffect(() => {
+    const loadAssets = async () => {
+      // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
+      await Asset.loadAsync(require("../assets/wtfs-per-minute.png"));
+      setAssetsLoaded(true);
     };
+    loadAssets();
+  }, []);
 
-    this.loadAssets();
+  if (!assetsLoaded) {
+    return <Text>Loading assets...</Text>;
   }
 
-  public render() {
-    if (!this.state.assetsLoaded) {
-      return <Text>Loading assets...</Text>;
-    }
-
-    return (
-      <View
+  return (
+    <View
+      style={{
+        alignItems: "center",
+        backgroundColor: "#fff",
+        flex: 1,
+        justifyContent: "center",
+      }}
+    >
+      <Image
+        resizeMode="contain"
+        source={require("../assets/wtfs-per-minute.png")}
         style={{
-          alignItems: "center",
-          backgroundColor: "#fff",
+          alignSelf: "stretch",
           flex: 1,
-          justifyContent: "center",
+          height: undefined,
+          width: undefined,
         }}
-      >
-        <Image
-          resizeMode="contain"
-          source={require("../assets/wtfs-per-minute.png")}
-          style={{
-            alignSelf: "stretch",
-            flex: 1,
-            height: undefined,
-            width: undefined,
-          }}
-        />
-      </View>
-    );
-  }
-
-  private async loadAssets() {
-    // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
-    await Asset.loadAsync(require("../assets/wtfs-per-minute.png"));
-    this.setState({
-      assetsLoaded: true,
-    });
-  }
-}
+      />
+    </View>
+  );
+};

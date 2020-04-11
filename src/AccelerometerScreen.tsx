@@ -1,8 +1,7 @@
 import { Subscription } from "@unimodules/core";
-import { Accelerometer } from "expo-sensors";
+import { Accelerometer, ThreeAxisMeasurement } from "expo-sensors";
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
   accelerometerData: ThreeAxisMeasurement;
@@ -24,7 +23,7 @@ export class AccelerometerScreen extends Component<{}, State> {
   private subscription: Subscription | undefined;
 
   public componentDidMount() {
-    this.toggleSubscription();
+    this.subscribe();
   }
 
   public componentWillUnmount() {
@@ -45,27 +44,34 @@ export class AccelerometerScreen extends Component<{}, State> {
     return (
       <View
         style={{
-          backgroundColor: "#fff",
-          marginTop: 15,
           paddingHorizontal: 10,
         }}
       >
-        <Text>Accelerometer:</Text>
-        <Text>
-          x: {x} y: {y} z: {z}
-        </Text>
+        <View
+          style={{
+            alignItems: "stretch",
+            alignSelf: "center",
+            flexDirection: "row",
+            marginBottom: 15,
+            marginTop: 15,
+            width: 200,
+          }}
+        >
+          <Text style={{ flex: 1 }}>x: {x}</Text>
+          <Text style={{ flex: 1 }}>y: {y}</Text>
+          <Text style={{ flex: 1 }}>z: {z}</Text>
+        </View>
         <View
           style={{
             alignItems: "stretch",
             flexDirection: "row",
-            marginTop: 15,
           }}
         >
           <TouchableOpacity
             onPress={() => this.toggleSubscription()}
             style={this.styles.button}
           >
-            <Text>Pause</Text>
+            <Text>Play/Pause</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => this.slow()}
@@ -87,7 +93,6 @@ export class AccelerometerScreen extends Component<{}, State> {
   private styles = StyleSheet.create({
     button: {
       alignItems: "center",
-      backgroundColor: "#eee",
       flex: 1,
       justifyContent: "center",
       padding: 10,
@@ -108,7 +113,8 @@ export class AccelerometerScreen extends Component<{}, State> {
   }
 
   private fast() {
-    Accelerometer.setUpdateInterval(16);
+    const framesPerSecond = 60;
+    Accelerometer.setUpdateInterval(Math.floor(1000 / framesPerSecond));
   }
 
   private slow() {

@@ -113,7 +113,8 @@ export class AccelerometerScreen extends Component<{}, State> {
   }
 
   private fast() {
-    Accelerometer.setUpdateInterval(16);
+    const framesPerSecond = 60;
+    Accelerometer.setUpdateInterval(Math.floor(1000 / framesPerSecond));
   }
 
   private slow() {

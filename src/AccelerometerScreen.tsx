@@ -1,8 +1,7 @@
 import { Subscription } from "@unimodules/core";
-import { Accelerometer } from "expo-sensors";
+import { Accelerometer, ThreeAxisMeasurement } from "expo-sensors";
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { ThreeAxisMeasurement } from "./ThreeAxisMeasurement";
 
 interface State {
   accelerometerData: ThreeAxisMeasurement;

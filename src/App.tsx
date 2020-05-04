@@ -4,6 +4,7 @@ import React from "react";
 import { AccelerometerScreen } from "./AccelerometerScreen";
 import { AmplitudeScreen } from "./AmplitudeScreen";
 import { AssetScreen } from "./AssetScreen";
+import { AudioScreen } from "./AudioScreen";
 import { BarCodeScannerScreen } from "./BarCodeScannerScreen";
 import { BlurViewScreen } from "./BlurViewScreen";
 import { BrightnessScreen } from "./BrightnessScreen";
@@ -47,6 +48,11 @@ export const App = () => {
           name="Asset"
           component={AssetScreen}
           options={{ title: "Asset" }}
+        />
+        <Stack.Screen
+          name="Audio"
+          component={AudioScreen}
+          options={{ title: "Audio" }}
         />
         <Stack.Screen
           name="BarCodeScanner"

@@ -1,12 +1,12 @@
 # React Native using Expo and Typescript
 
-<img src="https://github.com/janaagaard75/expo-and-typescript/raw/master/assets/app-icon.png" height="50">
+<img src="../../raw/master/assets/app-icon.png" height="50">
 
 This is a [React Native](https://facebook.github.io/react-native/) demo app using the [Expo framework](https://expo.io) and written in [TypeScript](http://www.typescriptlang.org).
 
 This repo used to also contain a type definition file for Expo. That work was merged into the [`@types/expo`](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/expo) package. `@types/expo` is now deprecated in favor of definition types includes with the `expo` package. TypeScript FTW!
 
-![Screen shot](https://github.com/janaagaard75/expo-and-typescript/raw/master/screen-shot.png)
+![Screen shot](../../raw/master/screen-shot.png)
 
 ## Prerequisites
 

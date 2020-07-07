@@ -2,8 +2,10 @@ import * as Amplitude from "expo-analytics-amplitude";
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
-export class AmplitudeScreen extends Component {
-  constructor(props: {}) {
+interface Props {}
+
+export class AmplitudeScreen extends Component<Props> {
+  constructor(props: Props) {
     super(props);
 
     Amplitude.initialize("31ef1b42450bb6c4372b30524c69b9a9");

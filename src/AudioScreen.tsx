@@ -2,12 +2,14 @@ import { Audio } from "expo-av";
 import React, { Component } from "react";
 import { Linking, Text, View } from "react-native";
 
+interface Props {}
+
 interface State {
   soundLoaded: boolean;
 }
 
-export class AudioScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class AudioScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

@@ -2,13 +2,15 @@ import * as Brightness from "expo-brightness";
 import React, { Component } from "react";
 import { Button, Text, View } from "react-native";
 
+interface Props {}
+
 interface State {
   normalBrightness: number | undefined;
   systemBrightness: number | undefined;
 }
 
-export class BrightnessScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class BrightnessScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

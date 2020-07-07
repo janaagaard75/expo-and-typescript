@@ -2,12 +2,14 @@ import * as Font from "expo-font";
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
+interface Props {}
+
 interface State {
   fontLoaded: boolean;
 }
 
-export class FontScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class FontScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

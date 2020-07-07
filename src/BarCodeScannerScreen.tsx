@@ -3,6 +3,8 @@ import * as Permissions from "expo-permissions";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+interface Props {}
+
 enum PermissionState {
   Unknown,
   Denied,
@@ -14,8 +16,8 @@ interface State {
   scannedText: string;
 }
 
-export class BarCodeScannerScreen extends React.Component<{}, State> {
-  constructor(props: {}) {
+export class BarCodeScannerScreen extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

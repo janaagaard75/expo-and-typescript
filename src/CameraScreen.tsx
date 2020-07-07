@@ -3,13 +3,15 @@ import * as Permissions from "expo-permissions";
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
+interface Props {}
+
 interface State {
   cameraType: string;
   hasPermissionToCamera: boolean | undefined;
 }
 
-export class CameraScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class CameraScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

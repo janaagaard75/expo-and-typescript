@@ -2,14 +2,16 @@ import * as LocalAuthentication from "expo-local-authentication";
 import React, { Component } from "react";
 import { Button, Text, View } from "react-native";
 
+interface Props {}
+
 interface State {
   authenticated: boolean;
   authenticationError: string;
   hasHardware: boolean | undefined;
 }
 
-export class LocalAuthenticationScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class LocalAuthenticationScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

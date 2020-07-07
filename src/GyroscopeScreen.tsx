@@ -3,12 +3,14 @@ import { Gyroscope, ThreeAxisMeasurement } from "expo-sensors";
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View, ViewStyle } from "react-native";
 
+interface Props {}
+
 interface State {
   gyroscopeData: ThreeAxisMeasurement;
 }
 
-export class GyroscopeScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class GyroscopeScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

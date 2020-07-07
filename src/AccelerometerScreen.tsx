@@ -3,12 +3,14 @@ import { Accelerometer, ThreeAxisMeasurement } from "expo-sensors";
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+interface Props {}
+
 interface State {
   accelerometerData: ThreeAxisMeasurement;
 }
 
-export class AccelerometerScreen extends Component<{}, State> {
-  constructor(props: {}) {
+export class AccelerometerScreen extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

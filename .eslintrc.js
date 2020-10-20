@@ -26,9 +26,16 @@ module.exports = {
         readonly: "generic",
       },
     ],
-    "@typescript-eslint/explicit-module-boundary-types": "off", // Mandatory return types clutters the code too much.
-    "@typescript-eslint/no-empty-interface": "off", // Allow empty Props interfaces.
-    "@typescript-eslint/no-var-requires": "off", // Used when importing assets.
-    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }], // Allow unescaped single and double quotes.
+    // Mandatory return types clutters the code too much.
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    // Allow empty Props interfaces.
+    "@typescript-eslint/no-empty-interface": "off",
+
+    // Used when importing assets.
+    "@typescript-eslint/no-var-requires": "off",
+
+    // Allow unescaped single and double quotes.
+    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
   },
 };

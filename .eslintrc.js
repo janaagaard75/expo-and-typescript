@@ -1,6 +1,7 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
+    "eslint:all",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -37,5 +38,17 @@ module.exports = {
 
     // Allow unescaped single and double quotes.
     "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+
+    "class-methods-use-this": "off",
+    "id-length": "off",
+    "max-lines-per-function": "off",
+    "no-invalid-this": "off",
+    "no-magic-numbers": "off",
+    "no-ternary": "off",
+    "no-undefined": "off",
+    "one-var": "off",
+    "prefer-destructuring": "off",
+    "sort-imports": "off",
+    "sort-keys": "off",
   },
 };

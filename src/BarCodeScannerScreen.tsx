@@ -63,6 +63,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
         );
 
       default:
+        // eslint-disable-next-line no-case-declarations
         const _: never = this.state.cameraPermission;
         return _;
     }

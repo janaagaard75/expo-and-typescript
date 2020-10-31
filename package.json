@@ -41,7 +41,6 @@
     "expo-local-authentication": "~9.3.0",
     "expo-permissions": "~9.3.0",
     "expo-sensors": "~9.1.0",
-    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
     "react-native-gesture-handler": "~1.7.0",
@@ -53,7 +52,6 @@
     "tslib": "^2.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
     "@types/expo__vector-icons": "^9.0.1",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
@@ -67,7 +65,6 @@
     "eslint-plugin-react": "^7.20.6",
     "expo-cli": "^3.24.2",
     "prettier": "^2.0.5",
-    "sharp-cli": "^1.14.1",
     "typescript": "~3.9.2"
   }
 }

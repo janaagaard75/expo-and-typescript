@@ -41,7 +41,7 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 
 Known packages: `@unimodules/core, expo-analytics-amplitude, expo-asset, expo-av, expo-barcode-scanner, expo-blur, expo-brightness, expo-camera, expo-constants, expo-facebook, expo-font, expo-linear-gradient, expo-local-authentication, expo-permissions, expo-sensors, react-native-gesture-handler, react-native-maps, react-native-reanimated, react-native-screens, react-native-svg, react-native-safe-area-context, @react-native-community/masked-view, react-native, react, typescript, @types/react, babel-preset-expo, @types/react-native, expo`
 
-Unknown packages: `@react-navigation/native, @react-navigation/stack, prop-types, tslib, @babel/core, @types/expo__vector-icons, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint, eslint-config-prettier, eslint-plugin-prettier, eslint-plugin-react, expo-cli, prettier, sharp-cli`.
+Unknown packages: `@react-navigation/native, @react-navigation/stack, tslib, @types/expo__vector-icons, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint, eslint-config-prettier, eslint-plugin-prettier, eslint-plugin-react, expo-cli, prettier`.
 
 ## Troubleshooting
 

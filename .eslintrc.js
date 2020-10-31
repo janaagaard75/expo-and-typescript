@@ -50,6 +50,9 @@ module.exports = {
     // Forbid reassigning parameters.
     "no-param-reassign": "error",
 
+    // Do not allow unused expressions.
+    "no-unused-expressions": "error",
+
     // Prefer const over let.
     "prefer-const": "error",
 

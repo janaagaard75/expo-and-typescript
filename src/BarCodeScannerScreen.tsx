@@ -1,6 +1,6 @@
 import { BarCodeScanner } from "expo-barcode-scanner";
 import * as Permissions from "expo-permissions";
-import React from "react";
+import React, { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 interface Props {}
@@ -34,7 +34,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
     });
   }
 
-  public render() {
+  public render(): ReactNode {
     switch (this.state.cameraPermission) {
       case PermissionState.Unknown:
         return <Text>Requesting for camera permission.</Text>;
@@ -61,10 +61,6 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
             </View>
           </View>
         );
-
-      default:
-        const _: never = this.state.cameraPermission;
-        return _;
     }
   }
 

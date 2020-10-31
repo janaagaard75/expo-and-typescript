@@ -10,13 +10,17 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
   },
   settings: {
     react: {
       version: "detect",
     },
+  },
+  env: {
+    es2020: true,
+    node: true,
   },
   rules: {
     // Use Array<> and ReadonlyArray<> syntax in types.

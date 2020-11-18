@@ -21,7 +21,7 @@ export class FontScreen extends Component<Props, State> {
 
   private async loadFont() {
     await Font.loadAsync({
-      "PokerKings-regular": require("../assets/PokerKings-Regular.ttf"),
+      "PokerKings-regular": require("../../assets/PokerKings-Regular.ttf"),
     });
 
     this.setState({

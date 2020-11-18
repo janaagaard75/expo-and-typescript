@@ -5894,6 +5894,11 @@ expo-analytics-amplitude@~8.3.1:
   resolved "https://registry.yarnpkg.com/expo-analytics-amplitude/-/expo-analytics-amplitude-8.3.1.tgz#7e2622a3b156005586ee5ec529746b29b8665cf9"
   integrity sha512-BW7sORrB/AZRsGViNwE2triJyf/Sgp5hiobDaA1rQKkWjzWu6YqQ4WdvY+nBt3aQyShG6+ctaRgCPl+Qkm9enA==
 
+expo-apple-authentication@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/expo-apple-authentication/-/expo-apple-authentication-2.2.1.tgz#4f515183a385bb2681d8f7bf1064251016d05b97"
+  integrity sha512-BD4tKhoUWm99RTbFjf8IZo/CIOKFhjUej54mci1djOao770TVXl4Eq8IYDgwHEqK5v8UAySVwxAzgJBmQl9XIw==
+
 expo-asset@~8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-8.2.0.tgz#2f72491064c02d4de32e9187d474deb9cec33003"

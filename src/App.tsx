@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import { AccelerometerScreen } from "./demoScreens/AccelerometerScreen";
 import { AmplitudeScreen } from "./demoScreens/AmplitudeScreen";
+import { AppleAuthenticationScreen } from "./demoScreens/AppleAuthenticationScreen";
 import { AssetScreen } from "./demoScreens/AssetScreen";
 import { AudioScreen } from "./demoScreens/AudioScreen";
 import { BarCodeScannerScreen } from "./demoScreens/BarCodeScannerScreen";
@@ -43,6 +44,11 @@ export const App = () => {
           name="Amplitude"
           component={AmplitudeScreen}
           options={{ title: "Amplitude" }}
+        />
+        <Stack.Screen
+          name="AppleAuthentication"
+          component={AppleAuthenticationScreen}
+          options={{ title: "Apple Authentication" }}
         />
         <Stack.Screen
           name="Asset"

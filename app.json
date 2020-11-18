@@ -19,7 +19,8 @@
     },
     "assetBundlePatterns": ["assets/**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "usesAppleSignIn": true
     },
     "githubUrl": "https://github.com/janaagaard75/expo-and-typescript"
   }

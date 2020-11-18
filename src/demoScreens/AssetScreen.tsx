@@ -7,7 +7,7 @@ export const AssetScreen = () => {
 
   useEffect(() => {
     const loadAssets = async () => {
-      // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
+      // Preloading is only required for published apps. This app isn't published, so this code has not been tested.
       await Asset.loadAsync(require("../../assets/wtfs-per-minute.png"));
       setAssetsLoaded(true);
     };

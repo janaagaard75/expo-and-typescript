@@ -8,7 +8,7 @@ export const AssetScreen = () => {
   useEffect(() => {
     const loadAssets = async () => {
       // This is only required when the app has been published. This app isn't published, so this code hasn't been tested, and it might not be correct.
-      await Asset.loadAsync(require("../assets/wtfs-per-minute.png"));
+      await Asset.loadAsync(require("../../assets/wtfs-per-minute.png"));
       setAssetsLoaded(true);
     };
     loadAssets();
@@ -29,7 +29,7 @@ export const AssetScreen = () => {
     >
       <Image
         resizeMode="contain"
-        source={require("../assets/wtfs-per-minute.png")}
+        source={require("../../assets/wtfs-per-minute.png")}
         style={{
           alignSelf: "stretch",
           flex: 1,

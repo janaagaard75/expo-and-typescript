@@ -52,7 +52,7 @@ export class AudioScreen extends Component<Props, State> {
 
   private async playSound() {
     await Audio.Sound.createAsync(
-      require("../assets/bensound-thejazzpiano.mp3"),
+      require("../../assets/bensound-thejazzpiano.mp3"),
       { shouldPlay: true }
     );
 

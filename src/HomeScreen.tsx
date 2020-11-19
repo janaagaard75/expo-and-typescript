@@ -5,6 +5,7 @@ import { Button, ScrollView } from "react-native";
 type HomeStackParametersList = {
   Accelerometer: undefined;
   Amplitude: undefined;
+  AppleAuthentication: undefined;
   Asset: undefined;
   Audio: undefined;
   BarCodeScanner: undefined;
@@ -33,7 +34,6 @@ export class HomeScreen extends Component<Props> {
     return (
       <ScrollView
         style={{
-          backgroundColor: "#fff",
           flex: 1,
         }}
       >
@@ -42,6 +42,10 @@ export class HomeScreen extends Component<Props> {
           title={"Accelerometer"}
         />
         <Button onPress={() => navigate("Amplitude")} title={"Amplitude"} />
+        <Button
+          onPress={() => navigate("AppleAuthentication")}
+          title={"Apple Authentication"}
+        />
         <Button onPress={() => navigate("Asset")} title={"Asset"} />
         <Button onPress={() => navigate("Audio")} title={"Audio"} />
         <Button

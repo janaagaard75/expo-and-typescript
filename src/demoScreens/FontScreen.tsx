@@ -38,7 +38,6 @@ export class FontScreen extends Component<Props, State> {
       <View
         style={{
           alignItems: "center",
-          backgroundColor: "#fff",
           flex: 1,
           justifyContent: "center",
         }}

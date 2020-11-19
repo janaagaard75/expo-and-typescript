@@ -27,6 +27,7 @@
     "@react-navigation/stack": "^5.12.6",
     "expo": "^39.0.4",
     "expo-analytics-amplitude": "~8.3.1",
+    "expo-apple-authentication": "2.2.1",
     "expo-asset": "~8.2.0",
     "expo-av": "~8.6.0",
     "expo-barcode-scanner": "~9.0.0",

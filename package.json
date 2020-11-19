@@ -15,7 +15,7 @@
     "ios": "yarn run start --ios",
     "lint": "eslint --format unix \"**/*.ts\" \"**/*.tsx\"",
     "start": "yarn install && expo start",
-    "validate": "yarn install && yarn run lint && yarn run check-types"
+    "validate": "yarn install --frozen-lockfile && yarn run lint && yarn run check-types"
   },
   "engines": {
     "node": ">=10",

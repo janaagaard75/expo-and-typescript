@@ -8,6 +8,25 @@ export const AppleAuthenticationScreen: FunctionComponent = () => {
     AppleAuthenticationCredential | undefined
   >(undefined);
 
+  const signIn = async () => {
+    try {
+      setIdentity(
+        await AppleAuthentication.signInAsync({
+          requestedScopes: [
+            AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+            AppleAuthentication.AppleAuthenticationScope.EMAIL,
+          ],
+        })
+      );
+    } catch (error) {
+      if (error.code === "ERR_CANCELED") {
+        console.info("The user cancelled in the sign in.", error);
+      } else {
+        console.info("An error occurred signing in.", error);
+      }
+    }
+  };
+
   return (
     <ScrollView>
       <View
@@ -20,24 +39,7 @@ export const AppleAuthenticationScreen: FunctionComponent = () => {
           buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.BLACK}
           buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
           cornerRadius={5}
-          onPress={async () => {
-            try {
-              setIdentity(
-                await AppleAuthentication.signInAsync({
-                  requestedScopes: [
-                    AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
-                    AppleAuthentication.AppleAuthenticationScope.EMAIL,
-                  ],
-                })
-              );
-            } catch (error) {
-              if (error.code === "ERR_CANCELED") {
-                console.info("The user cancelled in the sign in.", error);
-              } else {
-                console.info("An error occurred signing in.", error);
-              }
-            }
-          }}
+          onPress={signIn}
           style={{ height: 44, marginTop: 100, width: 200 }}
         />
 

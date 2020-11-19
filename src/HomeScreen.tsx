@@ -33,7 +33,6 @@ export class HomeScreen extends Component<Props> {
     return (
       <ScrollView
         style={{
-          backgroundColor: "#fff",
           flex: 1,
         }}
       >

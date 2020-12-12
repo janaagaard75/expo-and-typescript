@@ -39,7 +39,7 @@ yarn ios
 
 When upgrading Expo, `expo-cli` will also upgrade the versions of all the package that it knows about. This list naturally includes all the `expo-` packages, but also a few more. Do not change the version numbers of the known packages. Unknown packages may be upgraded. More info in my blog post [Upgrade an Expo App](https://janaagaard.com/blog/2020-05-04-upgrading-an-expo-app).
 
-Known packages: `@unimodules/core, expo-analytics-amplitude, expo-asset, expo-av, expo-barcode-scanner, expo-blur, expo-brightness, expo-camera, expo-constants, expo-facebook, expo-font, expo-linear-gradient, expo-local-authentication, expo-permissions, expo-sensors, react-native-gesture-handler, react-native-maps, react-native-reanimated, react-native-screens, react-native-svg, react-native-safe-area-context, @react-native-community/masked-view, react-native, react, typescript, @types/react, babel-preset-expo, @types/react-native, expo`
+Known packages: `@unimodules/core, expo-analytics-amplitude, expo-apple-authentication, expo-asset, expo-av, expo-barcode-scanner, expo-blur, expo-brightness, expo-camera, expo-constants, expo-facebook, expo-font, expo-linear-gradient, expo-local-authentication, expo-permissions, expo-sensors, react-native-gesture-handler, react-native-maps, react-native-reanimated, react-native-screens, react-native-svg, react-native-safe-area-context, @react-native-community/masked-view, react-native, react, typescript, @types/react, babel-preset-expo, @types/react-native, expo`.
 
 Unknown packages: `@react-navigation/native, @react-navigation/stack, tslib, @types/expo__vector-icons, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint, eslint-config-prettier, eslint-plugin-prettier, eslint-plugin-react, expo-cli, prettier`.
 

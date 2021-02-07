@@ -52,7 +52,6 @@
     "tslib": "^2.0.3"
   },
   "devDependencies": {
-    "@types/expo__vector-icons": "^9.0.1",
     "@types/react": "~16.9.56",
     "@types/react-native": "~0.63.43",
     "@typescript-eslint/eslint-plugin": "^4.11.1",

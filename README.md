@@ -79,7 +79,7 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | eslint-config-prettier              |        | Prettier rules for ESLint.                            |
 | eslint-plugin-prettier              |        | Run prettier through ESLint. TODO: Is this used?      |
 | eslint-plugin-react                 |        | React rules for ESLint.                               |
-| expo-cli                            |        | Included to ensure everybody has the same version.    |
+| expo-cli                            |        | Ensure everybody has the same version.                |
 | prettier                            |        | Format files.                                         |
 | typescript                          | Known  |                                                       |
 

@@ -35,13 +35,54 @@ If you're on a Mac and have Xcode installed, you can run the app using the iOS S
 yarn ios
 ```
 
-## Known and Unknown Packages
+## Packages
+
+List of the packages that this project uses. I really wish it was possible to write comments in `package.json`.
 
 When upgrading Expo, `expo-cli` will also upgrade the versions of all the package that it knows about. This list naturally includes all the `expo-` packages, but also a few more. Do not change the version numbers of the known packages. Unknown packages may be upgraded. More info in my blog post [Upgrade an Expo App](https://janaagaard.com/blog/2020-05-04-upgrading-an-expo-app).
 
-Known packages: `@unimodules/core, expo-analytics-amplitude, expo-apple-authentication, expo-asset, expo-av, expo-barcode-scanner, expo-blur, expo-brightness, expo-camera, expo-constants, expo-facebook, expo-font, expo-linear-gradient, expo-local-authentication, expo-permissions, expo-sensors, react-native-gesture-handler, react-native-maps, react-native-reanimated, react-native-screens, react-native-svg, react-native-safe-area-context, @react-native-community/masked-view, react-native, react, typescript, @types/react, babel-preset-expo, @types/react-native, expo`.
-
-Unknown packages: `@react-navigation/native, @react-navigation/stack, tslib, @types/expo__vector-icons, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint, eslint-config-prettier, eslint-plugin-prettier, eslint-plugin-react, expo-cli, prettier`.
+| Package Name                        | Known? | Notes                                                 |
+| ----------------------------------- | ------ | ----------------------------------------------------- |
+| @react-native-community/masked-view | Known  | TODO: Where is this used?                             |
+| @react-navigation/native            |        | Used to navigate between screens.                     |
+| @react-navigation/stack             |        | Used to navigate between screen.                      |
+| expo                                | Known  |                                                       |
+| expo-analytics-amplitude            | Known  | Used by AmplitudeScreen.                              |
+| expo-apple-authentication           | Known  | Used by AppleAuthenticationScreen.                    |
+| expo-asset                          | Known  | Used by AssetsScreen. TODO: Used in other places too? |
+| expo-av                             | Known  | Used by AudioScreen.                                  |
+| expo-barcode-scanner                | Known  | Used by BarCodeScannerScreen.                         |
+| expo-blur                           | Known  | Used by BlurScreen.                                   |
+| expo-brightness                     | Known  | Used by BrightnessScreen. Doesn't work on iOS.        |
+| expo-camera                         | Known  | Used by CameraScreen.                                 |
+| expo-constants                      | Known  | Used by the constants screens.                        |
+| expo-facebook                       | Known  | Used by FacebookScreen.                               |
+| expo-font                           | Known  | Used by FontScreen.                                   |
+| expo-linear-gradient                | Known  | Used by LinearGradientScreen.                         |
+| expo-local-authentication           | Known  | Used by LocalAuthenticationScreen.                    |
+| expo-permissions                    | Known  | Used by CameraScreen. TODO: Anywhere else?            |
+| expo-sensors                        | Known  | TODO: Where is this used?                             |
+| react                               | Known  |                                                       |
+| react-native                        | Known  |                                                       |
+| react-native-gesture-handler        | Known  | TODO: Where is this used?                             |
+| react-native-maps                   | Known  | Used by MapsViewScreen.                               |
+| react-native-reanimated             | Known  | TODO: Where is this used?                             |
+| react-native-safe-area-context      | Known  | TODO: Where is this used?                             |
+| react-native-screens                | Known  | TODO: Where is this used?                             |
+| react-native-svg                    | Known  | Used by SvgScreen.                                    |
+| @types/react                        | Known  |                                                       |
+| @types/react-native                 | Known  |                                                       |
+| @typescript-eslint/eslint-plugin    |        | Add TypeScript support to ESLint.                     |
+| @typescript-eslint/parser           |        | Add TypeScript support to ESLint.                     |
+| @unimodules/core                    | Known  | TODO: Is this package necessary?                      |
+| babel-preset-expo                   | Known  | Configure Babel for Expo.                             |
+| eslint                              |        |                                                       |
+| eslint-config-prettier              |        | Prettier rules for ESLint.                            |
+| eslint-plugin-prettier              |        | Run prettier through ESLint. TODO: Is this used?      |
+| eslint-plugin-react                 |        | React rules for ESLint.                               |
+| expo-cli                            |        | Included to ensure everybody has the same version.    |
+| prettier                            |        | Format files.                                         |
+| typescript                          | Known  |                                                       |
 
 ## Troubleshooting
 

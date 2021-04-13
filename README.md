@@ -74,7 +74,6 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | @types/react-native                 | Known  |                                                       |
 | @typescript-eslint/eslint-plugin    |        | Add TypeScript support to ESLint.                     |
 | @typescript-eslint/parser           |        | Add TypeScript support to ESLint.                     |
-| @unimodules/core                    | Known  | TODO: Is this package necessary?                      |
 | babel-preset-expo                   | Known  | Configure Babel for Expo.                             |
 | eslint                              |        |                                                       |
 | eslint-config-prettier              |        | Prettier rules for ESLint.                            |

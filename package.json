@@ -55,7 +55,6 @@
     "@types/react-native": "~0.63.52",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "@unimodules/core": "~6.0.0",
     "babel-preset-expo": "8.3.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^7.2.0",

@@ -45,7 +45,7 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | ----------------------------------- | ------ | ----------------------------------------------------- |
 | @react-native-community/masked-view | Known  | TODO: Where is this used?                             |
 | @react-navigation/native            |        | Used to navigate between screens.                     |
-| @react-navigation/stack             |        | Used to navigate between screen.                      |
+| @react-navigation/stack             |        | Used to navigate between screens.                     |
 | expo                                | Known  |                                                       |
 | expo-analytics-amplitude            | Known  | Used by AmplitudeScreen.                              |
 | expo-apple-authentication           | Known  | Used by AppleAuthenticationScreen.                    |

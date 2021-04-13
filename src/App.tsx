@@ -8,7 +8,6 @@ import { AssetScreen } from "./demoScreens/AssetScreen";
 import { AudioScreen } from "./demoScreens/AudioScreen";
 import { BarCodeScannerScreen } from "./demoScreens/BarCodeScannerScreen";
 import { BlurViewScreen } from "./demoScreens/BlurViewScreen";
-import { BrightnessScreen } from "./demoScreens/BrightnessScreen";
 import { CameraScreen } from "./demoScreens/CameraScreen";
 import { ConstantsScreen } from "./demoScreens/constants/ConstantsScreen";
 import { ManifestScreen } from "./demoScreens/constants/ManifestScreen";
@@ -69,11 +68,6 @@ export const App = () => {
           name="BlurView"
           component={BlurViewScreen}
           options={{ title: "Blur View" }}
-        />
-        <Stack.Screen
-          name="Brightness"
-          component={BrightnessScreen}
-          options={{ title: "Brightness" }}
         />
         <Stack.Screen
           name="Camera"

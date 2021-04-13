@@ -10,7 +10,6 @@ type HomeStackParametersList = {
   Audio: undefined;
   BarCodeScanner: undefined;
   BlurView: undefined;
-  Brightness: undefined;
   Camera: undefined;
   Constants: undefined;
   Facebook: undefined;
@@ -53,7 +52,6 @@ export class HomeScreen extends Component<Props> {
           title={"Bar Code Scanner"}
         />
         <Button onPress={() => navigate("BlurView")} title={"Blur View"} />
-        <Button onPress={() => navigate("Brightness")} title={"Brightness"} />
         <Button onPress={() => navigate("Camera")} title={"Camera"} />
         <Button onPress={() => navigate("Constants")} title={"Constants"} />
         <Button onPress={() => navigate("Facebook")} title={"Facebook"} />

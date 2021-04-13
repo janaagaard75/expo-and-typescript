@@ -90,6 +90,10 @@ If you have issues running the app it may help clearing the React Native package
 
 More tips found in [this thread on the Expo Forum](https://forums.expo.io/t/how-to-clear-the-react-native-packager/1352).
 
+## Automated Tests
+
+This project hasn't been set up with automated tests. The blog post [setting up tests for React-Native-Expo-Typescript] can probably help.
+
 ## Similar Projects
 
 - [expo-ts-example](https://github.com/dalcib/expo-ts-example), the basis for this project

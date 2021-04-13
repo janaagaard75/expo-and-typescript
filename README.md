@@ -53,7 +53,6 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | expo-av                             | Known  | Used by AudioScreen.                                  |
 | expo-barcode-scanner                | Known  | Used by BarCodeScannerScreen.                         |
 | expo-blur                           | Known  | Used by BlurScreen.                                   |
-| expo-brightness                     | Known  | Used by BrightnessScreen. Doesn't work on iOS.        |
 | expo-camera                         | Known  | Used by CameraScreen.                                 |
 | expo-constants                      | Known  | Used by the constants screens.                        |
 | expo-facebook                       | Known  | Used by FacebookScreen.                               |

@@ -25,7 +25,7 @@
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
-    "expo": "^41.0.0",
+    "expo": "^41.0.1",
     "expo-analytics-amplitude": "~10.1.0",
     "expo-apple-authentication": "~3.1.0",
     "expo-asset": "~8.3.1",
@@ -42,7 +42,7 @@
     "expo-sensors": "~10.1.2",
     "react": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.10.2",
+    "react-native-gesture-handler": "~1.10.3",
     "react-native-maps": "0.27.1",
     "react-native-reanimated": "~2.1.0",
     "react-native-safe-area-context": "3.2.0",
@@ -50,17 +50,17 @@
     "react-native-svg": "12.1.0"
   },
   "devDependencies": {
-    "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
+    "@types/react": "~16.9.56",
+    "@types/react-native": "~0.63.52",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-preset-expo": "8.3.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "expo-cli": "4.4.3",
     "prettier": "^2.2.1",
-    "typescript": "~4.0.0"
+    "typescript": "~4.0.7"
   }
 }

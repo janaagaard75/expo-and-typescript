@@ -1,4 +1,5 @@
 import { Camera } from "expo-camera";
+import { CameraType } from "expo-camera/build/Camera.types";
 import * as Permissions from "expo-permissions";
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
@@ -6,7 +7,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 interface Props {}
 
 interface State {
-  cameraType: string;
+  cameraType: keyof typeof CameraType;
   hasPermissionToCamera: boolean | undefined;
 }
 

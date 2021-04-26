@@ -6,7 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["esnext"],
+    "lib": ["ESNext"],
     "moduleResolution": "node",
     "noEmit": true,
     "noEmitHelpers": true,
@@ -16,6 +16,6 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "ESNext"
   }
 }

@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from "react-native";
 interface Props {}
 
 interface State {
-  cameraPermission: PermissionStatus;
+  cameraPermission: PermissionStatus | undefined;
   scannedText: string;
 }
 
@@ -22,17 +22,17 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
   public async componentDidMount() {
     const { status } = await BarCodeScanner.requestPermissionsAsync();
     this.setState({
-      cameraPermission:
-        status === PermissionStatus.GRANTED
-          ? PermissionStatus.GRANTED
-          : PermissionStatus.DENIED,
+      cameraPermission: status,
     });
   }
 
   public render(): ReactNode {
     switch (this.state.cameraPermission) {
-      case PermissionStatus.UNDETERMINED:
+      case undefined:
         return <Text>Requesting for camera permission.</Text>;
+
+      case PermissionStatus.UNDETERMINED:
+        return <Text>Could not determine if camera could be accessed.</Text>;
 
       case PermissionStatus.DENIED:
         return <Text>No access to the camera.</Text>;

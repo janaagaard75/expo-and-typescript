@@ -42,7 +42,7 @@
     "expo-sensors": "~10.1.2",
     "react": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.10.3",
+    "react-native-gesture-handler": "~1.10.2",
     "react-native-maps": "0.27.1",
     "react-native-reanimated": "~2.1.0",
     "react-native-safe-area-context": "3.2.0",
@@ -50,8 +50,8 @@
     "react-native-svg": "12.1.0"
   },
   "devDependencies": {
-    "@types/react": "~16.9.56",
-    "@types/react-native": "~0.63.52",
+    "@types/react": "~16.9.35",
+    "@types/react-native": "~0.63.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-preset-expo": "8.3.0",
@@ -61,6 +61,6 @@
     "eslint-plugin-react": "^7.23.2",
     "expo-cli": "^4.5.2",
     "prettier": "^2.2.1",
-    "typescript": "~4.0.7"
+    "typescript": "~4.0.0"
   }
 }

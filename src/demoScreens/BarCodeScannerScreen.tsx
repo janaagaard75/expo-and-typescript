@@ -49,7 +49,6 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
             </Text>
             <View style={{ flex: 1 }}>
               <BarCodeScanner
-                barCodeTypes={[BarCodeScanner.Constants.BarCodeType.qr]}
                 onBarCodeScanned={this.handleBarCodeScanned}
                 style={StyleSheet.absoluteFill}
               />

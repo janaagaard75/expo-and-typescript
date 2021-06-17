@@ -1,5 +1,4 @@
 import { BarCodeScanner } from "expo-barcode-scanner";
-import * as Permissions from "expo-permissions";
 import React, { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -27,7 +26,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
   }
 
   public async componentDidMount() {
-    const { status } = await Permissions.askAsync(Permissions.CAMERA);
+    const { status } = await BarCodeScanner.requestPermissionsAsync();
     this.setState({
       cameraPermission:
         status === "granted" ? PermissionState.Granted : PermissionState.Denied,

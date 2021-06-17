@@ -59,7 +59,6 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | expo-font                           | Known  | Used by FontScreen.                              |
 | expo-linear-gradient                | Known  | Used by LinearGradientScreen.                    |
 | expo-local-authentication           | Known  | Used by LocalAuthenticationScreen.               |
-| expo-permissions                    | Known  | Used by BarCodeScannerScreen and CameraScreen.   |
 | expo-sensors                        | Known  | TODO: Where is this used?                        |
 | react                               | Known  |                                                  |
 | react-native                        | Known  |                                                  |

@@ -1,6 +1,5 @@
 import { Camera } from "expo-camera";
 import { CameraType } from "expo-camera/build/Camera.types";
-import * as Permissions from "expo-permissions";
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
@@ -22,7 +21,7 @@ export class CameraScreen extends Component<Props, State> {
   }
 
   public async componentDidMount() {
-    const { status } = await Permissions.askAsync(Permissions.CAMERA);
+    const { status } = await Camera.requestPermissionsAsync();
 
     this.setState({
       hasPermissionToCamera: status === "granted",

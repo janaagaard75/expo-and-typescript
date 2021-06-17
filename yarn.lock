@@ -5806,11 +5806,6 @@ expo-local-authentication@~11.0.2:
     "@expo/config-plugins" "^1.0.18"
     invariant "^2.2.4"
 
-expo-permissions@~12.0.1:
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-12.0.1.tgz#5163c00d991bf565bf987354611628c298ddd0c4"
-  integrity sha512-TtypNPPLG4SdVEKBlrArLLZIyhlhE+3B4dhz2HaY1Mve2rcvKE0C7z/e1WoUVU8+LgcdKoNGwg/wRVeCkxeEhg==
-
 expo-pwa@0.0.82:
   version "0.0.82"
   resolved "https://registry.yarnpkg.com/expo-pwa/-/expo-pwa-0.0.82.tgz#9e84995672e7abd340eaab4a7081c8d29577074a"

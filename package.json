@@ -38,7 +38,6 @@
     "expo-font": "~9.1.0",
     "expo-linear-gradient": "~9.1.0",
     "expo-local-authentication": "~11.0.2",
-    "expo-permissions": "~12.0.1",
     "expo-sensors": "~10.1.2",
     "react": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",

@@ -29,7 +29,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
   public render(): ReactNode {
     switch (this.state.cameraPermission) {
       case undefined:
-        return <Text>Requesting for camera permission.</Text>;
+        return <Text>Requesting permission to access camera.</Text>;
 
       case PermissionStatus.UNDETERMINED:
         return <Text>Could not determine if camera could be accessed.</Text>;

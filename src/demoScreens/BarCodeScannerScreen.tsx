@@ -45,7 +45,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
                 margin: 10,
               }}
             >
-              this.state.scannerStatus
+              {this.state.scannedText}
             </Text>
             <View style={{ flex: 1 }}>
               <BarCodeScanner

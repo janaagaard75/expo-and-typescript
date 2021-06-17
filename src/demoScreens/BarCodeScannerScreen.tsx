@@ -61,7 +61,7 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
 
   private handleBarCodeScanned = (event: { type: string; data: string }) => {
     this.setState({
-      scannedText: `A bar code of type ${event.type} with content '${event.data}' has been scanned.`,
+      scannedText: `Scanned a code of type ${event.type} with the content '${event.data}'.`,
     });
   };
 }

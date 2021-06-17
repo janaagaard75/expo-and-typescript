@@ -20,9 +20,9 @@ export class BarCodeScannerScreen extends React.Component<Props, State> {
   }
 
   public async componentDidMount() {
-    const { status } = await BarCodeScanner.requestPermissionsAsync();
+    const permissionResponse = await BarCodeScanner.requestPermissionsAsync();
     this.setState({
-      cameraPermission: status,
+      cameraPermission: permissionResponse.status,
     });
   }
 

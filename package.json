@@ -59,7 +59,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
-    "expo-cli": "4.4.3",
+    "expo-cli": "^4.5.2",
     "prettier": "^2.2.1",
     "typescript": "~4.0.7"
   }

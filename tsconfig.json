@@ -1,21 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "react-native",
     "lib": ["ESNext"],
-    "moduleResolution": "node",
-    "noEmit": true,
     "noEmitHelpers": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext"
+    "strict": true
   }
 }

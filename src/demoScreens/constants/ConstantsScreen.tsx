@@ -14,9 +14,8 @@ interface Props {
 }
 
 export const ConstantsScreen = (props: Props) => {
-  const [webViewUserAgent, setWebViewUserAgent] = useState<string>(
-    "(fetching...)"
-  );
+  const [webViewUserAgent, setWebViewUserAgent] =
+    useState<string>("(fetching...)");
 
   useEffect(() => {
     const updateWebViewUserAgent = async () => {

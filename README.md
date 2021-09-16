@@ -68,6 +68,7 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | react-native-safe-area-context      | Known  | TODO: Where is this used?                        |
 | react-native-screens                | Known  | TODO: Where is this used?                        |
 | react-native-svg                    | Known  | Used by SvgScreen.                               |
+| @babel/core                         | Known  | Peer dependency.                                 |
 | @types/react                        | Known  |                                                  |
 | @types/react-native                 | Known  |                                                  |
 | @typescript-eslint/eslint-plugin    |        | Add TypeScript support to ESLint.                |

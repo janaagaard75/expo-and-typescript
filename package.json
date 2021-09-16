@@ -49,6 +49,7 @@
     "react-native-svg": "12.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@types/react": "~16.9.56",
     "@types/react-native": "~0.63.52",
     "@typescript-eslint/eslint-plugin": "^4.27.0",

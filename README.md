@@ -43,7 +43,7 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 
 | Package Name                        | Known? | Notes                                            |
 | ----------------------------------- | ------ | ------------------------------------------------ |
-| @react-native-community/masked-view | Known  | TODO: Where is this used?                        |
+| @react-native-community/masked-view |        | TODO: Where is this used?                        |
 | @react-navigation/native            |        | Used to navigate between screens.                |
 | @react-navigation/stack             |        | Used to navigate between screens.                |
 | expo                                | Known  |                                                  |
@@ -59,14 +59,14 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | expo-font                           | Known  | Used by FontScreen.                              |
 | expo-linear-gradient                | Known  | Used by LinearGradientScreen.                    |
 | expo-local-authentication           | Known  | Used by LocalAuthenticationScreen.               |
-| expo-sensors                        | Known  | TODO: Where is this used?                        |
+| expo-sensors                        | Known  | Used by accelerometer and gyroscope.             |
 | react                               | Known  |                                                  |
 | react-native                        | Known  |                                                  |
 | react-native-gesture-handler        | Known  | TODO: Where is this used?                        |
 | react-native-maps                   | Known  | Used by MapsViewScreen.                          |
 | react-native-reanimated             | Known  | TODO: Where is this used?                        |
-| react-native-safe-area-context      | Known  | TODO: Where is this used?                        |
-| react-native-screens                | Known  | TODO: Where is this used?                        |
+| react-native-safe-area-context      | Known  | Use by react-navigation.                         |
+| react-native-screens                | Known  | Used by react-navigation.                        |
 | react-native-svg                    | Known  | Used by SvgScreen.                               |
 | @babel/core                         | Known  | Peer dependency.                                 |
 | @types/react                        | Known  |                                                  |
@@ -74,12 +74,12 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | @typescript-eslint/eslint-plugin    |        | Add TypeScript support to ESLint.                |
 | @typescript-eslint/parser           |        | Add TypeScript support to ESLint.                |
 | babel-preset-expo                   | Known  | Configure Babel for Expo.                        |
-| eslint                              |        |                                                  |
+| eslint                              |        | Linter.                                          |
 | eslint-config-prettier              |        | Prettier rules for ESLint.                       |
 | eslint-plugin-prettier              |        | Run prettier through ESLint. TODO: Is this used? |
 | eslint-plugin-react                 |        | React rules for ESLint.                          |
 | expo-cli                            |        | Ensure everybody has the same version.           |
-| prettier                            |        | Format files.                                    |
+| prettier                            |        | File formatter.                                  |
 | typescript                          | Known  |                                                  |
 
 ## Troubleshooting

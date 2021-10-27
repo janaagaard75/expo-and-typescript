@@ -54,6 +54,7 @@ export const CameraScreen = () => {
               style={{
                 color: "white",
                 fontSize: 18,
+                marginLeft: 5,
                 marginBottom: 10,
               }}
             >

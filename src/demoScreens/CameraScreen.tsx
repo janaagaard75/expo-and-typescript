@@ -1,80 +1,69 @@
 import { Camera, PermissionStatus } from "expo-camera";
 import { CameraType } from "expo-camera/build/Camera.types";
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
-interface Props {}
+export const CameraScreen = () => {
+  const [cameraType, setCameraType] = useState(CameraType.back);
+  const [hasPermissionToCamera, setHasPermissionToCamera] = useState<
+    boolean | undefined
+  >(undefined);
 
-interface State {
-  cameraType: keyof typeof CameraType;
-  hasPermissionToCamera: boolean | undefined;
-}
-
-export class CameraScreen extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-
-    this.state = {
-      cameraType: CameraType.back,
-      hasPermissionToCamera: undefined,
+  useEffect(() => {
+    const getPermission = async () => {
+      const { status } = await Camera.requestCameraPermissionsAsync();
+      setHasPermissionToCamera(status === PermissionStatus.GRANTED);
     };
+
+    getPermission();
+  }, []);
+
+  const toggleCameraType = () => {
+    setCameraType(
+      cameraType === CameraType.back ? CameraType.front : CameraType.back
+    );
+  };
+
+  if (hasPermissionToCamera === undefined) {
+    return <Text>Getting permission to access the camera.</Text>;
   }
 
-  public async componentDidMount() {
-    const { status } = await Camera.requestPermissionsAsync();
-
-    this.setState({
-      hasPermissionToCamera: status === PermissionStatus.GRANTED,
-    });
+  if (hasPermissionToCamera === false) {
+    return <Text>No access to the camera.</Text>;
   }
 
-  public render() {
-    if (this.state.hasPermissionToCamera === undefined) {
-      return <Text>Getting permission to access the camera.</Text>;
-    }
-
-    if (this.state.hasPermissionToCamera === false) {
-      return <Text>No access to the camera.</Text>;
-    }
-
-    return (
-      <View style={{ flex: 1 }}>
-        <Camera style={{ flex: 1 }} type={this.state.cameraType}>
-          <View
+  return (
+    <View style={{ flex: 1 }}>
+      <Camera style={{ flex: 1 }} type={cameraType}>
+        <View
+          style={{
+            backgroundColor: "transparent",
+            flex: 1,
+            flexDirection: "row",
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => toggleCameraType()}
             style={{
-              backgroundColor: "transparent",
-              flex: 1,
-              flexDirection: "row",
+              alignItems: "center",
+              alignSelf: "flex-end",
+              flex: 0.1,
             }}
           >
-            <TouchableOpacity
-              onPress={() => this.toggleCameraType()}
+            <Text
               style={{
-                alignItems: "center",
-                alignSelf: "flex-end",
-                flex: 0.1,
+                color: "white",
+                fontSize: 18,
+                marginLeft: 5,
+                marginBottom: 10,
               }}
             >
-              <Text
-                style={{
-                  color: "white",
-                  fontSize: 18,
-                  marginBottom: 10,
-                }}
-              >
-                {" "}
-                Flip{" "}
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </Camera>
-      </View>
-    );
-  }
-
-  private toggleCameraType() {
-    this.setState({
-      cameraType: this.state.cameraType === "back" ? "front" : "back",
-    });
-  }
-}
+              {" "}
+              Flip{" "}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </Camera>
+    </View>
+  );
+};

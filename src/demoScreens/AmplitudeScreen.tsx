@@ -1,35 +1,42 @@
 import * as Amplitude from "expo-analytics-amplitude";
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 
-interface Props {}
+export const AmplitudeScreen = () => {
+  const [isInitialized, setIsInitialized] = React.useState(false);
 
-export class AmplitudeScreen extends Component<Props> {
-  constructor(props: Props) {
-    super(props);
+  useEffect(() => {
+    const initializeAmplitude = async () => {
+      await Amplitude.initializeAsync("31ef1b42450bb6c4372b30524c69b9a9");
+      await Amplitude.setUserIdAsync("1");
+      await Amplitude.setUserPropertiesAsync({
+        age: 42,
+      });
+      setIsInitialized(true);
+    };
 
-    Amplitude.initialize("31ef1b42450bb6c4372b30524c69b9a9");
-    Amplitude.setUserId("1");
-    Amplitude.setUserProperties({
-      age: 42,
-    });
-  }
+    initializeAmplitude();
+  }, []);
 
-  public render() {
-    Amplitude.logEventWithProperties("OPEN_SCREEN", {
+  useEffect(() => {
+    if (!isInitialized) {
+      return;
+    }
+
+    Amplitude.logEventWithPropertiesAsync("OPEN_SCREEN", {
       screenName: "AmplitudeScreen",
     });
+  }, [isInitialized]);
 
-    return (
-      <View
-        style={{
-          alignItems: "center",
-          flex: 1,
-          justifyContent: "center",
-        }}
-      >
-        <Text>Logged an event to Amplitude.</Text>
-      </View>
-    );
-  }
-}
+  return (
+    <View
+      style={{
+        alignItems: "center",
+        flex: 1,
+        justifyContent: "center",
+      }}
+    >
+      <Text>Logged an event to Amplitude.</Text>
+    </View>
+  );
+};

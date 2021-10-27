@@ -1,4 +1,4 @@
-import { Subscription } from "@unimodules/core";
+import { Subscription } from "expo-modules-core";
 import { Gyroscope, ThreeAxisMeasurement } from "expo-sensors";
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View, ViewStyle } from "react-native";

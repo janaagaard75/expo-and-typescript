@@ -41,46 +41,45 @@ List of the packages that this project uses. I really wish it was possible to wr
 
 When upgrading Expo, `expo-cli` will also upgrade the versions of all the package that it knows about. This list naturally includes all the `expo-` packages, but also a few more. Do not change the version numbers of the known packages. Unknown packages may be upgraded. More info in my blog post [Upgrade an Expo App](https://janaagaard.com/blog/2020-05-04-upgrading-an-expo-app).
 
-| Package Name                        | Known? | Notes                                            |
-| ----------------------------------- | ------ | ------------------------------------------------ |
-| @react-native-community/masked-view |        | TODO: Where is this used?                        |
-| @react-navigation/native            |        | Used to navigate between screens.                |
-| @react-navigation/stack             |        | Used to navigate between screens.                |
-| expo                                | Known  |                                                  |
-| expo-analytics-amplitude            | Known  | Used by AmplitudeScreen.                         |
-| expo-apple-authentication           | Known  | Used by AppleAuthenticationScreen.               |
-| expo-asset                          | Known  | Used by AssetsScreen.                            |
-| expo-av                             | Known  | Used by AudioScreen.                             |
-| expo-barcode-scanner                | Known  | Used by BarCodeScannerScreen.                    |
-| expo-blur                           | Known  | Used by BlurScreen.                              |
-| expo-camera                         | Known  | Used by CameraScreen.                            |
-| expo-constants                      | Known  | Used by the constants screens.                   |
-| expo-facebook                       | Known  | Used by FacebookScreen.                          |
-| expo-font                           | Known  | Used by FontScreen.                              |
-| expo-linear-gradient                | Known  | Used by LinearGradientScreen.                    |
-| expo-local-authentication           | Known  | Used by LocalAuthenticationScreen.               |
-| expo-sensors                        | Known  | Used by accelerometer and gyroscope.             |
-| react                               | Known  |                                                  |
-| react-native                        | Known  |                                                  |
-| react-native-gesture-handler        | Known  | TODO: Where is this used?                        |
-| react-native-maps                   | Known  | Used by MapsViewScreen.                          |
-| react-native-reanimated             | Known  | TODO: Where is this used?                        |
-| react-native-safe-area-context      | Known  | Use by react-navigation.                         |
-| react-native-screens                | Known  | Used by react-navigation.                        |
-| react-native-svg                    | Known  | Used by SvgScreen.                               |
-| @babel/core                         | Known  | Peer dependency.                                 |
-| @types/react                        | Known  |                                                  |
-| @types/react-native                 | Known  |                                                  |
-| @typescript-eslint/eslint-plugin    |        | Add TypeScript support to ESLint.                |
-| @typescript-eslint/parser           |        | Add TypeScript support to ESLint.                |
-| babel-preset-expo                   | Known  | Configure Babel for Expo.                        |
-| eslint                              |        | Linter.                                          |
-| eslint-config-prettier              |        | Prettier rules for ESLint.                       |
-| eslint-plugin-prettier              |        | Run prettier through ESLint. TODO: Is this used? |
-| eslint-plugin-react                 |        | React rules for ESLint.                          |
-| expo-cli                            |        | Ensure everybody has the same version.           |
-| prettier                            |        | File formatter.                                  |
-| typescript                          | Known  |                                                  |
+| Package Name                     | Known? | Notes                                            |
+| -------------------------------- | ------ | ------------------------------------------------ |
+| @react-navigation/native         |        | Used to navigate between screens.                |
+| @react-navigation/stack          |        | Used to navigate between screens.                |
+| expo                             | Known  |                                                  |
+| expo-analytics-amplitude         | Known  | Used by AmplitudeScreen.                         |
+| expo-apple-authentication        | Known  | Used by AppleAuthenticationScreen.               |
+| expo-asset                       | Known  | Used by AssetsScreen.                            |
+| expo-av                          | Known  | Used by AudioScreen.                             |
+| expo-barcode-scanner             | Known  | Used by BarCodeScannerScreen.                    |
+| expo-blur                        | Known  | Used by BlurScreen.                              |
+| expo-camera                      | Known  | Used by CameraScreen.                            |
+| expo-constants                   | Known  | Used by the constants screens.                   |
+| expo-facebook                    | Known  | Used by FacebookScreen.                          |
+| expo-font                        | Known  | Used by FontScreen.                              |
+| expo-linear-gradient             | Known  | Used by LinearGradientScreen.                    |
+| expo-local-authentication        | Known  | Used by LocalAuthenticationScreen.               |
+| expo-sensors                     | Known  | Used by accelerometer and gyroscope.             |
+| react                            | Known  |                                                  |
+| react-native                     | Known  |                                                  |
+| react-native-gesture-handler     | Known  | TODO: Where is this used?                        |
+| react-native-maps                | Known  | Used by MapsViewScreen.                          |
+| react-native-reanimated          | Known  | TODO: Where is this used?                        |
+| react-native-safe-area-context   | Known  | Use by react-navigation.                         |
+| react-native-screens             | Known  | Used by react-navigation.                        |
+| react-native-svg                 | Known  | Used by SvgScreen.                               |
+| @babel/core                      | Known  | Peer dependency.                                 |
+| @types/react                     | Known  |                                                  |
+| @types/react-native              | Known  |                                                  |
+| @typescript-eslint/eslint-plugin |        | Add TypeScript support to ESLint.                |
+| @typescript-eslint/parser        |        | Add TypeScript support to ESLint.                |
+| babel-preset-expo                | Known  | Configure Babel for Expo.                        |
+| eslint                           |        | Linter.                                          |
+| eslint-config-prettier           |        | Prettier rules for ESLint.                       |
+| eslint-plugin-prettier           |        | Run prettier through ESLint. TODO: Is this used? |
+| eslint-plugin-react              |        | React rules for ESLint.                          |
+| expo-cli                         |        | Ensure everybody has the same version.           |
+| prettier                         |        | File formatter.                                  |
+| typescript                       | Known  |                                                  |
 
 ## Troubleshooting
 

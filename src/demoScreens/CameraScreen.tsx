@@ -74,7 +74,10 @@ export class CameraScreen extends Component<Props, State> {
 
   private toggleCameraType() {
     this.setState({
-      cameraType: this.state.cameraType === "back" ? "front" : "back",
+      cameraType:
+        this.state.cameraType === CameraType.back
+          ? CameraType.front
+          : CameraType.back,
     });
   }
 }

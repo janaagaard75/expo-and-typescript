@@ -21,7 +21,7 @@ export class CameraScreen extends Component<Props, State> {
   }
 
   public async componentDidMount() {
-    const { status } = await Camera.requestPermissionsAsync();
+    const { status } = await Camera.requestCameraPermissionsAsync();
 
     this.setState({
       hasPermissionToCamera: status === PermissionStatus.GRANTED,

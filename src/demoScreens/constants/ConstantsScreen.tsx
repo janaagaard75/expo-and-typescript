@@ -39,9 +39,7 @@ export const ConstantsScreen = (props: Props) => {
       <Button onPress={() => navigate("Platform")} title="Platform" />
       <Button onPress={() => navigate("SystemFonts")} title="System Fonts" />
       <Text>appOwnership: "{Constants.appOwnership}"</Text>
-      <Text>deviceId: "{Constants.deviceId}"</Text>
       <Text>deviceName: "{Constants.deviceName}"</Text>
-      <Text>deviceYearClass: {Constants.deviceYearClass}</Text>
       <Text>expoVersion: "{Constants.expoVersion}"</Text>
       <Text>isDevice: {Constants.isDevice.toString()}</Text>
       <Text>linkingUri: "{Constants.linkingUri}"</Text>

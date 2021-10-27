@@ -8,15 +8,15 @@ export class AmplitudeScreen extends Component<Props> {
   constructor(props: Props) {
     super(props);
 
-    Amplitude.initialize("31ef1b42450bb6c4372b30524c69b9a9");
-    Amplitude.setUserId("1");
-    Amplitude.setUserProperties({
+    Amplitude.initializeAsync("31ef1b42450bb6c4372b30524c69b9a9");
+    Amplitude.setUserIdAsync("1");
+    Amplitude.setUserPropertiesAsync({
       age: 42,
     });
   }
 
   public render() {
-    Amplitude.logEventWithProperties("OPEN_SCREEN", {
+    Amplitude.logEventWithPropertiesAsync("OPEN_SCREEN", {
       screenName: "AmplitudeScreen",
     });
 

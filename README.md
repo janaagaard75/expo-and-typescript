@@ -43,31 +43,9 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 
 | Package Name                     | Known? | Notes                                            |
 | -------------------------------- | ------ | ------------------------------------------------ |
+| @babel/core                      | Known  | Peer dependency.                                 |
 | @react-navigation/native         |        | Used to navigate between screens.                |
 | @react-navigation/stack          |        | Used to navigate between screens.                |
-| expo                             | Known  |                                                  |
-| expo-analytics-amplitude         | Known  | Used by AmplitudeScreen.                         |
-| expo-apple-authentication        | Known  | Used by AppleAuthenticationScreen.               |
-| expo-asset                       | Known  | Used by AssetsScreen.                            |
-| expo-av                          | Known  | Used by AudioScreen.                             |
-| expo-barcode-scanner             | Known  | Used by BarCodeScannerScreen.                    |
-| expo-blur                        | Known  | Used by BlurScreen.                              |
-| expo-camera                      | Known  | Used by CameraScreen.                            |
-| expo-constants                   | Known  | Used by the constants screens.                   |
-| expo-facebook                    | Known  | Used by FacebookScreen.                          |
-| expo-font                        | Known  | Used by FontScreen.                              |
-| expo-linear-gradient             | Known  | Used by LinearGradientScreen.                    |
-| expo-local-authentication        | Known  | Used by LocalAuthenticationScreen.               |
-| expo-sensors                     | Known  | Used by accelerometer and gyroscope.             |
-| react                            | Known  |                                                  |
-| react-native                     | Known  |                                                  |
-| react-native-gesture-handler     | Known  | TODO: Where is this used?                        |
-| react-native-maps                | Known  | Used by MapsViewScreen.                          |
-| react-native-reanimated          | Known  | TODO: Where is this used?                        |
-| react-native-safe-area-context   | Known  | Use by react-navigation.                         |
-| react-native-screens             | Known  | Used by react-navigation.                        |
-| react-native-svg                 | Known  | Used by SvgScreen.                               |
-| @babel/core                      | Known  | Peer dependency.                                 |
 | @types/react                     | Known  |                                                  |
 | @types/react-native              | Known  |                                                  |
 | @typescript-eslint/eslint-plugin |        | Add TypeScript support to ESLint.                |
@@ -77,8 +55,30 @@ When upgrading Expo, `expo-cli` will also upgrade the versions of all the packag
 | eslint-config-prettier           |        | Prettier rules for ESLint.                       |
 | eslint-plugin-prettier           |        | Run prettier through ESLint. TODO: Is this used? |
 | eslint-plugin-react              |        | React rules for ESLint.                          |
+| expo                             | Known  |                                                  |
+| expo-analytics-amplitude         | Known  | Used by AmplitudeScreen.                         |
+| expo-apple-authentication        | Known  | Used by AppleAuthenticationScreen.               |
+| expo-asset                       | Known  | Used by AssetsScreen.                            |
+| expo-av                          | Known  | Used by AudioScreen.                             |
+| expo-barcode-scanner             | Known  | Used by BarCodeScannerScreen.                    |
+| expo-blur                        | Known  | Used by BlurScreen.                              |
+| expo-camera                      | Known  | Used by CameraScreen.                            |
 | expo-cli                         |        | Ensure everybody has the same version.           |
+| expo-constants                   | Known  | Used by the constants screens.                   |
+| expo-facebook                    | Known  | Used by FacebookScreen.                          |
+| expo-font                        | Known  | Used by FontScreen.                              |
+| expo-linear-gradient             | Known  | Used by LinearGradientScreen.                    |
+| expo-local-authentication        | Known  | Used by LocalAuthenticationScreen.               |
+| expo-sensors                     | Known  | Used by accelerometer and gyroscope.             |
 | prettier                         |        | File formatter.                                  |
+| react                            | Known  |                                                  |
+| react-native                     | Known  |                                                  |
+| react-native-gesture-handler     | Known  | TODO: Where is this used?                        |
+| react-native-maps                | Known  | Used by MapsViewScreen.                          |
+| react-native-reanimated          | Known  | TODO: Where is this used?                        |
+| react-native-safe-area-context   | Known  | Use by react-navigation.                         |
+| react-native-screens             | Known  | Used by react-navigation.                        |
+| react-native-svg                 | Known  | Used by SvgScreen.                               |
 | typescript                       | Known  |                                                  |
 
 ## Troubleshooting

@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import Svg, { G, Path } from "react-native-svg";
 

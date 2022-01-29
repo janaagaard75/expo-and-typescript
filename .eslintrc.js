@@ -61,5 +61,8 @@ module.exports = {
 
     // Allow unescaped single and double quotes.
     "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+
+    // Turn off react-in-jsx-scope, because the rule doesn't seem to work with React 17's JSX.
+    "react/react-in-jsx-scope": "off",
   },
 };

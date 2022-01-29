@@ -1,5 +1,4 @@
 import { Ionicons } from "@expo/vector-icons";
-import React from "react";
 import { View } from "react-native";
 
 export const VectorIconsScreen = () => (

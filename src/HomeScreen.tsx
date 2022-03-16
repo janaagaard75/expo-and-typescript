@@ -40,23 +40,50 @@ export class HomeScreen extends Component<Props> {
           onPress={() => navigate("Accelerometer")}
           title={"Accelerometer"}
         />
-        <Button onPress={() => navigate("Amplitude")} title={"Amplitude"} />
+        <Button
+          onPress={() => navigate("Amplitude")}
+          title={"Amplitude"}
+        />
         <Button
           onPress={() => navigate("AppleAuthentication")}
           title={"Apple Authentication"}
         />
-        <Button onPress={() => navigate("Asset")} title={"Asset"} />
-        <Button onPress={() => navigate("Audio")} title={"Audio"} />
+        <Button
+          onPress={() => navigate("Asset")}
+          title={"Asset"}
+        />
+        <Button
+          onPress={() => navigate("Audio")}
+          title={"Audio"}
+        />
         <Button
           onPress={() => navigate("BarCodeScanner")}
           title={"Bar Code Scanner"}
         />
-        <Button onPress={() => navigate("BlurView")} title={"Blur View"} />
-        <Button onPress={() => navigate("Camera")} title={"Camera"} />
-        <Button onPress={() => navigate("Constants")} title={"Constants"} />
-        <Button onPress={() => navigate("Facebook")} title={"Facebook"} />
-        <Button onPress={() => navigate("Font")} title={"Font"} />
-        <Button onPress={() => navigate("Gyroscope")} title={"Gyroscope"} />
+        <Button
+          onPress={() => navigate("BlurView")}
+          title={"Blur View"}
+        />
+        <Button
+          onPress={() => navigate("Camera")}
+          title={"Camera"}
+        />
+        <Button
+          onPress={() => navigate("Constants")}
+          title={"Constants"}
+        />
+        <Button
+          onPress={() => navigate("Facebook")}
+          title={"Facebook"}
+        />
+        <Button
+          onPress={() => navigate("Font")}
+          title={"Font"}
+        />
+        <Button
+          onPress={() => navigate("Gyroscope")}
+          title={"Gyroscope"}
+        />
         <Button
           onPress={() => navigate("LinearGradient")}
           title={"Linear Gradient"}
@@ -65,8 +92,14 @@ export class HomeScreen extends Component<Props> {
           onPress={() => navigate("LocalAuthentication")}
           title={"Local Authentication"}
         />
-        <Button onPress={() => navigate("MapView")} title={"Map View"} />
-        <Button onPress={() => navigate("Svg")} title={"Svg"} />
+        <Button
+          onPress={() => navigate("MapView")}
+          title={"Map View"}
+        />
+        <Button
+          onPress={() => navigate("Svg")}
+          title={"Svg"}
+        />
         <Button
           onPress={() => navigate("VectorIcons")}
           title={"Vector Icons"}

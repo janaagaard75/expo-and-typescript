@@ -32,7 +32,10 @@ export class LocalAuthenticationScreen extends Component<Props, State> {
         </Text>
         <Text>Authenticated: {this.state.authenticated ? "Yes" : "No"}</Text>
         <Text>Authentication error: {this.state.authenticationError}</Text>
-        <Button onPress={() => this.authenticate()} title="Scan" />
+        <Button
+          onPress={() => this.authenticate()}
+          title="Scan"
+        />
       </View>
     );
   }

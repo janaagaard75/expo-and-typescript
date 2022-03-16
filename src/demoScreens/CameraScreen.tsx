@@ -34,7 +34,10 @@ export const CameraScreen = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 1 }} type={cameraType}>
+      <Camera
+        style={{ flex: 1 }}
+        type={cameraType}
+      >
         <View
           style={{
             backgroundColor: "transparent",

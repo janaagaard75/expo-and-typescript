@@ -35,9 +35,18 @@ export const ConstantsScreen = (props: Props) => {
         padding: 10,
       }}
     >
-      <Button onPress={() => navigate("Manifest")} title="Manifest" />
-      <Button onPress={() => navigate("Platform")} title="Platform" />
-      <Button onPress={() => navigate("SystemFonts")} title="System Fonts" />
+      <Button
+        onPress={() => navigate("Manifest")}
+        title="Manifest"
+      />
+      <Button
+        onPress={() => navigate("Platform")}
+        title="Platform"
+      />
+      <Button
+        onPress={() => navigate("SystemFonts")}
+        title="System Fonts"
+      />
       <Text>appOwnership: "{Constants.appOwnership}"</Text>
       <Text>deviceName: "{Constants.deviceName}"</Text>
       <Text>expoVersion: "{Constants.expoVersion}"</Text>

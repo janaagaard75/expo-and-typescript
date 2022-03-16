@@ -20,7 +20,11 @@ export const BlurViewScreen = () => (
         width: 192,
       }}
     />
-    <BlurView intensity={50} style={StyleSheet.absoluteFill} tint="light">
+    <BlurView
+      intensity={50}
+      style={StyleSheet.absoluteFill}
+      tint="light"
+    >
       <Image
         source={{ uri: expoImageUrl }}
         style={{

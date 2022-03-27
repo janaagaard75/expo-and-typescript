@@ -19,7 +19,7 @@ export const AppleAuthenticationScreen: FunctionComponent = () => {
         })
       );
     } catch (error) {
-      if (error.code === "ERR_CANCELED") {
+      if (getStringProperty(error, "code") === "ERR_CANCELED") {
         console.info("The user cancelled in the sign in.", error);
       } else {
         console.info("An error occurred signing in.", error);
@@ -51,4 +51,22 @@ export const AppleAuthenticationScreen: FunctionComponent = () => {
       </View>
     </ScrollView>
   );
+};
+
+// From https://stackoverflow.com/a/70031969/37147
+const getStringProperty = (
+  someUnknown: unknown,
+  propertyName: string
+): string | unknown => {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const p = (someUnknown as any)[propertyName];
+    if (typeof p === "string") {
+      return p;
+    }
+  } catch {
+    // Ignore.
+  }
+
+  return undefined;
 };
